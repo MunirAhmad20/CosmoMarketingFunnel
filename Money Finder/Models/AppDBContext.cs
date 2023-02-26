@@ -53,10 +53,10 @@ namespace Money_Finder.Models
             // options.UseSqlServer("Data Source=.;Initial Catalog=moneyfinder;Integrated Security=True");
             ///options.UseSqlServer("Data Source=.;Initial Catalog=moneyfinder;Integrated Security=True");
             /// options.UseSqlServer("Data Source=A2NWPLSK14SQL-v01.shr.prod.iad2.secureserver.net;Initial Catalog=usmandb;User Id=Usman;Password =Lalamunir@20");
-          // options.UseSqlServer("Data Source=SQL5061.site4now.net;Initial Catalog=db_a786af_sternsites;User Id=db_a786af_sternsites_admin;Password=lalamunir@20");
+         
 
 
-           options.UseSqlServer("Data Source=SQL5070.site4now.net;Initial Catalog=db_a81f4a_cosmotemplate;User Id=db_a81f4a_cosmotemplate_admin;Password=macodex@123");
+           
         }
 
         public static void SetConnectionString(string connectionString)
