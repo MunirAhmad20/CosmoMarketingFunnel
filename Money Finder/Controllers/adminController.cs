@@ -94,6 +94,10 @@ namespace Money_Finder.Controllers
         {
             return View();
         }
+        public IActionResult UserLogin()
+        {
+            return View();
+        }
         public IActionResult logout()
         {
             urecby = null;
