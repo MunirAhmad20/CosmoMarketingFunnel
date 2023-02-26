@@ -1,0 +1,297 @@
+﻿
+@{
+    ViewData["Title"] = "Unsubcribe";
+    Layout = "~/Views/Layouts/_loginLayout.cshtml";
+}
+
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
+    <title>CCPA request form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="CCPA request form">
+    <meta property="og:title" content="CCPA request form">
+    <meta property="og:description" content="CCPA request form">
+
+    <link rel="shortcut icon" href="/etc/designs/global-store/sites/en/favicon.ico">
+
+    <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.3.1/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+
+    <link rel="stylesheet" href="~/ccpa/css/ccpa_theme.css" type="text/css">
+    <link rel="stylesheet" href="/~/ccpacss/wform_layout.css" type="text/css">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+ 
+
+    <style>
+        input[type=checkbox] {
+            display: block !important;
+            float: left;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        .input-checkbox-faux {
+            display: none !important;
+        }
+
+        #sparkjqv_overlay_correct_now {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="https://docs.corepassage.com/JSLibraries/SparkJQValidation/sparkjqv.parsley.css">
+    <script type="text/javascript" async="" src="https://cdn.trustedform.com/trustedform-1.3.4.js"></script>
+</head>
+
+<body class="ccpa-request-form-page " data-new-gr-c-s-check-loaded="14.1026.0" data-gr-ext-installed="">
+    <div id="sparkjqv_overlay_body_background" class="popup_background" style="opacity: 0; visibility: hidden; background-color: black; position: fixed; inset: 0px; z-index: 100000; transition: all 0.3s ease 0s;"></div><div id="sparkjqv_overlay_body_wrapper" class="popup_wrapper" style="opacity: 0; visibility: hidden; position: fixed; overflow: auto; z-index: 100001; transition: all 0.3s ease 0s; inset: 0px; text-align: center; display: none;"><div id="sparkjqv_overlay_body" class="simple_overlay popup_content" style="padding: 0px; margin: 0px; display: inline-block; z-index: 10000; background-color: rgb(51, 51, 51); border: 1px solid rgb(102, 102, 102); box-shadow: rgb(102, 102, 102) 0px 0px 40px; opacity: 0; visibility: hidden; outline: none; transition: all 0.3s ease 0s; text-align: left; position: relative; vertical-align: middle;" data-popup-initialized="true" aria-hidden="true" role="dialog"> <div id="sparkjqv_overlay_wrapper" style="width: 100%; margin: 0px auto 0px auto;"> <a id="sparkjqv_overlay_close" style="background-image:url(//docs.corepassage.com/JSLibraries/OptOutOverlay/close.png);position:absolute;right:-15px;top:-15px;cursor:pointer;height:35px;width:35px;"></a> <div style="width: 100%;padding:25px 25px 25px 25px;background-color:#fff;font-family: Arial, Helvetica, sans-serif;font-size:12px;float:left;text-align:left;"><span style="font-size:1.2rem;font-weight:bold;">Please correct the following errors:</span><br><br> <div id="sparkjqv_errors"></div> <br> <input type="button" id="sparkjqv_overlay_correct_now" value="Correct Now" class="btn button" style="margin-bottom:0px;"></div> </div> </div><div class="popup_align" style="display: inline-block; vertical-align: middle; height: 100%;"></div></div><div id="invm_overlay_mpartners_body_background" class="popup_background" style="opacity: 0; visibility: hidden; background-color: black; position: fixed; inset: 0px; z-index: 100000; transition: all 0.3s ease 0s;"></div><div id="invm_overlay_mpartners_body_wrapper" class="popup_wrapper" style="opacity: 0; visibility: hidden; position: fixed; overflow: auto; z-index: 100001; transition: all 0.3s ease 0s; inset: 0px; text-align: center; display: none;"><div id="invm_overlay_mpartners_body" class="simple_overlay popup_content" style="padding: 0px; margin: 0px; display: inline-block; z-index: 10000; background-color: rgb(51, 51, 51); border: 1px solid rgb(102, 102, 102); box-shadow: rgb(102, 102, 102) 0px 0px 40px; width: 650px; opacity: 0; visibility: hidden; outline: none; transition: all 0.3s ease 0s; text-align: left; position: relative; vertical-align: middle;" data-popup-initialized="true" aria-hidden="true" role="dialog"> <div id="invm_overlay_mpartners_wrapper" style="margin: 0px auto 0px auto;"> <a id="invm_overlay_mpartners_close" style="background-image:url(//docs.corepassage.com/JSLibraries/OptOutOverlay/close.png);position:absolute;right:-15px;top:-15px;cursor:pointer;height:35px;width:35px;"></a> <div style="padding:25px 25px 25px 25px;background-color:#fff;font-family: Arial, Helvetica, sans-serif;font-size:12px;float:left;text-align:left;"><strong>undefined</strong><br><br>By registering on our site, you may receive live telephone calls from one or more of the callers listed below at the number you provided. Whether or not you receive any calls may depend on your answers to the offers presented that follow our registration page. You expressly waive all federal and state no-call restrictions with respect to such contact. You may opt out of receiving calls at any time by following the instructions provided by the caller or asking the caller to place you on its do-not-call list.<ol style="margin-top:10px;font-family: Arial, Helvetica, sans-serif;font-size:12px;"></ol></div> </div> </div><div class="popup_align" style="display: inline-block; vertical-align: middle; height: 100%;"></div></div><div id="invm_overlay_body_background" class="popup_background" style="opacity: 0; visibility: hidden; background-color: black; position: fixed; inset: 0px; z-index: 100000; transition: all 0.3s ease 0s;"></div><div id="invm_overlay_body_wrapper" class="popup_wrapper" style="opacity: 0; visibility: hidden; position: fixed; overflow: auto; z-index: 100001; transition: all 0.3s ease 0s; inset: 0px; text-align: center; display: none;"><div id="invm_overlay_body" class="simple_overlay popup_content" style="padding: 0px; margin: 0px; display: inline-block; z-index: 10000; background-color: rgb(51, 51, 51); border: 1px solid rgb(102, 102, 102); box-shadow: rgb(102, 102, 102) 0px 0px 40px; width: 650px; opacity: 0; visibility: hidden; outline: none; transition: all 0.3s ease 0s; text-align: left; position: relative; vertical-align: middle;" data-popup-initialized="true" aria-hidden="true" role="dialog"> <div id="invm_overlay_wrapper" style="margin: 0px auto 0px auto;"> <a id="invm_overlay_close" style="background-image:url(//docs.corepassage.com/JSLibraries/OptOutOverlay/close.png);position:absolute;right:-15px;top:-15px;cursor:pointer;height:35px;width:35px;"></a> <div style="padding:50px 25px 75px 25px;background-color:#fff;font-family: Arial, Helvetica, sans-serif;font-size:12px;float:left;text-align:left;">You DO have the right to have your DNC (Do Not Call) registration honored and opting in to receive outbound calls is not a requirement to complete this application. If you would not like to receive live telephone calls from our marketing partners, please check the box below:<br><br> <input type="checkbox" id="dnc_opt_out_checkbox" value="1"> No, I do not want to receive live telephone calls <br><br> <input type="button" id="inovum_overlay_correct_now" value="Submit"></div> </div> </div><div class="popup_align" style="display: inline-block; vertical-align: middle; height: 100%;"></div></div>
+
+    <main role="main" style="margin-top:20px;margin-bottom:60px;">
+        <div class="par-main parsys">
+            <section class="column-control layout-default bgcolor--default default has-padding-top--60 has-padding-bottom--60 has-padding-horizontal--none default-rule section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-12">
+
+                        </div>
+
+                        <div class="col-md-8 col-12">
+                            <div class="title default-color text-align--left sans section">
+
+                                <h1 class="default-color text-align--left sans ">
+                                    Submit a CCPA request
+                                </h1>
+                            </div>
+
+                            <div class="content-tile default behavior--none content-tile-portrait bgcolor--default default-links default-btn-type default-btn-width default-btn-size pad--default__figure pad-eq-vertical--default__caption pad-eq-horizontal--default__caption default-color default-title-typesize default-title-typefamily default-title-typeweight default-title-color default-subtitle-typesize default-subtitle-typeweight default-subtitle-color default-content-tile-text--col-count section">
+                                <div class="content-tile-container">
+                                    <figure>
+                                        <figcaption>
+                                            <div class="content-tile-text">
+                                                <p>Cosmopolitan Consumer Group takes our obligation to protect your data very seriously. In order to process your data request, we need some basic information from you. The information requested in this form is essential to Cosmopolitan Consumer Group efforts to verify you are who you claim to be, to locate your data within our systems, and to determine whether we may have a lawful reason to deny your request.</p>
+                                                <p>Please note: If you choose not to provide the information requested in this form, we will be unable to process your request and will take no further action.<br></p>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="form-assembly section">
+                                <div>
+                                    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+                                    <!-- FORM: BODY SECTION -->
+                                    <form method="post" action="/Money/addccp" id="PageForm" class="hintsBelow labelsAbove" role="form" data-parsley-validate="" novalidate="" data-parsley-errors-messages-disabled="true">
+                                        <div class="aspNetHidden">
+                                            <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+                                            <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+                                            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTU1NTMzMjM0MmQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgMFBVRFUk1TBQZURVJNUzIFBlRFUk1TM1t3b/5wDIrm6/UH5xP6ovNv/yw3I6nybTWFKIXQu94p">
+                                        </div>
+
+                                        <script type="text/javascript">
+                                            //<![CDATA[
+                                            var theForm = document.forms['PageForm'];
+                                            if (!theForm) {
+                                                theForm = document.PageForm;
+                                            }
+                                            function __doPostBack(eventTarget, eventArgument) {
+                                                if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                                                    theForm.__EVENTTARGET.value = eventTarget;
+                                                    theForm.__EVENTARGUMENT.value = eventArgument;
+                                                    theForm.submit();
+                                                }
+                                            }
+                                            //]]>
+                                        </script>
+
+
+                                        <div class="aspNetHidden">
+
+                                            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F95CFA48">
+                                            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAA22O9Sh4/fQI6pW09n4HhRFxsCx5CFVkTNu+qzDuEFrDCX/IH8dHE8Z9NayuQCfVjpahbJLetVBQtoQs4t0I6YUz5ljNF0S56ULXNEc8WaEqcxrS9IiqopucD0i0+t5M6TYGLZMFZ2hJz3RZJ8HDKZCB9mmHUlGo0Om3R2FTWfQzOA8UA1DQQFsEO8qHKS0t1iI2aCiE9S7QdRP54usX6Kw7JUb4O+gQb1Ag/0iEs1h4yxlAVrYGYpJps/Di1qV2XT30m6V4mP1N8Frn2TivVhqCZVDycRpOSgOowaa+Dq1hDl8AAQaWFHGoNxKq8IP1OU=">
+                                        </div>
+                                        <div class="wFormContainer">
+                                            <div class="wFormHeader"></div>
+                                            <style type="text/css">
+                                                undefinedundefined
+                                            </style>
+                                            <div class="">
+                                                <div class="wForm" id="184-WRPR" dir="ltr">
+                                                    <div class="oneField field-container-D    " id="tfa_1-D">
+                                                        <label id="tfa_1-L" class="label preField reqMark" for="tfa_1">First name</label><br>
+                                                        <div class="inputWrapper">
+                                                            <input name="FIRST_NAME" placeholder="First Name" type="text" maxlength="40" id="FIRST_NAME" aria-required="true" class="validate-alphanum required tooltipster tooltipstered" required="required" data-parsley-trigger="change" data-parsley-pattern="^[a-zA-Z]{1}([a-zA-Z-' ]{0,39})$" data-parsley-minlength="2">
+                                                        </div>
+                                                    </div>
+                                                    <div class="oneField field-container-D    " id="tfa_2-D">
+                                                        <label id="tfa_2-L" class="label preField reqMark" for="tfa_2">Last name</label><br>
+                                                        <div class="inputWrapper">
+                                                            <input name="LAST_NAME" placeholder="Last Name" type="text" maxlength="40" id="LAST_NAME" value="" aria-required="true" class="validate-alphanum required tooltipster tooltipstered" required="required" data-parsley-trigger="change" data-parsley-pattern="^[a-zA-Z]{1}([a-zA-Z-' ]{0,39})$" data-parsley-minlength="2">
+                                                        </div>
+                                                    </div>
+                                                    <div class="oneField field-container-D    " id="tfa_3-D">
+                                                        <label id="tfa_3-L" class="label preField reqMark" for="tfa_3">Email address</label><br>
+                                                        <div class="inputWrapper">
+                                                            <input name="email" placeholder="Email" maxlength="100" id="form1_leadem" type="email" value="" aria-required="true" class="validate-email required tooltipster tooltipstered" required="required" data-parsley-trigger="change" data-parsley-type="email">
+                                                        </div>
+                                                    </div>
+                                                    <div class="oneField field-container-D    " id="tfa_2182-D">
+                                                        <label id="tfa_2182-L" class="label preField " for="tfa_2182">Mobile number</label><br>
+                                                        <div class="inputWrapper">
+                                                            <input name="phonea" placeholder="(Area Code)" maxlength="3" id="HOME_PHONE_AREA" type="tel" class="validate-integer tooltipster tooltipstered parsley-success" data-parsley-trigger="change" data-parsley-type="digits" data-parsley-length="[3, 3]" data-parsley-id="11">
+                                                            <input name="phoneb" maxlength="3" id="HOME_PHONE_PREFIX" type="tel" class="validate-integer tooltipster tooltipstered parsley-success" data-parsley-trigger="change" data-parsley-type="digits" data-parsley-length="[3, 3]" data-parsley-id="13">
+                                                            <input name="phonec" maxlength="4" id="HOME_PHONE_SUFFIX" type="tel" class="validate-integer tooltipster tooltipstered parsley-success" data-parsley-trigger="change" data-parsley-type="digits" data-parsley-length="[4, 4]" data-parsley-id="15">
+                                                        </div>
+                                                    </div>
+                                                    <div class="htmlSection" id="tfa_2219">
+                                                        <div class="htmlContent" id="tfa_2219-HTML">
+                                                            Note: If you may have used more than one email address with Cosmopolitan Consumer Group, please submit a separate request for each additional email address. You will be required to confirm your request via the email address associated with your account. If you no longer have access to the email address associated with your account we will not be able to process your request.&nbsp;
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="oneField field-container-D    " id="tfa_2184-D">
+                                                    <label id="tfa_2184-L" class="label preField reqMark" for="tfa_2184">What type of request are you making?</label><span style="color:red">*</span><br>
+                                                    <div class="inputWrapper">
+                                                        <select name="RequestType" id="RequestTypeID" aria-required="true" class="required tooltipster tooltipstered" required="required" data-parsley-trigger="change">
+                                                            <option value="">Please select...</option>
+                                                            <option value="Access - I would like to get a report of the Personal Information Spark Revenue has about me">Access - I would like to get a report of the Personal Information Cosmopolitan Consumer Group has about me</option>
+                                                            <option value="Opt-out - I would like to opt-out of personal information sales">Opt-out - I would like to opt-out of personal information sales</option>
+                                                            <option value="Deletion - I would like to have the Personal Information you have about me forgotten">Deletion - I would like to have the Personal Information you have about me forgotten</option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="section inline group">
+                                                    <div class="oneField field-container-D">
+                                                        <label class="label preField ">
+                                                            <p>
+                                                                Please provide any information that might be helpful in&nbsp;
+                                                                fulfilling your request in regards to how you have engaged with Cosmopolitan Consumer Group.&nbsp;
+                                                                For example, “<i>I signed up on a Cosmopolitan Consumer Group marketing website</i>”&nbsp;
+                                                            </p>
+                                                        </label><br>
+                                                        <div class="inputWrapper">
+                                                            <textarea name="message" rows="2" cols="20" id="ADDITIONAL_REQUEST_INFO" placeholder="Please provide any information that might be helpful in fulfilling your request in regards to how you have engaged with Cosmopolitan Consumer Group. For example, “I signed up on a Cosmopolitan Consumer Group marketing website”" class="" style="height:100px;"></textarea><br><br>
+                                                        </div>
+                                                    </div>
+                                                    <div class="htmlSection">
+                                                        <div class="htmlContent" id="tfa_2194-HTML">
+                                                            <br>At Cosmopolitan Consumer Group, we take your right to privacy seriously. We strive to protect the rights, freedoms and dignity of all those who entrust us with their personal information, including customers and employees.&nbsp;<br><br>
+                                                            We recognize our responsibility to keep your personal information safe and secure, and we have systems, processes, and expert staff devoted to implementing such security controls, and safeguarding data protection, across our business. In order to fulfill this request,
+                                                            Cosmopolitan Consumer Group will need to reasonably validate that you are the owner of the account for which this request is being submitted. This may require additional follow-up to ensure confidence that this request can be fulfilled. We will work to fulfill this request in a timely
+                                                            manner that complies with the legal requirements in your jurisdiction.<br>
+                                                        </div>
+                                                    </div>
+                                                    <div class="htmlSection">
+                                                        <div class="htmlContent">
+                                                            <br>*Please note all responses to your requests will be returned electronically via email.<br><br>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="tfa_2212" class="section inline group">
+                                                    <div class="oneField field-container-D" id="tfa_2202-D" role="radiogroup" aria-labelledby="tfa_2202-L" data-tfa-labelledby="-L tfa_2202-L">
+                                                        <label id="tfa_2202-L" class="label preField ">I agree to the following statements by checking the boxes below:</label><br>
+                                                        <div class="inputWrapper">
+                                                            <span id="tfa_2202" class="choices vertical ">
+                                                                <span class="oneChoice">
+                                                                    <input type="checkbox" runat="server" id="TERMS" name="TERMS" class="required tooltipster tooltipstered" aria-labelledby="tfa_2206-L" data-tfa-labelledby="tfa_2202-L tfa_2206-L" required="required" data-parsley-trigger="change" data-parsley-multiple="TERMS">
+                                                                    <label class="label postField" id="tfa_2206-L" for="TERMS">
+                                                                        <span class="input-radio-faux"></span><span style="color:red">*</span>
+                                                                        I declare under penalty of perjury that I am the individual consumer whose personal information is the subject of the request.
+                                                                    </label>
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="oneField field-container-D" id="tfa_2208-D" role="group" aria-labelledby="tfa_2208-L" data-tfa-labelledby="-L tfa_2208-L">
+                                                        <div class="inputWrapper">
+                                                            <span id="tfa_2208" class="choices vertical ">
+                                                                <span class="oneChoice">
+                                                                    <input type="checkbox" runat="server" id="TERMS2" name="TERMS2" class="required tooltipster tooltipstered" aria-labelledby="tfa_2213-L" data-tfa-labelledby="tfa_2208-L tfa_2213-L" required="required" data-parsley-trigger="change" data-parsley-multiple="TERMS2">
+                                                                    <label class="label postField" id="tfa_2213-L" for="TERMS2">
+                                                                        <span class="input-checkbox-faux"></span><span style="color:red">*</span>
+                                                                        I acknowledge that transmitting personal information over the internet or phone comes with inherent risks including the risk that the information will be exposed to unauthorized individuals. I understand the risks associated with receiving information pertaining to my request and accept responsibility for any unauthorized access occuring after Cosmopolitan Consumer Group sends my information.
+                                                                    </label>
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="oneField field-container-D    " id="tfa_2214-D" role="group" aria-labelledby="tfa_2214-L" data-tfa-labelledby="-L tfa_2214-L">
+                                                        <div class="inputWrapper">
+                                                            <span id="tfa_2214" class="choices vertical " data-condition="`#tfa_2186`">
+                                                                <span class="oneChoice">
+                                                                    <input type="checkbox" runat="server" id="TERMS3" name="TERMS3" class="required tooltipster tooltipstered" aria-labelledby="tfa_2215-L" data-tfa-labelledby="tfa_2214-L tfa_2215-L" required="required" data-parsley-trigger="change" data-parsley-multiple="TERMS3">
+                                                                    <label class="label postField" id="tfa_2215-L" for="TERMS3">
+                                                                        <span class="input-checkbox-faux"></span><span style="color:red">*</span>
+                                                                        I acknowledge that deletion of my personal information is a request that is permanent and cannot be reversed. I understand that I will lose access to any subscriptions, contest entries or information associated with me within Cosmopolitan Consumer Group systems and that I will not be refunded for any access that may be lost due to this deletion request.
+                                                                    </label>
+
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                </div>
+                                              
+                                                <div class="actions" id="184-A" style="margin-top:20px;">
+                                                 
+                                                    <a id="SUBMIT" data-label="Submit" class="primaryAction primaryAction button btn btn-primary" value="Submit" data-validates-form="" href="javascript:__doPostBack('SUBMIT','')">Submit</a>
+                                                </div>
+                                                <div style="clear:both"></div>
+                                                <div style="clear:both"></div>
+                                                <div style="clear:both"></div>
+                                                <div style="clear:both"></div>
+                                            </div>
+                                        </div>
+                                        <div class="wFormFooter">
+                                            <p class="supportInfo"><br></p>
+                                        </div>
+                                        <p class="supportInfo"></p>
+                                        <input type="hidden" name="xxTrustedFormToken" id="xxTrustedFormToken_0" value="https://cert.trustedform.com/0a9c351c3fcb12a754cc09b5b2c18abf3e0bf074"><input type="hidden" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0" value="https://cert.trustedform.com/0a9c351c3fcb12a754cc09b5b2c18abf3e0bf074"><input type="hidden" name="xxTrustedFormPingUrl" id="xxTrustedFormPingUrl_0" value="https://ping.trustedform.com/0.fYq1mvbwG6bps7R1Haehnt4PYBAV2ePrMxq18iItSm2lMUphqdxcZTS3kVL4TgZK2nRQ2EIt.TYT0KThNylDtP0uVcQcmdQ.MWl6xFKKMISoAlIUqylyxQ">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-12"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">var SparkJqvOnChange = true; var SparkJqvSetTypes = true;</script>
+
+    
+    <script src="~/ccpa/jslibraries/sparklib.1.1.js"></script>
+    <script>window.sparkjqv_setgenericval || document.write('<script src="/jslibraries/sparklib.1.1.js">\x3C/script>')</script>
+
+    <script src="~/ccpa//jslibraries/SparkJQValidation/sparkjqv.parsley.2.0.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            spark_ishiddenfields = true;
+        });
+    </script>
+    <!-- This is here for tooltip location adjustment if needed -->
+    <style>
+        .parsley-errors-list {
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <!-- End validation Scripts -->
+
+
+
+
+
+</body>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+</html>

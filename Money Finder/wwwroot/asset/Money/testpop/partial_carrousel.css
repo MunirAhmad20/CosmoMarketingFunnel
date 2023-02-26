@@ -1,0 +1,288 @@
+.confirming-text {
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 3px;
+}
+
+body {}
+
+#body {
+    padding: 10px 0 30px;
+}
+
+.container-nitro {
+    padding: 0 10px;
+    min-height: 213px;
+}
+
+.tagline {
+    padding-top: 1em;
+}
+
+.title-header {
+    padding: 10px 0;
+    max-width: 800px;
+    line-height: 22px;
+    font-size: 22px;
+    display: none;
+}
+
+.title-body {
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 0;
+    padding: 10px 0;
+    font-weight: normal;
+}
+
+.title-body div {
+    width: 100% !important;
+    margin: 0 auto;
+}
+
+.category-img {
+    text-align: center;
+}
+
+.category-img img {
+    width: 100%;
+    max-width: 500px;
+    display: inline;
+}
+
+.click_here {
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 5px 0 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.progress {
+    color: white !important;
+    display: block !important;
+    margin: 12px auto 0 !important;
+}
+
+.click_here div {
+    float: left;
+    width: 49%;
+    max-width: 284px;
+    cursor: pointer;
+}
+
+.click_here img {
+    width: 100%;
+    display: inline;
+}
+
+.skip_container {
+    padding-left: 2%;
+}
+
+.title-category-header {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 24px;
+    line-height: 22px;
+    padding: 0px 0 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.meter {
+    width: 75%;
+    height: 20px;
+    position: relative;
+    margin: 2px auto 10px;
+    background: #a6aeb9;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    padding: 2px;
+    -webkit-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.meter>span {
+    display: block;
+    height: 100%;
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(43, 194, 83);
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(43, 194, 83)), color-stop(1, rgb(84, 240, 84)));
+    background-image: -moz-linear-gradient( center bottom, rgb(43, 194, 83) 37%, rgb(84, 240, 84) 69%);
+    -webkit-box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.meter>span:after,
+.animate>span>span {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent), to(transparent));
+    background-image: -moz-linear-gradient( -45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    z-index: 1;
+    -webkit-background-size: 50px 50px;
+    -moz-background-size: 50px 50px;
+    -webkit-animation: move 2s linear infinite;
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    margin: 5px auto 0;
+    font-size: 12px;
+    color: #a6aeb9;
+    text-align: center;
+}
+
+#progress {
+    margin-top: -10px;
+    position: absolute;
+    z-index: 100;
+    left: 49%;
+}
+
+.pixel img {
+    width: 1px;
+    height: 1px;
+}
+
+.skip-to-wall,
+.next-btn {
+    margin: 9px auto;
+    border-radius: 12px;
+    display: inline-block;
+    padding: 5px 12px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0 5px #999;
+}
+
+.skip-to-wall:hover,
+.next-btn:hover {
+    background-color: #3e8e41
+}
+
+.skip-to-wall:active,
+.next-btn:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+@-webkit-keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .meter {
+        width: 42%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .categories {
+        padding: 10px;
+    }
+    .title-body div {
+        width: 60%;
+    }
+    .title-header {
+        line-height: 44px;
+        font-size: 44px;
+    }
+    .title-category-header {
+        font-size: 26px;
+        line-height: 26px;
+        padding: 10px 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .title-category-header {
+        font-size: 18px;
+    }
+    #meter {
+        padding-bottom: 8px;
+    }
+    .tagline {
+        font-size: 14px;
+        padding-top: 1em;
+    }
+    #body {
+        padding-top: 0 !important;
+    }
+    .title-body {
+        line-height: 18px;
+        padding: 10px 2px;
+        margin-bottom: 0px;
+    }
+    #progress {
+        left: 42%;
+    }
+    .categories,
+    .offers {
+        margin-top: 8px;
+    }
+    .meter {
+        width: 75%;
+    }
+    .container-nitro {
+        min-height: unset;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .title-body {
+        font-size: 12px !important;
+    }
+}
+
+.header-container {
+    background: none;
+}

@@ -1,0 +1,463 @@
+﻿@-webkit-keyframes colorChange {
+    0% {
+        background: #167fb0;
+    }
+
+    100% {
+        background: #f67002;
+    }
+}
+
+.clear {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.top-header {
+    height: 60px;
+    background: #fff;
+    padding-top: 12px;
+}
+
+    .top-header nav {
+        display: none;
+    }
+
+.offer-header {
+    background: #167fb0;
+    text-align: center;
+    padding: 15px 0px 15px 0px;
+    margin: 0px;
+    border-bottom: 4px solid #1577aa;
+}
+
+    .offer-header h1 {
+        font-family: "Roboto", sans-serif;
+        font-size: 2rem;
+        font-weight: 800;
+        letter-spacing: -.04em;
+        line-height: 1.1;
+        text-align: center;
+        color: #ffffff;
+        padding: 0px 20px 0px 20px;
+        margin: 0px;
+    }
+
+    .offer-header h2 {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.1rem;
+        font-weight: 300;
+        letter-spacing: -.04em;
+        line-height: 1.1;
+        text-align: center;
+        color: #ffffff;
+        padding: 0px 20px 0px 20px;
+        margin: 0px;
+    }
+
+    .offer-header h3 {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.1rem;
+        font-weight: 300;
+        letter-spacing: -.04em;
+        line-height: 1.1;
+        text-align: center;
+        color: #ffffff;
+        padding: 0px 20px 0px 20px;
+        margin: 0px;
+    }
+
+.results {
+    padding-top: 30px;
+}
+
+    .results h1 {
+        font-family: "Roboto", sans-serif;
+        font-size: 2.5rem;
+        line-height: 1rem;
+        font-weight: 600;
+        letter-spacing: -.03em;
+        color: #2d9cbc;
+        text-align: center;
+        padding: 18px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+    }
+
+        .results h1 small {
+            font-size: 1.6rem;
+            line-height: 1.6rem;
+            font-weight: 400;
+            letter-spacing: -.03em;
+        }
+
+    .results h2 {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.4rem;
+        font-weight: 500;
+        height: 60px;
+        background: url(../img/result-title-bg.png) no-repeat;
+        background-position: 20px 5px;
+        color: #ffffff;
+        padding-top: 7px;
+    }
+
+        .results h2 span {
+            -webkit-border-radius: 100px;
+            -moz-border-radius: 100px;
+            -ms-border-radius: 100px;
+            -o-border-radius: 100px;
+            border-radius: 100px;
+            width: 65px;
+            height: 60px;
+            padding: 15px 18px 15px 18px;
+            background: #f5a343;
+        }
+
+            .results h2 span img {
+                width: 55px;
+            }
+
+            .results h2 span i {
+                color: #fff;
+            }
+
+    .results p {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.1rem;
+        line-height: 1.4rem;
+        color: #666666;
+        font-weight: 400;
+        padding: 10px 20px 0px 20px;
+        margin: 0px 0px 30px 0px;
+    }
+
+.top-note p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #6c6c6c;
+    letter-spacing: -.06em;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.result-item {
+    background: #fff;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #fff 0%, #e9e9e9 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #e9e9e9));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #fff 0%, #e9e9e9 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -ms-linear-gradient(top, #fff 0%, #e9e9e9 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #fff 0%, #e9e9e9 100%);
+    /* W3C */
+    display: block;
+    border: 1px solid #dadada;
+    padding: 10px;
+    margin: 0px 0px 30px 0px;
+    text-align: center;
+}
+
+    .result-item img {
+        border: 1px solid #d8d8d8;
+    }
+
+    .result-item h2, .result-item hp, .result-item ul, .result-item li {
+        font-family: "Roboto", sans-serif;
+    }
+
+    .result-item h3 {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 1.8rem;
+        letter-spacing: -.03em;
+        color: #1577aa;
+        text-align: center;
+        padding: 0px;
+        margin: 5px 0px 15px 0px;
+    }
+
+    .result-item p {
+        font-size: .9rem;
+        letter-spacing: -.03em;
+        line-height: 1.4;
+        font-weight: 400;
+        padding: 0px 20px 0px 20px;
+        margin: 0px 0px 10px 0px;
+        text-align: left;
+    }
+
+    .result-item small {
+        color: #666;
+    }
+
+    .result-item li {
+        font-size: .9rem;
+        line-height: 1.1rem;
+        text-align: left;
+        padding: 0px;
+        margin: 0px 0px 5px 0px;
+    }
+
+    .result-item .result-stats {
+        font-family: "Roboto", sans-serif;
+    }
+
+    .result-item .button-result-apply {
+        background-color: #1577aa;
+        color: #ffffff;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        border-radius: 8px;
+        font-weight: 700;
+        text-align: center;
+        padding: 15px 25px 15px 25px;
+        margin: 30px auto 15px auto;
+        width: 60%;
+        font-family: "Roboto", sans-serif;
+        font-size: 1.2rem;
+        color: #ffffff;
+        letter-spacing: -.04em;
+        padding: 10px;
+        margin: 10px 0px 10px 0px;
+    }
+
+@keyframes buttonHover {
+    0% {
+        background-color: #1577aa;
+    }
+
+    100% {
+        background-color: #1577aa;
+    }
+}
+
+.result-item .button-result-apply:hover {
+    animation-name: tButtonHover;
+    animation-duration: .4s;
+    animation-iteration-count: 1;
+    background: #1577aa;
+    color: #ffffff;
+}
+
+#footer {
+    display: block;
+    width: 100%;
+    background: #333;
+    padding: 20px 0px 0px 0px;
+}
+
+    #footer p {
+        font-family: "Roboto", sans-serif;
+        font-size: .8rem;
+        font-weight: 400;
+        color: #CCCCCC;
+        text-decoration: none;
+        padding: 0px;
+    }
+
+    #footer a:link, #footer a:visited {
+        color: #CCCCCC;
+        text-decoration: none;
+    }
+
+    #footer a:hover {
+        text-decoration: underline;
+    }
+
+@media only screen and (min-width: 40.063em) {
+    .top-header {
+        height: 75px;
+    }
+
+    .offer-header {
+        padding: 35px 0px 30px 0px;
+    }
+
+        .offer-header h1 {
+            font-size: 2.7rem;
+            padding: 0px 85px 0px 85px;
+        }
+
+        .offer-header h2 {
+            font-size: 1.4rem;
+        }
+
+        .offer-header h3 {
+            font-size: 1.4rem;
+        }
+
+    .top-note p {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.3;
+        color: #6c6c6c;
+        letter-spacing: -.06em;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 40px;
+    }
+
+    .results {
+        padding-top: 30px;
+    }
+
+    .result-item {
+        padding: 15px;
+    }
+
+        .result-item h3 {
+            font-size: 1.6rem;
+            margin-bottom: 6px;
+            text-align: left;
+        }
+
+        .result-item p {
+            font-weight: 400;
+            margin: 0px;
+            text-align: left;
+            font-size: .9rem;
+            letter-spacing: -.03em;
+            line-height: 1.3;
+        }
+
+        .result-item small {
+            color: #666;
+        }
+
+        .result-item h4.subheader {
+            font-size: 1.1rem;
+            line-height: 1.3rem;
+            margin: 0px 0px 0px 0px;
+        }
+
+        .result-item .result-stats {
+            font-family: "Roboto", sans-serif;
+            text-align: center;
+            width: 100%;
+            border-collapse: collapse;
+            /* Zebra striping */
+        }
+
+            .result-item .result-stats tr:nth-of-type(odd) {
+                background: #fff;
+            }
+
+            .result-item .result-stats td, .result-item .result-stats th {
+                border: 1px solid #999;
+            }
+
+            .result-item .result-stats th {
+                padding: 6px;
+                font-size: .8rem;
+                line-height: .8rem;
+                background: #999;
+                color: white;
+                font-weight: 600;
+                text-align: center;
+            }
+
+            .result-item .result-stats td {
+                padding: 4px;
+                font-size: 1rem;
+                line-height: 1rem;
+                text-align: center;
+            }
+
+            .result-item .result-stats small {
+                color: #333;
+            }
+}
+
+@media only screen and (min-width: 64.063em) {
+    .top-header {
+        height: 103px;
+    }
+
+    .offer-header {
+        padding: 35px 0px 30px 0px;
+    }
+
+        .offer-header h1 {
+            font-size: 3.7rem;
+            padding: 0px 85px 0px 85px;
+        }
+
+    .results {
+        padding-top: 30px;
+    }
+
+        .results h1 {
+            font-size: 3.2rem;
+            line-height: 1.7rem;
+        }
+
+            .results h1 small {
+                font-size: 1.9rem;
+            }
+
+        .results p {
+            font-size: 1.1rem;
+            line-height: 1.5rem;
+            padding-top: 20px;
+        }
+
+    .result-item p {
+        font-size: 1rem;
+        padding: 0px;
+        margin: 0px;
+    }
+}
+
+
+
+
+
+/*.overlayimgdiv {
+        height: 90px;
+        vertical-align: central;
+        padding-top: 0px;
+        vertical-align: middle;
+    }*/
+
+
+@media only screen and (min-width: 40.063em) {
+    .overlayimgdiv {
+        height: 90px;
+        vertical-align: central;
+        vertical-align: middle;
+    }
+
+    .category-description-container {
+        height: 156px;
+    }
+}
+
+@media only screen and (min-width: 64.063em) {
+    .overlayimgdiv {
+        height: 90px;
+        vertical-align: central;
+        vertical-align: middle;
+    }
+
+
+
+    .category-description-container {
+        height: 156px;
+        height: 170px;
+    }
+}
+
+
+.category-description-container div p {
+    color: #062d5e;
+}

@@ -1,0 +1,105 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Money_Finder</RootNamespace>
+
+	  <AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
+	  
+		  <Nullable>disable</Nullable>
+	  
+  </PropertyGroup>
+
+	
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\maeen_asset\**" />
+    <Content Remove="wwwroot\maeen_asset\**" />
+    <EmbeddedResource Remove="wwwroot\maeen_asset\**" />
+    <None Remove="wwwroot\maeen_asset\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.Core" Version="2.41.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.0" />
+    <PackageReference Include="RestSharp" Version="108.0.3" />
+    <PackageReference Include="System.Collections" Version="4.3.0" />
+    <PackageReference Include="System.Data.OleDb" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\agencyvendor_assets\assets\NewFolder1\" />
+    <Folder Include="wwwroot\agencyvendor_assets\assets\NewFolder\" />
+    <Folder Include="wwwroot\asset\NewFolder\" />
+    <Folder Include="wwwroot\ExcelFile\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Money\accessdenied.cshtml" />
+    <None Include="Views\Money\applymidpath.cshtml" />
+    <None Include="Views\Money\applymidpath1.cshtml" />
+    <None Include="Views\Money\CCPA.cshtml" />
+    <None Include="Views\Money\everflowtest.cshtml" />
+    <None Include="Views\Money\Home.cshtml" />
+    <None Include="Views\Money\offer.cshtml" />
+    <None Include="Views\Money\offers.cshtml" />
+    <None Include="Views\Money\offersbk.cshtml" />
+    <None Include="Views\Money\offerwall.cshtml" />
+    <None Include="Views\Money\offerwallbk.cshtml" />
+    <None Include="Views\Money\privacy_policy.cshtml" />
+    <None Include="Views\Money\short_formbk.cshtml" />
+    <None Include="Views\Money\terms.cshtml" />
+    <None Include="Views\Money\testmodal.cshtml" />
+    <None Include="Views\Money\testpop.cshtml" />
+    <None Include="Views\Money\testt.cshtml" />
+    <None Include="Views\Money\thankyou.cshtml" />
+    <None Include="Views\Money\Unsubcribe.cshtml" />
+    <None Include="Views\Money\unsubnotification.cshtml" />
+    <None Include="wwwroot\datatablesassets\assets\img\ca.svg" />
+    <None Include="wwwroot\datatablesassets\assets\img\de.svg" />
+    <None Include="wwwroot\datatablesassets\assets\img\fr.svg" />
+    <None Include="wwwroot\datatablesassets\assets\img\jp.svg" />
+    <None Include="wwwroot\datatablesassets\assets\img\ru.svg" />
+    <None Include="wwwroot\datatablesassets\assets\js\app.js" />
+    <None Include="wwwroot\datatablesassets\assets\js\custom.js" />
+    <None Include="wwwroot\datatablesassets\assets\js\libs\jquery-3.1.1.min.js" />
+    <None Include="wwwroot\datatablesassets\assets\js\loader.js" />
+    <None Include="wwwroot\datatablesassets\bootstrap\js\bootstrap.min.js" />
+    <None Include="wwwroot\datatablesassets\bootstrap\js\popper.min.js" />
+    <None Include="wwwroot\datatablesassets\plugins\scrollbar\jquery.mCustomScrollbar.concat.min.js" />
+    <None Include="wwwroot\datatablesassets\plugins\table\datatable\datatables.js" />
+    <None Include="wwwroot\mail\js\cleanzone.js" />
+    <None Include="wwwroot\mail\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\mail\lib\clippy\clipboard.min.js" />
+    <None Include="wwwroot\mail\lib\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\mail\lib\jquery.nanoscroller\javascripts\jquery.nanoscroller.js" />
+    <None Include="wwwroot\mail\lib\jquery.niftymodals\js\jquery.modalEffects.js" />
+    <None Include="wwwroot\mail\lib\jquery.parsley\custom\validation.js" />
+    <None Include="wwwroot\mail\lib\jquery.parsley\dist\parsley.min.js" />
+    <None Include="wwwroot\mail\lib\jquery\jquery.min.js" />
+    <None Include="wwwroot\static\b0ac2ff9c34fb23815b932d911a71974.woff2" />
+    <None Include="wwwroot\static\network-dashboard.js" />
+    <None Include="wwwroot\static\network.js" />
+    <None Include="wwwroot\static\vendor.js" />
+    <None Include="wwwroot\static\vendorsnetwork.js" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,544 @@
+﻿@{ViewData["Title"] = "Home"; Layout = "~/Views/Layouts/MoneyhomeLayout.cshtml";}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+<style>.refun{color: white; padding-top: 4%;}.con{width: 40%;}.wing{padding-bottom: 2%; font-size: 20px; color: white; font-weight: 600;}.st1{background-color: #0064db; text-align: center; padding: 4%;}.aset{width: 80%; padding-left: 5%;}.up{text-align: left !important; margin: 0 !important; color: white !important; font-size: 42px !important; font-weight: 600 !important; padding: 0px 15px 0px 15px !important;}.ers{text-align: left !important; margin: 0 !important; font-size: 31px !important; font-weight: 600 !important; padding: 0px 15px 0px 15px !important; color: black !important;}.itt{text-align: left !important; margin: 0 !important; font-size: 21px !important; padding: 0px !important; margin: 0px !important; color: white !important; padding-top: 5% !important;}.upr{background-color: #0064db; padding: 5%;}</style><style>body, h1, h2, h3, h4, h5, h6{font-family: "Poppins" !important; font-weight: 400;}.right{float: left; width: 44px; min-height: 20px; margin-left: 2px;}.labels{margin-right: 0px; margin-top: 0px; background: #167fb0; padding-top: -5px; margin-left: 15px; display: inline-block; width: 100%; height: 35px; border-radius: 4px; border: none; color: #fff; font-size: 0.9rem; line-height: 1.3rem; font-weight: 400; text-align: center; text-indent: 0px; margin: 0px auto 10px auto;}.getbtn{margin-top: 1em; padding: 20px 30px 20px 30px; background: linear-gradient( 180deg,#2499DE,#1A71A3 ); box-shadow: none !important; visibility: visible !important; animation-name: bounce !important; color: white !important;}.getbtnd{margin-top: 1em; background: linear-gradient( 180deg,#2499DE,#1A71A3 ); box-shadow: none !important; visibility: visible !important; animation-name: bounce !important; color: white !important;}.getbtn:hover{margin-top: 1em; padding: 20px 30px 20px 30px; background: linear-gradient( 180deg,#2499DE,#1A71A3 ); box-shadow: none !important; visibility: visible !important; animation-name: bounce !important; color: white !important;}#stat-bar{display: block; width: 100%; height: 80px; padding: 8px 0px 0px 0px;}.new{background: #808080 !important; background-blend-mode: multiply !important;}.optinbox .optin-right p{color: #000000; line-height: 16px; margin: 11px 0px 0px -22px; padding: 0px 0px 0px 10px;}.icons i{font-size: 30px !important; color: white !important;}#TestSpan1{color: #808080 !important;}#main-reg .subheader{font-size: 1rem; line-height: 1.8rem; padding: 0px; margin: 0px;}.form-control{display: block; width: 100%; height: 34px; padding: 6px 12px !important; font-size: 14px !important; line-height: 1.42857143; color: #555; background-color: #fff; background-image: none; border: 1px solid #ccc; border-radius: 6px !important; -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%); box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%) !important; -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s; -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; height: 3em;}#main-reg .reg-box input[type=checkbox]{display: inline;}.confirminput{width: 20px; height: 20px; display: inline !important;}.optinbox .optin-right p{color: #000000; line-height: 16px; margin: 11px 0px 0px -74px; padding: 12px 0px 0px 10px;}/* #hero h2, #hero h2.subheader{font-family: "Oswald", sans-serif !important;}*/ body, h1, h2, h3, h4, h5, h6{font-family: "Poppins" !important; font-weight: 400;}</style>
+<section id="hero"> <div class="testimonials"> <div class="row"> <ul style="text-align:center;width:100%;text-align:center;margin-left:auto;margin-right:auto"> <li id="Test1" class="hide-for-small-only"> <p id="TestSpan1" class="animated fadeInRight navcolor testspan desktophide"><p>This website is not a USA Government website. This is an informational based website that may provide advertisements for consumers that we may profit from.</p></li><li id="Test2" class="show-for-small-only"> <p class="navcolor" id="TestSpan2">This website is not a USA Government website. This is an informational based website that may provide advertisements for consumers that we may profit from.</p></li><li id="Test3" style="display:none"> <p class="navcolor" id="TestSpan3"><b>Ted M. California</b> - $97,409 Found (old life Insurance policy)</p></li></ul> </div></div><div class="logo-bar" style="background-color:white;"> <div class="row navmaxwidth"> <div class="small-12 medium-12 large-4 columns"> <br /> <h1 class="wow fadeInDown animated logocls" style="visibility:visible;animation-name:fadeInDown"><img src="~/asset/StudentFinTech_Logo-mid-size.jpg" alt="Student Fintec" style="margin-top:-22px"></h1> </div><div class="large-8 columns hide-for-small-only" style="background-color: #0064db;height: 5em;"> <br><nav class="fontsizee" style=" margin-top: -8px; "> <p class="headertext" style="font-family:poppins;text-align:center;"> <a onclick="javascript:" class="rc-trigger navcolor fontsizee" href="#main-regg" style="color:white !important;">CHECK MY ELIGIBILITY</a> &nbsp;&nbsp; &nbsp;<a onclick="javascript:" style=" color: white !important;" class="rc-trigger navcolor fontsizee" href="#whatis">WHAT IS UNCLAIMED MONEY?</a> &nbsp;&nbsp; &nbsp; &nbsp;<a style="color: white !important; " class="rc-trigger navcolor fontsizee" href="#how_it_works">HOW IT WORKS </a> </p></nav> </div></div></div><div class="testimonials" style="background-color:transparent;"> <div class="row"> <ul style="text-align:center;width:100%;text-align:center;margin-left:auto;margin-right:auto"> <li id="Test1" style="display:none;"> <p id="TestSpan1" class="animated fadeInRight navcolor testspan mobilehide" style="font-size: 21px !important;margin-left: 4em;color: #808080 !important;"><b>Roland N. California</b> - $2462 Found (Old checking account/ Shares in Fidelity)</p><p id="TestSpan1" class="animated fadeInRight navcolor testspan desktophide"><b>Roland N. California</b> - $2462 Found (Old checking account/ Shares in Fidelity)</p></li><li id="Test2" style="display:none"> <p class="navcolor" id="TestSpan2"><b>Larry H. Virginia</b> - $266,174 Found (Old checking account)</p></li><li id="Test3" style="display:none"> <p class="navcolor" id="TestSpan3"><b>Ted M. California</b> - $97,409 Found (old life Insurance policy)</p></li></ul> </div></div><div class="testimonials" style="background-color:#d3d7da;"> <div class="row-fix maxwidth"> <div class="small-12 medium-8 medium-push-4 large-7 large-push-1 end columns maxwidthh uperleft tabhide"> <div class="desktophide"><br /></div><h2> @*<label style="font-size:22px;color:black;font-family:'Oswald';line-height:0" class="subheader"> PARENTS OR STUDENTS </label>*@ CHECK NOW FOR </h2> <h2 class="subheader"> UNCLAIMED MONEY! </h2> <p class="hide-for-small-only" style="font-weight:400"> There’s over $35 BILLION in unclaimed money available from the federal government, states, and organizations. You might be eligible to claim some of it before it’s gone! Check out how below! </p><p class="show-for-small-only text-center"> <a href="#main-regg" onclick="javascript:" class="rc-trigger"> <p class=" continuep text-center"> <button type="button" id="" class="btn button bounce infinite animated btn button wow bounce infinite animated getbtn"> <i style="color:#B5FF3F" class="fa fa-check"></i> GET STARTED NOW </button> </a> </p></div><p style="text-align:center!important"> <div class="small-12 medium-6 large-6 end columns mobilehidde"> <div class="desktophide"><br /></div><h2> @*<label style="font-size:22px;color:black;font-family:'Oswald';line-height:0" class="subheader"> PARENTS OR STUDENTS </label>*@ CHECK NOW FOR </h2> <h2 class="subheader"> UNCLAIMED MONEY! </h2> <p class="hide-for-small-only" style="font-weight:400"> There’s over $35 BILLION in unclaimed money available from the federal government, states, and organizations. You might be eligible to claim some of it before it’s gone! Check out how below! </p><p class="show-for-small-only text-center"><a href="#main-regg" onclick="javascript:" class="rc-trigger"><button type="button" class="btn button bounce infinite animated btn button wow bounce infinite animated getbtn"> <i style="color:#B5FF3F" class="fa fa-check"></i> GET STARTED NOW </button></a></p><p class="hide-for-small-only "> <a href="#main-regg" onclick="javascript:" class="rc-trigger"> <button type="button" class="btn button bounce infinite animated btn button wow bounce infinite animated getbtn animated animated" style="font-family: 'Poppins';color: white;font-weight: 700;visibility: visible;animation-name: bounce;border-radius: 0px !important;background: black !important;font-size: 22px !important;"> <i class="fa fa-check"></i> GET STARTED NOW </button> </a> </p></div></p><div class="medium-6 large-6 imgright mobilehide loghide columns " style="margin-top:-5px"> <img class="imgalign" src="~/asset/img/Asset1.png" style=" min-width: 27em;width: 83em;max-height: 67em;min-height: 30em;"> </div></div></div></section><div class="hide-for-small-only" style="background-color:white;height: 1em;"></div>
+<section class="margin_top" id="stat-bar" style="margin-top:-5px"> <div class="row show-for-small-only"> <div class="small-12 columns"></div></div><div id="main-regg"></div><div class="row hide-for-small-only"> <div class="small-12 columns"> <h1 class="wow fadeInDown animated" style="visibility: visible;"> <span class="subheader" style=" font-family: 'Poppins'; text-shadow: 0 0 BLACK; font-size: 36px; font-weight: 800; ">Amount of average claim:</span> $<span class="counter" style=" font-family: 'Poppins'; text-shadow: 0 0 black; font-size: 36px; font-weight: 800; ">892.00</span> </h1> <p class="wow fadeInUp animated" style="visibility: visible;"></p></div></div><div class="row desktophide tabshow "> <div class="small-12 columns"> <h1 class="wow fadeInDown" style="visibility:hidden;animation-name:none"> <span style="font-size:20px" class="subheader ">Amount of average claim: $892.00</span> </h1> <p class="wow fadeInUp" style="visibility:hidden;animation-name:none"></p></div></div></section><div class="hide-for-small-only" style="background-color:white;height: 1em;"></div>
+<section class="mainregg" id="main-reg"> <div class="navbar" id="navbar" style="display:none"></div><div class="row "> <div class="small-12 small-centered medium-12 medium-centered columns"> <div class="row reg-box boxpedding"> <div class="small-12 columns"> <div id="browss"></div><div id="main-regg"></div><br><h1 class="subheader comp">COMPLETE THE FOLLOWING INFORMATION </h1> <h1 class=" infor"> SEE HOW MUCH YOU MAY BE ELIGLBE FOR! </h1> </div><form class="needsv contact_form" action="/Money/submitoffers" name="PageForm" method="post" id="PPageForm" autocomplete="on"> <div class="small-12 columns"></div><div class="containers"> <div class="row-fix"> <div class="small-12 medium-4 large-4 columns mb-3"> <label>First Name</label> <input name="first_name" type="text" required="" placeholder="First Name" value="@ViewBag.firstname" maxlength="30" class="form-control tooltipster tooltipstered fname"> </div><div class="small-12 medium-4 large-4 columns mb-3"> <label>Email Address</label> <input class="form-control tooltipster tooltipstered emails" value="@ViewBag.email" name="email" placeholder="Enter email Address here..." maxlength="300" id="form1_leadem" type="email" required="required" data-parsley-type="email"> </div><div class="small-12 medium-4 large-4 columns mb-3"> <label>Phone Number</label> <input class="form-control phonea" value="@ViewBag.phonea @ViewBag.phoneb @ViewBag.phonec" placeholder="(111) 111 1111" type="tel" name="phone" id="phone" /> </div><div class="small-12 medium-6 large-6 columns"> <div class="row-fix" id="otp-screen"> <div class="small-4 medium-4 large-4 columns" style="padding-left:0"> </div></div></div></div></div><div style="display:none;"> <input value="@ViewBag.tid" name="TRANSACTIONID" type="text"> <input value="@ViewBag.tid" name="source_one" type="text"> <input value="@ViewBag.zip" name="zip" type="text"> <input value="@ViewBag.lastname" name="last_name" type="text"> <input name="age" type="text" placeholder="First Name" value="@ViewBag.Age"> <input name="city" type="text" placeholder="First Name" value="@ViewBag.City"> <input name="dob" type="text" placeholder="First Name" value="@ViewBag.DOB"> <input name="gender" type="text" placeholder="First Name" value="@ViewBag.Gender"> <input name="state" type="text" placeholder="First Name" value="@ViewBag.State"> <input name="address" type="text" placeholder="First Name" value="@ViewBag.address"> <input id="leadid_token" name="universal_leadid" type="hidden" value="" /> </div><input style="display:none;" id="bb" name="nsyesno"> <input style="display:none;" name="lf" value="SF"> <input style="display:none;" id="device" name="device"> @foreach (var it in ViewBag.qa)
+                    {
+                        if (it.Switch == "On" || it.Switch == "on")
+                        {
+                            <div id="PanelCheckingAccount" style="display:none;"> <div class="row radiobtn "> <div class="small-12 medium-12 large-12 columns"> <div class=""> <div class="col-md-6"> <p class=" radiop haveactive " style="text-align:left;"> Do You have an active Checking Account? </p></div><div class="col-md-6"> <div class="row rowlft "> <div class="col-md-12"> <div class="col-md-3"> <input type="radio" id="html leadid_tcpa_disclosure" name="fav_language" value="HTML"> <label for="html">Yes</label> </div><div class="col-md-6"> <input type="radio" id="javascript leadid_tcpa_disclosure" name="fav_language" value="JavaScript"> <label for="javascript">No</label> </div></div></div></div></div></div></div></div>
+
+                            <div class="small-12 columns"></div>
+
+                            <div id="PanelCheckingAccount" style="display:none;"> <div class="row-fix radiobtn show-for-small-only"> <div class="small-12 medium-12 large-12 columns"> <p class=" radiop haveactive " style="text-align:left;"> Do You have an active Checking Account? </p><div class="small-2 medium-2 large-2 columns" style="padding-left: 0;"> <a href=""> <input data-parsley-trigger="change" type="radio" id="html" name="checkingaccount" class="rbtnHasCheckingAccountYes ooltipster tooltipstered" value="Yes" data-parsley-multiple="checkingaccount"> <label for="html">Yes</label> </a> </div><div class="small-8 medium-8 large-8 columns" style="padding-left: 0;"> <a href=""> <input type="radio" id="htmll" name="checkingaccount" class="rbtnHasCheckingAccountNo" value="No" data-parsley-multiple="checkingaccount"> <label for="htmll">No</label> </a> </div></div></div><div class="row-fix radiobtn hide-for-small-only" style="display:none;"> <div class="small-12 medium-12 large-12 columns"> <p class=" radiop haveactive " style="text-align:left;"> Do You have an active Checking Account? </p><div class="small-1 medium-1 large-1 columns" style="padding-left: 0;"> <a href=""> <input data-parsley-trigger="change" type="radio" id="html" name="checkingaccount" class="rbtnHasCheckingAccountYes ooltipster tooltipstered" value="Yes" data-parsley-multiple="checkingaccount"> <label for="html">Yes</label> </a> </div><div class="small-8 medium-8 large-8 columns" style="padding-left: 0;float:left;"> <a href=""> <input type="radio" id="htmll" name="checkingaccount" class="rbtnHasCheckingAccountNo" value="No" data-parsley-multiple="checkingaccount"> <label for="htmll">No</label> </a> </div></div></div></div>
+                            @foreach (var i in ViewBag.coreg)
+                            {
+                                <div class="small-12 columns " id="panel-01" style="display: none; margin-top: 20px; padding-bottom: 0px; border-top: 0;"> <div class="row-fix"> <div class="medium-4 columns" style="margin: 0; padding: 0;"> <p> <img id="NetspendImage" alt="ns-logo" class="left netspendimage" src="~/UploadedImages/@i.Image"> </p></div><div class="small-12 medium-8 columns"> <p class="radiop" style="font-size: 14px;"> <span id="NetspendLbl"><strong>@i.OfferTitle</strong><br>@i.DiscriptionA @i.DiscriptionB.<br><strong>@i.LowerTitle</strong></span> </p><div class="row alightn "> <div class="small-5 medium-3 columns NSButtons"> <button type="button" class="labels" id="labelss setValue"> Yes, please!</button> </div><div class="small-5 end medium-3 columns NSButtons"> <button type="button" class="labels" id="labels setValues">No thanks</button> </div></div><div class="row"> </div></div></div></div>
+                            }
+                            <div class="small-12 columns" id="panel-02" style="display: none; margin-top: 20px; padding-bottom: 0px; border-top: 0;"> <div class="row-fix"> @foreach (var i in ViewBag.nocoreg)
+                                    {
+                                        <div class="medium-4 columns" style="margin: 0; padding: 0;"> <p> <img id="NetspendImage" alt="ns-logo" class="left netspendimage" src="~/UploadedImages/@i.Image" style="border-width: 0px; margin-left: 15px; border-radius: 4px; border: none; color: #fff; font-size: 0.9rem; line-height: 1.3rem; font-weight: 400; text-align: center; text-indent: 0px; padding: 7px 0px 0px 0px; margin: 0px auto 10px auto;width:10em;"> </p></div>
+
+                                        <div class="small-12 medium-8 columns"> <p class="radiop" style="font-size: 14px;"> <span id="NetspendLbl"><strong>@i.Offer_title</strong><br>@i.DiscriptionA @i.DiscriptionB.<br><strong>@i.LowerTitle</strong></span> </p><div class="row alightn"> <div class="small-5 medium-3 columns NSButtons"> <button type="button" class="labels" id="nolabelss nosetValue"> Yes, please!</button> </div><div class="small-5 medium-3 end columns NSButtons"> <button type="button" class="labels" id="nolabels nosetValues">No thanks</button> </div></div><div class="row"> </div></div>
+                                    }</div></div>
+                        }
+                    }<div class="clear"></div><label> <input type="hidden"> <div class="small-12 columns opt-in" id="OptinDiv"> <div class="small-12 medium-12 large-12 columns show-for-small-only " style="display:none;"> <div class="row-fix"> <div class="small-4 medium-4 large-4 columns" style=" margin-left: -84px !important;"> <img src="/asset/Money/img/arrow-p3.png" alt="" class="animated fadeInLeft infinite" style=""> <p style="text-align:center;"> <img style="display:none !important;" src="/asset/Money/img/arrow-p3-down.png" alt="" class="center animated fadeInDown infinite show-for-small-only"> </p></div><div class="small-8 medium-8 large-8 columns"> <div class="optin opt_in"> <div class="row" style=" display: inline-flex;"> <div class="medium-2 columns"> <div style="background-color:transparent !important;" class="optin-left iconfirm"> <p style="display:flex;justify-content:center"> <input type="checkbox" runat="server" id="TERMSa form1_leadem" name="terms" data-parsley-trigger="change" class="tooltipster tooltipstered confirminput" data-parsley-multiple="TERMS"> </p></div></div><div class="small-9 medium-9 large-9 columns"> <div class="optin-right" style="width:160%;"> <p class="optintxt optin-txt">This website is not a USA Government website. This is an informational based website that may provide advertisements for consumers that we may profit from. </p></div></div></div></div></div><div class="medium-3 columns"></div></div></div><div class="clear"></div><div class="small-12 columns"> <p class="hide-for-small-only continuep text-center" style="text-align:center !important;"> <button id="SUBMIT" type="button" @*data-toggle="modal" data-target="#exampleModalLong"*@ class="btn valid button bounce infinite animated btn button wow bounce infinite animated getbtn animated" novalidate="" data-validates-form="" style="border-bottom: 5px solid grey;color: white;font-weight: 700;border-radius: 0px !important;background: black !important;font-size: 20px !important;visibility: visible;animation-name: bounce;"> <i class="fa fa-check"></i> GET STARTED NOW </button> </p><p class="continuep text-center show-for-small-only" @*data-toggle="modal" data-target="#exampleModalLong"*@ style="text-align:center !important"> <button type="button" id="SUBMIT" class="btn valid button bounce infinite animated btn button wow bounce infinite animated getbtnd" novalidate="" data-validates-form=""> <i style="color:#B5FF3F" class="fa fa-check"></i> GET STARTED NOW </button> </p></div></div></label> </form> <script id="LeadiDscript" type="text/javascript">(function () { var s = document.createElement('script'); s.id = 'LeadiDscript_campaign'; s.type = 'text/javascript'; s.async = true; s.src = '//create.lidstatic.com/campaign/b2a168e1-6461-b1e9-a135-4a4e453337c6.js?snippet_version=2'; var LeadiDscript = document.getElementById('LeadiDscript'); LeadiDscript.parentNode.insertBefore(s, LeadiDscript); })();</script> <noscript><img src='//create.leadid.com/noscript.gif?lac=025A0669-DAB5-7F9F-84E2-227599989E8A&lck=b2a168e1-6461-b1e9-a135-4a4e453337c6&snippet_version=2' /></noscript> </div></div></div></section>
+<section class="text-gray-600 body-font mobilehide" style="background-color: white;margin-top: 5em;height: 10.8em;"> <div class="container px-5 py-10 mx-auto"> <div class="flex flex-wrap -m-4 text-center"> <div class="sm:w-1/4 w-1/2 py-2"> <img src="~/Resourcse/unclaimasseticon/11.png" /> </div><div class="sm:w-1/4 w-1/2"> <img src="~/Resourcse/unclaimasseticon/Asset 62.png" /> </div><div class="sm:w-1/4 w-1/2"> <img src="~/Resourcse/unclaimasseticon/Asset 60.png" /> </div><div class="sm:w-1/4 w-1/2 py-2"> <img src="~/Resourcse/unclaimasseticon/Asset 61.png" /> </div></div></div></section>
+<section class="desktophide logsection"> <div class="row reg-box tabshoww"> <div class="wFormContainer"> <br /><br /> <p class="plineheight pheight pmtop" style="text-align:center"><img style="width:5em" src="~/Resourcse/unclaimasseticon/11.png" /><img style="padding-left:2%;width:5em" src="~/Resourcse/unclaimasseticon/Asset 62.png" /><img style="padding-left:2%;width:5em" src="~/Resourcse/unclaimasseticon/Asset 60.png" /><img style="padding-left:2%;width:4em" src="~/Resourcse/unclaimasseticon/Asset 61.png" /></p>@* <p style="text-align:center" class="plineheight pheight"><img src="~/Resourcse/unclaimasseticon/Asset 62.png"/></p>*@ <br /><br /> </div></div><br /><br /><br /></section>
+<link href="~/popups/bootstrap-dialog.min.css" rel="stylesheet"><script src="https://code.jquery.com/jquery-3.1.1.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.3/js/bootstrap-dialog.min.js"></script>
+<script>function simpleSHow(b) { var a = $("#simple-div"); BootstrapDialog.show({ title: b, message: $("#simple-div"), onhide: function () { $("#hidden-div").append(a) } }) } function complexSHow(b) { var a = $("#complex-div"); BootstrapDialog.show({ title: b, message: $("#complex-div"), onhide: function () { $("#hidden-div").append(a) } }) } function showDiv1(a) { var b = $("#lavel-2_div-1"); BootstrapDialog.show({ title: "", message: $("#lavel-2_div-1"), onhide: function () { $("#hidden-div").append(b) } }) } function showDiv2(a) { var b = $("#lavel-2_div-2"); BootstrapDialog.show({ title: "", message: $("#lavel-2_div-2"), onhide: function () { $("#hidden-div").append(b) } }) } function showDiv3(a) { var b = $("#lavel-2_div-3"); BootstrapDialog.show({ title: "Level 2 Title", message: $("#lavel-2_div-3"), onhide: function () { $("#hidden-div").append(b) } }) } function showDiv4(a) { var b = $("#lavel-2_div-4"); BootstrapDialog.show({ title: "Level 2 Title", message: $("#lavel-2_div-4"), onhide: function () { $("#hidden-div").append(b) } }) } function showDiv5(a) { var b = $("#lavel-2_div-5"); BootstrapDialog.show({ title: "", message: $("#lavel-2_div-5"), onhide: function () { $("#hidden-div").append(b) } }) }</script>
+<div style="display:none" id="hidden-div"> <div id="lavel-2_div-5"> @foreach (var i in ViewBag.offers)
+        {
+            <p> @i.OfferName <br /><br /> @i.Description </p>
+
+            <p> @i.BulletPoint </p>
+        }</div></div>
+<section id="hero" class="hide-for-small-only" style="background-color: #e8f2fa; min-height: 34em;"> <div id="whatis"></div><div class="testimonials" style="background-color: #e8f2fa;"> <div class="row-fix maxwidth"> <div class="small-12 medium-8 medium-push-4 large-7 large-push-1 end columns maxwidthh uperleft tabhide"> <div class="desktophide"><br /></div><h2> @*<label style="font-size:22px;color:black;font-family:'Oswald';line-height:0" class="subheader"> PARENTS OR STUDENTS </label>*@ WHAT IS UNCLAIMED MONEY? </h2> <p class="hide-for-small-only" style="font-weight:400"> It sounds surprising, but every year, millions of dollars go unclaimed by their owners! This money can be a huge help for parents and students, so it’s worth it to see if you’re eligible to claim some of it! </p><p class="show-for-small-only text-center"> <a href="#main-regg" onclick="javascript:" class="rc-trigger"> <p class=" continuep text-center"> <button type="button" class="btn button bounce infinite animated btn button wow bounce infinite animated getbtn"> <i style="color:#B5FF3F" class="fa fa-check"></i> GET STARTED NOW </button> </a> </p></div><p style="text-align:center!important"> <div class="small-12 medium-6 large-6 end columns mobilehidde"> <div class="desktophide"><br /></div><h2 style="font-size: 46px;line-height:55px;"> @*<label style="font-size:22px;color:black;font-family:'Oswald';line-height:0" class="subheader"> PARENTS OR STUDENTS </label>*@ WHAT IS UNCLAIMED MONEY? </h2> <p class="hide-for-small-only" style="font-weight:400"> It sounds surprising, but every year, millions of dollars go unclaimed by their owners! This money can be a huge help for parents and students, so it’s worth it to see if you’re eligible to claim some of it! </p><p class="show-for-small-only text-center"><a href="#main-regg" onclick="javascript:" class="rc-trigger"><button type="button" class="btn button bounce infinite animated btn button wow bounce infinite animated getbtn"> <i style="color:#B5FF3F" class="fa fa-check"></i> GET STARTED NOW </button></a></p><p class="hide-for-small-only " style="margin-top:11%;"> <a href="#main-regg" onclick="javascript:" class="rc-trigger"> <button type="button" class="btn button bounce infinite animated btn button wow bounce infinite animated getbtn animated animated animated" style="font-family: Poppins; color: white; font-weight: 700; visibility: visible; animation-name: bounce; border-radius: 0px !important; background: black !important; font-size: 22px !important;"> <i class="fa fa-check"></i> GET STARTED NOW </button> </a> </p></div></p><div class="medium-6 large-6 imgright mobilehide loghide columns " style="margin-top:-5px"> <img class="imgalign bounceanimation" src="~/asset/img/Asset2.png" style=" margin-top:10%;"> </div></div></div></section>@*<div class="hide-for-small-only" style="background-color:white;height:8em"></div>*@<section class="hide-for-small-only"> <div class="st1"> <div class="container"> <p class="wing">THAT FOLLOWING ITEMS THE HAVE BEEN UNCLAIMED INCLUDE</p><div class="row"> <div class="col-md-3"> <a><img src="~/asset/img/Icon1.png" class="con"></a> <p class="refun">Tax Refunds</p></div><div class="col-md-3"> <a><img src="~/asset/img/Icon2.png" class="con"></a> <p class="refun">Bank Accounts </p></div><div class="col-md-3"> <a><img src="~/asset/img/Icon3.png" class="con"></a> <p class="refun">Insurance Policies</p></div><div class="col-md-3"> <a><img src="~/asset/img/Icon4.png" class="con"></a> <p class="refun">Dividends</p></div></div><br><div class="row"> <div class="col-md-3"> <a><img src="~/asset/img/Icon5.png" class="con"></a> <p class="refun">Utility Bills</p></div><div class="col-md-3"> <a><img src="~/asset/img/Icon6.png" class="con"></a> <p class="refun">Wages</p></div><div class="col-md-3"> <a><img src="~/asset/img/Icon7.png" class="con"></a> <p class="refun">Uncashed Checks</p></div><div class="col-md-3"> <a><img src="~/asset/img/Icon8.png" class="con"></a> <p class="refun">and More</p></div></div></div></div></section><div class="hide-for-small-only" style="background-color:white;height:8em"></div>
+<section class="bgimage show-for-small-only"> <section style="margin-top:-80px" id="unclaimed-assets"> <div class="row"> <div class="small-12 large-10 large-centered columns"> <div class="mobilehide"><br /><br /><br /></div><h1 class="unclainlineheight mobilehide" style="font-size:57px"> What is unclaimed money? </h1> <div class="brhide"><br /></div><div class="brhide"><br /></div><h3 class="brhide"> WHAT IS UNCLAIMED MONEY?</h3> <h2 class="texalign fontssize"> It sounds surprising, but every year, millions of dollars go unclaimed by their owners! This money can be a huge help for parents and students, so it’s worth it to see if you’re eligible to claim some of it! </h2> </div></div><br class="brhide" /> <br class="brhide" /> <div class="row hide-for-small-only"> <div class="small-12 large-4 large-centered columns"> <a href="#main-regg" onclick="javascript:" class="rc-trigger"> <p class=" continuep text-center hide-for-small-only" style="text-align:center;"> <button type="button" class="btn button bounce infinite animated btn button wow bounce infinite animated getbtn" style=" border-bottom: 5px grey solid; border-radius: 0 !important; background: black !important; font-size: 28px !important; font-weight: 100; color: white; font-weight: 700; "> <i class="fa fa-check"></i> GET STARTED NOW </button> </p><p class="continuep text-center show-for-small-only" style="text-align:center;"> <button type="button" class="btn button bounce infinite animated btn button wow bounce infinite animated getbtn"> <i style="color:#B5FF3F" class="fa fa-check"></i> GET STARTED NOW </button> </p></a> <div class="brhide"><br /></div><div class="brhide"><br /></div></div></div></section> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" /> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" /> <section id="main-reg "> <div class="row navmaxwidth icons"> <div class="small-12 small-centered medium-12 medium-centered columns"> <section class="text-gray-600 body-font" style="background-color:#000;opacity:.8"> <div class="container px-5 py-15 mx-auto"> <div class="text-center"> <br /> <h3 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4" style="color: #D3D3D3;text-align: center">THAT FOLLOWING ITEMS THE HAVE BEEN UNCLAIMED INCLUDE</h3> </div><div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2"> <div class="p-2 sm:w-1/2 w-full"> <div class=" rounded flex p-4 h-full items-center"> <i class="fas fa-sack-dollar"></i> <span class="title-font font-medium pfont pfonts" style="color: white;padding-left: 5%;">Tax refunds</span> </div></div><div class="p-2 sm:w-1/2 w-full"> <div class="rounded flex p-4 h-full items-center"> <i class="fa-sharp fa-solid fa-money-check"></i> <span class="title-font font-medium pfont pfonts" style="color: white;padding-left: 5%;">Uncashed checks</span> </div></div><div class="p-2 sm:w-1/2 w-full"> <div class=" rounded flex p-4 h-full items-center"> <i class="fa fa-university " aria-hidden="true"></i> <span class="title-font font-medium pfont pfonts" style="color: white;padding-left: 5%;">Bank accounts</span> </div></div><div class="p-2 sm:w-1/2 w-full"> <div class="rounded flex p-4 h-full items-center"> <i class="fas fa-money-bill-wave-alt"></i> <span class="title-font font-medium pfont pfonts" style="color: white;padding-left: 5%;">Utility bills</span> </div></div><div class="p-2 sm:w-1/2 w-full"> <div class=" rounded flex p-4 h-full items-center"> <i class="fa fa-shield" aria-hidden="true"></i> <span class="title-font font-medium pfont pfonts" style="color: white;padding-left: 5%;"> Insurance policies </span> </div></div><div class="p-2 sm:w-1/2 w-full"> <div class=" rounded flex p-4 h-full items-center"> <i class="fa fa-exchange" aria-hidden="true"></i> <span class="title-font font-medium pfont pfonts" style="color: white;padding-left: 5%;"> Wages</span> </div></div><div class="p-2 sm:w-1/2 w-full"> <div class=" rounded flex p-4 h-full items-center"> <i class="fa fa-usd" aria-hidden="true"></i> <span class="title-font font-medium pfont pfonts" style="color: white;padding-left: 5%;">Dividends</span> </div></div><div class="p-2 sm:w-1/2 w-full"> <div class=" rounded flex p-4 h-full items-center"> <i class="fas fa-plus-square"></i> <span class="title-font font-medium pfont pfonts" style="color: white;padding-left: 5%;">And More</span> </div></div></div></div></section> </div></div></section></section>
+<section id="hiw" class="sectiontop"> <div class="small-12 medium-12 large-12" style="background-color: #e8f2fa;"> <div class="small-12 large-7 large-centered columns"> <h2 class="texalign fontssize hide-for-small-only" style="font-size: 20px !important;color:black;padding:1%;">We’ve put together a variety of state and federal government resources that can help you find unclaimed money. Along the way, you’ll also be able to view special (totally optional) offers that can help you earn and save even more.</h2> </div></div><section class="hide-for-small-only"> <div class="container"> <div class="row" style="margin-top:5%;"> <div class="col-md-6"> <div class="card upr outline" style=" padding: 7%; "> <div class="card-body"> <h2 class="up" style=" font-size: 56px !important; font-weight: 500 !important; "> STEP 1 </h2> <h2 class="ers" style="font-weight: 500 !important;"> SIGN UP </h2> <h3 class="itt" style=" margin-left: 14px !important; font-weight: 400; padding-right: 100px !important; "> Start the process by submitting some basic information<br />about yourself above. </h3> </div></div></div><div class="col-md-6"> <a><img src="~/asset/img/Asset3.png" class="aset"></a> </div></div></div><div class="container"> <div class="row" style="margin-top:5%;"> <div class="col-md-6"> <a><img src="~/asset/img/Asset4.png" class="aset"></a> </div><div class="col-md-6"> <div class="card upr"> <div class="card-body"> <h2 class="up" style=" font-size: 56px !important; font-weight: 500 !important; "> STEP 2 </h2> <h2 class="ers" style=" font-weight: 500 !important; "> DISCOVER OFFERS </h2> <h3 class="itt" style=" margin-left: 14px !important; font-weight: 400; padding-right: 100px !important; "> From there, we’ll show you a few offers from our partners you might be interested in to earn and save money along the way! </h3> </div></div></div></div></div><div class="container"> <div class="row" style="margin-top:5%;"> <div class="col-md-6"> <div class="card upr"> <div class="card-body"> <h2 class="up" style="font-size: 56px !important;font-weight: 500 !important;">STEP 3</h2> <h2 class="ers" style=" font-weight: 500 !important; "> EXPLORE </h2> <h3 class="itt" style=" margin-left: 14px !important; font-weight: 400; padding-right: 100px !important; "> We give you the tools you need to learn more about how you can receive unclaimed money you may be eligible for - 100% free and legal! </h3> </div></div></div><div class="col-md-6"> <a><img src="~/asset/img/Asset5.png" class="aset"></a> </div></div></div></section> <section id="hiw" class="sectiontop circull"> <div style="display:none" id="how_it_works"></div><div class="row"> <div class="small-12 large-10 large-centered columns"> <div class="brhide"><br /></div><div class="brhide"><br /></div><div class="mobilehide"><br /></div><div class="mobilehide"><br /></div><h1 class="howworks"> HOW IT WORKS ? </h1> <div style="display:none" id="how_it_works"></div><h2 class="texalign fontssize show-for-small-only" style="color:black;padding:0">We’ve put together a variety of state and federal government resources that can help you find unclaimed money. Along the way, you’ll also be able to view special (totally optional) offers that can help you earn and save even more.</h2> </div></div><div class="small-12 medium-12 large-12" style="background-color: #e8f2fa;"> <div class="small-12 large-7 large-centered columns"> <h2 class="texalign fontssize hide-for-small-only" style="font-size: 20px !important;color:black;padding:1%;"> There are a lot of expenses to think about when it comes to our growing<br /> needs for our families in our lives.<br /> Unclaimed funds can be a huge help for paying expenses like: </h2> </div></div><div class="container" style="margin-top: -2%; padding: 0;"> <section class="hide-for-small-only" style=" background-color: #e8f2fa; padding: 5%; height: 24em;"> <div class="container" style="margin-top: -3%; padding: 0;"> <p style="text-align:center;"> <img src="~/asset/img/uppercircle.png" /> </p><div class="row"> <div class="col-md-5"> <p style=" font-size: 23px; font-weight: 500; color: black; text-align: center; ">College Expenses &amp; Fees</p></div><div class="col-md-3" style=" padding: 0; "> <p style=" font-size: 23px; font-weight: 500; color: black; text-align: left; ">Student Loans</p></div><div class="col-md-3"> <p style=" font-size: 23px; font-weight: 500; color: black; text-align: center; ">School Supplies</p></div></div></div></section> <section class="hide-for-small-only" style=" background-color: #0064db;margin-top:6%; padding: 5%; height: 27em;"> <div class="container" style="margin-top: -3%; padding: 0;"> <p style="text-align:center;"> <img src="~/asset/img/boottomcircle.png" style="width:90%;" /> </p><div class="row"> <div class="col-md-5"> <p style=" font-size: 23px; font-weight: 500; color: black; text-align: center; ">Auto/Personal Loans</p></div><div class="col-md-2" style=" padding: 0; "> <p style=" font-size: 23px; font-weight: 500; color: black; text-align: center; ">Housing</p></div><div class="col-md-5"> <p style="font-size: 23px;font-weight: 500;color: black;text-align: center;padding-left: 20%;">And More</p></div></div></div></section> </div></section> <section class="text-gray-600 body-font show-for-small-only"> <div class="container px-5 mx-auto pdtop" style="padding-left:8%"> <div class="flex flex-wrap -m-4"> <div class="stepwidth p-4 lg:w-1/3"> <div class="new h-25 bg-gray-100 bg-opacity-75 px-5 pt-5 rounded-lg overflow-hidden text-center relative stepmin"> <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3" style="color:white"> STEP 1</h1> <h2 style="color:white;margin-bottom: 1.3em;"> SIGN UP </h2> <p class="leading-relaxed mb-3" style="color:white">Start the process by submitting some basic information about yourself above.</p></div></div><div class="p-4 lg:w-1/3"> <div class="stepmin new h-25 bg-gray-100 bg-opacity-75 px-5 pt-5 rounded-lg overflow-hidden text-center relative"> <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3" style="color:white">STEP 2</h1> <h2 style="color:white;margin-bottom: 1.3em;"> DISCOVER OFFERS </h2> <p class="leading-relaxed mb-3" style="color:white">From there, we’ll show you a few offers from our partners you might be interested in to earn and save money along the way!</p></div></div><div class="p-4 lg:w-1/3"> <div class="stepmin new h-25 bg-gray-100 bg-opacity-75 px-5 pt-5 rounded-lg overflow-hidden text-center relative"> <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3" style="color:white">STEP 3</h1> <h2 style="color:white;margin-bottom: 1.3em;"> EXPLORE </h2> <p class="leading-relaxed mb-3" style="color:white">We give you the tools you need to learn more about how you can receive unclaimed money you may be eligible for - 100% free and legal!</p></div></div></div></div></section></section>
+<section id="unclaimed-assets" class="show-for-small-only"> <div class="row"> <div class="small-12 large-10 large-centered columns"> <h1 class="unclainlineheight mobilehide" style="font-size:57px"> HOW TO USE THE MONEY? </h1> <h3 class="brhide"> HOW TO USE THE MONEY?</h3> <h2 class="texalign fontssize" style="color:black;padding:0"> There are a lot of expenses to think about when it comes to our growing needs for our families in our lives. Unclaimed funds can be a huge help for paying expenses like: </h2> </div></div><br /> <br /> <section class="sectionleft" style="max-width:1125px;margin:0 auto"> <section class="text-gray-600 body-font"> <div class="container px-5 py-24 mx-auto" style="padding-top:0em !important;"> <div class="flex flex-wrap -m-2"> <div class="p-2 lg:w-1/3 md:w-1/2 w-full mb-5"> <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg buttonn"> <div class="flex-grow"> <h2 style=" font-size:25px;" class="text-gray-900 title-font font-medium">College Expenses & Fees</h2> </div></div></div><div class="p-2 lg:w-1/3 md:w-1/2 w-full mb-5"> <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg buttonn"> <div class="flex-grow"> <h2 style=" font-size:25px;" class="text-gray-900 title-font font-medium">Student Loans</h2> </div></div></div><div class="p-2 lg:w-1/3 md:w-1/2 w-full mb-5"> <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg buttonn"> <div class="flex-grow"> <h2 style=" font-size:25px;" class="text-gray-900 title-font font-medium">School Supplies</h2> </div></div></div><div class="p-2 lg:w-1/3 md:w-1/2 w-full mb-5"> <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg buttonn"> <div class="flex-grow"> <h2 style=" font-size:25px;" class="text-gray-900 title-font font-medium">Auto/Personal Loans</h2> </div></div></div><div class="p-2 lg:w-1/3 md:w-1/2 w-full mb-5"> <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg buttonn"> <div class="flex-grow"> <h2 style=" font-size:25px;" class="text-gray-900 title-font font-medium">Housing</h2> </div></div></div><div class="p-2 lg:w-1/3 md:w-1/2 w-full mb-5"> <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg buttonn" style="background-color: #808080;"> <div class="flex-grow"> <h2 style="color:white;font-size:25px;" class="text-gray-900 title-font font-medium">And More</h2> </div></div></div></div></div></section> </section></section>
+<section id="about"> <div class="row"> <div class="small-12 large-8 large-centered columns"> <p class="text-center mb-10"><img class="imgfooter" src="~/asset/StudentFinTech_Logo-mid-size.jpg" alt=""></p><h2 class="fintec texalign" style="padding:0"> Cosmopolitan Consumer Group, LLC is a service that helps you find unclaimed money and assets that may be available in your name.</h2> </div></div></section>
+<div class="row" style="margin-top:-30em"> <div class="small-12 large-8 large-centered columns"> <img class="footimgtop show-for-small-only" src="~/Resourcse/10.png" /> <p class="hide-for-small-only" style="text-align: center; padding: 27% 6% 10% 5%;"> <img class="footimgtop " style="width:30%" src="~/asset/img/Asset6.png" /></p></div></div>
+
+<section id="footer" style="background-color: #333;">
+    <div class="row footermaxwidth">
+        <div class="small-12 medium-12 large-7 columns">
+            <p style="color: gray;" class="text-left copyrighttext">© Copyright 2022 The Cosmopolitan Consumer Group, LLC</p>
+            <p class="text-left desktophide">
+                <a href="javascript:" onclick="window.open('/Money/Unsubcribe','privacy','scrollbars=yes,width=555,height=500')">Click here</a> to unsubscribe from our mailing list |
+                <a href="javascript:;" onclick="openfunc()" @*id="myBtn" onclick="showDiv1()" *@>Privacy Policy</a>| <a onclick="openfuncc()">Terms &amp;Conditions</a>
+            </p>
+        </div>
+      @*  <div class="small-12 medium-2 columns">&nbsp;</div>*@
+        <div class="small-12 medium-12 large-5 columns">
+            <p class="text-right mobilehide">
+                <a href="javascript:" onclick="window.open('/Money/Unsubcribe','privacy','scrollbars=yes,width=555,height=500')">Click here</a> to unsubscribe from our mailing list |
+                <a href="javascript:;" onclick="openfunc()" @*id="myBtn" onclick="showDiv1()" *@>Privacy Policy</a>|<a onclick="openfuncc()">Terms &amp;Conditions</a>
+            </p>
+        </div>
+        <div class="small-12 columns">
+            <p style="color: gray;" class="text-left">*Void where prohibited. Service is not available in all 50 states.</p>
+            <p style="color: gray;" class="text-left">
+                Cosmopolitan Consumer Group, LLC is not affiliated with the United States Government and is a privately operated web site. Cosmopolitan Consumer Group, LLC acts as an informational portal for funding assistance. Information
+                regarding the products and services on this website may be provided by a third party advertising such product and service on the site and therefore the correctness of such representations is unknown to the site owner who
+                does not undertake due diligence to confirm such third-party representations regarding third party advertising claims. When you are redirected to the third-party advertiser's site, and you should review their terms and
+                conditions and privacy policy as they differ significantly from our own. The owner of this website is not affiliated with the third-party advertiser other than stated above. The owner does not recommend or endorse any
+                product or service on this website. Cosmopolitan Consumer Group, LLC may receive a fee or commission when you participate in third party offers.
+            </p>
+            <p style="color: gray;"></p>
+            <p style="color: gray;" class="text-left">
+                After you register on unclaimedgovernment.com, you will see a series of advertising offers. These offers are optional. You are not required to participate in the offers to obtain unclaimed asset information. If you decide to
+                purchase products or services from our advertisers, you may incur associated charges. Any total dollar amount in unclaimed funds or goods that we show is reported by the appropriate government agencies. This does not
+                guarantee that this money is under your name or common variations of your name and is able to have a claim form submitted to be paid that amount.
+            </p>
+            <p></p>
+            <p style="color: gray;" class="text-left">
+                California Residents: Pursuant to Section 1798.120 of the California Consumer Privacy Act (CCPA), a consumer shall have the right, at any time, to direct a business that sells personal information about the consumer to third
+                parties not to sell the consumer’s personal information. If you would like to exercise this right, please click the following link:
+                <a href="javascript:" @*onclick="showDiv3()" *@ onclick="window.open('/Money/CCPA','privacy','scrollbars=yes,width=555,height=500')"> Do Not Sell My Personal Information.</a>
+            </p>
+            
+        </div>
+    </div>
+    <br />
+</section>
+<p style="text-align:right;color:#ccc;font-size:9px;    background-color: #e8f2fa !important;">V:a162c02</p>
+
+
+
+
+
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true"> <div class="modal-dialog" role="document"> <div class="modal-content"> <div class="modal-header"> <div class="row-fix"> <div class="small-8 medium-8 large-8 column"> <h5 class="modal-title gretatxt" id="exampleModalLongTitle">Great! we're almost done </h5> </div><div class="small-4 medium-4 large-4 column"> <button type="button" class="close" onclick="modalhide();" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div></div></div><div class="modal-body ppppp"> <label> <div class="row-fix"> <div class="small-12 large-11 medium-12 columns " style=" padding: 0% 5% 0% 5%; margin-top: 20px"> <div id="content"> <input type="checkbox" class="form-control chek_ip chec" required="" name="sms" id="leadid_tcpa_disclosure" data-gtm-form-interact-field-id="0"> <p class="textcheck mbb">Check this box to receive text messages. For SMS message campaigns: Text STOP to NUMBER cancel and HELP for help. Msg &amp; data rates may apply. Message frequency varies.</p></div><div id="content"> <input type="checkbox" class="form-control chek_ip check" required="" name="confirm_box" id="leadid_tcpa_disclosure confirm_box"> @foreach (var item in ViewBag.tcpadisc)
+                                {
+                                    <p class="textcheck mb2">@item.First <a onclick="showDiv5()" style="color: cornflowerblue;" data-databuyers="Admediary LLC|Lexington Law|The Credit Pros|VP Media Management"> Marketing Partners</a>, @item.Second @item.Third @item.Fourth</p>
+                                }</div></div></div></label> <div class="small-12 columns opt-in" id="OptinDiv"> <p class="disclosertext " style="display:none;"> By checking the box below I agree that I am a US Resident over the age 18, agree to the <a style="color:black" onclick="openfunc()">Privacy Policy</a> , <a style="color:black" onclick="openfuncc()"> Terms &amp;Conditions </a> and to receive daily messages from TD Edge Media, LLC, DS Prospecting, LLC, Providing4Seniors, LLC. By clicking “Continue” I expressly waive all federal and state no-call restrictions with respect to such contact. I also consent by electronic signature to receive phone calls and/or text messages from Marketing Partners (<a onclick="showDiv5()" style="color:black" data-databuyers="Admediary LLC|Lexington Law|The Credit Pros|VP Media Management"> click here to view </a>), I may opt out of receiving calls at any time by following the instructions provided by the caller or asking the caller to place my number on their do-not-call list. <a class="noselect" style="text-decoration:underline;color:black" href="#expe1">click here</a> to avoid receiving calls or SMS text messages. </p><script>function openfunc() { windowWidth = 1130; windowHeight = 560; top = 380; var left = (screen.width - windowWidth) / 2; var top = (screen.height - top) / 4; var myWindow = window.open("/Money/privacy_policy", '_blank', 'width=' + windowWidth + ', height=' + windowHeight + ', top=' + top + ', left=' + left); } function openfuncc() { windowWidth = 1130; windowHeight = 560; top = 380; var left = (screen.width - windowWidth) / 2; var top = (screen.height - top) / 4; var myWindow = window.open("/Money/terms", '_blank', 'width=' + windowWidth + ', height=' + windowHeight + ', top=' + top + ', left=' + left); }</script> <div class="resume" style="display:none;" id="expe1"> <div class="small-12 columns opt-in" style="padding:0;"> <p> You DO have the right to have your DNC (Do Not Call) registration honored and opting in to receive outbound calls and/or SMS texts is not a requirement to complete this application. If you would not like to receive live telephone calls from our marketing partners, please check the box below: </p></div></div><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> <script>jQuery(document).ready(function (a) { a('a[href^="#"]').on("click", function (b) { var c = a(a(this).attr("href")); c.fadeToggle(100) }) });</script> <div class="clear"></div><div class="small-12 columns hide-for-small-only"> <div class="row optinbox optingrp" style="display:none;"> <div class="large-1 medium-1 column" style="width: 28px;padding: 0;margin-top: 10px;"> <img src="/asset/Money/img/arrow-p3.png" alt="" class="right animated fadeInLeft infinite hide-for-small-only" style="margin-top: 26px;margin-left: -40px;"> <p style="text-align:center;"> <img src="/asset/Money/img/arrow-p3-down.png" alt="" class="center animated fadeInDown infinite show-for-small-only"> </p></div><div class="medium-9 column iconfirmmleft iconfirmmlefts"> <div class="optin opt_in"> <div class="row" style=" display: inline-flex;"> <div class="medium-2 columns"> <div style="background-color:transparent !important;" class="optin-left iconfirm"> <p style="margin-left: -150px; margin-top: 15px; display: flex; justify-content: center" class="parsley-error"> <input type="checkbox" runat="server" id="TERMSa" name="terms" data-parsley-trigger="change" class="tooltipster tooltipstered confirminput" data-parsley-multiple="TERMSa" style=" " data-parsley-id="45"> </p></div></div><div class="small-12 medium-12 large-12 columns " style="display:none;"> <div class="optin-right"> <p style="width: 150%;margin-left: -9rem;font-family: 'Poppins';text-align: justify !important;font-size: 18px !important;font-weight: 100;line-height: 26px;" class="optintxt">This website is not a USA Government website. This is an informational based website that may provide advertisements for consumers that we may profit from. </p></div></div></div></div></div><div class="medium-3 columns"></div></div></div><div class="small-12 medium-12 large-12 columns show-for-small-only " style="display:none;"> <div class="row-fix"> <div class="small-4 medium-4 large-4 columns" style=" margin-left: -84px !important;"> <img src="/asset/Money/img/arrow-p3.png" alt="" class="animated fadeInLeft infinite" style=""> <p style="text-align:center;"> <img style="display:none !important;" src="/asset/Money/img/arrow-p3-down.png" alt="" class="center animated fadeInDown infinite show-for-small-only"> </p></div><div class="small-8 medium-8 large-8 columns"> <div class="optin opt_in"> <div class="row" style=" display: inline-flex;"> <div class="medium-2 columns"> <div style="background-color:transparent !important;" class="optin-left iconfirm"> <p style="display:flex;justify-content:center"> <input type="checkbox" runat="server" id="TERMSa form1_leadem" name="terms" data-parsley-trigger="change" class="tooltipster tooltipstered confirminput" data-parsley-multiple="TERMS"> </p></div></div><div class="small-9 medium-9 large-9 columns"> <div class="optin-right" style="width:160%;"> <p class="optintxt optin-txt">This website is not a USA Government website. This is an informational based website that may provide advertisements for consumers that we may profit from. </p></div></div></div></div></div><div class="medium-3 columns"></div></div></div><div class="clear"></div><div class="small-12 columns"> <p class="hide-for-small-only continuep text-center" style=" padding: 0% 0% 0% 2%; text-align: center !important;"> <button id="SUBMIT" type="button" data-toggle="modal" data-target=".exampleModalLong" class="btn checkvalid button bounce infinite animated btn button wow bounce infinite animated getbtn animated animated" novalidate="" data-validates-form="" style="border-bottom: 5px solid grey; color: white; font-weight: 700; visibility: visible; animation-name: bounce; border-radius: 0px !important; background: black !important; font-size: 20px !important;"> <i class="fa fa-check"></i> GET STARTED NOW </button> </p><p class="continuep text-center show-for-small-only" style=" padding: 0% 0% 0% 2%; text-align: center !important"> <button type="button" id="SUBMIT" class="btn checkvalid button bounce infinite animated btn button wow bounce infinite animated getbtnd" novalidate="" data-validates-form="" style="visibility: hidden; animation-name: none;"> <i style="color:#B5FF3F" class="fa fa-check"></i> GET STARTED NOW </button> </p></div></div></div></div></div></div>
+<style>
+    #phone {
+        border: .5rem solid #ccc;
+        color: #444;
+        padding: 2rem 1rem;
+        font-family: arial;
+        font-size: 2rem;
+    }
+
+    .parsley-errors-list {
+        margin-top: -10px;
+        margin-bottom: 10px
+    }
+
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    @@media only screen and (max-width: 600px) {
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 0px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 18px;
+        }
+    }</style>
+<a id="myBtn" href="#navbar" onclick="javascript:">
+    <img style="width:30%!important;float:right;"
+         src="~/Resourcse/Asset 53 (2).png" />
+</a>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+
+
+@foreach (var it in ViewBag.pop)
+{
+    if (it.Switch == "on" || it.Switch == "On")
+    {
+        @foreach (var item in ViewBag.popup)
+        {
+            <script>
+
+                $(document).ready(function () 
+                {
+                    $('.checkvalid').on('click', function (event)
+                    {
+                      
+                            
+                        var fisvalid = "false";
+                        var phoneaisvalid = "false";
+                        //var phonebisvalid = "false";
+                        //var phonecisvalid = "false";
+                        var mailisvalid = "false";
+                        var checkaisvalid = "false";
+                        var checkbisvalid = "false";
+                        if ($(".fname").val().length > "1") {
+
+                            $(".fname").focus();
+                            $(".fname").css("color", "green");
+                            $(".fname").css("border", "1px solid #cccccc");
+                            fisvalid = "true";
+                        }
+                        if ($(".fname").val().length < "1") {
+
+
+                            $(".fname").css("border", "3px solid red");
+                            fisvalid = "false";
+
+                        }
+
+                    {
+                        if ($(".phonea").val().length > "11") {
+
+                            $(".phoneb").focus();
+                            $(".phonea").css("color", "green");
+                            $(".phonea").css("border", "1px solid #cccccc");
+                          phoneaisvalid = "true";
+
+                     }
+                   
+                    {
+                        if ($(".check").is(":not(:checked)")) {
+                            $(".mb2").css("color", "red");
+                            checkaisvalid = "false";
+                        }
+                        else {
+                            $(".mb2").css("color", "black");
+                        }
+                        if ($(".chec").is(":not(:checked)")) {
+                            $(".mbb ").css("color", "red");
+                            checkaisvalid = "false";
+                        }
+                        else {
+                            $(".mbb").css("color", "black");
+                            checkaisvalid = "true";
+                        }
+
+                    }
+
+
+
+
+                            {
+                                email = $(".emails");
+                                var EMAIL_USERNAME_LIMIT = 64;
+                                var EMAIL_DOMAIN_LIMIT = 1;
+
+
+                                var arrEmail = email.val().split("@@");
+                                /// alert(arrEmail[0].length );
+                                if (arrEmail[0].length > EMAIL_USERNAME_LIMIT) {
+
+                                    $(".emails").css("color", "red");
+                                    mailisvalid = "false";
+                                }
+
+                                else if (arrEmail[1].length < EMAIL_DOMAIN_LIMIT) {
+                                    $(".emails").css("color", "red");
+                                    mailisvalid = "false";
+                                }
+                                else if (email.val().length > 254) {
+                                    $(".emails").css("color", "red");
+                                    mailisvalid = "false";
+                                }
+                                else {
+                                    $(".emails").css("color", "green");
+                                    mailisvalid = "true";
+                                }
+
+                            }
+
+
+                        if (mailisvalid == "true" && checkaisvalid == "true" && fisvalid == "true" && phoneaisvalid == "true") {
+
+                        var element = document.getElementById("PPageForm");
+                        element.classList.add("was-validated");
+                        window.open("@item.RedirectLink/?tid=@ViewBag.tid&subid1=1234", "privacy", "scrollbars=yes,width=2000,height=1000");
+                        $("#PPageForm").submit();
+
+                    }
+                    else {
+
+                        var element = document.getElementById("PPageForm");
+                        element.classList.remove("was-validated");
+                    }
+
+                }
+                        
+                    });
+                });
+            </script>
+        }
+    }
+    if (it.Switch == "off" || it.Switch == "Off")
+    {
+        <script>
+            $(document).ready(function () {
+                $('.checkvalid').on('click', function (event) {
+                    {
+                       
+                  
+                    var fisvalid = "false";
+                    var phoneaisvalid = "false";
+                    var mailisvalid = "false";
+                    var checkaisvalid = "false";
+
+                    if ($(".fname").val().length > "1") {
+
+                        $(".fname").focus();
+                        $(".fname").css("color", "green");
+                        $(".fname").css("border", "1px solid #cccccc");
+                        fisvalid = "true";
+                    }
+                    if ($(".fname").val().length < "1") {
+
+
+                        $(".fname").css("border", "3px solid red");
+                        fisvalid = "false";
+
+                    }
+
+                    {
+                        if ($(".phonea").val().length > "11") {
+
+                            $(".phoneb").focus();
+                            $(".phonea").css("color", "green");
+                            $(".phonea").css("border", "1px solid #cccccc");
+                            phoneaisvalid = "true";
+
+                        }
+                        if ($(".phonea").val().length < "11") {
+
+
+                            $(".phonea").css("border", "3px solid red");
+                            phoneaisvalid = "false";
+
+                        }
+                    }
+
+               
+                    {
+                        if ($(".check").is(":not(:checked)")) {
+                            $(".mb2").css("color", "red");
+                            checkaisvalid = "false";
+                        }
+                        else {
+                            $(".mb2").css("color", "black");
+                            checkaisvalid = "true";
+                        }
+                        if ($(".chec").is(":not(:checked)")) {
+                            $(".mbb ").css("color", "red");
+                            checkaisvalid = "false";
+                        }
+                        else {
+                            $(".mbb").css("color", "black");
+                            checkaisvalid = "true";
+                        }
+
+                    }
+
+
+
+                        {
+                            email = $(".emails");
+                            var EMAIL_USERNAME_LIMIT = 64;
+                            var EMAIL_DOMAIN_LIMIT = 1;
+
+
+                            var arrEmail = email.val().split("@@");
+
+                            if (arrEmail[0].length > EMAIL_USERNAME_LIMIT) {
+
+                                $(".emails").css("color", "red");
+                                mailisvalid = "false";
+                            }
+
+                            else if (arrEmail[1].length < EMAIL_DOMAIN_LIMIT) {
+                                $(".emails").css("color", "red");
+                                mailisvalid = "false";
+                            }
+                            else if (email.val().length > 254) {
+                                $(".emails").css("color", "red");
+                                mailisvalid = "false";
+                            }
+                            else {
+                                $(".emails").css("color", "green");
+                                mailisvalid = "true";
+                            }
+
+                        }
+
+
+                        if (mailisvalid == "true" && checkaisvalid == "true" && fisvalid == "true" && phoneaisvalid == "true") {
+
+                        var element = document.getElementById("PPageForm");
+                        element.classList.add("was-validated");
+
+                        $("#PPageForm").submit();
+
+                    }
+                    else {
+
+                        var element = document.getElementById("PPageForm");
+                        element.classList.remove("was-validated");
+                    }
+
+                    }
+                });
+            });
+        </script>
+    }
+}
+<script>
+    $(document).ready(function () {
+       
+            $(".valid").click(function () {
+        {
+            
+     
+        var fisvalid = "false";
+        var phoneaisvalid = "false";
+        //var phonebisvalid = "false";
+        //var phonecisvalid = "false";
+        if ($(".fname").val().length > 1) {
+
+            $(".fname").focus();
+            $(".fname").css("color", "green");
+            $(".fname").css("border", "1px solid #cccccc");
+            fisvalid = "true";
+        }
+        if ($(".fname").val().length < 1) {
+
+
+            $(".fname").css("border", "3px solid red");
+            fisvalid = "false";
+
+        }
+
+                    {
+                        if ($(".phonea").val().length > "11") {
+
+                            $(".phoneb").focus();
+                            $(".phonea").css("color", "green");
+                            $(".phonea").css("border", "1px solid #cccccc");
+                            phoneaisvalid = "true";
+
+                        }
+                        var mailisvalid = "false";
+
+
+                        {
+                            email = $(".emails");
+                        var EMAIL_USERNAME_LIMIT = 64;
+                        var EMAIL_DOMAIN_LIMIT = 1;
+
+
+                        var arrEmail = email.val().split("@@");
+                        /// alert(arrEmail[0].length );
+                        if (arrEmail[0].length > EMAIL_USERNAME_LIMIT)
+                        {
+
+                            $(".emails").css("color", "red");
+                            mailisvalid = "false";
+                        }
+
+                        else if (arrEmail[1].length < EMAIL_DOMAIN_LIMIT) {
+                            $(".emails").css("color", "red");
+                                 mailisvalid = "false";
+                        }
+                             else if (email.val().length>  254) {
+        $(".emails").css("color", "red");
+        mailisvalid = "false";
+    }
+                        else 
+                        {
+                            $(".emails").css("color", "green");
+                            mailisvalid = "true";
+                        }
+                          
+                        }
+                        
+                        var element = document.getElementById("PPageForm");
+                        if (mailisvalid == "true" && fisvalid == "true" && phoneaisvalid == "true") {
+
+                            $("#exampleModalLong").addClass("fade in");
+                            $("#exampleModalLong").css("display", "block");
+
+                            $.ajax({
+                                type: "POST",
+                                url: "/Money/SaveDataInSession",
+                                data: { email: $(".emails").val(), fname: $(".fname").val(), phone: $(".phonea").val() },
+                                success: function (response) {
+                                },
+                                error: function (response) {
+                                }
+                            });
+
+                            element.classList.add("was-validated");
+
+
+                        }
+                        else {
+                            element.classList.remove("was-validated");
+                        }
+
+                    }
+                    }
+    
+             });
+    });
+    function modalhide() {
+
+        $("#exampleModalLong").addClass("fade");
+        $("#exampleModalLong").css("display", "none");
+    }
+</script>
+
+<script>
+    $(document).ready(function () {
+        $(".emails").keyup(function () {
+            
+            email = $(".emails");
+            
+            if (email.val()!="")
+            {
+                            var EMAIL_USERNAME_LIMIT = 64;
+                            var EMAIL_DOMAIN_LIMIT = 1;
+                            
+                           
+                            var arrEmail = email.val().split("@@");
+                          /// alert(arrEmail[0].length );
+                if (arrEmail[0].length > EMAIL_USERNAME_LIMIT) {
+
+                    $(".emails").css("color", "red");
+                    mailisvalid = "false";
+                }
+
+                else if (arrEmail[1].length < EMAIL_DOMAIN_LIMIT) {
+                    $(".emails").css("color", "red");
+                    mailisvalid = "false";
+                }
+                else if (email.val().length > 254) {
+                    $(".emails").css("color", "red");
+                    mailisvalid = "false";
+                }
+                else {
+                    $(".emails").css("color", "green");
+                    mailisvalid = "true";
+                }
+            
+            }
+            else
+            {
+                $(".emails").css("color", "red");
+            }
+
+
+        });
+        });
+    
+</script>
+
+<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
+<script>$(function () { $("#phone").mask("+1(999) 999-9999"); }); $(document).ready(function () { $('.phone2').inputmask('(99)-9999-9999'); $('.phone3').inputmask('99-9999999999'); });</script>
+<script>$(".mb2").click(function () { $("input[type='checkbox']").each(function () { $(this).prop("checked", !$(this).prop("checked")); }); });</script>
+<script>function getPasteEvent() { var el = document.createElement('input'), name = 'onpaste'; el.setAttribute(name, ''); return (typeof el[name] === 'function') ? 'paste' : 'input'; } var pasteEventName = getPasteEvent() + ".mask", ua = navigator.userAgent, iPhone = /iphone/i.test(ua), android = /android/i.test(ua), caretTimeoutId; $.mask = { definitions: { '9': "[0-9]", 'a': "[A-Za-z]", '*': "[A-Za-z0-9]" }, dataName: "rawMaskFn", placeholder: '_', }; $.fn.extend({ caret: function (begin, end) { var range; if (this.length === 0 || this.is(":hidden")) { return; } if (typeof begin == 'number') { end = (typeof end === 'number') ? end : begin; return this.each(function () { if (this.setSelectionRange) { this.setSelectionRange(begin, end); } else if (this.createTextRange) { range = this.createTextRange(); range.collapse(true); range.moveEnd('character', end); range.moveStart('character', begin); range.select(); } }); } else { if (this[0].setSelectionRange) { begin = this[0].selectionStart; end = this[0].selectionEnd; } else if (document.selection && document.selection.createRange) { range = document.selection.createRange(); begin = 0 - range.duplicate().moveStart('character', -100000); end = begin + range.text.length; } return { begin: begin, end: end }; } }, unmask: function () { return this.trigger("unmask"); }, mask: function (mask, settings) { var input, defs, tests, partialPosition, firstNonMaskPos, len; if (!mask && this.length > 0) { input = $(this[0]); return input.data($.mask.dataName)(); } settings = $.extend({ placeholder: $.mask.placeholder,  completed: null}, settings); defs=$.mask.definitions; tests=[]; partialPosition=len=mask.length; firstNonMaskPos=null; $.each(mask.split(""), function (i, c){if (c=='?'){len--; partialPosition=i;}else if (defs[c]){tests.push(new RegExp(defs[c])); if (firstNonMaskPos===null){firstNonMaskPos=tests.length - 1;}}else{tests.push(null);}}); return this.trigger("unmask").each(function (){var input=$(this), buffer=$.map( mask.split(""), function (c, i){if (c !='?'){return defs[c] ? settings.placeholder : c;}}), focusText=input.val(); function seekNext(pos){while (++pos < len && !tests[pos]); return pos;}function seekPrev(pos){while (--pos >=0 && !tests[pos]); return pos;}function shiftL(begin, end){var i, j; if (begin < 0){return;}for (i=begin, j=seekNext(end); i < len; i++){if (tests[i]){if (j < len && tests[i].test(buffer[j])){buffer[i]=buffer[j]; buffer[j]=settings.placeholder;}else{break;}j=seekNext(j);}}writeBuffer(); input.caret(Math.max(firstNonMaskPos, begin));}function shiftR(pos){var i, c, j, t; for (i=pos, c=settings.placeholder; i < len; i++){if (tests[i]){j=seekNext(i); t=buffer[i]; buffer[i]=c; if (j < len && tests[j].test(t)){c=t;}else{break;}}}}function keydownEvent(e){var k=e.which, pos, begin, end; if (k===8 || k===46 || (iPhone && k===127)){pos=input.caret(); begin=pos.begin; end=pos.end; if (end - begin===0){begin=k !==46 ? seekPrev(begin) : (end=seekNext(begin - 1)); end=k===46 ? seekNext(end) : end;}clearBuffer(begin, end); shiftL(begin, end - 1); e.preventDefault();}else if (k==27){input.val(focusText); input.caret(0, checkVal()); e.preventDefault();}}function keypressEvent(e){var k=e.which, pos=input.caret(), p, c, next; if (e.ctrlKey || e.altKey || e.metaKey || k < 32){ return;}else if (k){if (pos.end - pos.begin !==0){clearBuffer(pos.begin, pos.end); shiftL(pos.begin, pos.end - 1);}p=seekNext(pos.begin - 1); if (p < len){c=String.fromCharCode(k); if (tests[p].test(c)){shiftR(p); buffer[p]=c; writeBuffer(); next=seekNext(p); if (android){setTimeout($.proxy($.fn.caret, input, next), 0);}else{input.caret(next);}if (settings.completed && next >=len){settings.completed.call(input);}}}e.preventDefault();}}function clearBuffer(start, end){var i; for (i=start; i < end && i < len; i++){if (tests[i]){buffer[i]=settings.placeholder;}}}function writeBuffer(){input.val(buffer.join(''));}function checkVal(allow){var test=input.val(), lastMatch=-1, i, c; for (i=0, pos=0; i < len; i++){if (tests[i]){buffer[i]=settings.placeholder; while (pos++ < test.length){c=test.charAt(pos - 1); if (tests[i].test(c)){buffer[i]=c; lastMatch=i; break;}}if (pos > test.length){break;}}else if (buffer[i]===test.charAt(pos) && i !==partialPosition){pos++; lastMatch=i;}}if (allow){writeBuffer();}else if (lastMatch + 1 < partialPosition){input.val(""); clearBuffer(0, len);}else{writeBuffer(); input.val(input.val().substring(0, lastMatch + 1));}return (partialPosition ? i : firstNonMaskPos);}input.data($.mask.dataName, function (){return $.map(buffer, function (c, i){return tests[i] && c !=settings.placeholder ? c : null;}).join('');}); if (!input.attr("readonly")) input .one("unmask", function (){input .unbind(".mask") .removeData($.mask.dataName);}) .bind("focus.mask", function (){clearTimeout(caretTimeoutId); var pos, moveCaret; focusText=input.val(); pos=checkVal(); caretTimeoutId=setTimeout(function (){writeBuffer(); if (pos==mask.length){input.caret(0, pos);}else{input.caret(pos);}}, 10);}) .bind("blur.mask", function (){checkVal(); if (input.val() !=focusText) input.change();}) .bind("keydown.mask", keydownEvent) .bind("keypress.mask", keypressEvent) .bind(pasteEventName, function (){setTimeout(function (){var pos=checkVal(true); input.caret(pos); if (settings.completed && pos==input.val().length) settings.completed.call(input);}, 0);}); checkVal();});}}); $("#phone").mask("(999)999-9999");</script>
+

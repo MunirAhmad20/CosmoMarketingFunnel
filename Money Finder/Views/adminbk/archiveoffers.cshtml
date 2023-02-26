@@ -1,0 +1,439 @@
+﻿
+@{
+    ViewData["Title"] = "All_Offers";
+    Layout = "~/Views/Layouts/_adminLayout.cshtml";
+}
+<style>
+    /*  .row {
+        display: flex !important;
+        -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap;
+        margin-right: -38px !important;
+        margin-left: -38px !important;
+    }*/
+    @@media only screen and (max-width: 600px) {
+        input {
+            width: 9em;
+        }
+    }
+</style>
+<div class="page-wrapper">
+
+
+    <div class="container-fluid">
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-12">
+
+
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="col-2" style="float:right;">
+                            <form action="/admin/switchs" method="post">
+                                <div class="form-group p-0">
+                                    @*   <input type="text" name="switch" value="@ViewBag.switchss" style="display:none;" />
+                            <label>Switch</label>
+                                                                    <select class="select2 form-control mb-3 custom-select" name="switch" style="width: 100%; height:36px;">
+                                                                         <option value="On">ON</option>
+                                                                         <option value="Off">Off</option>
+
+                                                                     </select>
+                                                        <button class="btn btn-primary waves-effect waves-light" type="submit">@ViewBag.switchs</button>*@
+                                </div>
+                            </form>
+                        </div>
+                        <h4 style=" font-size: 25px; font-weight: bold;line-height:30px;" class="card-title">CO_REG OFFERS </h4>
+
+                        <div class="table-responsive m-t-40 m-t-400">
+                            <table class="demo-foo-addrow2 table table-bordered table m-b-0 toggle-arrow-tiny example23" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th data-toggle="true" style="width:60px;">Image</th>
+
+                                        <th>Offer Title</th>
+                                        <th data-hide="all">Advertiser ID</th>
+                                        <th data-hide="all">Offer ID</th>
+                                        <th data-hide="all">Description A</th>
+
+                                        <th data-hide="all">Lower Title</th>
+
+
+                                        <th data-hide="phone">Action</th>
+                                    </tr>
+                                </thead>
+                              
+                                <tbody>
+
+                                    @foreach (var i in ViewBag.coregoffers)
+                                    {
+                                        <tr>
+                                            <td>
+                                              
+                                                <img style="height:30px;" class="rounded-circle" src="~/UploadedImages/@i.Image" width="30">
+                                            </td>
+                                            <td>
+
+                                                <a>@i.Offer_title</a>
+
+                                            <td>@i.affliateid </td>
+                                            <td>@i.offerid</td>
+
+                                            <td>
+                                                <a href="javascript:void(0);">@i.Discription_A</a>
+
+                                            </td>
+
+
+                                           <td>@i.Lower_title</td>
+
+
+
+                                            <td> <a onclick="return checkDelete()"> @Html.ActionLink(" ", "restoreoffer", "admin", null, null, "", new { tid = i.Offer_title }, new { @class = " btn  btn btn-outline-danger btn-circle fa fa-recycle", onclick = "return checkDelete()", title = "Restore" })</a></td>
+
+
+                                        </tr>
+
+                                    }
+
+
+
+
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                        <script type="text/javascript">
+                            function checkDelete() {
+                                if (Archive('Are you sure you want to Restore ?')) {
+
+                                    return true
+                                }
+                                else {
+                                    return false
+                                }
+                            }
+                        </script>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4 style=" font-size: 25px; font-weight: bold;" class="card-title">POP OFFERS </h4>
+
+                        <div class="table-responsive m-t-40 m-t-400">
+                            <table class="demo-foo-addrow2 table table-bordered table m-b-0 toggle-arrow-tiny example23" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+
+                                        <th>Pop UP Offer</th>
+
+                                        <th>Advertiser ID</th>
+                                        <th>Offer ID</th>
+
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+
+                                        <th>Pop UP Offer</th>
+
+                                        <th>Advertiser ID</th>
+                                        <th>Offer ID</th>
+
+                                        <th>Action</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+
+                                    @foreach (var i in ViewBag.popffers)
+                                    {
+                                        <tr>
+
+
+
+                                            <td>
+
+                                                <a>@i.redirect_link</a>
+
+                                            <td>@i.affliateid </td>
+                                            <td>@i.offerid</td>
+
+
+
+                                            <td> <a onclick="return checkDelete()"> @Html.ActionLink(" ", "restoreoffer", "admin", null, null, "", new { tid = i.Offer_Name }, new { @class = " btn  btn btn-outline-danger btn-circle fa fa-recycle", onclick = "return checkDelete()", title = "Restore" })</a></td>
+
+                                        </tr>
+
+                                    }
+
+
+
+
+
+                                </tbody>
+
+                            </table>
+
+                            <script type="text/javascript">
+                                function checkDelete() {
+                                    if (confirm('Are you sure you want to Archive ?')) {
+
+                                        return true
+                                    }
+                                    else {
+                                        return false
+                                    }
+                                }
+                            </script>
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4 style=" font-size: 25px; font-weight: bold;" class="card-title">PATH OFFERS </h4>
+                        <div class="table-responsive m-t-40 m-t-400">
+                            <table class="demo-foo-addrow2 table table-bordered table m-b-0 toggle-arrow-tiny example23" data-page-size="7">
+                                <thead>
+                                    <tr>
+                                        <th data-toggle="true" style="width:60px;">Image</th>
+                                        <th>Offer Title</th>
+                                        <th data-hide="all">Advertiser ID</th>
+                                        <th data-hide="all">Offer ID</th>
+                                        <th data-hide="all">Description</th>
+
+                                        <th data-hide="all">Redirect Link</th>
+                                        @*<th data-hide="all">New Window POP UP</th>
+                                        <th data-hide="all">Skip Window POP UP</th>*@
+                                        <th data-hide="all">Priority</th>
+
+
+
+                                        <th data-hide="phone">Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    @foreach (var i in ViewBag.pathoffers)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @*<video class="rounded-circle" id="video_background" poster="images/dmm_background.jpg" autoplay controls="controls" width="40" preload="true" muted loop>
+
+                                            <source src="~/UploadedImages/@i.Image" type="video/mp4">
+                                        </video>
+                                        <script>
+                                            var video = document.getElementById("video_background");
+                                            video.addEventListener("canplay", function () {
+                                                setTimeout(function () {
+                                                    video.play();
+                                                }, 5000);
+                                            });
+                                        </script>*@
+                                                <img style="height:30px" class="rounded-circle" src="~/UploadedImages/@i.Image" width="30">
+                                            </td>
+                                            <td>
+
+                                                <a>@i.Offer_Name</a>
+                                            <td>@i.affliateid </td>
+                                            <td>@i.offerid</td>
+                                            <td>
+                                                <a href="javascript:void(0);">@i.Offer_description</a>
+
+                                            </td>
+
+
+                                            <td>@i.redirect_link</td>
+                                            @*<td>@i.newwindow_link</td>
+                                            <td>@i.skip_link</td>*@
+                                            <td>@i.Priority</td>
+
+
+                                            <td> <a onclick="return checkDelete()"> @Html.ActionLink(" ", "restoreoffer", "admin", null, null, "", new { tid = i.Offer_Name }, new { @class = " btn  btn btn-outline-danger btn-circle fa fa-recycle", onclick = "return checkDelete()", title = "Restore" })</a></td>
+                                        </tr>
+
+                                    }
+
+
+
+
+
+                                </tbody>
+
+
+                            </table>
+                        </div>
+                        <script type="text/javascript">
+                            function checkDelete() {
+                                if (confirm('Are you sure you want to Restore ?')) {
+
+                                    return true
+                                }
+                                else {
+                                    return false
+                                }
+                            }
+                        </script>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4 style=" font-size: 25px; font-weight: bold;" class="card-title">WALL OFFERS </h4>
+                        <div class="table-responsive m-t-40 m-t-400">
+                            <table class="demo-foo-addrow2 table table-bordered table m-b-0 toggle-arrow-tiny example23" data-page-size="7">
+                                @*<table id="demo-foo-pagination" class="table table-bordered table m-b-0 toggle-arrow-tiny example23" data-page-size="5">*@
+                                @*<table class="table table-bordered table-striped example23" cellspacing="0" width="100%">*@
+                                <thead>
+                                    <tr>
+                                        <th data-toggle="true" style="width:60px;">Image</th>
+                                        <th>Offer Title</th>
+                                        <th>Advertiser ID</th>
+                                        <th>Offer ID</th>
+                                        <th data-hide="all">Description</th>
+
+                                        <th data-hide="all">Link</th>
+                                        <th data-hide="all">Priority</th>
+
+
+
+                                        <th data-hide="phone">Action</th>
+                                    </tr>
+                                </thead>
+                                @*<tfoot>
+                            <tr>
+                                <th style="width:60px;">Image</th>
+                                <th>Offer Title</th>
+                                <th>Description</th>
+
+                                <th>Redirect Link</th>
+
+                                <th>Priority</th>
+
+
+                                <th>Action</th>
+                            </tr>
+                        </tfoot>*@
+
+                                <tbody>
+
+                                    @foreach (var i in ViewBag.offerwall)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @*<video class="rounded-circle" id="video_background" poster="images/dmm_background.jpg" autoplay controls="controls" width="40" preload="true" muted loop>
+
+                                            <source src="~/UploadedImages/@i.Image" type="video/mp4">
+                                        </video>
+                                        <script>
+                                            var video = document.getElementById("video_background");
+                                            video.addEventListener("canplay", function () {
+                                                setTimeout(function () {
+                                                    video.play();
+                                                }, 5000);
+                                            });
+                                        </script>*@
+                                                <img style="height:30px" class="rounded-circle" src="~/UploadedImages/@i.Image" width="30">
+                                            </td>
+                                            <td>
+
+                                                <a>@i.Offer_Name</a>
+                                            </td>
+                                            <td>@i.affliateid </td>
+                                            <td>@i.offerid</td>
+                                            <td>
+                                                <a>@i.description</a>
+
+                                            </td>
+
+
+                                            <td>@i.redirect_link</td>
+
+                                            <td>@i.Priority</td>
+
+                                            <td> <a onclick="return checkDelete()"> @Html.ActionLink(" ", "restoreoffer", "admin", null, null, "", new { tid = i.Offer_Name }, new { @class = " btn  btn btn-outline-danger btn-circle fa fa-recycle", onclick = "return checkDelete()", title = "Restore" })</a></td>
+
+                                        </tr>
+
+                                    }
+
+
+
+
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                        <script type="text/javascript">
+                            function checkDelete() {
+                                if (confirm('Are you sure you want to Restore ?')) {
+
+                                    return true
+                                }
+                                else {
+                                    return false
+                                }
+                            }
+                        </script>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

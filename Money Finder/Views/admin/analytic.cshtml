@@ -1,0 +1,466 @@
+﻿
+@{
+    ViewData["Title"] = "analytic";
+    Layout = "~/Views/Layouts/_analyticLayout.cshtml";
+}
+
+
+
+<style>
+
+    .piechart {
+        display: block;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-image: conic-gradient(pink 100deg, lightblue 0 235deg, orange 0);
+    }
+    .device {
+        display: block;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-image: conic-gradient(#cfcfcf 0 32deg, #6cb147 0 101deg, #cfcfcf 0 160deg);
+    }
+
+    .browserpiechart {
+        display: block;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-image: conic-gradient(#eded4d 0 91deg, #6cb147 0 174deg, #eded4d 0 150deg);
+    }
+
+    .Mobilepiechart {
+        margin-top: 0em;
+        display: block;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-image: conic-gradient(#6cb147 0 89deg, rgba(247, 253, 255, 0.13) 0 91deg, #6cb147 0 150deg);
+    }
+
+    .Desktoppiechart {
+        margin-top: 0em;
+        display: block;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-image: conic-gradient(#cfcfcf 0 89deg, rgba(247, 253, 255, 0.13) 0 91deg, #cfcfcf 0 150deg);
+    }
+
+    .leaddpiechart {
+        margin-top: 0em;
+        display: block;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-image: conic-gradient( #3e8bc1 0 89deg, lightblue 0 91deg, #3e8bc1 0 150deg);
+    }
+
+
+
+    body,
+    .piechart {
+        justify-content: center;
+        align-items: center;
+    }
+    a {
+        text-decoration: underline !important;
+    }
+</style>
+<h1>Create Catagories Overview</h1>
+
+
+
+<div class="text">
+        	<div class="topValues">
+	            <div class="left">
+    	        	<div class="topName"><span>Overview</span><small>Distribution of LeadiDs created across campaigns, broken down by time period selected.<small></small></small></div>
+                </div>
+                <div class="topDate right clearfix">
+                    <strong>Date Range:</strong> <span class="dateName">May 1, 2022 - May 1, 2022</span><br>
+                    <strong><span class="txt_qulead_pl">LeadiDs</span> in Date Range:</strong> <span class="total">13</span><br>
+                    <strong>Filtered <span class="txt_qulead">LeadiD</span> Count:</strong> <span class="totalFiltered">13 (100%)</span>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="options clearfix">
+	            <ul class="clearfix type">
+    				<li><input type="radio" class="Radio" name="labelValues" id="lv1" value="percent"><label for="lv1"><div>Percent</div></label></li>
+                    <li><input type="radio" class="Radio" name="labelValues" id="lv2" value="total" checked="checked"><label for="lv2"><div>Count</div></label></li>
+                </ul>
+                <ul class="clearfix icons">
+    				<li><input type="radio" class="Radio" name="chartDisplay" id="cd1" value="bar" checked="checked"><label for="cd1"><div> <img align="top" src="/img/insights/icon-bar.png"></div></label></li>
+                    <li><input type="radio" class="Radio" name="chartDisplay" id="cd2" value="line"><label for="cd2"><div><img align="top" src="/img/insights/icon-line.png"></div></label></li>
+                </ul>
+
+            </div>
+        	<div class="barchart" style="position: relative;">
+            	<div class="legend"><ul><li><span style="background:#058dc7"></span>Web</li></ul></div>
+                <div class="nodata noDataText" style="display: none;">
+                    No data available for selected criteria.
+                </div>
+	            <div class="chart" style="background-color: rgb(255, 255, 255);"><div style="position: absolute; z-index: 20; opacity: 0;"><svg height="375" version="1.1" width="790" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: -0.666667px; top: -0.833333px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.0.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path fill="#ffffff" stroke="none" d="M727.5,253.5L727.5,270.5L747.5,270.5L747.5,253.5Z" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#ffffff" stroke="none" d="M755.5,62.5L755.5,270.5L775.5,270.5L775.5,62.5Z" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path></svg></div><svg height="375" version="1.1" width="790" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: -0.666667px; top: -0.833333px;"><text x="114.16666666666667" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,-173.7107,187.4762)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">12 AM</tspan></text><text x="142.5" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,-163.5897,209.1808)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">1 AM</tspan></text><text x="170.83333333333331" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,-153.4687,230.8854)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2 AM</tspan></text><text x="199.16666666666666" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,-143.3476,252.59)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">3 AM</tspan></text><text x="227.49999999999997" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,-133.2266,274.2946)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">4 AM</tspan></text><text x="255.83333333333331" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,-123.1056,295.9992)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">5 AM</tspan></text><text x="284.1666666666667" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,-112.9846,317.7038)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">6 AM</tspan></text><text x="312.5" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,-102.8636,339.4084)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">7 AM</tspan></text><text x="340.8333333333333" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,-92.7426,361.113)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">8 AM</tspan></text><text x="369.1666666666667" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,-82.6215,382.8175)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">9 AM</tspan></text><text x="397.5" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,-72.5005,404.5221)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">10 AM</tspan></text><text x="425.8333333333333" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,-62.3795,426.2267)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">11 AM</tspan></text><text x="454.1666666666667" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,-52.2585,447.9313)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">12 PM</tspan></text><text x="482.5" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,-42.1375,469.6359)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">1 PM</tspan></text><text x="510.8333333333333" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,-32.0164,491.3405)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2 PM</tspan></text><text x="539.1666666666666" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,-21.8954,513.0451)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">3 PM</tspan></text><text x="567.4999999999999" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,-11.7744,534.7497)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">4 PM</tspan></text><text x="595.8333333333333" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,-1.6534,556.4543)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">5 PM</tspan></text><text x="624.1666666666666" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,8.4676,578.1589)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">6 PM</tspan></text><text x="652.4999999999999" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,18.5886,599.8635)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">7 PM</tspan></text><text x="680.8333333333333" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,28.7097,621.5681)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">8 PM</tspan></text><text x="709.1666666666666" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,38.8307,643.2727)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">9 PM</tspan></text><text x="737.4999999999999" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,48.9517,664.9772)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">10 PM</tspan></text><text x="765.8333333333333" y="280" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana;" transform="matrix(0.6428,-0.766,0.766,0.6428,59.0727,686.6818)"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">11 PM</tspan></text><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.0.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><rect x="0" y="0" width="1" height="1" r="0" rx="0" ry="0" fill="none" stroke="#000" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></rect><text x="85.5" y="270.5" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana; opacity: 1;" opacity="1"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><text x="85.5" y="218.5" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana; opacity: 1;" opacity="1"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">3</tspan></text><text x="85.5" y="166.5" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana; opacity: 1;" opacity="1"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">6</tspan></text><text x="85.5" y="114.5" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana; opacity: 1;" opacity="1"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">9</tspan></text><text x="85.5" y="62.5" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana; opacity: 1;" opacity="1"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">12</tspan></text><text x="85.5" y="10.5" text-anchor="end" font="10px Verdana" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 10px Verdana; opacity: 1;" opacity="1"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">15</tspan></text><path fill="none" stroke="#989898" d="M100.5,10.5L780.5,10.5M100.5,62.5L780.5,62.5M100.5,114.5L780.5,114.5M100.5,166.5L780.5,166.5M100.5,218.5L780.5,218.5M100.5,270.5L780.5,270.5M100.5,10.5L100.5,280.5M780.5,10.5L780.5,280.5" stroke-width="1" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path><path fill="none" stroke="#989898" d="M100.5,270.5L100.5,277.5M128.5,270.5L128.5,277.5M157.5,270.5L157.5,277.5M185.5,270.5L185.5,277.5M213.5,270.5L213.5,277.5M242.5,270.5L242.5,277.5M270.5,270.5L270.5,277.5M298.5,270.5L298.5,277.5M327.5,270.5L327.5,277.5M355.5,270.5L355.5,277.5M383.5,270.5L383.5,277.5M412.5,270.5L412.5,277.5M440.5,270.5L440.5,277.5M468.5,270.5L468.5,277.5M497.5,270.5L497.5,277.5M525.5,270.5L525.5,277.5M553.5,270.5L553.5,277.5M582.5,270.5L582.5,277.5M610.5,270.5L610.5,277.5M638.5,270.5L638.5,277.5M667.5,270.5L667.5,277.5M695.5,270.5L695.5,277.5M723.5,270.5L723.5,277.5M752.5,270.5L752.5,277.5M780.5,270.5L780.5,277.5M93.5,10.5L100.5,10.5M93.5,62.5L100.5,62.5M93.5,114.5L100.5,114.5M93.5,166.5L100.5,166.5M93.5,218.5L100.5,218.5M93.5,270.5L100.5,270.5" stroke-width="1" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path><path fill="#058dc7" stroke="#ffffff" d="M727.5,253.5L727.5,270.5L747.5,270.5L747.5,253.5Z" stroke-width="0" stroke-linejoin="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round; opacity: 1;" opacity="1"></path><path fill="#058dc7" stroke="#ffffff" d="M755.5,62.5L755.5,270.5L775.5,270.5L775.5,62.5Z" stroke-width="0" stroke-linejoin="round" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round; opacity: 1;"></path></svg>
+                </div>
+                <div class="ylabel">Distribution (Count)</div>
+                <div class="xlabel">By hour</div>
+            </div>
+            <div class="detail">
+            	<div class="head iLeftTitle clicker">
+                	Chart Details <div class="arrow"></div>
+                </div>
+                <div class="table hide slideout" style="position: relative; display: none;">
+                    <table class="rowcolor tablesorter">
+                        <thead><tr><th width="28%" class="header">Overview</th><th class="{sorter: 'percent'} header" width="12%">Web<br><small>(Percent)</small></th><th class="{sorter: 'commaDigit'} header" width="12%">Web<br><small>(Count)</small></th><th class="{sorter: 'percent'} header" width="12%">Total<br><small>(Percent)</small></th><th class="{sorter: 'commaDigit'} header" width="12%">Total<br><small>(Count)</small></th></tr></thead>
+                        <tbody><tr><td>12 AM</td><td>0%</td><td>0</td><td>0%</td><td>0</td></tr><tr><td>1 AM</td><td>0%</td><td>0</td><td>0%</td><td>0</td></tr><tr><td>2 AM</td><td>0%</td><td>0</td><td>0%</td><td>0</td></tr><tr><td>3 AM</td><td>0%</td><td>0</td><td>0%</td><td>0</td></tr><tr><td>4 AM</td><td>0%</td><td>0</td><td>0%</td><td>0</td></tr><tr><td>5 AM</td><td>0%</td><td>0</td><td>0%</td><td>0</td></tr><tr><td>6 AM</td><td>0%</td><td>0</td><td>0%</td><td>0</td></tr><tr><td>7 AM</td><td>0%</td><td>0</td><td>0%</td><td>0</td></tr><tr><td>8 AM</td><td>0%</td><td>0</td><td>0%</td><td>0</td></tr><tr><td>9 AM</td><td>0%</td><td>0</td><td>0%</td><td>0</td></tr><tr><td>10 AM</td><td>0%</td><td>0</td><td>0%</td><td>0</td></tr><tr><td>11 AM</td><td>0%</td><td>0</td><td>0%</td><td>0</td></tr><tr><td>12 PM</td><td>0%</td><td>0</td><td>0%</td><td>0</td></tr><tr><td>1 PM</td><td>0%</td><td>0</td><td>0%</td><td>0</td></tr><tr><td>2 PM</td><td>0%</td><td>0</td><td>0%</td><td>0</td></tr><tr><td>3 PM</td><td>0%</td><td>0</td><td>0%</td><td>0</td></tr><tr><td>4 PM</td><td>0%</td><td>0</td><td>0%</td><td>0</td></tr><tr><td>5 PM</td><td>0%</td><td>0</td><td>0%</td><td>0</td></tr><tr><td>6 PM</td><td>0%</td><td>0</td><td>0%</td><td>0</td></tr><tr><td>7 PM</td><td>0%</td><td>0</td><td>0%</td><td>0</td></tr><tr><td>8 PM</td><td>0%</td><td>0</td><td>0%</td><td>0</td></tr><tr><td>9 PM</td><td>0%</td><td>0</td><td>0%</td><td>0</td></tr><tr><td>10 PM</td><td>7.7%</td><td>1</td><td>7.7%</td><td>1</td></tr><tr><td>11 PM</td><td>92.3%</td><td>12</td><td>92.3%</td><td>12</td></tr></tbody>
+                        <tfoot><tr><td><strong>Total</strong></td><td><strong>100%</strong></td><td><strong>13</strong></td><td><strong>100%</strong></td><td><strong>13</strong></td></tr></tfoot>
+                    </table>
+                </div>
+            </div>
+          
+          
+        </div>
+<div class="row">
+
+    <div class="col-md-6">
+        <div  class="h3bg row"style="margin:0px;">
+            <div class="col-md-9">
+                <h4 id="heading" class="mt-0 header-title " style="line-height: 0.8;color:white;    margin-left: -10px;">Browsers</h4>
+            </div>
+            <div class="col-md-3">
+                <a style="float:right">View Details</a>
+            </div>
+        </div>
+        <div class="card" style=" height: 15.4em; ">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="piechart browserpiechart">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div style="display: inline-flex; margin-top: 1em;">
+                            <span style=" margin-top: 8px;   padding-right: 16%;">
+                                <p style="background: #dfee5c; color: #dfee5c; height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></p>
+                            </span>
+                            <span>
+                                Chrome
+                            </span>
+                        </div>
+                        <br />
+                        <div style="display: inline-flex;    margin-top: -1em;">
+                            <span style=" margin-top: 8px;   padding-right: 16%;">
+                                <p style="background: rgb(233, 115, 37); color: rgb(233, 115, 37); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></p>
+                            </span>
+                            <span>Firefox</span>
+
+                            <br>
+
+                        </div>
+                        <br>
+                        <div style="display: inline-flex;    margin-top: -1em;">
+                            <span style=" margin-top: 8px;   padding-right: 38%;">
+                                <p style="background: rgb(13, 110, 253); color: rgb(13, 110, 253); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></p>
+                            </span>
+                            <span>IE</span>
+
+                        </div>
+
+                        <br>
+                        <div style="display: inline-flex;    margin-top: -1em;">
+                            <span style=" margin-top: 8px;   padding-right: 16%;">
+                                <p style="background: rgb(142, 172, 216); color: rgb(142, 172, 216); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></p>
+                            </span>
+                            <span>Safari</span>
+
+                        </div>
+                        <br>
+                        <div style="display: inline-flex;    margin-top: -1em;width: 1.3em;">
+                            <span style=" margin-top: 8px;   padding-right: 16%;">
+                                <p style="background: rgb(231, 82, 82); color: rgb(231, 82, 82); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></p>
+                            </span>
+                            <span>Opera</span>
+
+                        </div>
+                        <br>
+                        <div style="display: inline-flex;    margin-top: -1em;width: 1.3em;">
+                            <span style=" margin-top: 8px;   padding-right: 16%;">
+                                <p style="background: rgb(103, 230, 134); color: rgb(103, 230, 134); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></p>
+                            </span>
+                            <span>Mobile</span>
+
+                        </div>
+                        <br>
+                        <div style="display: inline-flex;    margin-top: -1em;">
+                            <span style=" margin-top: 8px;   padding-right: 16%;">
+                                <p style="background: rgb(160, 168, 179); color: rgb(160, 168, 179); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></p>
+                            </span>
+                            <span>Other</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="h3bg row" style="margin:0px;">
+            <div class="col-md-9">
+                <h4 id="heading" class="mt-0 header-title " style="line-height: 0.8;color:white;    margin-left: -10px;">Device Type</h4>
+            </div>
+            <div class="col-md-3">
+                <a style="float:right">View Details</a>
+            </div>
+        </div>
+        <div class="card" style=" height: 15.4em;">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="piechart device"></div>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div style="display: inline-flex;    margin-top: 5em;width: 1.3em;">
+                            <span style=" margin-top: 8px;   padding-right: 16%;">
+                                <p style="background: rgb(116, 166, 223); color: rgb(116, 166, 223); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></p>
+                            </span>
+                            <span>Desktop</span>
+
+                        </div>
+                        <br>
+                        <div style="display: inline-flex;    margin-top: -1em;width: 1.3em;">
+                            <span style=" margin-top: 8px;   padding-right: 16%;">
+                                <p style="background: rgb(103, 230, 134); color: rgb(103, 230, 134); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></p>
+                            </span>
+                            <span>Mobile</span>
+
+                        </div>
+                        <br>
+                        <div style="display: inline-flex;    margin-top: -1em;">
+                            <span style=" margin-top: 8px;   padding-right: 16%;">
+                                <p style="background: rgb(160, 168, 179); color: rgb(160, 168, 179); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></p>
+                            </span>
+                            <span>Other</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="h3bg row" style="margin:0px;">
+            <div class="col-md-9">
+                <h4 id="heading" class="mt-0 header-title " style="line-height: 0.8;color:white;    margin-left: -10px;">Lead Type</h4>
+            </div>
+            <div class="col-md-3">
+                <a style="float:right">View Details</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body" style=" height: 15.4em;">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="piechart leaddpiechart"></div>
+
+                    </div>
+                    <div class="col-md-6" style="
+    margin-top: 4em;
+">
+
+                        <div style="display: inline-flex;    margin-top: 1em;width: 8.3em;">
+                            <span style=" margin-top: 8px;   padding-right: 16%;">
+                                <p style="background: rgb(116, 166, 223); color: rgb(116, 166, 223); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></p>
+                            </span>
+                            <span>Call Center</span>
+
+                        </div>
+                        <br>
+                        <div style="display: inline-flex;    margin-top: -1em;width: 8.3em;">
+                            <span style=" margin-top: 8px;   padding-right: 16%;">
+                                <p style="background: rgb(103, 230, 134); color: rgb(103, 230, 134); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></p>
+                            </span>
+                            <span>Web</span>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="h3bg row" style="margin:0px;">
+            <div class="col-md-9">
+                <h4 id="heading" class="mt-0 header-title " style="line-height: 0.8;color:white;    margin-left: -10px;">Fraud Risk</h4>
+            </div>
+            <div class="col-md-3">
+                <a style="float:right">View Details</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body" style=" height: 15.4em;">
+               <div class="card"style=" margin-top: 2em; background-color: #ebf6f8;">
+                <div class="card-body" >
+                    <h3 style="text-align: center; ">Fraud detection solutions available in LeadiD AppMarketplace.</h3>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="h3bg row" style="margin:0px;">
+                    <div class="col-md-9">
+                        <h4 id="heading" class="mt-0 header-title " style="line-height: 0.8;color:white;    margin-left: -10px;">Desktop Operating Systems</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <a style="float:right">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body" style=" height: 15.4em;">
+                        <div class="row">
+                            <div class="col-md-5">
+
+                                <div class="piechart Desktoppiechart"></div>
+
+                            </div>
+                            <div class="col-md-6">
+
+                                <div style="display: inline-flex;    margin-top: 3em;width: 8.3em;">
+                                    <span style=" margin-top: 8px;   padding-right: 16%;">
+                                        <p style="background: rgb(116, 166, 223); color: rgb(116, 166, 223); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></p>
+                                    </span>
+                                    <span>Window</span>
+
+                                </div>
+                                <br>
+                                <div style="display: inline-flex;    margin-top: -1em;width: 8.3em;">
+                                    <span style=" margin-top: 8px;   padding-right: 16%;">
+                                        <p style="background: rgb(82, 224, 103); color: rgb(82, 224, 103); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></p>
+                                    </span>
+                                    <span>Mac OS</span>
+
+                                </div>
+                                <br>
+                                <div style="display: inline-flex;    margin-top: -1em;width: 8.3em;">
+                                    <span style=" margin-top: 8px;   padding-right: 16%;">
+                                        <p style="background: rgb(116, 166, 223); color: rgb(116, 166, 223); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></p>
+                                    </span>
+                                    <span>Linux</span>
+
+                                </div>
+                                <br>
+                                <div style="display: inline-flex;    margin-top: -1em;width: 8.3em;">
+                                    <span style=" margin-top: 8px;   padding-right: 16%;">
+                                        <p style="background: rgb(116, 166, 223); color: rgb(116, 166, 223); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></p>
+                                    </span>
+                                    <span>Other</span>
+
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="h3bg row" style="margin:0px;">
+                    <div class="col-md-9">
+                        <h4 id="heading" class="mt-0 header-title " style="line-height: 0.8;color:white;    margin-left: -10px;">Mobile Operating Systems</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <a style="float:right">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body" style=" height: 15.4em;">
+                        <div class="row">
+                            <div class="col-md-5">
+
+                                <div class="piechart Mobilepiechart"></div>
+
+                            </div>
+                            <div class="col-md-6">
+
+                                <div style="display: inline-flex;    margin-top: 2em;width: 8.3em;">
+                                    <span style=" margin-top: 8px;   padding-right: 16%;">
+                                        <p style="background: rgb(116, 166, 223); color: rgb(116, 166, 223); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></p>
+                                    </span>
+                                    <span>Andriod</span>
+
+                                </div>
+                                <br>
+                                <div style="display: inline-flex;    margin-top: -1em;width: 8.3em;">
+                                    <span style=" margin-top: 8px;   padding-right: 16%;">
+                                        <p style="background: rgb(82, 224, 103); color: rgb(82, 224, 103); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></p>
+                                    </span>
+                                    <span> iOS</span>
+
+                                </div>
+                                <br>
+                                <div style="display: inline-flex;    margin-top: -1em;width: 8.3em;">
+                                    <span style=" margin-top: 8px;   padding-right: 16%;">
+                                        <p style="background: rgb(116, 166, 223); color: rgb(116, 166, 223); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></p>
+                                    </span>
+                                    <span>Black Berry</span>
+
+                                </div>
+                                <br>
+                                <div style="display: inline-flex;    margin-top: -1em;width: 10.3em;">
+                                    <span style=" margin-top: 8px;   padding-right: 13%;">
+                                        <p style="background: rgb(116, 166, 223); color: rgb(116, 166, 223); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></p>
+                                    </span>
+                                    <span>Window Phone</span>
+
+                                </div>s
+
+                                <br>
+                                <div style="display: inline-flex;    margin-top: -1em;width: 8.3em;">
+                                    <span style=" margin-top: 8px;   padding-right: 16%;">
+                                        <p style="background: rgb(116, 166, 223); color: rgb(116, 166, 223); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></p>
+                                    </span>
+                                    <span>Other</span>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        s
+
+        <!-- Bootstrap JS -->
+        <script src="~/nfd/assets/js/bootstrap.bundle.min.js"></script>
+        <!--plugins-->
+        <script src="~/nfd/assets/js/jquery.min.js"></script>
+        <script src="~/nfd/assets/plugins/simplebar/js/simplebar.min.js"></script>
+        <script src="~/nfd/assets/plugins/metismenu/js/metisMenu.min.js"></script>
+        <script src="~/nfd/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+        <script src="~/nfd/assets/plugins/apexcharts-bundle/js/apexcharts.min.js"></script>
+        <script src="~/nfd/assets/plugins/apexcharts-bundle/js/apex-custom.js"></script>
+        <!--app JS-->
+        <script src="~/nfd/assets/js/app.js"></script>

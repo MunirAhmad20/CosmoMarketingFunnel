@@ -1,0 +1,79 @@
+.opt_in a {
+    background-color: transparent;
+    font-size: 22px;
+    background-repeat: no-repeat;
+    color: white;
+    font-weight: bold;
+    border: none;
+    background-size: 100% 100%;
+    min-width: 100%;
+    min-height: 100%;
+    display: inline-block;
+    line-height: 70px;
+}
+
+.opt_in .offer_click {
+    background-image: url('../../Content/new_images/nitro/yes_2.png');
+}
+
+.opt_in .offer_click:focus {
+    outline: none;
+}
+
+.opt_in .offer_click:hover {
+    text-decoration: none;
+}
+
+.opt_in .skip_offer {
+    background-image: url('../../Content/new_images/nitro/no_2.png');
+}
+
+.opt_in .skip_offer:focus {
+    outline: none;
+}
+
+.opt_in .skip_offer:hover {
+    text-decoration: none;
+}
+
+.one {
+    margin-left: 1%;
+}
+
+.two {
+    margin-left: 2%;
+}
+
+.top {
+    margin-top: 1%;
+}
+
+.third {
+    width: 32% !important;
+}
+
+.quarter {
+    margin-left: 25%;
+}
+
+@media only screen and (max-width:425px) {
+    .opt_in .skip_offer {
+        background-image: url('../../Content/new_images/nitro/no_mobile_2.png');
+    }
+    .opt_in .offer_click {
+        background-image: url('../../Content/new_images/nitro/yes_mobile_2.png');
+    }
+    .opt_in a {
+        background-color: transparent;
+        font-size: 12px;
+        background-repeat: no-repeat;
+        color: white;
+        font-weight: bold;
+        border: none;
+        background-size: 100% 100%;
+        min-width: 100%;
+        min-height: 100%;
+        display: inline-block;
+        line-height: 50px;
+    }
+}

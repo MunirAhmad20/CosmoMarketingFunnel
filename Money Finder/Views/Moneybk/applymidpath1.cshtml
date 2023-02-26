@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewData["Title"] = "applymidpath";
+    Layout = "~/Views/Layouts/_emptyLayout.cshtml";
+}
+
+<style>
+  /*  a {
+        color: darkblue !important;
+    }*/
+</style>
+
+@foreach (var i in ViewBag.package)
+{
+<section class="offer-header bgimage mmtop" style="background-color: #f8e8ff; background: bottom; line-height: 0px; border-bottom: 0px;" id="">
+    <div class="row">
+        <br />
+        <div class="small-12 columns">
+            <h1 style="color: black; font-size:2em; line-height: 1.5em;">  @i.Offer_Name</h1>
+
+            <h2 style="color:black">@i.Offer_description</h2>
+
+        </div>
+    </div>
+
+    
+    <section id="unclaimed-assets" class="mtop">
+        <div class="row">
+        
+            <div class="small-12 columns">
+                @*<div class="divider"></div>*@
+                @*<div class="mobilehide"><br /></div>
+            <br />
+
+            <h1 style="color:black;" class="text-center infor">
+                @i.Offer_Name
+
+            </h1>
+            <h3 style="text-align: center; font-size: 18px; color:black;">
+                @i.Offer_description
+            </h3>*@
+
+                <p style="text-align:center!important">
+                   
+                    <br />
+                    <img class="imgsize" src="~/UploadedImages/@i.Image" />
+                   
+                    <br />
+                    <br />
+
+
+                    <h5 style="text-align: center; color: darkblue; font: caption; font-size: 30px; font-weight: bold; ">
+                      
+                            @Html.ActionLink("No Thanks", "applymidpath", "Money", null, null, "", new { tid = ViewBag.count }, null)
+                      
+                            <br />
+                            <br />
+                    </h5>
+                </p>
+            </div>
+
+        </div>
+    </section>
+</section>
+}

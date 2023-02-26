@@ -1,0 +1,816 @@
+.wFormWebPage {
+    background-color: rgb(244, 246, 249);
+    background-image: url("");
+}
+
+.wFormContainer {
+    margin: 0px auto;
+    padding: 0px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    color: rgb(51, 51, 51);
+}
+
+.wFormContainer .wFormHeader {
+    height: 1.5rem;
+    margin-bottom: 1em;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+    display: none;
+}
+
+.wFormContainer .wForm {
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    background-image: url("");
+    font-family: "Open Sans", sans-serif;
+    padding: 0px !important;
+}
+
+.wFormContainer .reviewHeader,
+.wFormContainer .reviewResponse {
+    padding: 2.96em;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    background-image: url("");
+    font-family: "Open Sans", sans-serif;
+}
+
+.wFormContainer .wForm .wFormTitle {
+    margin: 0px;
+    color: rgb(0, 48, 87);
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    line-height: 39px;
+    padding: 0px 0px 10px;
+    font-weight: normal;
+}
+
+.wFormContainer .section.pageSection>h4 {
+    font-size: 1.2em;
+}
+
+.wFormContainer fieldset legend {
+    font-size: 21px;
+    width: inherit;
+    border-bottom: none;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    color: rgb(0, 48, 87);
+    font-weight: normal;
+    margin: 0px auto;
+}
+
+.wFormContainer form .oneFieldWrapper,
+.wFormContainer form .section:not(fieldset):not(.pageSection) {}
+
+.wFormContainer form fieldset.section {
+    margin: 45px 0px 0px;
+}
+
+.wFormContainer fieldset {
+    padding: 0px;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    border-image: initial;
+    border-top: 1px solid rgb(219, 219, 219);
+    font-family: "Open Sans", sans-serif;
+}
+
+.wFormContainer #wFormsSavedMessage {
+    border: none;
+}
+
+.wFormContainer fieldset>fieldset:last-child {
+    margin-bottom: 0px;
+}
+
+.wFormContainer .pageSection> :last-child {
+    margin-bottom: 0px;
+}
+
+.wFormContainer .wForm .actions,
+.wFormContainer .wForm form .wfPagingButtons {
+    margin-top: 0px;
+}
+
+.wFormContainer fieldset.highlighted {
+    border-color: rgb(254, 194, 15);
+}
+
+.wFormContainer fieldset.highlighted legend {
+    color: rgb(51, 51, 51);
+}
+
+.wFormContainer .label.preField {
+    line-height: 28px;
+    font-size: 16px;
+    padding-bottom: 10px;
+    font-weight: normal;
+    color: rgb(51, 51, 51);
+    padding-left: 0px !important;
+}
+
+.wFormContainer .label.postField {
+    padding-left: 0.4em;
+    color: rgb(51, 51, 51);
+}
+
+.wFormContainer .oneChoice {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    position: relative;
+}
+
+.wFormContainer .oneChoice .label {
+    vertical-align: middle !important;
+}
+
+.wFormContainer .reqMark::after {
+    color: rgb(255, 255, 255);
+}
+
+.wFormContainer .wForm .inputWrapper {
+    vertical-align: initial;
+    min-width: 100%;
+}
+
+.wFormContainer .oneField input:not([type="file"]),
+.wFormContainer .inputWrapper textarea {
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 16px;
+    color: rgb(51, 51, 51) !important;
+    font-family: "Open Sans", sans-serif !important;
+}
+
+.wFormContainer .wfAutosuggest.tt-hint {
+    margin-top: 0px;
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(51, 51, 51) !important;
+}
+
+.wFormContainer .wForm .tt-spinner {
+    top: 0.5rem;
+}
+
+.wFormContainer .inputWrapper input[type="text"],
+.wFormContainer .inputWrapper input[type="password"] {
+    padding: 0px 0.5em;
+    box-sizing: border-box;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+    color: rgb(52, 59, 62);
+    height: 48px;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif !important;
+    font-style: normal !important;
+}
+
+.wFormContainer .inputWrapper select option {
+    padding: 0.25em 0.5em;
+    color: rgb(51, 51, 51);
+    font-family: "Open Sans", sans-serif !important;
+    font-style: normal !important;
+}
+
+.wFormContainer .inputWrapper select[multiple],
+.wFormContainer .inputWrapper input[type="checkbox"],
+.wFormContainer .inputWrapper input[type="radio"] {
+    font-family: "Open Sans", sans-serif !important;
+    font-style: normal !important;
+    color: rgb(51, 51, 51) !important;
+}
+
+.wFormContainer textarea:focus,
+.wFormContainer input[type="text"]:focus,
+.wFormContainer input[type="password"]:focus,
+.wFormContainer select:focus {
+    outline-style: none;
+    box-shadow: rgb(52, 151, 255) 0px 0px 5px inset;
+}
+
+.wFormContainer .field-hint-inactive,
+.wFormContainer .field-hint {
+    background-color: rgb(255, 255, 255);
+    padding-top: 10px;
+    line-height: 20px !important;
+    font-size: 13px !important;
+    color: rgb(51, 51, 51) !important;
+}
+
+.wFormContainer .field-hint-inactive .hint {
+    font-size: 13px !important;
+    line-height: 20px !important;
+    padding: 10px 0px 0px !important;
+    opacity: 1 !important;
+    color: rgb(51, 51, 51) !important;
+}
+
+.wFormContainer .field-hint .hint {
+    font-size: 13px !important;
+    line-height: 20px !important;
+    padding: 10px 0px 0px !important;
+    color: rgb(51, 51, 51) !important;
+}
+
+.wFormContainer .lengthIndicator {
+    font-size: 0.75em;
+}
+
+.wFormContainer .wfTabNav {
+    line-height: 2em;
+    font-size: 0.9em !important;
+}
+
+.wFormContainer .wfTabNav .wfTab {
+    display: inline-block;
+    min-width: 1.6em;
+    margin: 0px 0.1em;
+    padding: 0px 0.3em;
+    box-sizing: border-box;
+    line-height: 1.5em;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 127, 163, 0.19);
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    color: rgb(0, 127, 163);
+}
+
+.wFormContainer .wfTabNav .wfTab.wfTabCurrentPage {
+    border-color: rgb(0, 127, 163);
+    background-color: rgb(0, 127, 163);
+    color: rgb(255, 255, 255);
+}
+
+.wFormContainer .wfTabNav .wfTab:not(.wfTabCurrentPage):hover {
+    background-color: rgb(224, 229, 238);
+}
+
+.wFormContainer .wfTab.wfHiddenTab,
+.wFormContainer .wfTab.wfHiddenTab:hover {
+    color: rgba(0, 0, 0, 0.3);
+    cursor: not-allowed;
+}
+
+.wFormContainer .wfTabNav .wfTabSep {
+    display: none;
+}
+
+.wFormContainer .wForm .secondaryAction,
+.wFormContainer .wForm .primaryAction,
+.wFormContainer .wForm .wfPageNextButton,
+.wFormContainer .wForm .wfPagePreviousButton {
+    margin-top: 20px;
+    padding: 0.85em 1em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    border: 0.1em solid rgba(0, 127, 163, 0.19);
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: rgb(0, 127, 163);
+    appearance: none;
+}
+
+.wFormContainer .wForm .primaryAction {
+    font-weight: 600;
+    background-color: rgb(0, 127, 163);
+    color: rgb(255, 255, 255);
+    height: 54px;
+    width: 293px;
+}
+
+.wFormContainer .wForm .secondaryAction:hover,
+.wFormContainer .wForm .wfPagePreviousButton:hover,
+.wFormContainer .wForm .wfPageNextButton:hover {
+    background-color: rgb(224, 229, 238);
+}
+
+.wFormContainer .wForm .primaryAction:hover {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 48, 87);
+    color: rgb(0, 48, 87);
+    box-shadow: none;
+}
+
+.wFormContainer .supportInfo {
+    text-align: center;
+}
+
+.wFormContainer .supportInfo a {
+    text-decoration: none;
+    color: rgb(0, 127, 163);
+}
+
+.wFormContainer .supportInfo a:hover {
+    color: rgb(0, 127, 163);
+}
+
+.wFormContainer .branding a {
+    color: rgb(0, 127, 163);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.wFormContainer .oneField.errFld input[type="text"],
+.wFormContainer .oneField.errFld input[type="password"],
+.wFormContainer .oneField.errFld textarea,
+.wFormContainer .oneField.errFld select {
+    border-color: rgb(219, 0, 32) !important;
+}
+
+.wFormContainer .oneField.errFld div.errMsg {
+    color: rgb(219, 0, 32);
+    font-family: "Open Sans";
+    padding-top: 5px;
+    font-weight: normal;
+    font-size: 13px !important;
+    font-style: italic !important;
+    line-height: 21px !important;
+}
+
+html .kalendae {
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.25em;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+}
+
+html .kalendae .k-calendar {
+    width: 18em;
+}
+
+html .kalendae .k-title,
+html .kalendae .k-header,
+html .kalendae .k-days {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+}
+
+html .kalendae .k-header span,
+html .kalendae .k-days span {
+    line-height: inherit;
+    text-align: center;
+    padding: 3px;
+    border-radius: inherit;
+    font-size: 14px;
+    height: inherit;
+    width: calc(14% - 3px) !important;
+    box-sizing: border-box !important;
+    margin-left: 1px !important;
+    margin-right: 1px !important;
+}
+
+html .kalendae .k-btn-close {
+    font-family: "Open Sans", sans-serif;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    color: rgb(56, 57, 50);
+}
+
+html .kalendae .k-btn-close:hover {
+    color: rgb(0, 127, 163);
+    border-color: rgb(0, 127, 163);
+}
+
+html .kalendae .k-caption {
+    color: rgb(0, 122, 156);
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+html .kalendae .k-btn-previous-month,
+html .kalendae .k-btn-next-month,
+html .kalendae .k-btn-previous-year,
+html .kalendae .k-btn-next-year {
+    color: rgb(0, 127, 163);
+    line-height: 25px;
+    height: auto;
+    font-size: 20px;
+}
+
+html .kalendae .k-btn-previous-month:hover,
+html .kalendae .k-btn-next-month:hover,
+html .kalendae .k-btn-previous-year:hover,
+html .kalendae .k-btn-next-year:hover {
+    color: rgb(0, 127, 163);
+}
+
+html .kalendae .k-header span {
+    color: rgb(51, 51, 51);
+    font-weight: normal;
+}
+
+html .kalendae .k-days span {
+    color: rgb(56, 57, 50);
+}
+
+.kalendae .k-today {
+    text-decoration: none !important;
+    background: rgb(245, 245, 245) !important;
+    color: rgb(51, 51, 51) !important;
+}
+
+html .kalendae .k-days span.k-in-month.k-active {
+    background: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
+    border-color: transparent;
+}
+
+html .kalendae .k-days span.k-out-of-month {
+    color: rgba(56, 57, 50, 0.6);
+}
+
+html .kalendae .k-days span.k-selected.k-active {
+    background: rgb(0, 127, 163);
+    color: rgb(254, 254, 255);
+}
+
+html .kalendae .k-days span.k-active:hover {
+    border-color: rgb(0, 48, 87);
+    background: rgb(0, 48, 87) !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+.k-btn-close {
+    display: none;
+}
+
+.kalendae.k-floating {
+    box-shadow: rgba(0, 0, 0, 0.08) 3px 3px 3px 0px;
+}
+
+.inputWrapper .validate-datecal {
+    background-image: linear-gradient(45deg, transparent 50%, rgb(0, 122, 156) 50%), linear-gradient(135deg, rgb(0, 122, 156) 50%, transparent 50%), linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
+    background-position: calc(100% - 20px) calc(1.1em + 2px), calc(100% - 15px) calc(1.1em + 2px), 100% 0px;
+    background-size: 0.75em 0.48em, 0.46em 0.62em, 2.5em 3.5em;
+    background-repeat: no-repeat;
+    font-family: "Open Sans", sans-serif;
+    padding: 0.7em 3.5em 0.7em 1em;
+    background-color: rgb(255, 255, 255);
+    border: thin solid rgb(204, 204, 204);
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px;
+    box-sizing: border-box;
+    appearance: none;
+    color: rgb(51, 51, 51) !important;
+}
+
+.wForm form>div.oneField {
+    padding: 15px 0px;
+    margin-top: 0px;
+}
+
+.wForm form>div.oneField:first-child {
+    padding: 20px 0px 15px;
+}
+
+.wFormContainer textarea,
+.wFormContainer input[type="text"],
+.wFormContainer input[type="password"] {
+    width: 100% !important;
+}
+
+.inputWrapper input[type="file"] {
+    outline: none;
+    font-size: 1em;
+    line-height: 15px;
+}
+
+.inputWrapper input[type="checkbox"]+label {
+    display: block;
+    margin: 0px;
+    cursor: pointer;
+    line-height: 1.625em;
+    font-family: "Open Sans", sans-serif !important;
+    font-style: normal !important;
+    color: rgb(51, 51, 51) !important;
+}
+
+.inputWrapper input[type="checkbox"] {
+    display: none;
+}
+
+.inputWrapper input[type="checkbox"]+label .input-checkbox-faux {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    position: relative;
+    vertical-align: -3px;
+    border: 1px solid rgb(221, 219, 218);
+    border-radius: 0.125rem;
+    background: rgb(255, 255, 255);
+    transition: border 0.1s linear 0s, background-color 0.1s linear 0s;
+    margin-right: 15px;
+}
+
+.inputWrapper input[type="checkbox"]:checked+label .input-checkbox-faux {
+    border: 1px solid rgb(52, 151, 255);
+    background: rgb(52, 151, 255);
+    border-radius: 2px;
+}
+
+.inputWrapper input[type="checkbox"]+label.postField {
+    padding-left: 0rem;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif !important;
+    font-style: normal !important;
+    color: rgb(51, 51, 51) !important;
+}
+
+.inputWrapper input[type="checkbox"]:checked+label::after,
+.inputWrapper input[type="checkbox"]:checked+label::after,
+.inputWrapper input[type="checkbox"]:checked+label::after,
+.inputWrapper input[type="checkbox"]:checked+.input-checkbox-faux::after,
+.inputWrapper [type="checkbox"]:checked~.input-checkbox-faux::after,
+.inputWrapper [type="checkbox"]:checked~.input-checkbox-faux::after {
+    display: block;
+    content: "";
+    height: 6px;
+    width: 10px;
+    position: absolute;
+    top: 14px;
+    left: 9px;
+    transform: translate3d(-50%, -50%, 0px) rotate(-45deg);
+    border-bottom: 3px solid rgb(255, 255, 255);
+    border-left: 3px solid rgb(255, 255, 255);
+}
+
+.inputWrapper input[type="radio"]:checked+label::before {
+    border: 1px solid rgb(52, 151, 255);
+}
+
+.inputWrapper input[type="radio"]:checked,
+.inputWrapper input[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+.inputWrapper input[type="radio"]:checked+label,
+.inputWrapper input[type="radio"]:not(:checked)+label {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    color: rgb(51, 51, 51);
+    font-weight: normal;
+    font-size: 16px;
+    margin: 2px 0px 0px;
+    padding-left: 33px !important;
+}
+
+.inputWrapper input[type="radio"]:checked+label::before,
+.inputWrapper input[type="radio"]:not(:checked)+label::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif !important;
+    font-style: normal !important;
+    color: rgb(51, 51, 51) !important;
+}
+
+.inputWrapper input[type="radio"]:checked+label::after,
+.inputWrapper input[type="radio"]:not(:checked)+label::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: rgb(52, 151, 255);
+    position: absolute;
+    top: 6px;
+    left: 4px;
+    border-radius: 50%;
+    transition: all 0.2s ease 0s;
+    border-color: rgb(52, 151, 255);
+}
+
+.inputWrapper input[type="radio"]:not(:checked)+label::after {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.inputWrapper input[type="radio"]:checked+label::before {
+    border: 2px solid rgb(52, 151, 255);
+}
+
+.wForm form .vertical>.oneChoice {
+    position: relative;
+}
+
+.acions input[type="submit"] {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 127, 163);
+    border-color: rgb(0, 127, 163);
+    font-family: "Open Sans", Helvetica, Verdana, sans-serif;
+    padding: 9px 1.66em;
+    line-height: 1.625;
+    text-decoration: none;
+    text-align: center;
+}
+
+.inputWrapper select {
+    background-image: linear-gradient(45deg, transparent 50%, rgb(0, 122, 156) 50%), linear-gradient(135deg, rgb(0, 122, 156) 50%, transparent 50%), linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
+    background-position: calc(100% - 20px) calc(1.1em + 2px), calc(100% - 15px) calc(1.1em + 2px), 100% 0px;
+    background-size: 0.75em 0.48em, 0.46em 0.62em, 2.5em 3.5em;
+    background-repeat: no-repeat;
+    font-family: "Open Sans", sans-serif;
+    padding: 0.7em 3.5em 0.7em 1em;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 16px;
+    color: rgb(51, 51, 51);
+    margin: 0px;
+    box-sizing: border-box;
+    appearance: none;
+    width: 100%;
+}
+
+.form-assembly.section {
+    margin: 0px auto !important;
+}
+
+.wFormContainer .errMsg {
+    color: rgb(219, 0, 32);
+}
+
+.inputWrapper select[multiple] {
+    width: 100%;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+    height: 196px;
+    padding: 0px;
+    overflow: auto;
+    color: rgb(51, 51, 51) !important;
+}
+
+.inputWrapper select[multiple]:focus {
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.inputWrapper select[multiple]:focus option:checked {
+    background: linear-gradient(0deg, rgb(245, 245, 245) 0%, rgb(245, 245, 245) 100%) rgb(245, 245, 245);
+    color: rgb(51, 51, 51) !important;
+}
+
+.inputWrapper select:not([multiple]) option:hover {
+    background: linear-gradient(0deg, rgb(0, 127, 163) 0%, rgb(0, 127, 163) 100%) rgb(0, 127, 163);
+}
+
+.inputWrapper select[multiple] option:checked {
+    background-color: rgb(245, 245, 245);
+    font-weight: 600;
+    color: rgb(51, 51, 51) !important;
+}
+
+.inputWrapper select[multiple] option {
+    padding: 13px 15px;
+    line-height: 26px;
+    color: rgb(51, 51, 51) !important;
+}
+
+.wFormContainer form .oneFieldWrapper {
+    width: 100%;
+}
+
+.wFormContainer form textarea {
+    border: 1px solid rgb(204, 204, 204);
+    resize: both !important;
+}
+
+.wForm h3 {
+    color: rgb(0, 48, 87);
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 0px !important;
+}
+
+.wFormTitle .editableText {
+    line-height: 39px;
+}
+
+.validate-datecal {
+    width: 280px !important;
+}
+
+.wForm .htmlSection {
+    padding: 0px;
+}
+
+.wForm fieldset h3 {
+    padding-top: 15px;
+    font-size: 18px !important;
+}
+
+.inputContainer input[type="checkbox"]+label,
+.inputContainer input[type="radio"]+label {
+    font-size: 16px;
+}
+
+.wform fieldset .input-checkbox-faux+div {
+    font-size: 14px;
+    line-height: 22.75px;
+}
+
+.wForm .oneField {
+    border: 0px solid transparent;
+}
+
+.wFormFooter,
+.supportInfo {
+    display: none;
+}
+
+.wForm fieldset .htmlContent {
+    font-size: 16px;
+}
+
+.inputWrapper select[multiple] option:checked,
+.inputWrapper select[multiple] option:hover,
+.inputWrapper select[multiple] option:focus,
+.inputWrapper select[multiple] option:focus-within,
+.inputWrapper select[multiple] option:active {
+    box-shadow: rgb(245, 245, 245) 0px 0px 10px 100px inset;
+    -webkit-text-fill-color: rgb(51, 51, 51);
+    color: rgb(51, 51, 51);
+    background: rgb(245, 245, 245) !important;
+}
+
+.inputWrapper select option:checked,
+.inputWrapper select option:hover,
+.inputWrapper select option:focus,
+.inputWrapper select option:focus-within,
+.inputWrapper select option:active {
+    box-shadow: rgb(0, 48, 87) 0px 0px 10px 100px inset;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
+    background: rgb(245, 245, 245) !important;
+}
+
+.inputWrapper .validate-datecal:hover,
+.inputWrapper select:not([multiple]):hover {
+    cursor: pointer;
+    background-image: linear-gradient(45deg, transparent 50%, rgb(0, 48, 87) 50%), linear-gradient(135deg, rgb(0, 48, 87) 50%, transparent 50%), linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255)) !important;
+    background-position: calc(100% - 20px) calc(1.1em + 2px), calc(100% - 15px) calc(1.1em + 2px), 100% 0px !important;
+    background-size: 0.75em 0.48em, 0.46em 0.62em, 2.5em 3.5em !important;
+}
+
+.inputWrapper .validate-datecal:focus,
+.inputWrapper select:not([multiple]):focus {
+    cursor: pointer;
+    background-image: linear-gradient(45deg, rgb(0, 48, 87) 50%, transparent 50%), linear-gradient(135deg, transparent 50%, rgb(0, 48, 87) 50%), linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255)) !important;
+    background-position: calc(100% - 15px) 1.1em, calc(100% - 21px) 1.1em, 100% 0px !important;
+    background-size: 0.43em 9px, 0.48em 9px, 2.5em 2.5em !important;
+}
+
+.wForm .htmlContent,
+.wForm .section.empty.group {
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    font-family: "Open Sans";
+    line-height: 1.625em;
+    padding: 15px 0px !important;
+}
+
+.wForm .htmlContent span,
+.wForm .section.empty.group span {
+    color: rgb(102, 102, 102) !important;
+    font-size: 16px !important;
+    font-family: "Open Sans" !important;
+    line-height: 1.425em !important;
+}
+
+.wForm .htmlContent a,
+.wForm .section.empty.group a {
+    font-size: 16px !important;
+    font-family: "Open Sans" !important;
+    color: rgb(0, 122, 156) !important;
+    line-height: 1.425em !important;
+}
+
+.wForm .section.group .oneField {
+    margin: 15px 0px 30px;
+    padding: 0px;
+}
+
+.wForm .section.inline.group .oneField {
+    margin: 0px;
+}

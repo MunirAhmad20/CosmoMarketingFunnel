@@ -1,0 +1,123 @@
+﻿
+@{
+    ViewData["Title"] = "Dne";
+    Layout = "~/Views/Layouts/_adminLayout.cshtml";
+}
+
+
+<div class="page-wrapper">
+
+
+    <div class="container-fluid">
+
+
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-12">
+                <div class="card m-b-30">
+                    <div class="card-body">
+
+                        <h4 class="mt-0 header-title">DNE Database </h4>
+
+
+
+                      
+                        <form action="/admin/addexcel" enctype="multipart/form-data" method="post">
+                            <div>
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="card m-b-30">
+                                            <div class="card-body">
+                                                <h4 class="mt-0 header-title">Excel File Uploads (.xlsx) </h4>
+
+                                                <input type="file" name="files" src="files" id="files" class="dropify" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+
+                            <br />
+
+                            <div class="form-group p-0">
+                                <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                            </div>
+
+                        </form>
+                        <h4 class="mt-0 header-title">@ViewBag.mess </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 style=" font-size: 25px; font-weight: bold;" class="card-title">MASTER FILE  INFO</h4>
+                       
+                        <div class="table-responsive m-t-40">
+                            <table id="example23" class="table table-bordered table-striped" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+
+                                        <th>Email</th>
+
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>Email</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+
+                                    @foreach (var i in ViewBag.site)
+                                    {
+                                        <tr>
+
+                                            <td>
+
+                                                <a>@i.gmail</a>
+
+
+                                            </td>
+
+
+
+                                        </tr>
+
+                                    }
+                                </tbody>
+
+                            </table>
+                        </div>
+                        <script type="text/javascript">
+                            function checkDelete() {
+                                if (confirm('Are you sure you want to delete ?')) {
+
+                                    return true
+                                }
+                                else {
+                                    return false
+                                }
+                            }
+                        </script>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> <!-- end col -->
+</div>
+
+
+  
+    </div>
+</div>

@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewData["Title"] = "Admin";
+    Layout = "~/Views/Layouts/_adminLayout.cshtml";
+}
+
+
+
+
+
+
+
+
+
+<div class="page-wrapper">
+  
+
+    <div class="container-fluid">
+
+        <br />
+        <br />
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card m-b-30">
+                    <div class="card-body">
+
+                        <h4 class="mt-0 header-title">Create New Offer </h4>
+
+
+
+                        @*<form action="/Agency/addimage" enctype="multipart/form-data" method="post">*@
+                        <form action="/admin/addprocess" enctype="multipart/form-data" method="post">
+                            <div>
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="card m-b-30">
+                                            <div class="card-body">
+                                                <h4 class="mt-0 header-title">Gif/Mp4 video Upload </h4>
+                                                <p class="text-muted m-b-30 font-14">Your so fresh input Image/gif</p>
+                                                <input type="file" name="files" src="files" id="files" class="dropify" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="p-20">
+                                            <div class="form-group">
+
+                                                <label>Offer Name</label>
+                                                <input type="text" name="name" required="" placeholder="Offer Title" data-mask="999-99-999-9999-9" class="form-control">
+
+                                            </div>
+
+
+
+
+                                        </div>
+                                        <div class="p-20">
+                                            <div class="form-group">
+
+                                                <label>Redirect Link</label>
+                                                <input type="text" name="redirectlink" required="" placeholder="https://localhost:5001/" data-mask="999-99-999-9999-9" class="form-control">
+
+                                            </div>
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <br />
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end col -->
+        </div> <!-- end row -->
+    </div><!-- container -->
+</div> <!-- Page content Wrapper -->
+                </div> <!-- content -->

@@ -1,0 +1,168 @@
+﻿
+
+@{
+    ViewData["Title"] = "offers";
+    Layout = "~/Views/Layouts/_emptyLayout.cshtml";
+}
+
+<style>
+
+  /*  a {
+        color: darkblue !important;
+    }*/
+
+    .image-link {
+        background: url("/Resourcse/Asset 72.png");
+    }
+</style>
+
+
+@foreach (var i in ViewBag.package)
+{
+    <section style="background-color: #f8e8ff;" id="main-reg">
+        <div id="main-regg"></div>
+        <section class="offer-header" style="background-color: #f8e8ff; border-bottom: 0px;" id="">
+            <div class="row">
+                <div class="small-12 columns">
+                    <h1 style="color: black; font-size:2em; line-height: 1.5em;">  @i.Offer_Name</h1>
+
+
+                    <h2 style="color: black; margin-top: -1em; "> @i.Offer_description</h2>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <!--<div class="row">
+        <div class="small-12 columns">-->
+        @*<div class="divider"></div>*@
+        <!--<div class="mobilehide"><br /></div>
+                <br />
+
+                <h1 style="color:black;" class="text-center infor">
+
+
+                </h1>
+                <h3 style="text-align: center; font-size: 18px;">
+
+                </h3>
+                <div class="mobilehide"> <br /></div>
+
+            </div>
+        </div>-->
+
+
+        <div class="row navmaxwidth">
+
+            <div class="small-11 small-centered medium-11 medium-centered columns">
+
+
+
+                <div class="row reg-box" style="border-radius: 0px; background-color: #167fb0; height: 4em; padding: 0px; ">
+                    <h1 class="wow fadeInDown" style="text-align:center;font-size:37px !important;"><span style="color: white;" class="subheader">SELECT YOUR CARD</span></h1>
+                </div>
+                <div class="row reg-box" style="border-radius:0px;">
+
+                    @*<section class="margin_top confrm" id="stat-bar" style=" margin-top:-5px;">
+                            <div class="row show-for-small-only">
+                                <div class="small-12 columns"></div>
+                            </div>
+
+
+                            <div class="row hide-for-small-only">
+                                <div class="small-12 columns">
+                                    <h1 class="wow fadeInDown" style="visibility: hidden; animation-name: none;"><span class="subheader">Amount of average claim:</span> $<span class="counter">892.00</span></h1>
+                                    <p class="wow fadeInUp" style="visibility: hidden; animation-name: none;"></p>
+                                </div>
+                            </div>
+                            <div class="row desktophide tabhide">
+                                <div class="small-12 columns">
+                                    <h1 class="wow fadeInDown" style="visibility: hidden; animation-name: none;"><span style="font-size:20px;" class="subheader">SELECT YOUR CARD</span></h1>
+                                    <p class="wow fadeInUp" style="visibility: hidden; animation-name: none;"></p>
+                                </div>
+                            </div>
+                        </section>*@
+
+                    @*<section class="margin_top confrm" id="stat-bar">
+                            <div class="row show-for-small-only">
+                                <div class="small-12 columns"></div>
+                            </div>
+
+                            <div class="row hide-for-small-only">
+                                <div class="small-12 columns">
+                                    <h1 class="wow fadeInDown cardtop" style="visibility: hidden; animation-name: none; font-size: 40px; "><span class="subheader" style=" ">SELECT YOUR CARD</span></h1>
+                                    <p class="wow fadeInUp" style="visibility: hidden; animation-name: none;"></p>
+                                </div>
+                            </div>
+                            <div class="row desktophide endlineshow tabhidde">
+                                <div class="small-12 columns">
+                                    <h1 class="wow fadeInDown" style="visibility: hidden; animation-name: none; margin-top: -15px; "><span style="font-size: 24px;" class="subheader">SELECT YOUR CARD</span></h1>
+                                    <p class="wow fadeInUp" style="visibility: hidden; animation-name: none;"></p>
+                                </div>
+                            </div>
+                        </section>*@
+
+
+
+                    <div class="tabhide">
+                        <br />
+                        <br />
+                    </div>
+                    <p style="text-align:-webkit-center !important;">
+
+                        <img class="imgsize" src="~/UploadedImages/@i.Image" />
+
+                        <br />
+                        <br />
+
+                        @*@i.Offer_Name*@
+
+                        <a href="/Money/applymidpath1">
+                            <img src="~/Resourcse/Asset 72.png" />
+                        </a>
+
+                        <br />
+                        <div class="mobilehide">
+                            <br />
+                        </div>
+                    </p>
+                </div>
+                @*<div class="row reg-box" style="border-radius: 0px; background-color: #167fb0; height: 4em; padding: 0px; ">
+                        <h1 class="wow fadeInDown" style="text-align:center;font-size:37px !important;"><span style="color: white;" class="subheader">SELECT YOUR CARD</span></h1>
+                    </div>*@
+                @*<div class="small-12 medium-12 large-12 columns">
+                        <section class="margin_top confrm" id="stat-bar">
+                            <div class="row show-for-small-only">
+                                <div class="small-12 columns"></div>
+                            </div>
+
+                            <div class="row hide-for-small-only">
+                                <div class="small-12 columns">
+                                    <h1 class="wow fadeInDown cardtop" style="visibility: hidden; animation-name: none;  font-size: 40px; "><span class="subheader" style=" ">CARD INFORMATION</span></h1>
+                                    <p class="wow fadeInUp" style="visibility: hidden; animation-name: none;"></p>
+                                </div>
+                            </div>
+                            <div class="row desktophide endlineshow tabhidde">
+                                <div class="small-12 columns">
+                                    <h1 class="wow fadeInDown" style="visibility: hidden; animation-name: none; margin-top: -15px; "><span style="font-size: 24px;" class="subheader">CARD INFORMATION</span></h1>
+                                    <p class="wow fadeInUp" style="visibility: hidden; animation-name: none;"></p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>*@
+
+
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+
+    </section>
+
+}

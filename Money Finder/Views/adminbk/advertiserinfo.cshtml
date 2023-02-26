@@ -1,0 +1,1978 @@
+﻿@{ ViewData["Title"] = "Advertiseinfo"; Layout = "~/Views/Layouts/_adminLayout.cshtml"; }
+
+<html lang="en" class="js-focus-visible" data-js-focus-visible="" extension-installed="true">
+<head>
+    <style>
+        @@charset "UTF-8";
+
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak,
+        .ng-hide:not(.ng-hide-animate) {
+            display: none !important;
+        }
+
+        ng\:form {
+            display: block;
+        }
+
+        .ng-animate-shim {
+            visibility: hidden;
+        }
+
+        .ng-anchor {
+            position: absolute;
+        }
+    </style>
+    <base href="/" />
+    <meta charset="UTF-8" />
+    <meta name="eflow-version" value="0151b623d0255e9e72034655e325ce1c91ae7770" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>Student FinTech LLC - View Spark Revenue (DISPLAY)</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/vendor.css?build=0151b623d0255e9e72034655e325ce1c91ae7770" />
+    <link rel="stylesheet" type="text/css" href="/static/network.css?build=0151b623d0255e9e72034655e325ce1c91ae7770" />
+    <link rel="stylesheet" type="text/css" href="https://themes.everflowclient.io/layout.css" />
+    <style id="color" type="text/css">
+        :root {
+            --ef-primary-blue-raw-hsl-hue: 216;
+            --ef-primary-blue-raw-hsl-saturation: 46%;
+            --ef-primary-blue-raw-hsl-lightness: 39%;
+            --ef-primary-blue-raw-rgb-r: 53;
+            --ef-primary-blue-raw-rgb-g: 89;
+            --ef-primary-blue-raw-rgb-b: 144;
+            --ef-primary-blue: #355990;
+            --ef-primary-blue-default: #355990;
+            --selected-element-raw-hsl-hue: 216;
+            --selected-element-raw-hsl-saturation: 46%;
+            --selected-element-raw-hsl-lightness: 39%;
+            --selected-element-raw-rgb-r: 53;
+            --selected-element-raw-rgb-g: 89;
+            --selected-element-raw-rgb-b: 144;
+            --selected-element: #355990;
+            --selected-element-default: #355990;
+            --focused-element-raw-hsl-hue: 216;
+            --focused-element-raw-hsl-saturation: 46%;
+            --focused-element-raw-hsl-lightness: 39%;
+            --focused-element-raw-rgb-r: 53;
+            --focused-element-raw-rgb-g: 89;
+            --focused-element-raw-rgb-b: 144;
+            --focused-element: #355990;
+            --focused-element-default: #355990;
+            --checkbox-check-raw-hsl-hue: 216;
+            --checkbox-check-raw-hsl-saturation: 46%;
+            --checkbox-check-raw-hsl-lightness: 39%;
+            --checkbox-check-raw-rgb-r: 53;
+            --checkbox-check-raw-rgb-g: 89;
+            --checkbox-check-raw-rgb-b: 144;
+            --checkbox-check: #355990;
+            --checkbox-check-default: #355990;
+            --date-picker-selected-date-raw-hsl-hue: 216;
+            --date-picker-selected-date-raw-hsl-saturation: 46%;
+            --date-picker-selected-date-raw-hsl-lightness: 39%;
+            --date-picker-selected-date-raw-rgb-r: 53;
+            --date-picker-selected-date-raw-rgb-g: 89;
+            --date-picker-selected-date-raw-rgb-b: 144;
+            --date-picker-selected-date: #355990;
+            --date-picker-selected-date-default: #355990;
+            --login-top-banner-raw-hsl-hue: 216;
+            --login-top-banner-raw-hsl-saturation: 46%;
+            --login-top-banner-raw-hsl-lightness: 39%;
+            --login-top-banner-raw-rgb-r: 53;
+            --login-top-banner-raw-rgb-g: 89;
+            --login-top-banner-raw-rgb-b: 144;
+            --login-top-banner: #355990;
+            --login-top-banner-default: #355990;
+            --left-menu-background-raw-hsl-hue: 216;
+            --left-menu-background-raw-hsl-saturation: 46%;
+            --left-menu-background-raw-hsl-lightness: 39%;
+            --left-menu-background-raw-rgb-r: 53;
+            --left-menu-background-raw-rgb-g: 89;
+            --left-menu-background-raw-rgb-b: 144;
+            --left-menu-background: #355990;
+            --left-menu-background-default: #355990;
+            --ef-flashy-blue-raw-hsl-hue: 216;
+            --ef-flashy-blue-raw-hsl-saturation: 79%;
+            --ef-flashy-blue-raw-hsl-lightness: 50%;
+            --ef-flashy-blue-raw-rgb-r: 27;
+            --ef-flashy-blue-raw-rgb-g: 108;
+            --ef-flashy-blue-raw-rgb-b: 227;
+            --ef-flashy-blue: #1b6ce3;
+            --ef-flashy-blue-default: #1b6ce3;
+            --link-raw-hsl-hue: 216;
+            --link-raw-hsl-saturation: 79%;
+            --link-raw-hsl-lightness: 50%;
+            --link-raw-rgb-r: 27;
+            --link-raw-rgb-g: 108;
+            --link-raw-rgb-b: 227;
+            --link: #1b6ce3;
+            --link-default: #1b6ce3;
+            --ef-error-red-raw-hsl-hue: 354;
+            --ef-error-red-raw-hsl-saturation: 81%;
+            --ef-error-red-raw-hsl-lightness: 31%;
+            --ef-error-red-raw-rgb-r: 142;
+            --ef-error-red-raw-rgb-g: 15;
+            --ef-error-red-raw-rgb-b: 27;
+            --ef-error-red: #8e0f1b;
+            --ef-error-red-default: #8e0f1b;
+            --ef-feedback-error-raw-hsl-hue: 2;
+            --ef-feedback-error-raw-hsl-saturation: 64%;
+            --ef-feedback-error-raw-hsl-lightness: 58%;
+            --ef-feedback-error-raw-rgb-r: 217;
+            --ef-feedback-error-raw-rgb-g: 83;
+            --ef-feedback-error-raw-rgb-b: 79;
+            --ef-feedback-error: #d9534f;
+            --ef-feedback-error-default: #d9534f;
+            --ef-feedback-warn-raw-hsl-hue: 35;
+            --ef-feedback-warn-raw-hsl-saturation: 84%;
+            --ef-feedback-warn-raw-hsl-lightness: 62%;
+            --ef-feedback-warn-raw-rgb-r: 240;
+            --ef-feedback-warn-raw-rgb-g: 173;
+            --ef-feedback-warn-raw-rgb-b: 78;
+            --ef-feedback-warn: #f0ad4e;
+            --ef-feedback-warn-default: #f0ad4e;
+            --ef-feedback-ok-raw-hsl-hue: 194;
+            --ef-feedback-ok-raw-hsl-saturation: 66%;
+            --ef-feedback-ok-raw-hsl-lightness: 61%;
+            --ef-feedback-ok-raw-rgb-r: 91;
+            --ef-feedback-ok-raw-rgb-g: 192;
+            --ef-feedback-ok-raw-rgb-b: 222;
+            --ef-feedback-ok: #5bc0de;
+            --ef-feedback-ok-default: #5bc0de;
+            --ef-feedback-good-raw-hsl-hue: 120;
+            --ef-feedback-good-raw-hsl-saturation: 39%;
+            --ef-feedback-good-raw-hsl-lightness: 54%;
+            --ef-feedback-good-raw-rgb-r: 92;
+            --ef-feedback-good-raw-rgb-g: 184;
+            --ef-feedback-good-raw-rgb-b: 92;
+            --ef-feedback-good: #5cb85c;
+            --ef-feedback-good-default: #5cb85c;
+            --loading-text-raw-hsl-hue: 0;
+            --loading-text-raw-hsl-saturation: 0%;
+            --loading-text-raw-hsl-lightness: 67%;
+            --loading-text-raw-rgb-r: 170;
+            --loading-text-raw-rgb-g: 170;
+            --loading-text-raw-rgb-b: 170;
+            --loading-text: #aaaaaa;
+            --loading-text-default: #aaaaaa;
+            --button-danger-border-raw-hsl-hue: 354;
+            --button-danger-border-raw-hsl-saturation: 86%;
+            --button-danger-border-raw-hsl-lightness: 20%;
+            --button-danger-border-raw-rgb-r: 95;
+            --button-danger-border-raw-rgb-g: 7;
+            --button-danger-border-raw-rgb-b: 16;
+            --button-danger-border: #5f0710;
+            --button-danger-border-default: #5f0710;
+            --button-cancel-raw-hsl-hue: 184;
+            --button-cancel-raw-hsl-saturation: 6%;
+            --button-cancel-raw-hsl-lightness: 53%;
+            --button-cancel-raw-rgb-r: 127;
+            --button-cancel-raw-rgb-g: 140;
+            --button-cancel-raw-rgb-b: 141;
+            --button-cancel: #7f8c8d;
+            --button-cancel-default: #7f8c8d;
+            --reporting-setting-control-raw-hsl-hue: 0;
+            --reporting-setting-control-raw-hsl-saturation: 0%;
+            --reporting-setting-control-raw-hsl-lightness: 33%;
+            --reporting-setting-control-raw-rgb-r: 85;
+            --reporting-setting-control-raw-rgb-g: 85;
+            --reporting-setting-control-raw-rgb-b: 85;
+            --reporting-setting-control: #555555;
+            --reporting-setting-control-default: #555555;
+            --reporting-no-data-ball-1-raw-hsl-hue: 217;
+            --reporting-no-data-ball-1-raw-hsl-saturation: 35%;
+            --reporting-no-data-ball-1-raw-hsl-lightness: 39%;
+            --reporting-no-data-ball-1-raw-rgb-r: 64;
+            --reporting-no-data-ball-1-raw-rgb-g: 91;
+            --reporting-no-data-ball-1-raw-rgb-b: 133;
+            --reporting-no-data-ball-1: #405b85;
+            --reporting-no-data-ball-1-default: #405b85;
+            --reporting-no-data-ball-2-raw-hsl-hue: 37;
+            --reporting-no-data-ball-2-raw-hsl-saturation: 92%;
+            --reporting-no-data-ball-2-raw-hsl-lightness: 54%;
+            --reporting-no-data-ball-2-raw-rgb-r: 246;
+            --reporting-no-data-ball-2-raw-rgb-g: 164;
+            --reporting-no-data-ball-2-raw-rgb-b: 28;
+            --reporting-no-data-ball-2: #f6a41c;
+            --reporting-no-data-ball-2-default: #f6a41c;
+            --reporting-no-data-ball-3-raw-hsl-hue: 77;
+            --reporting-no-data-ball-3-raw-hsl-saturation: 55%;
+            --reporting-no-data-ball-3-raw-hsl-lightness: 55%;
+            --reporting-no-data-ball-3-raw-rgb-r: 167;
+            --reporting-no-data-ball-3-raw-rgb-g: 203;
+            --reporting-no-data-ball-3-raw-rgb-b: 75;
+            --reporting-no-data-ball-3: #a7cb4b;
+            --reporting-no-data-ball-3-default: #a7cb4b;
+            --ef-accent-orange-raw-hsl-hue: 15;
+            --ef-accent-orange-raw-hsl-saturation: 87%;
+            --ef-accent-orange-raw-hsl-lightness: 64%;
+            --ef-accent-orange-raw-rgb-r: 243;
+            --ef-accent-orange-raw-rgb-g: 121;
+            --ef-accent-orange-raw-rgb-b: 81;
+            --ef-accent-orange: #f37951;
+            --ef-accent-orange-default: #f37951;
+            --ef-primary-white-raw-hsl-hue: 0;
+            --ef-primary-white-raw-hsl-saturation: 0%;
+            --ef-primary-white-raw-hsl-lightness: 100%;
+            --ef-primary-white-raw-rgb-r: 255;
+            --ef-primary-white-raw-rgb-g: 255;
+            --ef-primary-white-raw-rgb-b: 255;
+            --ef-primary-white: #ffffff;
+            --ef-primary-white-default: #ffffff;
+            --toolbar-icon-raw-hsl-hue: 0;
+            --toolbar-icon-raw-hsl-saturation: 0%;
+            --toolbar-icon-raw-hsl-lightness: 100%;
+            --toolbar-icon-raw-rgb-r: 255;
+            --toolbar-icon-raw-rgb-g: 255;
+            --toolbar-icon-raw-rgb-b: 255;
+            --toolbar-icon: #ffffff;
+            --toolbar-icon-default: #ffffff;
+            --toolbar-search-icon-raw-hsl-hue: 0;
+            --toolbar-search-icon-raw-hsl-saturation: 0%;
+            --toolbar-search-icon-raw-hsl-lightness: 100%;
+            --toolbar-search-icon-raw-rgb-r: 255;
+            --toolbar-search-icon-raw-rgb-g: 255;
+            --toolbar-search-icon-raw-rgb-b: 255;
+            --toolbar-search-icon: #ffffff;
+            --toolbar-search-icon-default: #ffffff;
+            --support-link-raw-hsl-hue: 0;
+            --support-link-raw-hsl-saturation: 0%;
+            --support-link-raw-hsl-lightness: 100%;
+            --support-link-raw-rgb-r: 255;
+            --support-link-raw-rgb-g: 255;
+            --support-link-raw-rgb-b: 255;
+            --support-link: #ffffff;
+            --support-link-default: #ffffff;
+            --support-signup-link-raw-hsl-hue: 0;
+            --support-signup-link-raw-hsl-saturation: 0%;
+            --support-signup-link-raw-hsl-lightness: 100%;
+            --support-signup-link-raw-rgb-r: 255;
+            --support-signup-link-raw-rgb-g: 255;
+            --support-signup-link-raw-rgb-b: 255;
+            --support-signup-link: #ffffff;
+            --support-signup-link-default: #ffffff;
+            --left-menu-icon-raw-hsl-hue: 0;
+            --left-menu-icon-raw-hsl-saturation: 0%;
+            --left-menu-icon-raw-hsl-lightness: 100%;
+            --left-menu-icon-raw-rgb-r: 255;
+            --left-menu-icon-raw-rgb-g: 255;
+            --left-menu-icon-raw-rgb-b: 255;
+            --left-menu-icon: #ffffff;
+            --left-menu-icon-default: #ffffff;
+            --left-menu-icon-selected-raw-hsl-hue: 0;
+            --left-menu-icon-selected-raw-hsl-saturation: 0%;
+            --left-menu-icon-selected-raw-hsl-lightness: 100%;
+            --left-menu-icon-selected-raw-rgb-r: 255;
+            --left-menu-icon-selected-raw-rgb-g: 255;
+            --left-menu-icon-selected-raw-rgb-b: 255;
+            --left-menu-icon-selected: #ffffff;
+            --left-menu-icon-selected-default: #ffffff;
+            --left-menu-text-raw-hsl-hue: 0;
+            --left-menu-text-raw-hsl-saturation: 0%;
+            --left-menu-text-raw-hsl-lightness: 100%;
+            --left-menu-text-raw-rgb-r: 255;
+            --left-menu-text-raw-rgb-g: 255;
+            --left-menu-text-raw-rgb-b: 255;
+            --left-menu-text: #ffffff;
+            --left-menu-text-default: #ffffff;
+            --left-menu-selected-text-raw-hsl-hue: 0;
+            --left-menu-selected-text-raw-hsl-saturation: 0%;
+            --left-menu-selected-text-raw-hsl-lightness: 100%;
+            --left-menu-selected-text-raw-rgb-r: 255;
+            --left-menu-selected-text-raw-rgb-g: 255;
+            --left-menu-selected-text-raw-rgb-b: 255;
+            --left-menu-selected-text: #ffffff;
+            --left-menu-selected-text-default: #ffffff;
+            --left-menu-child-text-raw-hsl-hue: 0;
+            --left-menu-child-text-raw-hsl-saturation: 0%;
+            --left-menu-child-text-raw-hsl-lightness: 100%;
+            --left-menu-child-text-raw-rgb-r: 255;
+            --left-menu-child-text-raw-rgb-g: 255;
+            --left-menu-child-text-raw-rgb-b: 255;
+            --left-menu-child-text: #ffffff;
+            --left-menu-child-text-default: #ffffff;
+            --switch-off-raw-hsl-hue: 215;
+            --switch-off-raw-hsl-saturation: 31%;
+            --switch-off-raw-hsl-lightness: 81%;
+            --switch-off-raw-rgb-r: 193;
+            --switch-off-raw-rgb-g: 205;
+            --switch-off-raw-rgb-b: 222;
+            --switch-off: #c1cdde;
+            --switch-off-default: #c1cdde;
+            --switch-on-raw-hsl-hue: 218;
+            --switch-on-raw-hsl-saturation: 26%;
+            --switch-on-raw-hsl-lightness: 51%;
+            --switch-on-raw-rgb-r: 98;
+            --switch-on-raw-rgb-g: 122;
+            --switch-on-raw-rgb-b: 163;
+            --switch-on: #627aa3;
+            --switch-on-default: #627aa3;
+            --paper-header-raw-hsl-hue: 0;
+            --paper-header-raw-hsl-saturation: 0%;
+            --paper-header-raw-hsl-lightness: 46%;
+            --paper-header-raw-rgb-r: 117;
+            --paper-header-raw-rgb-g: 117;
+            --paper-header-raw-rgb-b: 117;
+            --paper-header: #757575;
+            --paper-header-default: #757575;
+            --form-icon-raw-hsl-hue: 0;
+            --form-icon-raw-hsl-saturation: 0%;
+            --form-icon-raw-hsl-lightness: 62%;
+            --form-icon-raw-rgb-r: 158;
+            --form-icon-raw-rgb-g: 158;
+            --form-icon-raw-rgb-b: 158;
+            --form-icon: #9e9e9e;
+            --form-icon-default: #9e9e9e;
+            --label-raw-hsl-hue: 0;
+            --label-raw-hsl-saturation: 0%;
+            --label-raw-hsl-lightness: 62%;
+            --label-raw-rgb-r: 158;
+            --label-raw-rgb-g: 158;
+            --label-raw-rgb-b: 158;
+            --label: #9e9e9e;
+            --label-default: #9e9e9e;
+            --error-raw-hsl-hue: 354;
+            --error-raw-hsl-saturation: 81%;
+            --error-raw-hsl-lightness: 31%;
+            --error-raw-rgb-r: 142;
+            --error-raw-rgb-g: 15;
+            --error-raw-rgb-b: 27;
+            --error: #8e0f1b;
+            --error-default: #8e0f1b;
+            --success-raw-hsl-hue: 143;
+            --success-raw-hsl-saturation: 87%;
+            --success-raw-hsl-lightness: 37%;
+            --success-raw-rgb-r: 12;
+            --success-raw-rgb-g: 179;
+            --success-raw-rgb-b: 76;
+            --success: #0cb34c;
+            --success-default: #0cb34c;
+            --loading-bit-raw-hsl-hue: 0;
+            --loading-bit-raw-hsl-saturation: 0%;
+            --loading-bit-raw-hsl-lightness: 100%;
+            --loading-bit-raw-rgb-r: 255;
+            --loading-bit-raw-rgb-g: 255;
+            --loading-bit-raw-rgb-b: 255;
+            --loading-bit: #ffffff;
+            --loading-bit-default: #ffffff;
+            --list-item-raw-hsl-hue: 0;
+            --list-item-raw-hsl-saturation: 0%;
+            --list-item-raw-hsl-lightness: 95%;
+            --list-item-raw-rgb-r: 242;
+            --list-item-raw-rgb-g: 242;
+            --list-item-raw-rgb-b: 242;
+            --list-item: #f2f2f2;
+            --list-item-default: #f2f2f2;
+            --fake-menu-left-raw-hsl-hue: 210;
+            --fake-menu-left-raw-hsl-saturation: 56%;
+            --fake-menu-left-raw-hsl-lightness: 74%;
+            --fake-menu-left-raw-rgb-r: 151;
+            --fake-menu-left-raw-rgb-g: 188;
+            --fake-menu-left-raw-rgb-b: 226;
+            --fake-menu-left: #97bce2;
+            --fake-menu-left-default: #97bce2;
+            --toolbar-search-container-raw-hsl-hue: 216;
+            --toolbar-search-container-raw-hsl-saturation: 46%;
+            --toolbar-search-container-raw-hsl-lightness: 59%;
+            --toolbar-search-container-raw-rgb-r: 102;
+            --toolbar-search-container-raw-rgb-g: 141;
+            --toolbar-search-container-raw-rgb-b: 199;
+            --toolbar-search-container: #668dc7;
+            --toolbar-search-container-default: #668dc7;
+            --toolbar-search-container: hsl(var(--ef-primary-blue-raw-hsl-hue), var(--ef-primary-blue-raw-hsl-saturation), calc(var(--ef-primary-blue-raw-hsl-lightness) + 20%));
+            --ef-primary-blue-pale: hsl(var(--ef-primary-blue-raw-hsl-hue), var(--ef-primary-blue-raw-hsl-saturation), calc(var(--ef-primary-blue-raw-hsl-lightness) + 8%));
+            --ef-primary-blue-dark: hsl(var(--ef-primary-blue-raw-hsl-hue), var(--ef-primary-blue-raw-hsl-saturation), calc(var(--ef-primary-blue-raw-hsl-lightness) - 8%));
+            --checkbox-check: var(--ef-primary-blue);
+            --date-picker-selected-date: var(--ef-primary-blue);
+            --date-picker-today-date: var(--ef-primary-blue-pale);
+            --date-picker-date-hover: var(--ef-primary-blue-pale);
+            --progress-bar-moving-line: var(--ef-primary-blue);
+            --progress-bar-background: var(--ef-primary-blue-pale);
+            --button-primary-text: var(--ef-primary-white);
+            --button-primary: var(--ef-primary-blue);
+            --button-danger-text: var(--ef-primary-white);
+            --button-danger: var(--ef-error-red);
+            --button-cancel-text: var(--ef-primary-white);
+            --selected-element-raw-rgb-r: var(--ef-primary-blue-raw-rgb-r);
+            --selected-element-raw-rgb-g: var(--ef-primary-blue-raw-rgb-g);
+            --selected-element-raw-rgb-b: var(--ef-primary-blue-raw-rgb-b);
+            --selected-element: var(--ef-primary-blue);
+            --focused-element: var(--ef-primary-blue);
+            --link: var(--ef-flashy-blue);
+            --left-menu-background: var(--ef-primary-blue);
+            --left-menu-text: var(--ef-primary-white);
+            --left-menu-selected-text: var(--ef-primary-white);
+            --left-menu-child-text: var(--ef-primary-white);
+            --left-menu-selected: var(--ef-primary-blue-dark);
+            --left-menu-selected-border: var(--ef-accent-orange);
+            --left-menu-icon: var(--ef-primary-white);
+            --left-menu-icon-selected: var(--ef-primary-white);
+            --toolbar-background: var(--ef-primary-blue-pale);
+            --toolbar-icon: var(--ef-primary-white);
+            --toolbar-search-icon: var(--ef-primary-white);
+            --login-top-banner: var(--ef-primary-blue);
+            --support-link: var(--ef-primary-white);
+            --support-signup-link: var(--ef-primary-white);
+            --data-table-ordered-column: var(--ef-accent-orange);
+            /*CUSTOM_START*/
+
+            --ef-primary-blue-raw-hsl-hue: 0;
+            --ef-primary-blue-raw-hsl-saturation: 0%;
+            --ef-primary-blue-raw-hsl-lightness: 100%;
+            --ef-primary-blue-raw-rgb-r: 255;
+            --ef-primary-blue-raw-rgb-g: 255;
+            --ef-primary-blue-raw-rgb-b: 255;
+            --ef-primary-blue: #ffffff;
+            --ef-accent-orange-raw-hsl-hue: 220;
+            --ef-accent-orange-raw-hsl-saturation: 100%;
+            --ef-accent-orange-raw-hsl-lightness: 50%;
+            --ef-accent-orange-raw-rgb-r: 0;
+            --ef-accent-orange-raw-rgb-g: 85;
+            --ef-accent-orange-raw-rgb-b: 255;
+            --ef-accent-orange: #0055ff;
+            --ef-primary-white-raw-hsl-hue: 0;
+            --ef-primary-white-raw-hsl-saturation: 0%;
+            --ef-primary-white-raw-hsl-lightness: 0%;
+            --ef-primary-white-raw-rgb-r: 0;
+            --ef-primary-white-raw-rgb-g: 0;
+            --ef-primary-white-raw-rgb-b: 0;
+            --ef-primary-white: #000000;
+            --checkbox-check-raw-hsl-hue: 0;
+            --checkbox-check-raw-hsl-saturation: 0%;
+            --checkbox-check-raw-hsl-lightness: 100%;
+            --checkbox-check-raw-rgb-r: 255;
+            --checkbox-check-raw-rgb-g: 255;
+            --checkbox-check-raw-rgb-b: 255;
+            --checkbox-check: #ffffff;
+            --date-picker-selected-date-raw-hsl-hue: 0;
+            --date-picker-selected-date-raw-hsl-saturation: 0%;
+            --date-picker-selected-date-raw-hsl-lightness: 100%;
+            --date-picker-selected-date-raw-rgb-r: 255;
+            --date-picker-selected-date-raw-rgb-g: 255;
+            --date-picker-selected-date-raw-rgb-b: 255;
+            --date-picker-selected-date: #ffffff;
+            --date-picker-today-date-raw-hsl-hue: 0;
+            --date-picker-today-date-raw-hsl-saturation: 0%;
+            --date-picker-today-date-raw-hsl-lightness: 100%;
+            --date-picker-today-date-raw-rgb-r: 255;
+            --date-picker-today-date-raw-rgb-g: 255;
+            --date-picker-today-date-raw-rgb-b: 255;
+            --date-picker-today-date: #ffffff;
+            --progress-bar-moving-line-raw-hsl-hue: 0;
+            --progress-bar-moving-line-raw-hsl-saturation: 0%;
+            --progress-bar-moving-line-raw-hsl-lightness: 100%;
+            --progress-bar-moving-line-raw-rgb-r: 255;
+            --progress-bar-moving-line-raw-rgb-g: 255;
+            --progress-bar-moving-line-raw-rgb-b: 255;
+            --progress-bar-moving-line: #ffffff;
+            --progress-bar-background-raw-hsl-hue: 0;
+            --progress-bar-background-raw-hsl-saturation: 0%;
+            --progress-bar-background-raw-hsl-lightness: 100%;
+            --progress-bar-background-raw-rgb-r: 255;
+            --progress-bar-background-raw-rgb-g: 255;
+            --progress-bar-background-raw-rgb-b: 255;
+            --progress-bar-background: #ffffff;
+            --button-primary-text-raw-hsl-hue: 0;
+            --button-primary-text-raw-hsl-saturation: 0%;
+            --button-primary-text-raw-hsl-lightness: 0%;
+            --button-primary-text-raw-rgb-r: 0;
+            --button-primary-text-raw-rgb-g: 0;
+            --button-primary-text-raw-rgb-b: 0;
+            --button-primary-text: #000000;
+            --button-primary-raw-hsl-hue: 0;
+            --button-primary-raw-hsl-saturation: 0%;
+            --button-primary-raw-hsl-lightness: 100%;
+            --button-primary-raw-rgb-r: 255;
+            --button-primary-raw-rgb-g: 255;
+            --button-primary-raw-rgb-b: 255;
+            --button-primary: #ffffff;
+            --button-cancel-raw-hsl-hue: 184;
+            --button-cancel-raw-hsl-saturation: 6%;
+            --button-cancel-raw-hsl-lightness: 53%;
+            --button-cancel-raw-rgb-r: 127;
+            --button-cancel-raw-rgb-g: 140;
+            --button-cancel-raw-rgb-b: 141;
+            --button-cancel: #7f8c8d;
+            --button-cancel-text-raw-hsl-hue: 0;
+            --button-cancel-text-raw-hsl-saturation: 0%;
+            --button-cancel-text-raw-hsl-lightness: 0%;
+            --button-cancel-text-raw-rgb-r: 0;
+            --button-cancel-text-raw-rgb-g: 0;
+            --button-cancel-text-raw-rgb-b: 0;
+            --button-cancel-text: #000000;
+            --selected-element-raw-hsl-hue: 0;
+            --selected-element-raw-hsl-saturation: 0%;
+            --selected-element-raw-hsl-lightness: 100%;
+            --selected-element-raw-rgb-r: 255;
+            --selected-element-raw-rgb-g: 255;
+            --selected-element-raw-rgb-b: 255;
+            --selected-element: #ffffff;
+            --focused-element-raw-hsl-hue: 0;
+            --focused-element-raw-hsl-saturation: 0%;
+            --focused-element-raw-hsl-lightness: 100%;
+            --focused-element-raw-rgb-r: 255;
+            --focused-element-raw-rgb-g: 255;
+            --focused-element-raw-rgb-b: 255;
+            --focused-element: #ffffff;
+            --link-raw-hsl-hue: 216;
+            --link-raw-hsl-saturation: 79%;
+            --link-raw-hsl-lightness: 50%;
+            --link-raw-rgb-r: 27;
+            --link-raw-rgb-g: 108;
+            --link-raw-rgb-b: 227;
+            --link: #1b6ce3;
+            --left-menu-background-raw-hsl-hue: 0;
+            --left-menu-background-raw-hsl-saturation: 0%;
+            --left-menu-background-raw-hsl-lightness: 100%;
+            --left-menu-background-raw-rgb-r: 255;
+            --left-menu-background-raw-rgb-g: 255;
+            --left-menu-background-raw-rgb-b: 255;
+            --left-menu-background: #ffffff;
+            --left-menu-text-raw-hsl-hue: 0;
+            --left-menu-text-raw-hsl-saturation: 0%;
+            --left-menu-text-raw-hsl-lightness: 0%;
+            --left-menu-text-raw-rgb-r: 0;
+            --left-menu-text-raw-rgb-g: 0;
+            --left-menu-text-raw-rgb-b: 0;
+            --left-menu-text: #000000;
+            --left-menu-selected-text-raw-hsl-hue: 0;
+            --left-menu-selected-text-raw-hsl-saturation: 0%;
+            --left-menu-selected-text-raw-hsl-lightness: 0%;
+            --left-menu-selected-text-raw-rgb-r: 0;
+            --left-menu-selected-text-raw-rgb-g: 0;
+            --left-menu-selected-text-raw-rgb-b: 0;
+            --left-menu-selected-text: #000000;
+            --left-menu-child-text-raw-hsl-hue: 0;
+            --left-menu-child-text-raw-hsl-saturation: 0%;
+            --left-menu-child-text-raw-hsl-lightness: 0%;
+            --left-menu-child-text-raw-rgb-r: 0;
+            --left-menu-child-text-raw-rgb-g: 0;
+            --left-menu-child-text-raw-rgb-b: 0;
+            --left-menu-child-text: #000000;
+            --left-menu-selected-raw-hsl-hue: 0;
+            --left-menu-selected-raw-hsl-saturation: 0%;
+            --left-menu-selected-raw-hsl-lightness: 92%;
+            --left-menu-selected-raw-rgb-r: 235;
+            --left-menu-selected-raw-rgb-g: 235;
+            --left-menu-selected-raw-rgb-b: 235;
+            --left-menu-selected: #ebebeb;
+            --left-menu-selected-border-raw-hsl-hue: 220;
+            --left-menu-selected-border-raw-hsl-saturation: 100%;
+            --left-menu-selected-border-raw-hsl-lightness: 50%;
+            --left-menu-selected-border-raw-rgb-r: 0;
+            --left-menu-selected-border-raw-rgb-g: 85;
+            --left-menu-selected-border-raw-rgb-b: 255;
+            --left-menu-selected-border: #0055ff;
+            --left-menu-icon-raw-hsl-hue: 0;
+            --left-menu-icon-raw-hsl-saturation: 0%;
+            --left-menu-icon-raw-hsl-lightness: 0%;
+            --left-menu-icon-raw-rgb-r: 0;
+            --left-menu-icon-raw-rgb-g: 0;
+            --left-menu-icon-raw-rgb-b: 0;
+            --left-menu-icon: #000000;
+            --toolbar-background-raw-hsl-hue: 0;
+            --toolbar-background-raw-hsl-saturation: 0%;
+            --toolbar-background-raw-hsl-lightness: 100%;
+            --toolbar-background-raw-rgb-r: 255;
+            --toolbar-background-raw-rgb-g: 255;
+            --toolbar-background-raw-rgb-b: 255;
+            --toolbar-background: #ffffff;
+            --toolbar-search-container-raw-hsl-hue: 0;
+            --toolbar-search-container-raw-hsl-saturation: 0%;
+            --toolbar-search-container-raw-hsl-lightness: 100%;
+            --toolbar-search-container-raw-rgb-r: 255;
+            --toolbar-search-container-raw-rgb-g: 255;
+            --toolbar-search-container-raw-rgb-b: 255;
+            --toolbar-search-container: #ffffff;
+            --toolbar-icon-raw-hsl-hue: 0;
+            --toolbar-icon-raw-hsl-saturation: 0%;
+            --toolbar-icon-raw-hsl-lightness: 0%;
+            --toolbar-icon-raw-rgb-r: 0;
+            --toolbar-icon-raw-rgb-g: 0;
+            --toolbar-icon-raw-rgb-b: 0;
+            --toolbar-icon: #000000;
+            --toolbar-search-icon-raw-hsl-hue: 0;
+            --toolbar-search-icon-raw-hsl-saturation: 0%;
+            --toolbar-search-icon-raw-hsl-lightness: 0%;
+            --toolbar-search-icon-raw-rgb-r: 0;
+            --toolbar-search-icon-raw-rgb-g: 0;
+            --toolbar-search-icon-raw-rgb-b: 0;
+            --toolbar-search-icon: #000000;
+            --reporting-setting-control-raw-hsl-hue: 0;
+            --reporting-setting-control-raw-hsl-saturation: 0%;
+            --reporting-setting-control-raw-hsl-lightness: 33%;
+            --reporting-setting-control-raw-rgb-r: 85;
+            --reporting-setting-control-raw-rgb-g: 85;
+            --reporting-setting-control-raw-rgb-b: 85;
+            --reporting-setting-control: #555555;
+            --reporting-no-data-ball-1-raw-hsl-hue: 217;
+            --reporting-no-data-ball-1-raw-hsl-saturation: 35%;
+            --reporting-no-data-ball-1-raw-hsl-lightness: 39%;
+            --reporting-no-data-ball-1-raw-rgb-r: 64;
+            --reporting-no-data-ball-1-raw-rgb-g: 91;
+            --reporting-no-data-ball-1-raw-rgb-b: 133;
+            --reporting-no-data-ball-1: #405b85;
+            --reporting-no-data-ball-2-raw-hsl-hue: 37;
+            --reporting-no-data-ball-2-raw-hsl-saturation: 92%;
+            --reporting-no-data-ball-2-raw-hsl-lightness: 54%;
+            --reporting-no-data-ball-2-raw-rgb-r: 246;
+            --reporting-no-data-ball-2-raw-rgb-g: 164;
+            --reporting-no-data-ball-2-raw-rgb-b: 28;
+            --reporting-no-data-ball-2: #f6a41c;
+            --reporting-no-data-ball-3-raw-hsl-hue: 77;
+            --reporting-no-data-ball-3-raw-hsl-saturation: 55%;
+            --reporting-no-data-ball-3-raw-hsl-lightness: 55%;
+            --reporting-no-data-ball-3-raw-rgb-r: 167;
+            --reporting-no-data-ball-3-raw-rgb-g: 203;
+            --reporting-no-data-ball-3-raw-rgb-b: 75;
+            --reporting-no-data-ball-3: #a7cb4b;
+            --label-raw-hsl-hue: 0;
+            --label-raw-hsl-saturation: 0%;
+            --label-raw-hsl-lightness: 62%;
+            --label-raw-rgb-r: 158;
+            --label-raw-rgb-g: 158;
+            --label-raw-rgb-b: 158;
+            --label: #9e9e9e;
+            --data-table-ordered-column-raw-hsl-hue: 220;
+            --data-table-ordered-column-raw-hsl-saturation: 100%;
+            --data-table-ordered-column-raw-hsl-lightness: 50%;
+            --data-table-ordered-column-raw-rgb-r: 0;
+            --data-table-ordered-column-raw-rgb-g: 85;
+            --data-table-ordered-column-raw-rgb-b: 255;
+            --data-table-ordered-column: #0055ff;
+            --login-top-banner-raw-hsl-hue: 0;
+            --login-top-banner-raw-hsl-saturation: 0%;
+            --login-top-banner-raw-hsl-lightness: 100%;
+            --login-top-banner-raw-rgb-r: 255;
+            --login-top-banner-raw-rgb-g: 255;
+            --login-top-banner-raw-rgb-b: 255;
+            --login-top-banner: #ffffff;
+            --support-signup-link-raw-hsl-hue: 0;
+            --support-signup-link-raw-hsl-saturation: 0%;
+            --support-signup-link-raw-hsl-lightness: 0%;
+            --support-signup-link-raw-rgb-r: 0;
+            --support-signup-link-raw-rgb-g: 0;
+            --support-signup-link-raw-rgb-b: 0;
+            --support-signup-link: #000000;
+            --form-icon-raw-hsl-hue: 0;
+            --form-icon-raw-hsl-saturation: 0%;
+            --form-icon-raw-hsl-lightness: 62%;
+            --form-icon-raw-rgb-r: 158;
+            --form-icon-raw-rgb-g: 158;
+            --form-icon-raw-rgb-b: 158;
+            --form-icon: #9e9e9e;
+            --loading-text-raw-hsl-hue: 0;
+            --loading-text-raw-hsl-saturation: 0%;
+            --loading-text-raw-hsl-lightness: 67%;
+            --loading-text-raw-rgb-r: 170;
+            --loading-text-raw-rgb-g: 170;
+            --loading-text-raw-rgb-b: 170;
+            --loading-text: #aaaaaa;
+            --switch-on-raw-hsl-hue: 218;
+            --switch-on-raw-hsl-saturation: 26%;
+            --switch-on-raw-hsl-lightness: 51%;
+            --switch-on-raw-rgb-r: 98;
+            --switch-on-raw-rgb-g: 122;
+            --switch-on-raw-rgb-b: 163;
+            --switch-on: #627aa3;
+            --switch-off-raw-hsl-hue: 215;
+            --switch-off-raw-hsl-saturation: 31%;
+            --switch-off-raw-hsl-lightness: 81%;
+            --switch-off-raw-rgb-r: 193;
+            --switch-off-raw-rgb-g: 205;
+            --switch-off-raw-rgb-b: 222;
+            --switch-off: #c1cdde;
+            --button-danger-raw-hsl-hue: 354;
+            --button-danger-raw-hsl-saturation: 81%;
+            --button-danger-raw-hsl-lightness: 31%;
+            --button-danger-raw-rgb-r: 142;
+            --button-danger-raw-rgb-g: 15;
+            --button-danger-raw-rgb-b: 27;
+            --button-danger: #8e0f1b;
+            --button-danger-text-raw-hsl-hue: 0;
+            --button-danger-text-raw-hsl-saturation: 0%;
+            --button-danger-text-raw-hsl-lightness: 0%;
+            --button-danger-text-raw-rgb-r: 0;
+            --button-danger-text-raw-rgb-g: 0;
+            --button-danger-text-raw-rgb-b: 0;
+            --button-danger-text: #000000;
+        }
+    </style>
+    <script type="text/javascript" async="" src="https://app.planhat.com/analytics/plantrack.min.js"></script>
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" async="" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" async="" src="https://www.gstatic.com/charts/49/loader.js"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-81610869-2"></script>
+    <style type="text/css">
+        @@font-face {
+            font-weight: 400;
+            font-style: normal;
+            font-family: "Circular-Loom";
+            src: url("https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2") format("woff2");
+        }
+
+        @@font-face {
+            font-weight: 500;
+            font-style: normal;
+            font-family: "Circular-Loom";
+            src: url("https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Medium-d74eac43c78bd5852478998ce63dceb3.woff2") format("woff2");
+        }
+
+        @@font-face {
+            font-weight: 700;
+            font-style: normal;
+            font-family: "Circular-Loom";
+            src: url("https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Bold-83b8ceaf77f49c7cffa44107561909e4.woff2") format("woff2");
+        }
+
+        @@font-face {
+            font-weight: 900;
+            font-style: normal;
+            font-family: "Circular-Loom";
+            src: url("https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Black-bf067ecb8aa777ceb6df7d72226febca.woff2") format("woff2");
+        }
+    </style>
+    <style>
+        [_nghost-wkp-c563] {
+            position: relative;
+            display: block;
+            pointer-events: none;
+        }
+
+            [_nghost-wkp-c563] .ngx-spinner[_ngcontent-wkp-c563] {
+                transition: 350ms linear all;
+                display: block;
+                position: absolute;
+                top: 5px;
+                left: 0px;
+            }
+
+                [_nghost-wkp-c563] .ngx-spinner[_ngcontent-wkp-c563] .ngx-spinner-icon[_ngcontent-wkp-c563] {
+                    width: 14px;
+                    height: 14px;
+                    border: solid 2px transparent;
+                    border-top-color: inherit;
+                    border-left-color: inherit;
+                    border-radius: 50%;
+                    animation: loading-bar-spinner 400ms linear infinite;
+                }
+
+            [_nghost-wkp-c563] .ngx-bar[_ngcontent-wkp-c563] {
+                transition: width 350ms;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                border-bottom-right-radius: 1px;
+                border-top-right-radius: 1px;
+            }
+
+        [dir="rtl"] [_nghost-wkp-c563] .ngx-bar[_ngcontent-wkp-c563] {
+            right: 0;
+            left: unset;
+        }
+
+        [fixed="true"][_nghost-wkp-c563] {
+            z-index: 10002;
+        }
+
+            [fixed="true"][_nghost-wkp-c563] .ngx-bar[_ngcontent-wkp-c563] {
+                position: fixed;
+            }
+
+            [fixed="true"][_nghost-wkp-c563] .ngx-spinner[_ngcontent-wkp-c563] {
+                position: fixed;
+                top: 10px;
+                left: 10px;
+            }
+
+        [dir="rtl"] [fixed="true"][_nghost-wkp-c563] .ngx-spinner[_ngcontent-wkp-c563] {
+            right: 10px;
+            left: unset;
+        }
+
+        @@keyframes loading-bar-spinner {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <style>
+        [_nghost-wkp-c19] {
+            position: relative;
+            display: block;
+            pointer-events: none;
+        }
+
+            [_nghost-wkp-c19] .ngx-spinner[_ngcontent-wkp-c19] {
+                transition: 350ms linear;
+                display: block;
+                position: absolute;
+                top: 5px;
+                left: 0;
+            }
+
+                [_nghost-wkp-c19] .ngx-spinner[_ngcontent-wkp-c19] .ngx-spinner-icon[_ngcontent-wkp-c19] {
+                    width: 14px;
+                    height: 14px;
+                    border: 2px solid transparent;
+                    border-top-color: inherit;
+                    border-left-color: inherit;
+                    border-radius: 50%;
+                    -webkit-animation: 0.4s linear infinite loading-bar-spinner;
+                    animation: 0.4s linear infinite loading-bar-spinner;
+                }
+
+            [_nghost-wkp-c19] .ngx-bar[_ngcontent-wkp-c19] {
+                transition: width 350ms;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                border-bottom-right-radius: 1px;
+                border-top-right-radius: 1px;
+            }
+
+        [dir="rtl"] [_nghost-wkp-c19] .ngx-bar[_ngcontent-wkp-c19] {
+            right: 0;
+            left: unset;
+        }
+
+        [fixed="true"][_nghost-wkp-c19] {
+            z-index: 10002;
+        }
+
+            [fixed="true"][_nghost-wkp-c19] .ngx-bar[_ngcontent-wkp-c19] {
+                position: fixed;
+            }
+
+            [fixed="true"][_nghost-wkp-c19] .ngx-spinner[_ngcontent-wkp-c19] {
+                position: fixed;
+                top: 10px;
+                left: 10px;
+            }
+
+        [dir="rtl"] [fixed="true"][_nghost-wkp-c19] .ngx-spinner[_ngcontent-wkp-c19] {
+            right: 10px;
+            left: unset;
+        }
+
+        @@-webkit-keyframes loading-bar-spinner {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @@keyframes loading-bar-spinner {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <style type="text/css">
+        /*
+          @@angular/flex-layout - workaround for possible browser quirk with mediaQuery listeners
+          see http://bit.ly/2sd4HMP
+        */
+        @@media screen and (min-width: 600px), screen and (min-width: 960px), screen and (min-width: 1280px), screen and (min-width: 1920px), screen and (min-width: 1920px) and (max-width: 4999.98px), screen and (max-width: 1919.98px), screen and (min-width: 1280px) and (max-width: 1919.98px), screen and (max-width: 1279.98px), screen and (min-width: 960px) and (max-width: 1279.98px), screen and (max-width: 959.98px), screen and (min-width: 600px) and (max-width: 959.98px), screen and (max-width: 599.98px), screen and (min-width: 0px) and (max-width: 599.98px), print {
+            .fx-query-test {
+            }
+        }
+    </style>
+    <style>
+        [_nghost-wkp-c611] {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 10;
+        }
+    </style>
+    <style>
+        i.control[_ngcontent-wkp-c112] {
+            cursor: pointer;
+        }
+
+            i.control[_ngcontent-wkp-c112]:hover {
+                color: #757575;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+                background-color: white;
+            }
+    </style>
+    <style>
+        [_nghost-wkp-c142] {
+            display: inline-block;
+            height: 1em;
+            border-radius: 3px;
+            animation-duration: 1.7s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-name: efLoadingTextAnimation;
+            background: #e8e8e8 linear-gradient(to right, #eee 2%, #ddd 18%, #eee 33%);
+            background-size: 1000px;
+        }
+
+        @@keyframes efLoadingTextAnimation {
+            0% {
+                background-position: -650px 0;
+            }
+
+            100% {
+                background-position: 650px 0;
+            }
+        }
+    </style>
+    <style>
+        [_nghost-wkp-c141] {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            align-content: center;
+            position: relative;
+        }
+
+        .status-circle[_ngcontent-wkp-c141] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 5px;
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+        }
+
+            .status-circle[_ngcontent-wkp-c141] .inner-circle[_ngcontent-wkp-c141] {
+                background-color: white;
+                height: 8px;
+                width: 8px;
+                border-radius: 50%;
+            }
+    </style>
+    <style></style>
+    <style>
+        [_nghost-wkp-c48] {
+            overflow: hidden;
+        }
+
+        .loader[_ngcontent-wkp-c48] {
+            top: 0;
+            position: absolute;
+            z-index: 100;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            opacity: 0.8;
+            pointer-events: all;
+        }
+
+        svg[_ngcontent-wkp-c48] {
+            width: 400px;
+        }
+
+        svg.monotone[_ngcontent-wkp-c48] path[_ngcontent-wkp-c48] {
+            fill: #d3d3d3 !important;
+        }
+
+        @@keyframes kf_el_AmwoVrJn80_an_El-4MGACn {
+            0% {
+                opacity: 0;
+            }
+
+            26.67% {
+                opacity: 1;
+            }
+
+            73.33% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @@keyframes kf_el_aE5QWwqgds_an_xscRkjRRC {
+            0% {
+                opacity: 0;
+            }
+
+            26.67% {
+                opacity: 1;
+            }
+
+            73.33% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @@keyframes kf_el_9_VvvqmRrQ_an_SLD9fJEFS {
+            0% {
+                opacity: 0;
+            }
+
+            26.67% {
+                opacity: 1;
+            }
+
+            73.33% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @@keyframes kf_el_AmwoVrJn80_an_DIgZ6en54 {
+            0% {
+                -webkit-transform: translate(0px, 470.65002441px) translate(0px, -470.65002441px) translate(1500px, 0px);
+                transform: translate(0px, 470.65002441px) translate(0px, -470.65002441px) translate(1500px, 0px);
+            }
+
+            15.56% {
+                -webkit-transform: translate(0px, 470.65002441px) translate(0px, -470.65002441px) translate(125px, 0px);
+                transform: translate(0px, 470.65002441px) translate(0px, -470.65002441px) translate(125px, 0px);
+            }
+
+            51.11% {
+                -webkit-transform: translate(0px, 470.65002441px) translate(0px, -470.65002441px) translate(0px, 0px);
+                transform: translate(0px, 470.65002441px) translate(0px, -470.65002441px) translate(0px, 0px);
+            }
+
+            84.44% {
+                -webkit-transform: translate(0px, 470.65002441px) translate(0px, -470.65002441px) translate(-125px, 0px);
+                transform: translate(0px, 470.65002441px) translate(0px, -470.65002441px) translate(-125px, 0px);
+            }
+
+            100% {
+                -webkit-transform: translate(0px, 470.65002441px) translate(0px, -470.65002441px) translate(-1500px, 0px);
+                transform: translate(0px, 470.65002441px) translate(0px, -470.65002441px) translate(-1500px, 0px);
+            }
+        }
+
+        @@keyframes kf_el_aE5QWwqgds_an_TXC-Qcfdu {
+            0% {
+                -webkit-transform: translate(94.09999847px, 941.34997559px) translate(-94.09999847px, -941.34997559px) translate(-1500px, 0px);
+                transform: translate(94.09999847px, 941.34997559px) translate(-94.09999847px, -941.34997559px) translate(-1500px, 0px);
+            }
+
+            15.56% {
+                -webkit-transform: translate(94.09999847px, 941.34997559px) translate(-94.09999847px, -941.34997559px) translate(-125px, 0px);
+                transform: translate(94.09999847px, 941.34997559px) translate(-94.09999847px, -941.34997559px) translate(-125px, 0px);
+            }
+
+            51.11% {
+                -webkit-transform: translate(94.09999847px, 941.34997559px) translate(-94.09999847px, -941.34997559px) translate(0px, 0px);
+                transform: translate(94.09999847px, 941.34997559px) translate(-94.09999847px, -941.34997559px) translate(0px, 0px);
+            }
+
+            84.44% {
+                -webkit-transform: translate(94.09999847px, 941.34997559px) translate(-94.09999847px, -941.34997559px) translate(125px, 0px);
+                transform: translate(94.09999847px, 941.34997559px) translate(-94.09999847px, -941.34997559px) translate(125px, 0px);
+            }
+
+            100% {
+                -webkit-transform: translate(94.09999847px, 941.34997559px) translate(-94.09999847px, -941.34997559px) translate(1500px, 0px);
+                transform: translate(94.09999847px, 941.34997559px) translate(-94.09999847px, -941.34997559px) translate(1500px, 0px);
+            }
+        }
+
+        @@keyframes kf_el_9_VvvqmRrQ_an_l386v-068 {
+            0% {
+                -webkit-transform: translate(470.64001465px, 0px) translate(-470.64001465px, 0px) translate(-1500px, 0px);
+                transform: translate(470.64001465px, 0px) translate(-470.64001465px, 0px) translate(-1500px, 0px);
+            }
+
+            15.56% {
+                -webkit-transform: translate(470.64001465px, 0px) translate(-470.64001465px, 0px) translate(-125px, 0px);
+                transform: translate(470.64001465px, 0px) translate(-470.64001465px, 0px) translate(-125px, 0px);
+            }
+
+            51.11% {
+                -webkit-transform: translate(470.64001465px, 0px) translate(-470.64001465px, 0px) translate(0px, 0px);
+                transform: translate(470.64001465px, 0px) translate(-470.64001465px, 0px) translate(0px, 0px);
+            }
+
+            84.44% {
+                -webkit-transform: translate(470.64001465px, 0px) translate(-470.64001465px, 0px) translate(125px, 0px);
+                transform: translate(470.64001465px, 0px) translate(-470.64001465px, 0px) translate(125px, 0px);
+            }
+
+            100% {
+                -webkit-transform: translate(470.64001465px, 0px) translate(-470.64001465px, 0px) translate(1500px, 0px);
+                transform: translate(470.64001465px, 0px) translate(-470.64001465px, 0px) translate(1500px, 0px);
+            }
+        }
+
+        #el_MOuIR2F_p[_ngcontent-wkp-c48] *[_ngcontent-wkp-c48] {
+            -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1);
+            animation-timing-function: cubic-bezier(0, 0, 1, 1);
+        }
+
+        #el_9_VvvqmRrQ[_ngcontent-wkp-c48] {
+            fill: #4332a5;
+            -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
+            opacity: 0;
+            -webkit-animation-name: kf_el_9_VvvqmRrQ_an_SLD9fJEFS;
+            animation-name: kf_el_9_VvvqmRrQ_an_SLD9fJEFS;
+            -webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1);
+            animation-timing-function: cubic-bezier(0, 0, 1, 1);
+        }
+
+        #el_AmwoVrJn80[_ngcontent-wkp-c48] {
+            fill: #f7dc4c;
+            -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
+            opacity: 0;
+            -webkit-animation-name: kf_el_AmwoVrJn80_an_El-4MGACn;
+            animation-name: kf_el_AmwoVrJn80_an_El-4MGACn;
+            -webkit-animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+            animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+        }
+
+        #el_aE5QWwqgds[_ngcontent-wkp-c48] {
+            fill: #4332a5;
+            -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
+            opacity: 0;
+            -webkit-animation-name: kf_el_aE5QWwqgds_an_xscRkjRRC;
+            animation-name: kf_el_aE5QWwqgds_an_xscRkjRRC;
+            -webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1);
+            animation-timing-function: cubic-bezier(0, 0, 1, 1);
+        }
+
+        #el_9_VvvqmRrQ_an_l386v-068[_ngcontent-wkp-c48] {
+            -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
+            -webkit-transform: translate(470.64001465px, 0px) translate(-470.64001465px, 0px) translate(-1500px, 0px);
+            transform: translate(470.64001465px, 0px) translate(-470.64001465px, 0px) translate(-1500px, 0px);
+            -webkit-animation-name: kf_el_9_VvvqmRrQ_an_l386v-068;
+            animation-name: kf_el_9_VvvqmRrQ_an_l386v-068;
+            -webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1);
+            animation-timing-function: cubic-bezier(0, 0, 1, 1);
+        }
+
+        #el_9_VvvqmRrQ_an_AyMGb8vSA[_ngcontent-wkp-c48] {
+            -webkit-transform: translate(470.64001465px, 0px) rotate(0deg) translate(-470.64001465px, 0px);
+            transform: translate(470.64001465px, 0px) rotate(0deg) translate(-470.64001465px, 0px);
+        }
+
+        #el_aE5QWwqgds_an_TXC-Qcfdu[_ngcontent-wkp-c48] {
+            -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
+            -webkit-transform: translate(94.09999847px, 941.34997559px) translate(-94.09999847px, -941.34997559px) translate(-1500px, 0px);
+            transform: translate(94.09999847px, 941.34997559px) translate(-94.09999847px, -941.34997559px) translate(-1500px, 0px);
+            -webkit-animation-name: kf_el_aE5QWwqgds_an_TXC-Qcfdu;
+            animation-name: kf_el_aE5QWwqgds_an_TXC-Qcfdu;
+            -webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1);
+            animation-timing-function: cubic-bezier(0, 0, 1, 1);
+        }
+
+        #el_AmwoVrJn80_an_DIgZ6en54[_ngcontent-wkp-c48] {
+            -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
+            -webkit-transform: translate(0px, 470.65002441px) translate(0px, -470.65002441px) translate(1500px, 0px);
+            transform: translate(0px, 470.65002441px) translate(0px, -470.65002441px) translate(1500px, 0px);
+            -webkit-animation-name: kf_el_AmwoVrJn80_an_DIgZ6en54;
+            animation-name: kf_el_AmwoVrJn80_an_DIgZ6en54;
+            -webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1);
+            animation-timing-function: cubic-bezier(0, 0, 1, 1);
+        }
+    </style>
+    <style>
+        .ng-select {
+            display: block;
+            position: relative;
+        }
+
+            .ng-select,
+            .ng-select div,
+            .ng-select input,
+            .ng-select span {
+                box-sizing: border-box;
+            }
+
+                .ng-select [hidden] {
+                    display: none;
+                }
+
+                .ng-select.ng-select-searchable .ng-select-container .ng-value-container .ng-input {
+                    opacity: 1;
+                }
+
+                .ng-select.ng-select-opened .ng-select-container {
+                    z-index: 1001;
+                }
+
+                .ng-select.ng-select-disabled .ng-select-container .ng-value-container .ng-placeholder,
+                .ng-select.ng-select-disabled .ng-select-container .ng-value-container .ng-value {
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    -webkit-user-select: none;
+                    cursor: default;
+                    user-select: none;
+                }
+
+                .ng-select.ng-select-disabled .ng-arrow-wrapper {
+                    cursor: default;
+                }
+
+                .ng-select.ng-select-filtered .ng-placeholder {
+                    display: none;
+                }
+
+                .ng-select .ng-select-container {
+                    cursor: default;
+                    display: flex;
+                    outline: none;
+                    overflow: hidden;
+                    position: relative;
+                    width: 100%;
+                }
+
+                    .ng-select .ng-select-container .ng-value-container {
+                        display: flex;
+                        flex: 1;
+                    }
+
+                        .ng-select .ng-select-container .ng-value-container .ng-input {
+                            opacity: 0;
+                        }
+
+                            .ng-select .ng-select-container .ng-value-container .ng-input > input {
+                                background: none transparent;
+                                border: 0;
+                                box-shadow: none;
+                                box-sizing: content-box;
+                                cursor: default;
+                                outline: none;
+                                width: 100%;
+                            }
+
+                                .ng-select .ng-select-container .ng-value-container .ng-input > input::-ms-clear {
+                                    display: none;
+                                }
+
+                                .ng-select .ng-select-container .ng-value-container .ng-input > input[readonly] {
+                                    -moz-user-select: none;
+                                    -ms-user-select: none;
+                                    -webkit-user-select: none;
+                                    padding: 0;
+                                    user-select: none;
+                                    width: 0;
+                                }
+
+                .ng-select.ng-select-single.ng-select-filtered .ng-select-container .ng-value-container .ng-value {
+                    visibility: hidden;
+                }
+
+                .ng-select.ng-select-single .ng-select-container .ng-value-container,
+                .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                    .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value .ng-value-icon {
+                        display: none;
+                    }
+
+                    .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-input {
+                        left: 0;
+                        position: absolute;
+                        width: 100%;
+                    }
+
+                .ng-select.ng-select-multiple.ng-select-disabled > .ng-select-container .ng-value-container .ng-value .ng-value-icon {
+                    display: none;
+                }
+
+                .ng-select.ng-select-multiple .ng-select-container .ng-value-container {
+                    flex-wrap: wrap;
+                }
+
+                    .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-placeholder {
+                        position: absolute;
+                    }
+
+                    .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {
+                        white-space: nowrap;
+                    }
+
+                        .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value.ng-value-disabled .ng-value-icon {
+                            display: none;
+                        }
+
+                        .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-icon {
+                            cursor: pointer;
+                        }
+
+                    .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-input {
+                        flex: 1;
+                        z-index: 2;
+                    }
+
+                    .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-placeholder {
+                        z-index: 1;
+                    }
+
+                .ng-select .ng-clear-wrapper {
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    -webkit-user-select: none;
+                    cursor: pointer;
+                    position: relative;
+                    user-select: none;
+                    width: 17px;
+                }
+
+                    .ng-select .ng-clear-wrapper .ng-clear {
+                        display: inline-block;
+                        font-size: 18px;
+                        line-height: 1;
+                        pointer-events: none;
+                    }
+
+                .ng-select .ng-spinner-loader {
+                    -webkit-animation: load8 0.8s linear infinite;
+                    animation: load8 0.8s linear infinite;
+                    border: 2px solid rgba(66, 66, 66, 0.2);
+                    border-left-color: #424242;
+                    border-radius: 50%;
+                    font-size: 10px;
+                    height: 17px;
+                    margin-right: 5px;
+                    position: relative;
+                    text-indent: -9999em;
+                    transform: translateZ(0);
+                    width: 17px;
+                }
+
+                    .ng-select .ng-spinner-loader:after {
+                        border-radius: 50%;
+                        height: 17px;
+                        width: 17px;
+                    }
+
+        @@-webkit-keyframes load8 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(1turn);
+            }
+        }
+
+        @@keyframes load8 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(1turn);
+            }
+        }
+
+        .ng-select .ng-arrow-wrapper {
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -webkit-user-select: none;
+            cursor: pointer;
+            position: relative;
+            text-align: center;
+            user-select: none;
+        }
+
+            .ng-select .ng-arrow-wrapper .ng-arrow {
+                display: inline-block;
+                height: 0;
+                pointer-events: none;
+                position: relative;
+                width: 0;
+            }
+
+        .ng-dropdown-panel {
+            -webkit-overflow-scrolling: touch;
+            box-sizing: border-box;
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            z-index: 1050;
+        }
+
+            .ng-dropdown-panel .ng-dropdown-panel-items {
+                box-sizing: border-box;
+                display: block;
+                height: auto;
+                max-height: 240px;
+                overflow-y: auto;
+            }
+
+                .ng-dropdown-panel .ng-dropdown-panel-items .ng-optgroup,
+                .ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                .ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+                    box-sizing: border-box;
+                    cursor: pointer;
+                    display: block;
+                }
+
+                    .ng-dropdown-panel .ng-dropdown-panel-items .ng-option .highlighted {
+                        font-weight: 700;
+                        text-decoration: underline;
+                    }
+
+                    .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.disabled {
+                        cursor: default;
+                    }
+
+            .ng-dropdown-panel .scroll-host {
+                -webkit-overflow-scrolling: touch;
+                display: block;
+                overflow: hidden;
+                overflow-y: auto;
+                position: relative;
+            }
+
+            .ng-dropdown-panel .scrollable-content {
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+
+            .ng-dropdown-panel .total-padding {
+                opacity: 0;
+                width: 1px;
+            }
+    </style>
+    <link rel="shortcut icon" type="image/png" href="https://assets.efusercontent.com/519/assets/favicon/Cosmopolitan%20Consumer%20Group%20LOGO_white-bg-small.png" />
+</head>
+<body id="app-tmpl" browser="chrome" data-new-gr-c-s-check-loaded="14.1049.0" data-gr-ext-installed="" cz-shortcut-listen="true" style="">
+    <div class="page-wrapper">
+        <div class="container-fluid">
+            <br />
+            <br />
+            <!---->
+            <div id="ngApp" ui-view="" layout="row" layout-fill="" class="layout-fill layout-row">
+                <ef-app-layout user="::$resolve.user"
+                               is-gdpr-accepted="::$resolve.isGdprAccepted"
+                               is-impersonate="::$resolve.isImpersonate"
+                               ad-blocker-detected="::$resolve.adBlockerDetected"
+                               customer-support-manager-instant-messaging="::$resolve.customerSupportManagerInstantMessaging"
+                               customer-support-manager="::$resolve.customerSupportManager"
+                               employee="::$resolve.employee">
+                    <ef-router-loading-bar _nghost-wkp-c563="" ng-version="11.0.5">
+                        <ngx-loading-bar _ngcontent-wkp-c563="" _nghost-wkp-c19="" fixed="true" style="color: var(--left-menu-selected-border);"><!----></ngx-loading-bar>
+                    </ef-router-loading-bar>
+
+                    <div class="main-content">
+
+                        <!---->
+                        <!---->
+                        <ef-force-reload-message></ef-force-reload-message>
+                        <ef-breadcrumb ng-version="11.0.5">
+                            <div fxlayout="row wrap" fxlayoutalign="space-between center" class="container ng-star-inserted" style="flex-flow: row wrap; box-sizing: border-box; display: flex; place-content: center space-between; align-items: center;">
+                                <div fxlayout="row" fxlayoutalign="start center" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center flex-start; align-items: center;">
+                                    <div fxlayout="row" fxlayoutalign="start center" class="items ng-star-inserted" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center flex-start; align-items: center;">
+                                        <span class="item clickable">
+                                            Advertisers
+
+                                        </span><i class="ef-icon ef-chevron-right ng-star-inserted"></i>
+                                        <!---->
+                                    </div>
+                                    <div fxlayout="row" fxlayoutalign="start center" class="items ng-star-inserted" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center flex-start; align-items: center;">
+                                        <span class="item active"> @ViewBag.apiresult.name </span>
+                                        <!---->
+                                    </div>
+                                    <!---->
+                                </div>
+                                <div fxlayout="row" fxlayoutalign="end center" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center flex-end; align-items: center;">
+                                    <!---->
+                                    <!---->
+                                    <ef-ng-icon _nghost-wkp-c112="" class="ng-star-inserted"><i _ngcontent-wkp-c112="" class="control ef-icon ef-puzzle"></i></ef-ng-icon>
+                                    <!---->
+                                </div>
+                            </div>
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                        </ef-breadcrumb>
+                        <div layout="column" class="scroll-wrapper layout-column flex" flex="">
+                            <div layout="row" style="max-width: 100%; min-height: 100%;" class="layout-row">
+                                <!---->
+                                <ui-view class="scroll-container layout-column flex" layout="column" flex="">
+                                    <!---->
+                                    <ui-view>
+                                        <!---->
+                                        <ui-view>
+                                            <ui-view-ng-upgrade name="$default" ng-version="11.0.5">
+                                                <ui-view>
+                                                    <ef-affiliate-view style="flex-direction: row; box-sizing: border-box; display: flex;" class="ng-star-inserted">
+
+                                                        <ef-ng-tabs class="ng-tns-c232-2">
+                                                            <!---->
+
+                                                            <div class="ng-tns-c232-2 ng-trigger ng-trigger-tabAnimation" style="opacity: 1;">
+                                                                <ef-affiliate-general-view class="ng-star-inserted">
+                                                                    <ef-customizable-view>
+                                                                        <!---->
+                                                                        <div class="card">
+                                                                            <div fxlayout="row" style="height: 100%; flex-direction: row; box-sizing: border-box; display: flex;">
+                                                                                <div fxflex="100" fxlayout="row" fxlayout.gt-xs="row" class="ef-padding" style="flex-direction: row; box-sizing: border-box; display: flex; flex: 1 1 100%; max-width: 100%;">
+                                                                                    <div fxlayout="column" fxflex.gt-xs="50" cdkdroplist="" class="cdk-drop-list customizable-column" id="cdk-drop-list-2" style="flex-direction: column; box-sizing: border-box; display: flex; flex: 1 1 100%; max-width: 100%;">
+                                                                                        <div cdkdrag="" class="cdk-drag customizable-element-wrapper cdk-drag-disabled ng-star-inserted" style="">
+                                                                                            <ef-ng-card class="ng-tns-c69-4 ng-star-inserted" style="flex-direction: row; box-sizing: border-box; display: flex;">
+                                                                                                <div fxlayout="column" fxflex="100" class="container ng-tns-c69-4" style="flex-direction: column; box-sizing: border-box; display: flex; flex: 1 1 100%; max-width: 100%;">
+                                                                                                    <div fxlayout="row" fxlayoutalign="space-between center" class="ng-tns-c69-4 header card-header collapsible-header ng-star-inserted" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center space-between; align-items: center;">
+                                                                                                        <div fxlayout="row" style="align-items: center; flex-direction: row; box-sizing: border-box; display: flex;" class="ng-tns-c69-4">
+                                                                                                            <!---->
+                                                                                                            <h2 class="ng-tns-c69-4">General</h2>
+                                                                                                        </div>
+                                                                                                        <div fxlayout="row" fxlayoutalign="center center" class="control-container ng-tns-c69-4" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center; align-items: center;">
+                                                                                                            <ef-ng-card-buttons class="ng-tns-c69-4 ng-star-inserted">
+                                                                                                                <ef-ng-button data-intercom-target="8f7e41ab-ae9e-4338-b8af-f19a177f85ca" test-id="cc59e65c-0999-4165-894e-13558cee27ce"><button class="ef-button" type="button">Edit</button></ef-ng-button>
+                                                                                                            </ef-ng-card-buttons>
+                                                                                                            <!---->
+                                                                                                            <!----><i fxhide.lt-md="" class="ng-tns-c69-4 ef-icon collapse-icon ef-chevron-down ng-star-inserted"></i>
+                                                                                                            <!---->
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <!---->
+                                                                                                    <div style="display: flex; overflow: hidden; position: relative; height: 100%;" class="ng-tns-c69-4 ng-trigger ng-trigger-efCollapsibleWrapper ng-star-inserted">
+                                                                                                        <div class="ng-tns-c69-4 ng-trigger ng-trigger-efCollapsible content with-title ng-star-inserted" style="">
+                                                                                                            <div fxlayout="row" class="ef-padding ng-tns-c69-4 ng-star-inserted" style="flex-direction: row; box-sizing: border-box; display: flex;">
+                                                                                                                <div fxlayout="column" fxflex="50" style="flex-direction: column; box-sizing: border-box; display: flex; flex: 1 1 100%; max-width: 50%;">
+                                                                                                                    <ef-labeled-field data-intercom-target="af25532b-4c5f-47fa-87c2-9ea6e6547c1b" test-id="4ac47d53-1710-4ead-9d36-695af5deaa6a">
+                                                                                                                        <span class="ef-labeled-field-label"> ID <!----></span>
+                                                                                                                        <div class="ef-labeled-field-value"> @ViewBag.apiresult.network_advertiser_id </div>
+                                                                                                                    </ef-labeled-field>
+                                                                                                                    <ef-labeled-field data-intercom-target="d45fda21-9435-4deb-936d-07435bb795e2" test-id="4ef335ff-aaac-4af7-92cc-9b5872ab1bd2">
+                                                                                                                        <span class="ef-labeled-field-label"> Name <!----></span>
+                                                                                                                        <div class="ef-labeled-field-value"> @ViewBag.apiresult.name </div>
+                                                                                                                    </ef-labeled-field>
+                                                                                                                    <ef-labeled-field data-intercom-target="2b399809-52e2-488b-9ecb-88021ed7bbb0" test-id="daf94324-bee5-448e-a222-47fe2543122d">
+                                                                                                                        <span class="ef-labeled-field-label"> Account Manager <!----></span>
+                                                                                                                        <div class="ef-labeled-field-value">
+                                                                                                                            <ef-ss-network-employee-label>
+                                                                                                                                <ef-status-circle _nghost-pfm-c141="" class="ng-star-inserted" style="">
+                                                                                                                                    <div _ngcontent-pfm-c141="" class="status-circle" style="background-color: rgb(142, 15, 27);">
+                                                                                                                                        <div _ngcontent-pfm-c141="" class="inner-circle"></div>
+                                                                                                                                    </div>
+                                                                                                                                    <!---->
+                                                                                                                                </ef-status-circle>
+                                                                                                                                <ef-link title="Eric Hargrove" class="ng-star-inserted" style="">
+                                                                                                                                    <a class="ef-link"> Eric Hargrove </a><i class="ef-icon ef-link-new-tab ng-star-inserted"></i>
+                                                                                                                                    <!---->
+                                                                                                                                </ef-link>
+                                                                                                                                <!---->
+                                                                                                                                <!---->
+                                                                                                                                <!---->
+                                                                                                                                <!---->
+                                                                                                                                <!---->
+                                                                                                                                <!---->
+                                                                                                                                <!---->
+                                                                                                                                <!---->
+                                                                                                                            </ef-ss-network-employee-label>
+                                                                                                                        </div>
+                                                                                                                    </ef-labeled-field>
+                                                                                                                    <ef-labeled-field data-intercom-target="6632c383-50b8-47da-aa22-1b2fff645e0c" test-id="d1c7eec8-a150-4fcf-88c3-2db8c609a726">
+                                                                                                                        <span class="ef-labeled-field-label"> Sales Manager <!----></span>
+                                                                                                                        <div class="ef-labeled-field-value">
+                                                                                                                            <ef-ss-network-employee-label>
+                                                                                                                                N/A
+                                                                                                                                <!---->
+                                                                                                                                <!---->
+                                                                                                                                <!---->
+                                                                                                                                <!---->
+                                                                                                                                <!---->
+                                                                                                                            </ef-ss-network-employee-label>
+                                                                                                                        </div>
+                                                                                                                    </ef-labeled-field>
+                                                                                                                    <ef-labeled-field data-intercom-target="ce4856bd-cf78-4676-9977-73e93eda00f2" test-id="e2fda889-1cc5-42ca-951e-7bc7fa0b990c">
+                                                                                                                        <span class="ef-labeled-field-label"> Attribution Method <ef-help-tooltip><i class="ef-icon ef-help-circle icon-input"></i><!----></ef-help-tooltip><!----></span>
+                                                                                                                        <div class="ef-labeled-field-value"> Last Touch </div>
+                                                                                                                    </ef-labeled-field>
+                                                                                                                    <ef-labeled-field data-intercom-target="3094a881-9a9d-4269-ad19-1bda1be75622" test-id="a2616d27-da47-4934-ad9a-70d858218d64">
+                                                                                                                        <span class="ef-labeled-field-label"> Notes <!----></span>
+                                                                                                                        <div class="ef-labeled-field-value multiline">@ViewBag.apiresult.internal_notes </div>
+                                                                                                                    </ef-labeled-field>
+                                                                                                                    <ef-labeled-field data-intercom-target="538c58f9-3bc9-4fd3-9b65-008fc1367dc5" test-id="23bdea96-47ab-4679-9b13-7a2ea77cb085">
+                                                                                                                        <span class="ef-labeled-field-label"> Email Attribution Method <ef-help-tooltip><i class="ef-icon ef-help-circle icon-input"></i><!----></ef-help-tooltip><!----></span>
+                                                                                                                        <div class="ef-labeled-field-value"> @ViewBag.apiresult.email_attribution_method </div>
+                                                                                                                    </ef-labeled-field>
+                                                                                                                    <ef-labeled-field data-intercom-target="b7d56762-3922-41dc-8726-c2ac000b94df" test-id="919ef13d-2e69-4bf8-98af-0ecf10ff5031">
+                                                                                                                        <span class="ef-labeled-field-label"> Variables exposed in the advertiser UI <!----></span>
+                                                                                                                        <div class="ef-labeled-field-value">
+                                                                                                                            <div fxlayout="row" style="flex-direction: row; box-sizing: border-box; display: flex;">
+                                                                                                                                <div fxlayout="column" fxflex="50" style="flex-direction: column; box-sizing: border-box; display: flex; flex: 1 1 100%; max-width: 50%;">
+                                                                                                                                    <div fxlayout="row" fxflex="50" style="padding-top: 10px; flex-direction: row; box-sizing: border-box; display: flex; flex: 1 1 100%; max-height: 50%;"
+                                                                                                                                         class="ng-star-inserted">
+                                                                                                                                        <span fxflex="50" style="flex: 1 1 100%; box-sizing: border-box; max-width: 50%;">Affiliate ID</span>
+                                                                                                                                        <ef-switch data-intercom-target="f0d0c411-9693-4d18-81d0-b67d8f814112"
+                                                                                                                                                   test-id="70ab2c56-f3d2-4186-9004-1f6f7eeb33a2" fxflex="50" id="3fdc74844eaa-5084-37d5-b08b06f99f27" class="readonly ng-untouched ng-pristine ng-valid"
+                                                                                                                                                   style="flex: 1 1 100%; box-sizing: border-box; max-width: 50%;">
+                                                                                                                                            <!---->
+                                                                                                                                            <div class="ng-star-inserted">
+                                                                                                                                                <!---->
+                                                                                                                                                <div style="white-space: nowrap; display: flex; line-height: 15px;" class="ng-star-inserted"><svg width="14" height="14" viewBox="0 0 24 24" style="margin-right: 3px;"><circle cx="12" cy="12" r="12" class="off-switch"></circle><g stroke-width="1"><path stroke="#FFF" fill="#FFF" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></g></svg><span>Off</span></div>
+                                                                                                                                                <!---->
+                                                                                                                                            </div>
+                                                                                                                                            <!---->
+                                                                                                                                        </ef-switch>
+                                                                                                                                    </div>
+                                                                                                                                    <div fxlayout="row" fxflex="50" style="padding-top: 10px; flex-direction: row; box-sizing: border-box; display: flex; flex: 1 1 100%; max-height: 50%;"
+                                                                                                                                         class="ng-star-inserted">
+                                                                                                                                        <span fxflex="50" style="flex: 1 1 100%; box-sizing: border-box; max-width: 50%;">Affiliate</span>
+                                                                                                                                        <ef-switch data-intercom-target="f0d0c411-9693-4d18-81d0-b67d8f814112"
+                                                                                                                                                   test-id="70ab2c56-f3d2-4186-9004-1f6f7eeb33a2" fxflex="50" id="af73b1076ce5-5243-800e-2267e645c2c8" class="readonly ng-untouched ng-pristine ng-valid"
+                                                                                                                                                   style="flex: 1 1 100%; box-sizing: border-box; max-width: 50%;">
+                                                                                                                                            <!---->
+                                                                                                                                            <div class="ng-star-inserted">
+                                                                                                                                                <!---->
+                                                                                                                                                <div style="white-space: nowrap; display: flex; line-height: 15px;" class="ng-star-inserted"><svg width="14" height="14" viewBox="0 0 24 24" style="margin-right: 3px;"><circle cx="12" cy="12" r="12" class="off-switch"></circle><g stroke-width="1"><path stroke="#FFF" fill="#FFF" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></g></svg><span>Off</span></div>
+                                                                                                                                                <!---->
+                                                                                                                                            </div>
+                                                                                                                                            <!---->
+                                                                                                                                        </ef-switch>
+                                                                                                                                    </div>
+                                                                                                                                    <div fxlayout="row" fxflex="50" style="padding-top: 10px; flex-direction: row; box-sizing: border-box; display: flex; flex: 1 1 100%; max-height: 50%;"
+                                                                                                                                         class="ng-star-inserted">
+                                                                                                                                        <span fxflex="50" style="flex: 1 1 100%; box-sizing: border-box; max-width: 50%;">Sub1</span>
+                                                                                                                                        <ef-switch data-intercom-target="f0d0c411-9693-4d18-81d0-b67d8f814112"
+                                                                                                                                                   test-id="70ab2c56-f3d2-4186-9004-1f6f7eeb33a2" fxflex="50" id="d3c2762ae497-68ee-0cde-13f5935aab40" class="readonly ng-untouched ng-pristine ng-valid"
+                                                                                                                                                   style="flex: 1 1 100%; box-sizing: border-box; max-width: 50%;">
+                                                                                                                                            <!---->
+                                                                                                                                            <div class="ng-star-inserted">
+                                                                                                                                                <!---->
+                                                                                                                                                <div style="white-space: nowrap; display: flex; line-height: 15px;" class="ng-star-inserted"><svg width="14" height="14" viewBox="0 0 24 24" style="margin-right: 3px;"><circle cx="12" cy="12" r="12" class="off-switch"></circle><g stroke-width="1"><path stroke="#FFF" fill="#FFF" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></g></svg><span>Off</span></div>
+                                                                                                                                                <!---->
+                                                                                                                                            </div>
+                                                                                                                                            <!---->
+                                                                                                                                        </ef-switch>
+                                                                                                                                    </div>
+                                                                                                                                    <div fxlayout="row" fxflex="50" style="padding-top: 10px; flex-direction: row; box-sizing: border-box; display: flex; flex: 1 1 100%; max-height: 50%;"
+                                                                                                                                         class="ng-star-inserted">
+                                                                                                                                        <span fxflex="50" style="flex: 1 1 100%; box-sizing: border-box; max-width: 50%;">Sub2</span>
+                                                                                                                                        <ef-switch data-intercom-target="f0d0c411-9693-4d18-81d0-b67d8f814112"
+                                                                                                                                                   test-id="70ab2c56-f3d2-4186-9004-1f6f7eeb33a2" fxflex="50" id="e4f965d7bb67-4003-3a23-3a772a96ce39" class="readonly ng-untouched ng-pristine ng-valid"
+                                                                                                                                                   style="flex: 1 1 100%; box-sizing: border-box; max-width: 50%;">
+                                                                                                                                            <!---->
+                                                                                                                                            <div class="ng-star-inserted">
+                                                                                                                                                <!---->
+                                                                                                                                                <div style="white-space: nowrap; display: flex; line-height: 15px;" class="ng-star-inserted"><svg width="14" height="14" viewBox="0 0 24 24" style="margin-right: 3px;"><circle cx="12" cy="12" r="12" class="off-switch"></circle><g stroke-width="1"><path stroke="#FFF" fill="#FFF" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></g></svg><span>Off</span></div>
+                                                                                                                                                <!---->
+                                                                                                                                            </div>
+                                                                                                                                            <!---->
+                                                                                                                                        </ef-switch>
+                                                                                                                                    </div>
+                                                                                                                                    <!---->
+                                                                                                                                </div>
+                                                                                                                                <div fxlayout="column" fxflex="50" style="flex-direction: column; box-sizing: border-box; display: flex; flex: 1 1 100%; max-width: 100%;">
+                                                                                                                                    <div fxlayout="row" fxflex="50" style="padding-top: 10px; flex-direction: row; box-sizing: border-box; display: flex; flex: 1 1 100%; max-height: 100%;"
+                                                                                                                                         class="ng-star-inserted">
+                                                                                                                                        <span fxflex="50" style="flex: 1 1 100%; box-sizing: border-box; max-width: 50%;">Sub3</span>
+                                                                                                                                        <ef-switch data-intercom-target="9ce1b8ee-2a60-470c-a361-16ee98a55b9d"
+                                                                                                                                                   test-id="d64d64f7-f12c-4550-8da8-fe3a8e79b08a" fxflex="50" id="6464af3ba3fd-041c-fc68-941850b0cf6f" class="readonly ng-untouched ng-pristine ng-valid"
+                                                                                                                                                   style="flex: 1 1 100%; box-sizing: border-box; max-width: 50%;">
+                                                                                                                                            <!---->
+                                                                                                                                            <div class="ng-star-inserted">
+                                                                                                                                                <!---->
+                                                                                                                                                <div style="white-space: nowrap; display: flex; line-height: 15px;" class="ng-star-inserted"><svg width="14" height="14" viewBox="0 0 24 24" style="margin-right: 3px;"><circle cx="12" cy="12" r="12" class="off-switch"></circle><g stroke-width="1"><path stroke="#FFF" fill="#FFF" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></g></svg><span>Off</span></div>
+                                                                                                                                                <!---->
+                                                                                                                                            </div>
+                                                                                                                                            <!---->
+                                                                                                                                        </ef-switch>
+                                                                                                                                    </div>
+                                                                                                                                    <div fxlayout="row" fxflex="50" style="padding-top: 10px; flex-direction: row; box-sizing: border-box; display: flex; flex: 1 1 100%; max-height: 50%;"
+                                                                                                                                         class="ng-star-inserted">
+                                                                                                                                        <span fxflex="50" style="flex: 1 1 100%; box-sizing: border-box; max-width: 50%;">Sub4</span>
+                                                                                                                                        <ef-switch data-intercom-target="9ce1b8ee-2a60-470c-a361-16ee98a55b9d"
+                                                                                                                                                   test-id="d64d64f7-f12c-4550-8da8-fe3a8e79b08a" fxflex="50" id="bda687eb2562-a4c1-a0a6-019e3e59174a" class="readonly ng-untouched ng-pristine ng-valid"
+                                                                                                                                                   style="flex: 1 1 100%; box-sizing: border-box; max-width: 50%;">
+                                                                                                                                            <!---->
+                                                                                                                                            <div class="ng-star-inserted">
+                                                                                                                                                <!---->
+                                                                                                                                                <div style="white-space: nowrap; display: flex; line-height: 15px;" class="ng-star-inserted"><svg width="14" height="14" viewBox="0 0 24 24" style="margin-right: 3px;"><circle cx="12" cy="12" r="12" class="off-switch"></circle><g stroke-width="1"><path stroke="#FFF" fill="#FFF" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></g></svg><span>Off</span></div>
+                                                                                                                                                <!---->
+                                                                                                                                            </div>
+                                                                                                                                            <!---->
+                                                                                                                                        </ef-switch>
+                                                                                                                                    </div>
+                                                                                                                                    <div fxlayout="row" fxflex="50" style="padding-top: 10px; flex-direction: row; box-sizing: border-box; display: flex; flex: 1 1 100%; max-height: 50%;"
+                                                                                                                                         class="ng-star-inserted">
+                                                                                                                                        <span fxflex="50" style="flex: 1 1 100%; box-sizing: border-box; max-width: 50%;">Sub5</span>
+                                                                                                                                        <ef-switch data-intercom-target="9ce1b8ee-2a60-470c-a361-16ee98a55b9d"
+                                                                                                                                                   test-id="d64d64f7-f12c-4550-8da8-fe3a8e79b08a" fxflex="50" id="51afc0d740f7-fc9e-64e4-83d23a5ca65b" class="readonly ng-untouched ng-pristine ng-valid"
+                                                                                                                                                   style="flex: 1 1 100%; box-sizing: border-box; max-width: 50%;">
+                                                                                                                                            <!---->
+                                                                                                                                            <div class="ng-star-inserted">
+                                                                                                                                                <!---->
+                                                                                                                                                <div style="white-space: nowrap; display: flex; line-height: 15px;" class="ng-star-inserted"><svg width="14" height="14" viewBox="0 0 24 24" style="margin-right: 3px;"><circle cx="12" cy="12" r="12" class="off-switch"></circle><g stroke-width="1"><path stroke="#FFF" fill="#FFF" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></g></svg><span>Off</span></div>
+                                                                                                                                                <!---->
+                                                                                                                                            </div>
+                                                                                                                                            <!---->
+                                                                                                                                        </ef-switch>
+                                                                                                                                    </div>
+                                                                                                                                    <div fxlayout="row" fxflex="50" style="padding-top: 10px; flex-direction: row; box-sizing: border-box; display: flex; flex: 1 1 100%; max-height: 50%;"
+                                                                                                                                         class="ng-star-inserted">
+                                                                                                                                        <span fxflex="50" style="flex: 1 1 100%; box-sizing: border-box; max-width: 50%;">Source ID</span>
+                                                                                                                                        <ef-switch data-intercom-target="9ce1b8ee-2a60-470c-a361-16ee98a55b9d"
+                                                                                                                                                   test-id="d64d64f7-f12c-4550-8da8-fe3a8e79b08a" fxflex="50" id="ffb18a731c15-f5b6-b0c6-da4ccd5aa235" class="readonly ng-untouched ng-pristine ng-valid"
+                                                                                                                                                   style="flex: 1 1 100%; box-sizing: border-box; max-width: 50%;">
+                                                                                                                                            <!---->
+                                                                                                                                            <div class="ng-star-inserted">
+                                                                                                                                                <!---->
+                                                                                                                                                <div style="white-space: nowrap; display: flex; line-height: 15px;" class="ng-star-inserted"><svg width="14" height="14" viewBox="0 0 24 24" style="margin-right: 3px;"><circle cx="12" cy="12" r="12" class="off-switch"></circle><g stroke-width="1"><path stroke="#FFF" fill="#FFF" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></g></svg><span>Off</span></div>
+                                                                                                                                                <!---->
+                                                                                                                                            </div>
+                                                                                                                                            <!---->
+                                                                                                                                        </ef-switch>
+                                                                                                                                    </div>
+                                                                                                                                    <!---->
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </ef-labeled-field>
+                                                                                                                </div>
+                                                                                                                <div fxlayout="column" fxflex="50" style="flex-direction: column; box-sizing: border-box; display: flex; flex: 1 1 100%; max-width: 50%;">
+                                                                                                                    <ef-labeled-field data-intercom-target="f818fd54-387f-403c-9eab-e357b75dfbac">
+                                                                                                                        <span class="ef-labeled-field-label"> Date Created <!----></span>
+                                                                                                                        <div class="ef-labeled-field-value">
+                                                                                                                            <ef-date>
+                                                                                                                                <span class="ng-star-inserted">  @ViewBag.apiresult.time_created<!----><!----><!----></span>
+                                                                                                                                <!---->
+                                                                                                                                <!---->
+                                                                                                                                <!---->
+                                                                                                                                <!---->
+                                                                                                                                <!---->
+                                                                                                                            </ef-date>
+                                                                                                                        </div>
+                                                                                                                    </ef-labeled-field>
+                                                                                                                    <ef-labeled-field data-intercom-target="382ebadd-6fa0-416f-81c9-3ea17169c659" test-id="e50d42c9-b31b-4678-b525-9936b6ccd814">
+                                                                                                                        <span class="ef-labeled-field-label"> Last Modification <!----></span>
+                                                                                                                        <div class="ef-labeled-field-value">
+                                                                                                                            <ef-date>
+                                                                                                                                <span class="ng-star-inserted">  @ViewBag.apiresult.time_saved PST<!----><!----><!----></span>
+                                                                                                                                <!---->
+                                                                                                                                <!---->
+                                                                                                                                <!---->
+                                                                                                                                <!---->
+                                                                                                                                <!---->
+                                                                                                                            </ef-date>
+                                                                                                                        </div>
+                                                                                                                    </ef-labeled-field>
+                                                                                                                    <ef-labeled-field data-intercom-target="459c51a6-4ffb-481f-8c4f-53a791ded446" test-id="478a5a67-111a-4eeb-b7cf-230dffad3b2d">
+                                                                                                                        <span class="ef-labeled-field-label"> Verification token <ef-help-tooltip><i class="ef-icon ef-help-circle icon-input"></i><!----></ef-help-tooltip><!----></span>
+                                                                                                                        <div class="ef-labeled-field-value"> - </div>
+                                                                                                                    </ef-labeled-field>
+                                                                                                                    <ef-labeled-field data-intercom-target="8eab755f-d4a8-4d4a-8012-6ba13efde550" test-id="90fd0f11-fc7e-4623-b081-93467a70abf4">
+                                                                                                                        <span class="ef-labeled-field-label"> Currency <!----></span>
+                                                                                                                        <div class="ef-labeled-field-value">
+                                                                                                                            <ef-ss-currency-label _nghost-pfm-c411="">
+                                                                                                                                $ @ViewBag.apiresult.default_currency_id Dollar
+                                                                                                                                <!---->
+                                                                                                                                <!---->
+                                                                                                                                <!---->
+                                                                                                                            </ef-ss-currency-label>
+                                                                                                                        </div>
+                                                                                                                    </ef-labeled-field>
+                                                                                                                    <ef-labeled-field data-intercom-target="f37dfaf1-0c42-4dda-825c-099f3c3898f0" test-id="764dc2d2-2af1-4827-8b24-28046ab5042f">
+                                                                                                                        <span class="ef-labeled-field-label"> Status <!----></span>
+                                                                                                                        <div class="ef-labeled-field-value">
+                                                                                                                            <ef-status-circle _nghost-pfm-c141="">
+                                                                                                                                <div _ngcontent-pfm-c141="" class="status-circle" style="background-color: rgb(92, 184, 92);">
+                                                                                                                                    <div _ngcontent-pfm-c141="" class="inner-circle"></div>
+                                                                                                                                </div><span _ngcontent-pfm-c141="" class="capitalize ng-star-inserted"> @ViewBag.apiresult.account_status</span>
+                                                                                                                                <!---->
+                                                                                                                            </ef-status-circle>
+                                                                                                                        </div>
+                                                                                                                    </ef-labeled-field>
+                                                                                                                    <ef-labeled-field data-intercom-target="d88a4063-dd74-492f-a97e-9a803de227a6" test-id="364dd226-195a-4825-a573-e832be46c396">
+                                                                                                                        <span class="ef-labeled-field-label"> Labels <!----></span>
+                                                                                                                        <div class="ef-labeled-field-value">
+                                                                                                                            <!----><span class="ng-star-inserted">-</span>
+                                                                                                                            <!---->
+                                                                                                                        </div>
+                                                                                                                    </ef-labeled-field>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <!---->
+                                                                                                        </div>
+                                                                                                        <!---->
+                                                                                                    </div>
+                                                                                                    <!---->
+                                                                                                    <!---->
+                                                                                                </div>
+                                                                                                <!---->
+                                                                                            </ef-ng-card>
+                                                                                            <!---->
+                                                                                            <!---->
+                                                                                            <!---->
+                                                                                            <!---->
+                                                                                            <!---->
+                                                                                        </div>
+                                                                                        <!---->
+                                                                                        <!---->
+                                                                                        <!---->
+                                                                                        <div cdkdrag="" class="cdk-drag customizable-element-wrapper cdk-drag-disabled ng-star-inserted" style="">
+
+                                                                                        </div>
+                                                                                        <!---->
+                                                                                        <!---->
+                                                                                        <!---->
+
+
+
+
+                                                                                    </div>
+
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </ef-customizable-view>
+                                                                </ef-affiliate-general-view>
+                                                                <!---->
+                                                                <div fxlayout="column" class="angular-js-container ng-tns-c232-2" style="flex-direction: column; box-sizing: border-box; display: flex;"></div>
+                                                            </div>
+                                                        </ef-ng-tabs>
+                            </div>
+                            </ef-affiliate-view>
+                            <!---->
+                            <!---->
+                            </ui-view>
+                            <!---->
+                            </ui-view-ng-upgrade>
+                            </ui-view>
+                            </ui-view>
+                            </ui-view>
+                            <ef-side-pane [default-pane]="true" class="ng-tns-c549-0 loading" ng-version="11.0.5" style="flex-direction: column; box-sizing: border-box; display: flex;">
+                                <div id="sidePaneResize" class="ng-tns-c549-0"></div>
+                                <div fxflex="" fxlayout="column" class="max-height-100 ng-tns-c549-0 ng-trigger ng-trigger-efSidePaneAnimationWrapper" style="flex: 1 1 1e-9px; box-sizing: border-box; flex-direction: column; display: flex;">
+                                    <!---->
+                                </div>
+                            </ef-side-pane>
+                        </div>
+                    </div>
+</div>
+
+            <ef-floating-notification-list _nghost-wkp-c611="" ng-version="11.0.5"><!----></ef-floating-notification-list>
+            </ef-app-layout>
+        </div>
+    </div>
+    </div>
+    <script src="/static/vendor.js?build=0151b623d0255e9e72034655e325ce1c91ae7770"></script>
+    <script src="/static/vendors~network.js?build=0151b623d0255e9e72034655e325ce1c91ae7770"></script>
+    <script>
+        angular.module("eflow.core.downgrades", []);
+        angular.module("eflow.core", ["ngSanitize", "eflow.core.downgrades"]);
+
+        angular.module("eflow.core.ui.downgrades", []);
+        angular.module("eflow.core.ui", ["eflow.core", "eflow.core.ui.downgrades"]);
+
+        angular.module("eflow.network.downgrades", []);
+        angular.module("eflow.network", ["ui.router.upgrade", "angularMoment", "eflow.core", "eflow.core.ui", "eflow.network.downgrades"]);
+    </script>
+
+    <script src="/static/network.js?build=0151b623d0255e9e72034655e325ce1c91ae7770"></script>
+
+    <script type="text/javascript" async="" src="https://widget.intercom.io/widget/u3n7clxl"></script>
+    <iframe id="intercom-frame"
+            style="
+                position: absolute !important;
+                opacity: 0 !important;
+                width: 1px !important;
+                height: 1px !important;
+                top: 0 !important;
+                left: 0 !important;
+                border: none !important;
+                display: block !important;
+                z-index: -1 !important;
+                pointer-events: none;
+            "
+            aria-hidden="true"
+            tabindex="-1"
+            title="Intercom"></iframe>
+    <div id="intercom-container" class="intercom-namespace">
+        <style>
+            html.intercom-mobile-messenger-active,
+            html.intercom-mobile-messenger-active > body,
+            html.intercom-modal-open,
+            #intercom-container-body {
+                overflow: hidden !important;
+            }
+
+                html.intercom-mobile-messenger-active,
+                html.intercom-mobile-messenger-active > body {
+                    position: static !important;
+                }
+
+                    html.intercom-mobile-messenger-active > body {
+                        height: 0 !important;
+                        margin: 0 !important;
+                    }
+
+                    html.intercom-mobile-messenger-active.intercom-mobile-messenger-ios-15 > body {
+                        height: 100vh !important;
+                    }
+
+            iframe#intercom-frame {
+                position: absolute !important;
+                opacity: 0 !important;
+                width: 1px !important;
+                height: 1px !important;
+                top: 0 !important;
+                left: 0 !important;
+                border: none !important;
+                display: block !important;
+                z-index: -1 !important;
+            }
+        </style>
+        <div class="intercom-app" aria-live="polite"><div id="intercom-modal-container"></div></div>
+    </div>
+    <div id="intercom-css-container">
+        <style data-emotion="intercom-global"></style>
+    </div>
+</body>
+<loom-container id="lo-engage-ext-container"><loom-shadow classname="resolved"></loom-shadow></loom-container>
+<loom-container id="lo-companion-container"><loom-shadow classname="resolved"></loom-shadow></loom-container>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+</html>

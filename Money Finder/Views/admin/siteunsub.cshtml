@@ -1,0 +1,714 @@
+﻿
+@{
+    ViewData["Title"] = "consumerleadinfo";
+    Layout = "~/Views/Layouts/_adminLayout.cshtml";
+}
+<link href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables_themeroller.css">
+<link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf8" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+
+<link href="~/agencyvendor_assets/assets/plugins/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css">
+<link href="~/agencyvendor_assets/assets/plugins/dropify/css/dropify.min.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/select/1.1.2/css/select.dataTables.min.css" rel="stylesheet" />
+
+
+
+
+@*<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <style>
+        table.dataTable.select tbody tr,
+        table.dataTable thead th:first-child {
+            cursor: pointer;
+        }
+    </style>*@
+
+<style>
+    td {
+        background-color: white !important;
+        padding-top: 2% !important;
+        padding-bottom: 2% !important;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+        table.dataTable thead th {
+            border-bottom: 2px solid #f7f7ff !important;
+        }
+
+    thead, th, td {
+        border-bottom: 2px solid #f7f7ff;
+    }
+
+    table.dataTable.no-footer {
+        border-bottom: 2px solid #f7f7ff;
+    }
+
+    thead {
+        background-color: #f7f7ff !important;
+    }
+
+    table.dataTable thead th {
+        /* padding-bottom:10px;
+        padding-top:10px;*/
+        padding-top: 1% !important;
+        padding-bottom: 1% !important;
+        background-color: #f7f7ff !important;
+    }
+
+    #mytable_previous a {
+        border: none !important;
+        padding-left: 100% !important;
+    }
+
+    .hundered {
+        padding: 1% !important;
+        color: white !important;
+        background-color: #38A169 !important;
+        border-radius: 2px !important;
+    }
+
+    #mytable_next a {
+        border: none !important;
+    }
+
+
+    tr.border-bottom {
+        border-bottom: 1px solid #ff000d !important;
+    }
+
+    tr {
+        border-bottom: 2px solid #f7f7ff !important;
+    }
+
+        tr.border_bottom td {
+            border-bottom: 1px solid black;
+        }
+
+
+    .cancel {
+        padding: 2% 0% 2%;
+        background-color: transparent;
+        border-color: lightgray;
+        width: 16em;
+        border-width: 2px;
+    }
+
+    .swal2-actions {
+        display: none;
+    }
+</style>
+
+
+
+
+
+
+@*<style>
+       .pagination {
+            display: none !important;
+        }
+
+        .pagination li.Prev, .pagination Next {
+            display: inline !important;
+        }
+    </style>*@
+<div class="row">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-10">
+
+
+                    <form id="unsubscribe">
+                        
+                        <div class="form-group row">
+                            <label for="inputPassword" style=" font-size: 20px; font-weight: bold;" class="col-sm-4 col-form-label">Unsubscribe a User</label>
+                            <div class="col-md-4 mb-3">
+                                <input type="text" name="gmail" class="form-control" placeholder="Enter Email Address">
+                            </div>
+                            <div class="col-md-2 mb-3">
+                                <button onclick="addunsubscribe();" type="button" style="background-color: #38A169 !important; width: 100%; " class="btn btn-primary waves-effect waves-light">Submit</button>
+                            </div>
+                            </div>
+</form>
+                </div>
+                <div class="col-md-2">
+                    <button onclick="openexcel();" type="button" style="background-color: #38A169 !important; width: 100%; " class="btn btn-primary waves-effect waves-light">File Upload</button>
+                </div>
+        </div>
+        </div>
+    </div>
+
+
+</div>
+<form id="Form">
+    <div class="col-12">
+        <h4 class="mt-0 header-title h3bg">Unsubscriber's Information</h4>
+
+        <div class="card" style="margin-top: -7px; box-shadow: 0 9px 4px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%); ">
+            <div class="card-body">
+
+
+                <table id="mytable" class="" style="width:100%">
+                    <thead data-orderable="false">
+                        <tr data-orderable="false">
+                          
+                            <th data-orderable="false"><input name="select_all" value="1" type="checkbox" autocomplete="off"></th>
+                            <th class="userid" data-orderable="false"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>&nbsp;USER ID</th>
+                            <th data-orderable="false"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;EMAIL ADDRESS</th>
+                            <th data-orderable="false"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>&nbsp;UNSUBSCRIBE DATE</th>
+                            <th data-orderable="false">ACTION</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            var ii = 0;
+
+                            @foreach (var i in ViewBag.site)
+                            {
+
+                                ii++;
+                                <tr>
+
+                                    <td><input type="checkbox" class="archive" value="@i.SiteUnSubscribeId" name="archiveitem" autocomplete="off"></td>
+                                    <td>@ii</td>
+                                    <td>@i.Email</td>
+                                    <td>07-04-2022</td>
+
+                                    <td><a style=" cursor: pointer;" onclick="offerdetail('@ii','@i.Email')">....</a>  <a style=" cursor: pointer;" onclick="showconfirmationmodal()">×</a></td>
+
+                                </tr>
+                            }
+
+
+                        }
+
+                    </tbody>
+
+                </table>
+
+
+            </div>
+
+
+        </div>
+    </div>
+    </form>
+
+    <div class="modal fade bd-example-modal-lg" id="modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+
+            <div class="modal-content" style="margin-top:10em; background: linear-gradient(90deg, #1E292B 0%, #273132 20.83%, #313735 40.62%, #3E413A 60.94%, #4A4B43 80.21%, #5A5748 100%);">
+                <div class="col-md-12">
+                    <button onclick="modalclose()" style="float: right; background-color: white;" type="button" class="btn-close"></button>
+
+                </div>
+                <div class="row" style="padding-top: 5%; padding-bottom: 5%; ">
+
+                    <div class="col-md-5" style="line-height: 28px; padding-left: 5%;  font-size: 18px;color:white;">
+
+                        <div>ID:</div>
+                        <div>GMail:</div>
+
+                    </div>
+
+
+                    <div class="col-md-7" style="text-align:end;padding-right: 5%;font-size: 15px;color:white;">
+                        <div id="id" style="height: 1.9em ">None</div>
+                        <div id="gmail" style="height: 1.9em ">MM/DD/YY</div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="confirmmodal" tabindex="-1" role="dialog" style="margin-top: 23em;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+
+                            <h1 style="background-color: #FED7E2; margin-left: 1em; background-color: #FED7E2; width: 48px; height: 48px; padding-top: 0%; padding-left: 10%; border-radius: 87px; color: hotpink; ">×</h1>
+
+                        </div>
+                        <div class="col-md-4"></div>
+
+                    </div>
+                    <h2 style=" text-align: center; font-size: 24px;">Remove</h2>
+                    <p style=" text-align: center;">You’ve officially removing something this user. All the access will be removed immediately.</p>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button onclick="cancel()" type="button" style=" padding: 2% 0% 2%; background-color: transparent; border-color: lightgray; width: 16em; border-width: 2px;">Cancel</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="button" style=" padding: 2% 0% 2%; color: white; background-color: #319795; border-color: lightgray; width: 16em; border-width: 2px; " data-dismiss="modal">Continue</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal" id="openexcel" tabindex="-1" role="dialog" >
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="mt-0 header-title h3bg">Unsubscriber's Information</h4>
+
+                            <form action="/admin/addunsubexcel" enctype="multipart/form-data" method="post">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="card m-b-30" style="margin-top:-8px;">
+                                                <div class="card-body">
+                                                    <h4 class="mt-0 header-title">Excel File Uploads (.xlsx) </h4>
+
+                                                    <input type="file" name="files" src="files" id="files" class="dropify" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+
+
+
+
+                                <div class="form-group p-0 mt-2">
+                                    <button type="submit" style="background-color: #38A169 !important; width: 100%; " class="btn btn-primary waves-effect waves-light">File Upload</button>
+                                </div>
+
+                            </form>
+                          
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.all.min.js"></script>
+<script>
+    function showmodal() {
+
+        $("#modal").modal('show');
+    }
+    function openexcel() {
+
+        $("#openexcel").modal('show');
+    }
+    function modalclose() {
+
+        $("#modal").modal('hide');
+    }
+    function showconfirmationmodal() {
+
+        /*$("#confirmmodal").modal('show');*/
+        Swal.fire({
+            icon: '  <h1 style="background-color: #FED7E2; margin-left: 1em; background-color: #FED7E2; width: 48px; height: 48px; padding-top: 0%; padding-left: 10%; border-radius: 87px; color: hotpink; ">×</h1>',
+            title: '  <h1 style="background-color: #FED7E2;  background-color: #FED7E2; width: 48px; height: 48px; padding-top: 0%;  border-radius: 87px; color: hotpink; ">×</h1>',
+            text: 'Remove ',
+            html: "<h2 style='text- align: center; font - size: 24px;'onclick='cancel()'>Remove</h2><br/><p style='color:black;font-size: 14px;' >You’ve officially removing something this user. All the access will be removed immediately.</p><br/> <button onclick='cancel()' type='button' style='  height: 1.9em;padding:2% 0 % 2 %; background-color: transparent; border-color: lightgray; width: 11em; float: left;; border - width: 2px;'>Cancel</button>    <button type='button' style=' height: 1.9em; padding:2% 0 % 2 %; color:white; background-color: #319795; border-color: lightgray; width: 11em; border-width: 2px'; onclick='selectedcheckbox()'; data-dismiss='modal'>Continue</button>",
+
+
+
+
+            //showCancelButton: true,
+            //confirmButtonColor: "#319795",
+            //confirmButtonText: "Cancel",
+            //closeOnConfirm: false,
+
+
+        })
+    }
+
+    function cancel() {
+        Swal.close();
+        $("#confirmmodal").modal('hide');
+    }
+    function selectedcheckbox(offer) {
+
+        var formData = {};
+        var formData = $("#Form").serialize();
+
+        $.ajax(
+            {
+                type: "POST",
+                url: '/admin/Deletedne',
+
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8', // when we use .serialize() this generates the data in query string format. this needs the default contentType (default content type is: contentType: 'application/x-www-form-urlencoded; charset=UTF-8') so it is optional, you can remove it
+                data: formData,
+                success: function (result) {
+                    sumitsweett();
+                    setTimeout(function () {
+                        location.reload(true);
+
+                    }, 1000);
+
+                },
+                error: function () {
+                    alert('Failed to receive the Data');
+                    console.log('Failed ');
+                }
+
+            }
+        );
+    }
+    function sumitsweett() {
+        var icon = "success";
+        if (status == "success") {
+            icon = "success";
+        }
+
+        var config = {}
+        config.icon = icon;
+        config.title = "Success";
+        config.text = "DNE Deleted SuccessFully";
+
+        Swal.fire(config);
+
+    }
+
+
+    $(document).ready(function () {
+
+        /** Handling checboxes selection*/
+
+        function updateDataTableSelectAllCtrl(table) {
+            var $table = table.table().node();
+            var $chkbox_all = $('tbody input[type="checkbox"]', $table);
+            var $chkbox_checked = $('tbody input[type="checkbox"]:checked', $table);
+            var chkbox_select_all = $('thead input[name="select_all"]', $table).get(0);
+
+            // If none of the checkboxes are checked
+            if ($chkbox_checked.length === 0) {
+                chkbox_select_all.checked = false;
+                if ('indeterminate' in chkbox_select_all) {
+                    chkbox_select_all.indeterminate = false;
+                }
+
+                // If all of the checkboxes are checked
+            } else if ($chkbox_checked.length === $chkbox_all.length) {
+                chkbox_select_all.checked = true;
+                if ('indeterminate' in chkbox_select_all) {
+                    chkbox_select_all.indeterminate = false;
+                }
+
+                // If some of the checkboxes are checked
+            } else {
+                chkbox_select_all.checked = true;
+                if ('indeterminate' in chkbox_select_all) {
+                    chkbox_select_all.indeterminate = true;
+                }
+            }
+        }
+
+        /** Responsive table with colreorder, fixed header;footer, sortable teble*/
+        var table = $('#mytable').DataTable({
+
+            //responsive: {
+            //    details: {
+            //        type: 'column'
+            //    }
+            //},
+            //  order: [1, 'asc'],
+            //colReorder: {
+            //    fixedColumnsLeft: 1,
+            //    fixedColumnsLeft: 2
+            //},
+            fixedHeader: {
+                header: false,
+                footer: false
+            },
+            'columnDefs': [{
+                'targets': 1,
+                'searchable': false,
+                'orderable': false,
+                'width': '1%',
+                'className': 'dt-body-center'
+            },
+            {
+                'className': 'control',
+                'orderable': false,
+                targets: 0,
+
+            },
+            ],
+
+
+            'filter': false,
+
+            "dom": '<"bottom"i>rt<"bottom"flp><"clear">',
+
+            "language": {
+                "info": '<"bottom"i>rt<"bottom"flp><"clear">',
+                "info": " _START_ - _END_ of _TOTAL_",
+                "paginate": {
+                    "next": '<img src="/img/nextt.png" style=" width: 15px;">',
+
+                    "previous": '<img src="/img/back.png" style=" width: 15px;" > '
+                }
+            },
+
+            "pagingType": "simple",
+            /*'order': [[1, 'asc']],*/
+            'rowCallback': function (row, data, dataIndex) {
+                // Get row ID
+                var rowId = data[6];
+
+                // If row ID is in the list of selected row IDs
+                if ($.inArray(rowId, /**rows_selected */) !== -1) {
+                    $(row).find('input[type="checkbox"]').prop('checked', true);
+                    $(row).addClass('selected');
+                }
+            }
+        });
+
+        /** mark single checkboxes */
+
+        $(document).ready(function () {
+            // Array holding selected row IDs
+            var rows_selected = [];
+
+
+            // Handle click on checkbox
+            $('#mytable tbody').on('click', 'input[type="checkbox"]', function (e) {
+                var $row = $(this).closest('tr');
+
+                // Get row data
+                var data = table.row($row).data();
+
+                // Get row ID
+                var rowId = data[6];
+
+                // Determine whether row ID is in the list of selected row IDs
+                var index = $.inArray(rowId, rows_selected);
+
+                // If checkbox is checked and row ID is not in list of selected row IDs
+                if (this.checked && index === -1) {
+                    rows_selected.push(rowId);
+
+                    // Otherwise, if checkbox is not checked and row ID is in list of selected row IDs
+                } else if (!this.checked && index !== -1) {
+                    rows_selected.splice(index, 1);
+                }
+
+                if (this.checked) {
+                    $row.addClass('selected');
+                } else {
+                    $row.removeClass('selected');
+                }
+
+                // Update state of "Select all" control
+                updateDataTableSelectAllCtrl(table);
+
+                // Prevent click event from propagating to parent
+                e.stopPropagation();
+            });
+
+            // Handle click on table cells with checkboxes
+            $('#mytable').on('click', 'tbody td, thead th:first-child', function (e) {
+                $(this).parent().find('input[type="checkbox"]').trigger('click');
+            });
+
+            // Handle click on "Select all" control
+            $('thead input[name="select_all"]', table.table().container()).on('click', function (e) {
+                if (this.checked) {
+                    $('#mytable tbody input[type="checkbox"]:not(:checked)').trigger('click');
+                } else {
+                    $('#mytable tbody input[type="checkbox"]:checked').trigger('click');
+                }
+
+                // Prevent click event from propagating to parent
+                e.stopPropagation();
+            });
+
+            // Handle table draw event
+            table.on('draw', function () {
+                // Update state of "Select all" control
+                updateDataTableSelectAllCtrl(table);
+            });
+
+            // Handle form submission event
+            $('#frm-mytable').on('submit', function (e) {
+                var form = this;
+
+                // Iterate over all selected checkboxes
+                $.each(rows_selected, function (index, rowId) {
+                    // Create a hidden element
+                    $(form).append(
+                        $('<input>')
+                            .attr('type', 'hidden')
+                            .attr('name', 'id[]')
+                            .val(rowId)/**there are data from json file or db*/
+                    );
+                });
+
+                $('#examplee-console').text($(form).serialize());
+                console.log("Form submission", $(form).serialize());
+
+                // Remove added elements
+                $('input[name="id\[\]"]', form).remove();
+
+                // Prevent actual form submission
+                e.preventDefault();
+            });
+
+        });
+
+
+
+        /** Handling responsive expand collapse all*/
+
+
+
+        // Handle click on "Expand All" button
+        $('#btn-show-all-children').on('click', function () {
+            // Expand row details
+            table.rows(':not(.parent)').nodes().to$().find('td:first-child').trigger('click');
+        });
+
+        // Handle click on "Collapse All" button
+        $('#btn-hide-all-children').on('click', function () {
+            // Collapse row details
+            table.rows('.parent').nodes().to$().find('td:first-child').trigger('click');
+        });
+    });
+</script>
+
+<script>
+
+    function selectedcheckbox(offer) {
+
+        var formData = {};
+        var formData = $("#Form").serialize();
+
+        $.ajax(
+            {
+                type: "POST",
+                url: '/admin/Deleteunsub',
+
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8', // when we use .serialize() this generates the data in query string format. this needs the default contentType (default content type is: contentType: 'application/x-www-form-urlencoded; charset=UTF-8') so it is optional, you can remove it
+                data: formData,
+                success: function (result) {
+                    sumitsweettt();
+                    setTimeout(function () {
+                        location.reload(true);
+
+                    }, 1000);
+
+                },
+                error: function () {
+                    alert('Failed to receive the Data');
+                    console.log('Failed ');
+                }
+
+            }
+        );
+    }
+    function sumitsweettt() {
+        var icon = "success";
+        if (status == "success") {
+            icon = "success";
+        }
+
+        var config = {}
+        config.icon = icon;
+        config.title = "Success";
+        config.text = "Unsubscribe User Deleted SuccessFully";
+
+        Swal.fire(config);
+
+    }
+
+
+
+    function addunsubscribe()
+
+    {
+        var formData = {};
+        var formData = $("#unsubscribe").serialize();
+
+        $.ajax(
+            {
+                type: "POST",
+                url: '/admin/addunsubscribe',
+
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8', // when we use .serialize() this generates the data in query string format. this needs the default contentType (default content type is: contentType: 'application/x-www-form-urlencoded; charset=UTF-8') so it is optional, you can remove it
+                data: formData,
+                success: function (result) {
+                    sumitsweett();
+                    setTimeout(function () {
+                        location.reload(true);
+
+                    }, 1000);
+
+                },
+                error: function () {
+                    alert('Failed to receive the Data');
+                    console.log('Failed ');
+                }
+
+            }
+        );
+    }
+    function sumitsweett() {
+        var icon = "success";
+        if (status == "success") {
+            icon = "success";
+        }
+
+        var config = {}
+        config.icon = icon;
+        config.title = "Success";
+        config.text = "Unsubscribe User Added SuccessFully";
+
+        Swal.fire(config);
+
+    }
+    function offerdetail(id,gmail) {
+
+        $("#modal").modal('show');
+     
+
+        $("#gmail").text(gmail);
+        $("#id").text(id);
+    }
+</script>
+

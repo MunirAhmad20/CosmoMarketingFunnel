@@ -1,0 +1,1624 @@
+﻿/*bcgdjfd*/
+/*#main-reg .subheader {
+    font-size: 1.8rem ;
+    line-height: 1.8rem;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 200 !important;
+}*/
+.gretatxt {
+    font-size: 24px !important;
+}
+.ppppp {
+    position: relative;
+    padding-bottom: 83% !important;
+}
+.bd-example-modal-lg {
+    background-color: white;
+    max-width: 55%;
+    margin: 0 auto;
+     max-height: 58%;
+    
+    top: 6%;
+}
+.containers {
+    max-width: 76%;
+    margin: 0 auto;
+}
+.logsection {
+    background-color: #c7ffd2;
+    margin-top: -1em;
+    height: 8em
+}
+.ppend {
+    padding: 0 16% 0 16%;
+}
+#content p {
+    font-weight: 500 !important;
+    line-height: 1.7 !important;
+    font-size: 12px;
+    text-align: justify;
+}
+.mbb {
+    margin-bottom: 10px !important;
+}
+
+.mb2 {
+    margin-bottom: 2px !important;
+}
+#OptinDiv {
+    margin-top: 20px;
+}
+.chek_ip {
+    opacity: 10 !important;
+    position: initial !important;
+    height: 12px !important;
+    width: 12px !important;
+    float: left !important;
+    margin-right: 4px !important;
+    cursor: pointer !important;
+}
+
+input, button, select, optgroup, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+.comp {
+    text-align: center;
+    font-size: 1.8rem !important;
+    line-height: 1.8rem !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-weight: 200 !important;
+}
+#hero {
+    min-height: 600px;
+    background-color: #e8f2fa;
+}
+    #hero h2 {
+        font-size: 56px;
+       
+        padding: 0px;
+        
+        margin: 80px 0px 0px 0px;
+    }
+        #hero h2.subheader {
+            font-size: 56px;
+            line-height: 60px;
+            padding: 0px;
+            margin: 0px 0px 20px 0px;
+        }
+    #hero p {
+        font-weight: 400;
+        font-size: 21px;
+    }
+#stat-bar h1, #stat-bar p, #stat-bar .subheader {
+    font-family: "Oswald", sans-serif;
+    color: black;
+}
+#stat-bar {
+
+    
+  background: #e8f2fa; 
+    border-top: 6px solid #e8f2fa;
+   
+}
+.navmaxwidth {
+    max-width: 100%;
+}
+.logocls {
+    padding-left: 5% !important;
+}
+.mainregg {
+    background-color: #0064db !important;
+}
+.reg-box {
+    box-shadow: none !important;
+    background-color: #0064db !important;
+}
+.disclosertext {
+   
+    color: white !important;
+    font-family: 'Poppins';
+    text-align: justify !important;
+    font-size: 18px !important;
+    font-weight: 100 !important;
+    line-height: 26px !important;
+}
+.optinbox .optin {
+    border: 0;
+    line-height: 18px;
+    margin: 0px 0px 20px 0px;
+    padding: 0px 0px 0px 0px 0px;
+    background: transparent !important;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#main-reg {
+ 
+    margin-bottom: 20px;
+}
+
+.optinbox .optin-right {
+    background-color: transparent !important;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+}
+.opt-in p {
+    padding-top: 2%;
+    color: white;
+    font-family: 'Poppins';
+    text-align: justify !important;
+    font-size: 18px !important;
+    font-weight: 300 !important;
+    line-height: 26px !important;
+}
+
+.infor {
+    font-size: 40px !important;
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+    color: white !important;
+}
+
+.input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.sectiontop {
+    margin-top: -6em;
+}
+.logocls
+{
+
+}
+.btncontinue {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+}
+.new {
+    background: #f9a22f !important;
+    background-image: url('/Resourcse/images/moboverlay 2.png') !important;
+    background-blend-mode: multiply !important;
+}
+.fontssize {
+    font-size: 24px !important;
+}
+
+.pmtop {
+    margin-top: -2em !important;
+}
+
+.icon {
+    padding: 10px !important;
+    background: dodgerblue !important;
+    color: white !important;
+    min-width: 50px !important;
+    text-align: center !important;
+    height: 49px !important;
+}
+
+.bgimage {
+    background-image: url("/Resourcse/Asset 64.png");
+    height: 72em;
+}
+
+.inputs {
+    cursor: auto;
+    background-color: whitesmoke !important;
+    font-size: 29px !important;
+    padding: 6% !important;
+    padding-left: 35px !important;
+    width: 14em !important;
+}
+
+#panel-02 {
+    /*border-top: 1px solid #ccc !important;*/
+    border-bottom: 1px solid #ccc !important;
+    padding: 10px 0px 10px 0px !important;
+    margin: 10px 0px 20px 0px !important;
+}
+
+.marginright {
+    margin-right: 9em !important;
+}
+
+.nsectiontop {
+    margin-top: -3em !important;
+}
+#footer {
+    background-color: #e8f2fa !important;
+    padding: 60px 0px 50px 0px !important;
+}
+    #footer p {
+        color: black !important;
+        text-align: justify !important;
+    }
+    #footer a {
+        color: #034bb0 !important;
+        text-decoration: none;
+    }
+    .footermaxwidth {
+    max-width: 90% !important;
+}
+.imgiconwidth {
+    width: 43px !important;
+}
+.stepmin {
+    min-height:22em !important;
+}
+.icon {
+    padding: 10px !important;
+    background: dodgerblue !important;
+    color: white !important;
+    min-width: 50px !important;
+    text-align: center !important;
+    height: 49px !important;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+    .input-field:focus {
+        border: 2px solid royalblue;
+    }
+
+.brhide {
+    display: none;
+}
+
+.brhidde {
+    display: block;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.btnleft {
+    margin-left: -4em !important;
+}
+
+.btnendleft {
+    margin-left: -8em !important;
+}
+
+.btnlineh {
+    line-height: 3.6 !important;
+}
+
+.sectionleft {
+    margin-left: 3em;
+}
+
+.buttonn {
+    border-radius: 12px;
+    background-color: white; /* Green */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    box-shadow: 0px 0px 0px 8px #808080;
+    width: 90%;
+}
+
+.buttonnn {
+    border-radius: 12px;
+    background-color: white; /* Green */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    box-shadow: 0px 0px 0px 8px #f8e8ff;
+    width: 120%;
+}
+
+.btnmargintop {
+    margin-top: 2em !important;
+}
+
+.flex-child {
+    flex: 1;
+    border: 2px solid yellow;
+}
+
+.navcolor {
+    color: darkblue !important;
+}
+
+.assettextalign {
+    text-align: center !important;
+}
+
+.pfont {
+    font-size: 29px !important;
+}
+
+.maxwidthth {
+    max-width: 80em;
+}
+
+.sectionwidth {
+    width: 99% !important
+}
+
+.lowerleft {
+    margin-left: 2em !important;
+}
+
+
+
+.bulletleft {
+    margin-left: 2.1em !important;
+}
+
+.bulletlefts {
+    margin-left: -4.5em !important;
+}
+
+.insurancelefts {
+    margin-left: 5.1em !important;
+}
+
+.devidendlefts {
+    margin-left: -13px !important;
+}
+
+.uperleft {
+    margin-left: -3.1em !important;
+}
+
+.wageleft {
+    margin-left: -8em !important;
+}
+
+.andmoreleft {
+    margin-left: -6em !important;
+}
+
+.fintec {
+    font-size: 25px !important;
+    color: black !important;
+    font-weight: 400 !important;
+}
+
+.pheight {
+    height: 52px !important;
+}
+
+.btnpheight {
+    height: 90px !important;
+}
+
+.bullettop {
+    margin-top: -8px !important;
+}
+
+.circle {
+    border-radius: 50%;
+    behavior: url(PIE.htc);
+    width: 338px;
+    height: 338px;
+    background: #f9a22f;
+    border: 0px solid blue;
+    text-align: center;
+    margin-left: 50px;
+    background-image: url("/Resourcse/images/circleoverlay  image.png");
+    background-blend-mode: multiply;
+}
+
+.deviderr {
+    display: block;
+    width: 102%;
+    border-top: 4px solid #dbd6d2;
+    margin: 30px auto 20px auto;
+    clear: both;
+    align-items: baseline;
+}
+
+.deviderrleft {
+    margin-left: 4em !important;
+}
+
+.bdeviderleft {
+    margin-left: 4em !important;
+}
+@media only screen and (max-width: 1278px) {
+    .stepmin {
+        min-height: 27em !important;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+
+
+    .iconfirmmlefts {
+        width: 100% !important;
+    }
+
+    #hiw {
+        display: block;
+        width: 100%;
+        background: url("/Resourcse/images/moboverlay 2.png") no-repeat center top;
+        padding: 0;
+    }
+    /*  .circlecenter {
+            max-width: 390px !important;
+            float: right !important;
+        }*/
+    .circlecenter {
+        max-width: 460px !important;
+        margin-left: -1.5em !important;
+    }
+
+
+    .tabhide {
+        display: block;
+    }
+
+    .desktophide {
+        display: block !important;
+    }
+
+    .mobilehidde {
+        display: block;
+    }
+
+    .bgimage {
+        background: url("/Resourcse/images/mobBackground.png") no-repeat center top;
+    }
+}
+
+@media only screen and (max-width:650px) {
+    .ppend {
+        padding: 0px;
+    }
+    .navv {
+        margin: 0px 0px 10px 0px !important;
+        padding: 0 !important;
+        font-family: oswald,sans-serif;
+        font-size: .7rem !important;
+    }
+    .mbb {
+        margin-bottom: 11px !important;
+    }
+    .mb2 {
+        margin-bottom: 30px !important;
+    }
+    #content p {
+        text-align: justify;
+        font-weight: 500 !important;
+        line-height: 1.6 !important;
+       
+        font-size: 11px;
+    }
+    
+    #hiw p {
+        font-family: "Poppins";
+        font-weight: 400;
+        font-size: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        padding: 0px 15px 0px 15px;
+        margin: 0px 0px 10px 0px;
+    }
+    #OptinDiv {
+        margin-top: -20px;
+    }
+    .iconfirmmleft {
+        width: 100% !important;
+    }
+    #stat-bar {
+        display: block;
+        width: 100%;
+        height: 80px;
+         background: #808080; 
+        border-top: 6px solid #808080; 
+        padding: 8px 0px 0px 0px;
+    }
+        #stat-bar h1, #stat-bar p, #stat-bar .subheader {
+            font-family: "Oswald", sans-serif;
+            color: #ffffff;
+        }
+            .optinbox .optin {
+        border: 0;
+        line-height: 18px;
+        margin: 0px 0px 20px 0px;
+        padding: 0px 0px 0px 0px 0px;
+        background: #ffffff !important;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+    }
+    .optinbox .optin-right {
+        background-color: #ffffff !important;
+        text-align: left;
+        padding: 0px;
+        margin: 0px;
+    }
+    .reg-box {
+        box-shadow: none !important;
+        background-color: transparent !important;
+    }
+    .brhide {
+        font-size: 22px !important;
+    }
+    .howworks {
+        font-size: 22px !important;
+    }
+    .copyrighttext
+    {
+        font-size:11px !important;
+    }
+    .opt_in {
+        margin-left: -40px !important;
+    }
+    .optin-txt {
+        font-size: 12px !important;
+    }
+    .optin-right {
+        width: 258% !important;
+        text-align: justify !important;
+        margin-left: -32% !important;
+        margin-top: 0px !important;
+    }
+    .disclosertext {
+        text-align: justify !important;
+        color: #666666 !important;
+    }
+    .resume {
+        text-align: justify !important;
+    }
+    .comp {
+        font-size: 14px !important;
+        text-align: center !important;
+        font-weight: bold !important;
+    }
+    .chek_ip {
+        opacity: 10 !important;
+        position: initial !important;
+        height: 13px !important;
+        width: 13px !important;
+        float: left !important;
+        margin-right: 8px !important;
+        cursor: pointer !important;
+    }
+    .infor {
+        font-size: 12px !important;
+        text-align: center !important;
+        color: #3c79aE !important;
+    }
+    .tabshow{
+        display:block!important;
+    }
+
+    .stepmin {
+        min-height: 0em !important;
+    }
+}
+    @media only screen and (max-width:768px) {
+        .iconfirm {
+            background-color: #0564a0 !important;
+            text-align: center !important;
+            margin: 0px !important;
+            padding: 5px !important;
+            height: 66px !important;
+        }
+
+        .iconfirmmleft {
+            width: 75%;
+        }
+        .sectiontop
+        {
+            margin-top:-13em;
+        }
+
+        #hiw {
+           
+            width: 100%;
+            background: url("/Resourcse/overlay  image.png") no-repeat center top;
+            padding: 0;
+        }
+
+        .tabhide {
+            display: none;
+        }
+
+        .amounthide {
+            display: inline !important;
+        }
+
+        .medium-push-4 {
+            left: 7.33333% !important;
+        }
+
+        .headertext {
+            text-align: center !important
+        }
+
+        .circlecenter {
+            max-width: 470px;
+            float: right;
+        }
+
+        .circlewidth {
+            width: 100% !important;
+        }
+
+        .icon {
+            padding: 10px !important;
+            background: dodgerblue !important;
+            color: white !important;
+            min-width: 50px !important;
+            text-align: center !important;
+            height: 40px !important;
+        }
+
+        .sstop {
+            margin-top: 0px !important;
+        }
+
+        .panel-02 {
+            /*border-top: 1px solid #ccc !important;*/
+            border-bottom: 1px solid #ccc !important;
+            padding: 10px 0px 10px 0px !important;
+            margin: 10px 0px 20px 0px !important;
+        }
+
+        .bgimage {
+            background-image: url("/Resourcse/images/mobBackground.png");
+            background-repeat: no-repeat;
+            background-size: 47em 60em;
+            height: 72em;
+        }
+
+        .imgfooter {
+            width: 13em !important;
+        }
+
+        .sectionwidth {
+            width: 20% !important
+        }
+
+        .nsectiontop {
+            margin-top: 0em !important;
+        }
+
+
+        .marginright {
+            margin-right: -1em !important;
+        }
+
+        .imgiconwidth {
+            width: auto !important;
+        }
+
+        .inputs {
+            cursor: auto;
+            background-color: whitesmoke !important;
+            font-size: 24px !important;
+            padding: 6% !important;
+            padding-left: 35px !important;
+            width: 10.3em !important;
+        }
+
+        .pfonts {
+            font-size: 22px !important;
+        }
+
+        .sectionleft {
+            margin-left: 0em;
+        }
+
+        .brhide {
+            display: block;
+        }
+
+        .brhidde {
+            display: none;
+        }
+
+        .bullettop {
+            margin-top: -8px !important;
+        }
+
+        btnmargintop {
+            margin-top: 0em !important;
+        }
+
+        .btnleft {
+            margin-left: 0em !important;
+        }
+
+        .btnsleft {
+            margin-left: 2em !important;
+        }
+
+        .fontssize {
+            font-size: 17px !important;
+        }
+
+        .btnlineh {
+            line-height: 4.2 !important;
+        }
+
+        .buttonnn {
+            border-radius: 12px;
+            background-color: white; /* Green */
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            box-shadow: 0px 0px 0px 3px #f8e8ff;
+            width: 100%;
+        }
+
+        .buttonn {
+            border-radius: 12px;
+            background-color: white; /* Green */
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            box-shadow: 0px 0px 0px 3px #808080;
+            width: 100%;
+        }
+
+        .fintec {
+            font-size: 1.1rem !important;
+            color: black !important;
+            font-weight: 300 !important;
+        }
+
+        .bulletleft {
+            margin-left: 0em !important;
+        }
+
+        .bulletleftss {
+            margin-left: 0em !important;
+        }
+
+        .bulletlefts {
+            margin-left: 0px !important;
+        }
+
+        .devidendlefts {
+            margin-left: 0px !important;
+        }
+
+        .wageleft {
+            margin-left: 0px !important;
+        }
+
+        .insurancelefts {
+            margin-left: 0px !important;
+        }
+
+        .andmoreleft {
+            margin-left: 0px !important;
+        }
+
+        .uperleft {
+            margin-left: -15em !important;
+        }
+
+        .assettextalign {
+            text-align: left !important;
+        }
+
+        .texalign {
+            text-align: center !important;
+            /* text-align: left !important;
+            margin-left: 1em !important;*/
+        }
+
+        .pheight {
+            height: 10px !important;
+        }
+
+        .pmtop {
+            margin-top: -2.5em !important;
+        }
+
+        .imgalign {
+            margin-left: 0px;
+        }
+
+        .btnheight {
+            height: 3em !important;
+        }
+
+        .plineheight {
+            line-height: 10px !important;
+        }
+
+        .circlemargintop {
+            margin-top: 1em !important;
+        }
+
+        .mobilehide {
+            display: none;
+        }
+
+        .unclainlineheight {
+            line-height: 1.1em;
+        }
+
+        .netspendimage {
+            margin-left: 1em !important;
+        }
+        .tabshow
+        {
+            display:block;
+        }
+
+        .circle {
+            border-radius: 50%;
+            behavior: url(PIE.htc);
+            width: 338px;
+            height: 338px;
+            background: #f9a22f;
+            border: 0px solid blue;
+            text-align: center;
+            margin-left: 50px;
+            background-image: url("/Resourcse/images/moboverlay.png");
+            background-blend-mode: multiply;
+        }
+        /* .circlee {
+                border-radius: 50%;
+                behavior: url(PIE.htc);
+                width: 310px;
+                height: 303px;
+                background: #f9a22f;
+                border: 0px solid blue;
+                text-align: center;
+                font-size: 13px;
+                background-image: url("/Resourcse/images/circleoverlay  image.png");
+                background-blend-mode: multiply;
+                margin-left: 0.7em !important;
+            }*/
+        /* .lineheight {
+                line-height: 27px;
+            }*/
+    }
+
+    @media only screen and (max-width:568px) {
+        .circlecenter {
+            max-width: 460px !important;
+        }
+        .gretatxt {
+            font-size: 15px !important;
+        }
+    }
+@media only screen and (max-width:1022px) {
+
+    .pdtop {
+        padding-top: 0em !important;
+        padding-bottom: 4rem !important;
+    }
+    .footimgtop {
+        margin-top: -6em ;
+    }
+    .stepmin {
+        min-height: 0em !important;
+    }
+    .stepwidth {
+        width: 44em !important;
+    }
+}
+
+    @media only screen and (max-width:1024px) {
+        .maxwidthh {
+            max-width: 470px;
+        }
+
+      
+
+        .imgalign {
+            margin-left: -6em
+        }
+
+        btnmargintop {
+            margin-top: 2em !important;
+        }
+
+        margin_top {
+            margin-top: -70px;
+        }
+
+        .step1 {
+            color: white;
+            text-align: start;
+            font-size: 23px;
+            display: contents;
+        }
+
+        .step2 {
+            color: white;
+            font-size: 16px !important;
+        }
+
+        .deviderr {
+            display: block;
+            width: 97%;
+            border-top: 4px solid #dbd6d2;
+            margin: 30px auto 20px auto;
+            clear: both;
+            align-items: baseline;
+        }
+
+        .deviderrleft {
+            margin-left: 4em !important;
+        }
+    }
+
+    @media only screen and (max-width: 990px) {
+        .mobilehide {
+            display: none;
+        }
+
+        .tabhide {
+            display: none;
+        }
+
+        .desktophide {
+            display: none;
+        }
+
+        .tabshoww {
+            display: block;
+        }
+    }
+
+    @media only screen and (min-width: 992px) {
+
+        .pfont {
+            font-size: 25px !important;
+        }
+
+        .btnmargintop {
+            margin-top: 2em !important;
+        }
+
+        .deviderr {
+            display: block;
+            width: 80%;
+            border-top: 4px solid #dbd6d2;
+            margin: 30px auto 20px auto;
+            clear: both;
+        }
+
+        .desktophide {
+            display: none;
+        }
+
+        .tabhide {
+            display: none;
+        }
+
+        .amounthide {
+            display: none;
+        }
+
+        .step1 {
+            color: white;
+            text-align: start;
+            font-size: 23px;
+            display: contents;
+        }
+
+        .step2 {
+            color: white;
+            font-size: 16px;
+        }
+
+        .deviderr {
+            display: block;
+            width: 97%;
+            border-top: 4px solid #dbd6d2;
+            margin: 30px auto 20px auto;
+            clear: both;
+            align-items: baseline;
+        }
+
+        .deviderrleft {
+            margin-left: 4.3em !important;
+        }
+
+        .bdeviderleft {
+            margin-left: 3em !important;
+        }
+    }
+@media only screen and ( max-width: 600px)
+
+{
+    .bd-example-modal-lg {
+        background-color: white;
+        max-width: 90%;
+        margin: 0 auto;
+        max-height: 90%;
+        top: 6%;
+    }
+    .continuep {
+        padding-top: 10% !important;
+    }
+    #hero .testimonials li p {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Oswald", sans-serif;
+        font-size: .7rem !important;
+    }
+    #footer {
+        display: block;
+        width: 100%;
+        background-color: #333 !important;
+        padding: 20px 0 0;
+    }
+    .logocls {
+        text-align: center;
+        padding:0 !important;
+    }
+    #footer p{
+        color: gray !important;
+    }
+    .desktophide {
+        color: #ccc !important;
+    }
+    #footer a {
+        color: #ccc !important;
+    }
+    .footermaxwidth {
+        max-width: 100% !important;
+    }
+    #hero h2, #hero h2.subheader {
+        font-family: "Oswald", sans-serif !important;
+    }
+    #hero h2 {
+        font-size: 48px;
+        line-height: 48px;
+        text-align: center;
+        padding: 0;
+        margin: 20px 0 0;
+    }
+    #hero {
+        width: 100%;
+        min-height: 300px;
+        padding: 0;
+        margin: 0;
+        background-color:white;
+    }
+        #hero h2, #hero h2.subheader {
+            font-family: "Oswald", sans-serif !important;
+        }
+            #hero h2.subheader {
+                font-size: 36px;
+                line-height: 36px;
+                padding: 0;
+                margin: 0 0 20px;
+            }
+    .mainregg {
+        background-color: #D3D3D3 !important;
+    }
+   
+
+    .btncontinue {
+        padding-left: 30% !important;
+        padding-right: 30% !important;
+    }
+    .footimgtop {
+        margin-top: -2em;
+    }
+    
+    .bgimage {
+        background-image: url(/Resourcse/images/mobBackground.png);
+        background-repeat: no-repeat;
+        background-size: 47em 73em;
+        height: 86em;
+    }
+    #main-reg .reg-box {
+        display: block;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        border-radius: 8px;
+        background: #fff !important;
+        padding: 15px;
+        box-shadow: 0 0 10px rgb(0 0 0 / 40%) !important;
+    }
+        #main-reg .reg-box .opt-in p {
+            font-size: .8rem !important;
+            line-height: 1rem !important;
+            font-family: roboto,sans-serif !important;
+            font-weight: 600 !important;
+            color: #666666 !important;
+        }
+    #main-reg a {
+        color: #2199e8 !important;
+    }
+    #main-reg .reg-box label {
+        font-family: roboto,sans-serif !important;
+        font-size: 1rem;
+        font-weight: 600 !important;
+    }
+     .optin-txt {
+        font-size: 12px !important;
+    }
+    .haveactive {
+        font-size: 13px;
+        text-align: left;
+        padding-top: 7%;
+    }
+    .rowlft {
+        margin-left: -30px !important;
+    } 
+    }
+@media only screen and (max-width: 320px) {
+    .bgimage {
+        background-image: url("/Resourcse/images/mobBackground.png");
+        background-repeat: no-repeat;
+        background-size: 47em 95em;
+        height: 105em;
+    }
+}
+
+@media only screen and ( max-width: 360px) {
+    /*  @@media only screen and (max-width: 600px) {*/
+    .icon {
+        padding: 10px !important;
+        background: dodgerblue !important;
+        color: white !important;
+        min-width: 50px !important;
+        text-align: center !important;
+        height: 40px !important;
+    }
+
+    #hiw {
+        display: block;
+        width: 100%;
+        background: url("/Resourcse/images/moboverlay 2.png") no-repeat center top;
+        padding: 0;
+    }
+
+    .mobilehidde {
+        display: none;
+    }
+
+    .desktophide {
+        display: block;
+    }
+
+    .iconfirmmleft {
+        width: 100% !important;
+    }
+
+    .circlecenter {
+        margin-right: 0.8em !important;
+    }
+
+    .tabhide {
+        display: block;
+    }
+
+    .sstop {
+        margin-top: 0px !important;
+    }
+
+    .panel-02 {
+        /*border-top: 1px solid #ccc !important;*/
+        border-bottom: 1px solid #ccc !important;
+        padding: 10px 0px 10px 0px !important;
+        margin: 10px 0px 20px 0px !important;
+    }
+
+    .bgimage {
+        background-image: url("/Resourcse/images/mobBackground.png");
+    }
+
+    .imgfooter {
+        width: 13em !important;
+    }
+
+    .sectionwidth {
+        width: 20% !important
+    }
+
+    .nsectiontop {
+        margin-top: 0em !important;
+    }
+
+
+    .marginright {
+        margin-right: -1em !important;
+    }
+
+    .imgiconwidth {
+        width: auto !important;
+    }
+
+    .inputs {
+        cursor: auto;
+        background-color: whitesmoke !important;
+        font-size: 24px !important;
+        padding: 6% !important;
+        padding-left: 35px !important;
+        width: 10.3em !important;
+    }
+
+    .pfonts {
+        font-size: 22px !important;
+    }
+
+    .sectionleft {
+        margin-left: 0em;
+    }
+
+    .brhide {
+        display: block;
+    }
+
+    .brhidde {
+        display: none;
+    }
+
+    .bullettop {
+        margin-top: -8px !important;
+    }
+
+    btnmargintop {
+        margin-top: 0em !important;
+    }
+
+    .btnleft {
+        margin-left: 0em !important;
+    }
+
+    .btnsleft {
+        margin-left: 1em !important;
+    }
+
+    .fontssize {
+        font-size: 17px !important;
+    }
+
+    .btnlineh {
+        line-height: 4.2 !important;
+    }
+
+    .buttonnn {
+        border-radius: 12px;
+        background-color: white; /* Green */
+        border: none;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        box-shadow: 0px 0px 0px 3px #808080;
+        width: 100%;
+    }
+
+    .buttonn {
+        border-radius: 12px;
+        background-color: white; /* Green */
+        border: none;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        box-shadow: 0px 0px 0px 3px #808080;
+        width: 100%;
+    }
+
+    .fintec {
+        font-size: 1.1rem !important;
+        color: black !important;
+        font-weight: 300 !important;
+    }
+
+    .bulletleft {
+        margin-left: 0em !important;
+    }
+
+    .bulletleftss {
+        margin-left: 0em !important;
+    }
+
+    .bulletlefts {
+        margin-left: 0px !important;
+    }
+
+    .devidendlefts {
+        margin-left: 0px !important;
+    }
+
+    .wageleft {
+        margin-left: 0px !important;
+    }
+
+    .insurancelefts {
+        margin-left: 0px !important;
+    }
+
+    .andmoreleft {
+        margin-left: 0px !important;
+    }
+
+    .uperleft {
+        margin-left: 0em !important;
+    }
+
+    .assettextalign {
+        text-align: left !important;
+    }
+
+    .texalign {
+        text-align: center !important;
+        /* text-align: left !important;
+            margin-left: 1em !important;*/
+    }
+
+    .pheight {
+        height: 10px !important;
+    }
+
+    .pmtop {
+        margin-top: -2.5em !important;
+    }
+
+    .imgalign {
+        margin-left: 0px;
+    }
+
+    .btnheight {
+        height: 3em !important;
+    }
+
+    .plineheight {
+        line-height: 10px !important;
+    }
+
+    .circlemargintop {
+        margin-top: 1em !important;
+    }
+
+    .mobilehide {
+        display: none;
+    }
+
+    .unclainlineheight {
+        line-height: 1.1em;
+    }
+
+    .netspendimage {
+        margin-left: 1em !important;
+    }
+
+    .circle {
+        border-radius: 50%;
+        behavior: url(PIE.htc);
+        width: 310px;
+        height: 303px;
+        background: #f9a22f;
+        border: 0px solid blue;
+        text-align: center;
+        font-size: 13px;
+        background-image: url("/Resourcse/images/moboverlay.png");
+        background-blend-mode: multiply;
+        margin-left: 0.7em !important;
+    }
+
+    .lineheight {
+        line-height: 12px;
+    }
+}
+
+    @media only screen and (max-width: 1200px) {
+
+        .loghide {
+            display: none !important;
+        }
+
+        
+
+        .sstop {
+            margin-top: -15em;
+        }
+
+        .pfont {
+            font-size: 22px !important;
+        }
+
+
+
+        .circle {
+            border-radius: 50%;
+            behavior: url(PIE.htc);
+            width: 338px;
+            height: 338px;
+            background: #f9a22f;
+            border: 0px solid blue;
+            text-align: center;
+            margin-left: 50px;
+            background-image: url("/Resourcse/images/circleoverlay  image.png");
+            background-blend-mode: multiply;
+        }
+    }
+
+    @media only screen and (max-width:1400px) {
+        .span1 {
+            font-size: 17px !important;
+        }
+
+        .btnmargintop {
+            margin-top: 2em !important;
+        }
+
+
+        .imgright {
+            float: right;
+        }
+        /* .deviderrleft
+        {
+            margin-left:3em !important;
+        }*/
+    }
+
+@media only screen and (min-width: 1536px) {
+
+    .maxwidth {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+}
+    @media only screen and (min-width: 1936px) {
+        .roland {
+            font-size: 21px !important;
+            margin-left: 4em;
+        }
+
+        .circull h2 {
+            margin-bottom: 6em !important;
+        }
+
+        .footermaxwidth {
+            max-width: 65% !important;
+        }
+
+        .icon {
+            padding: 10px !important;
+            background: dodgerblue !important;
+            color: white !important;
+            min-width: 50px !important;
+            text-align: center !important;
+            height: 43px !important;
+        }
+
+        .btnlineh {
+            line-height: 3.2 !important;
+        }
+
+        .uperleft {
+            margin-left: -2.8em !important;
+        }
+
+        .btnmargintop {
+            margin-top: 2em !important;
+        }
+
+        .imgalign {
+            margin-top: 1% !important;
+        }
+
+        .circleleft {
+            margin-left: -2.2em !important;
+        }
+
+
+        .pfont {
+            font-size: 29px !important;
+        }
+
+        .comp {
+            font-size: 33px !important;
+        }
+
+        /* .infor {
+            font-size: 40px !important;
+        }*/
+
+        .deviderrleft {
+            margin-left: 8em !important;
+        }
+
+
+
+        .maxwidth {
+            max-width: 60%;
+            margin: 0 auto;
+        }
+
+        .desktophide {
+            display: none;
+        }
+
+        .fontsizee {
+            font-size: 24px !important;
+        }
+
+        .navmaxwidth {
+            max-width: 64%;
+            margin: 0 auto;
+        }
+
+        .testspan {
+            font-size: 21px !important;
+            margin-left: 4em;
+        }
+
+        .mm {
+            margin-left: 3em;
+        }
+
+        .imgright {
+            float: right;
+        }
+
+        .deviderr {
+            display: block;
+            width: 112%;
+            border-top: 4px solid #dbd6d2;
+            margin: 30px auto 20px auto;
+            clear: both;
+        }
+
+        margin_top {
+            margin-top: -5px;
+        }
+
+        .step1 {
+            color: white;
+            text-align: start;
+            font-size: 23px;
+            display: contents;
+        }
+
+        .step2 {
+            color: white;
+            font-size: 16px;
+        }
+    }
+
+

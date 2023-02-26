@@ -1,0 +1,166 @@
+﻿
+@{
+    ViewData["Title"] = "Unsubcribe";
+    Layout = "~/Views/Layouts/_loginLayout.cshtml";
+}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="apple-touch-icon" sizes="57x57" href="~/mail/img/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/mail/img/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/mail/img/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/mail/img/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/mail/img/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/mail/img/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/mail/img/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/mail/img/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/mail/img/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/mail/img/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/mail/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/mail/img/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/mail/img/icons/favicon-16x16.png">
+    <link rel="manifest" href="~/mail/img/icons/manifest.json">
+    <title>Unsubscribe</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700,800" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,200,100" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet" type="text/css">
+    <link href="~/mail/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/mail/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/mail/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/mail/lib/jquery.niftymodals/css/component.css">
+    <!--if lt IE 9script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')-->
+    <link type="text/css" href="~/mail/lib/jquery.nanoscroller/css/nanoscroller.css" rel="stylesheet">
+    <link type="text/css" href="~/mail/css/style.css" rel="stylesheet">
+</head>
+<body class="texture" style="opacity: 1; margin-left: 0px;" data-new-gr-c-s-check-loaded="14.1026.0" data-gr-ext-installed="">
+    <!-- Dynamic content -->
+    <!-- Dynamic content -->
+    <div id="cl-wrapper" class="unsub-container">
+        <div class="middle-unsub">
+            <div class="block-flat">
+                <div class="header unsub-primary">
+                    <h3>Unsubscribe</h3>
+                </div>
+                <div>
+                    <div class="content" style="padding:30px 30px 15px 30px;">
+                        <span class="unsub-content"><h1>Sorry to see you go!</h1><h3>We hate goodbyes- but if you have a change of heart, we'll always be here with great deals to share.</h3>To unsubscribe enter your email address and click the unsubscribe button.</span>
+                        <br><br>
+                        <form style="margin-bottom: 0px !important;" method="post" action="/Money/unsubmail" class="form-horizontal" novalidate="">
+                            <input type="hidden" id="affiliate_id" name="affiliate_id" value="1">
+                            <input type="hidden" id="list_id" name="list_id" value="265">
+                            <input type="hidden" id="list_nid" name="list_nid" value="14">
+                            <input type="hidden" id="source" name="source" value="1">
+                            <input type="hidden" id="authorization_code" name="authorization_code" value="7d20a27d1d1ee33e7e50e73c9129fdc6">
+                            <input type="hidden" id="subid" name="subid" value="LandingPage::">
+                            <!-- Dynamic content -->
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></span>
+                                        <input id="email" name="email" data-parsley-required="" data-parsley-type="email" type="text" placeholder="Email address" class="form-control" value="" data-parsley-id="4">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Dynamic content -->
+                            <div class="form-group">
+                                <div class="col-sm-12 unsub-actions">
+                                    <button type="submit" class="btn btn-primary pull-right" style="margin:0;">Unsubscribe</button>
+                                    <!-- Dynamic content -->
+                                    <div class="pull-left sub-alert" style="line-height:36px">
+                                        <a id="start_feedback" href="#" data-modal="feedback_modal" class="md-trigger">Still getting emails after unsubscribing?</a>
+                                    </div>
+                                    <!-- Dynamic content -->
+                                </div>
+                            </div>
+                        </form>
+                        <!-- Dynamic content -->
+                        <!-- Dynamic content -->
+                    </div>
+                </div>
+            </div>
+            <!-- Dynamic content -->
+            <div class="text-center out-links"><a href="https://docs.corepassage.com/privacy.aspx?sid=4">Privacy Policy</a></div>
+            <!-- Dynamic content -->
+        </div>
+    </div>
+    <div id="feedback_modal" class="md-modal colored-header md-effect-1">
+        <div class="md-content">
+            <div class="modal-header">
+                <h3>Let's see if you have already unsubscribed.</h3>
+                <button type="button" data-dismiss="modal" aria-hidden="true" class="close md-close">×</button>
+            </div>
+            <div class="modal-body" style="padding:30px;">
+                <div id="search_box">
+                    <div class="input-group" style="margin:0;">
+                        <input id="query" type="text" class="form-control" onkeypress="submitOnReturn(event, feedbackSearch);" placeholder="Enter your email address.">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-primary" onclick="feedbackSearch();">Search</button>
+                        </span>
+                    </div>
+                </div>
+                <div id="search_working" class="hidden text-center" style="margin:30px 0 0 0;">
+                    <div class="i-circle success" style="padding-top:17px !important;"><i class="fa fa-cog fa-4x fa-spin"></i></div>
+                    <h4>Searching</h4>
+                    <p>Please wait, this could take a few moments.</p>
+                </div>
+                <div id="search_results" class="hidden" style="margin:30px 0 0 0;"></div>
+                <div id="feedback_step2" class="hidden">
+                    <div class="input-group" style="margin:30px 0 0 0;">
+                        <input id="feedback_email" name="feedback_email" type="text" class="form-control" value="" readonly="readonly">
+                        <span class="input-group-btn">
+                            <button id="copy_email" type="button" class="btn btn-default" data-clipboard-target="#feedback_email">Click to Copy</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-default btn-flat md-close">Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="md-overlay"></div>
+    <script type="text/javascript" src="~/mail/lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="~/mail/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.js"></script>
+    <script type="text/javascript" src="~/mail/js/cleanzone.js"></script>
+    <script type="text/javascript" src="~/mail/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Modal Windows -->
+    <script type="text/javascript" src="~/mail/lib/jquery.niftymodals/js/jquery.modalEffects.js"></script>
+    <!-- Form Validation -->
+    <script type="text/javascript" src="~/mail/lib/jquery.parsley/dist/parsley.min.js"></script>
+    <script type="text/javascript" src="~/mail/lib/jquery.parsley/custom/validation.js"></script>
+    <script type="text/javascript" src="/unsubscribe/functions.js"></script>
+    <script type="text/javascript" src="~/mail/lib/clippy/clipboard.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        App.init();
+        $('form').parsley({
+          //successClass: "has-success",
+          //errorClass: "has-error",
+          classHandler: function (el) {
+            return el.$element.closest(".form-group");
+          },
+          errorsContainer: function (el) {
+            return el.$element.closest(".form-group");
+          },
+          errorsWrapper: "<span class='help-block'></span>",
+          errorTemplate: "<span style='padding-left:68px; color:#c00;'></span>"
+        });
+        // Load clippy.
+        var clipboard = new Clipboard('#copy_email');
+        clipboard.on('success', function(e) {
+          $(e.trigger).attr('title','Copied!');
+          $(e.trigger).tooltip('show');
+          e.clearSelection();
+        });
+      });
+    </script>
+
+
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+</body>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+</html>

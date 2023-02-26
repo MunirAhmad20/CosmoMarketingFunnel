@@ -1,0 +1,1307 @@
+﻿
+@{
+    ViewData["Title"] = "consumerleadinfo";
+    Layout = "~/Views/Layouts/_adminLayout.cshtml";
+}
+<link href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables_themeroller.css">
+<link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf8" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+
+
+<link href="https://cdn.datatables.net/select/1.1.2/css/select.dataTables.min.css" rel="stylesheet" />
+
+
+
+<script src="~/agencyvendor_assets/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+<script src="~/agencyvendor_assets/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+<script src="~/agencyvendor_assets/assets/plugins/switchery/switchery.js"></script>
+
+<link href="~/agencyvendor_assets/assets/plugins/switchery/dist/switchery.min.css" rel="stylesheet">
+
+@*<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <style>
+        table.dataTable.select tbody tr,
+        table.dataTable thead th:first-child {
+            cursor: pointer;
+        }
+    </style>*@
+<style>
+    @@media screen and (max-width:620px) {
+        #mytable, .mytable {
+            width: 540% !important;
+            /*width: 500% !important;*/
+            overflow-x: scroll;
+        }
+    }
+    table.dataTable tbody th, table.dataTable tbody td {
+        padding: 1px 13px;
+    }
+    .fapencil {
+        background: url('../img/edit.png') !important;
+        background-repeat: no-repeat !important;
+        color: transparent;
+        margin-left: 10%;
+    }
+    .tr:hover {
+        color: transparent !important;
+
+    }
+    .swal2-confirm {
+        display: none !important;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+    /* The slider */
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+    input:checked + .slider {
+        background-color: #2196F3;
+    }
+
+    input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+</style>
+<style>
+    td {
+        background-color: white !important;
+        padding-top: 2% !important;
+        padding-bottom: 2% !important;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+        table.dataTable thead th {
+            border-bottom: 2px solid #f7f7ff !important;
+        }
+
+    thead, th, td {
+        border-bottom: 2px solid #f7f7ff;
+    }
+
+    table.dataTable.no-footer {
+        border-bottom: 2px solid #f7f7ff;
+    }
+
+    thead {
+        background-color: #f7f7ff !important;
+    }
+
+    table.dataTable thead th {
+        /* padding-bottom:10px;
+        padding-top:10px;*/
+        padding-top: 1% !important;
+        padding-bottom: 1% !important;
+        background-color: #f7f7ff !important;
+    }
+
+    #mytable_previous a {
+        border: none !important;
+        padding-left: 100% !important;
+    }
+
+    .hundered {
+        padding: 1% !important;
+        color: white !important;
+        background-color: #38A169 !important;
+        border-radius: 2px !important;
+    }
+
+    #mytable_next a {
+        border: none !important;
+    }
+
+
+    tr.border-bottom {
+        border-bottom: 1px solid #ff000d !important;
+    }
+
+    tr {
+        border-bottom: 2px solid #f7f7ff !important;
+    }
+
+        tr.border_bottom td {
+            border-bottom: 1px solid black;
+        }
+    #mytable_wrapper {
+        overflow: scroll !important;
+    }
+</style>
+
+
+
+
+
+
+@*<style>
+       .pagination {
+            display: none !important;
+        }
+
+        .pagination li.Prev, .pagination Next {
+            display: inline !important;
+        }
+    </style>*@
+
+@*editmodal*@
+<div class="modal fade" id="editnewuser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="/admin/updateuser" id="adminroles" enctype="multipart/form-data" method="post">
+
+
+
+                <div class="modal-body">
+                    <p align="center" style="font-weight: 500;font-size: 20px;"> Edit USER</p>
+                    <div class="row mt-3">
+
+                        <div class="col-md-6">
+                            <label>First Name</label>
+                            <input  name="fname" required="" class="form-control fname" placeholder="first" type="text">
+                            <input style="display:none;"  name="userid" required="" class="form-control userid" placeholder="first" type="text">
+                        </div>
+                        <div class="col-md-6">
+                            <label>last Name</label>
+                            <input  name="lname" required="" class="form-control lname" placeholder="last" type="text">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <label>Role</label>
+
+                            <select name="roll" class="form-control mb-3 " style="width: 100%; height:36px;">
+
+                                <option value="Super Admin">Super Admin </option>
+                                <option value="Admin">Admin </option>
+                                <option value="Advertiser">Advertiser </option>
+                                <option value="Affiliate">Affiliate </option>
+
+                            </select>
+
+                        </div>
+                        <div class="col-md-6">
+                            <label>Skype ID</label>
+                            <input  name="skype" required="" class="form-control skype" placeholder="abc.def" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <label>Contact Number</label>
+                            <input name="contact" class="form-control contact" placeholder="+123456" type="text">
+                        </div>
+                        <div class="col-md-6">
+                            <label>Email Address</label>
+                            <input name="gmail" class="form-control gmail" placeholder="abc@def.com" type="text">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+
+                            <label>Password</label>
+
+                            <div class="input-group" id="show_hide_password">
+                                <a href="javascript:;" class="input-group-text bg-transparent" style="
+    background-color: #a2a5a1 !important;
+">
+                                    <i class="bx bx-show" style="
+    color: white;
+"></i>
+                                </a><input type="text" required="" class="form-control border-end-0 pass" name="password" id="inputChoosePassword" placeholder="Enter Password">
+                            </div>
+                            @*<input type="text" name="password" required="" placeholder="Password" class="form-control pass">*@
+                        </div>
+                        <div class="col-md-6">
+                            <label>Image</label>
+                            <input type="file" name="files" src="files" id="files" class="form-control">
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button type="button" class="mb-3" data-bs-dismiss="modal" aria-label="Close" style="width: 100%;
+      border-radius: 4px;height: 42px;border: 1px solid darkgray;background: transparent;">
+                                Cancel
+                            </button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="submit" style="width: 100%;
+      background-color: seagreen;
+      border-radius: 4px;color: white;height: 42px;border: none;">
+                                Continue
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+@*modal*@
+
+<div class="modal fade" id="addnewuser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="/admin/submitnewuser" id="adminroles" enctype="multipart/form-data" method="post">
+
+
+
+                <div class="modal-body">
+                    <p align="center" style="font-weight: 500;font-size: 20px;"> ADD A NEW USER</p>
+                    <div class="row mt-3">
+
+                        <div class="col-md-6">
+                            <label>First Name</label>
+                            <input id="fname" name="fname" required="" class="form-control" placeholder="first" type="text">
+                        </div>
+                        <div class="col-md-6">
+                            <label>last Name</label>
+                            <input id="lname" name="lname" class="form-control" placeholder="last" type="text">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <label>Role</label>
+
+                            <select name="roll" class="form-control mb-3 " style="width: 100%; height:36px;">
+
+                                <option value="Super Admin">Super Admin </option>
+                                <option value="Admin">Admin </option>
+                                <option value="Advertiser">Advertiser </option>
+                                <option value="Affiliate">Affiliate </option>
+
+                            </select>
+
+                        </div>
+                        <div class="col-md-6">
+                            <label>Skype ID</label>
+                            <input id="skype" name="skype"  class="form-control" placeholder="abc.def" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <label>Contact Number</label>
+                            <input name="contact" class="form-control" placeholder="+123456" type="text">
+                        </div>
+                        <div class="col-md-6">
+                            <label>Email Address</label>
+                            <input id="gmail" name="gmail" class="form-control" required="" placeholder="abc@def.com" type="text">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <label>Password</label>
+                            <div class="input-group" id="show_hide_password">
+                                <a href="javascript:;" class="input-group-text bg-transparent" style="
+    background-color: #a2a5a1 !important;
+">
+                                    <i class="bx bx-show" style="
+    color: white;
+"></i>
+                                </a><input type="text" required="" class="form-control border-end-0 pass" name="password" id="inputChoosePassword" placeholder="Enter Password">
+                            </div>
+                            @*<input type="password" name="password" required="" placeholder="Password" class="form-control">*@
+                        </div>
+                        <div class="col-md-6">
+                            <label>Image</label>
+                            <input type="file" name="files" src="files" id="files" class="form-control">
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button type="button" class="mb-3" data-bs-dismiss="modal" aria-label="Close" style="width: 100%;
+      border-radius: 4px;height: 42px;border: 1px solid darkgray;background: transparent;">
+                                Cancel
+                            </button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="submit" style="width: 100%;
+      background-color: seagreen;
+      border-radius: 4px;color: white;height: 42px;border: none;">
+                                Continue
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                </form>
+        </div>
+    </div>
+</div>
+<!--<div id="systemuser" class="">
+    <div class="col-12">
+        <div class="card m-b-30">
+            <div class="card-body">
+
+
+
+                <br />
+                <br />
+
+                <form action="/admin/submitnewuser" id="adminroles" enctype="multipart/form-data" method="post">
+
+
+
+                    <div class="row">
+                        <div class="col-md-3"></div>
+
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="card m-b-30">
+                                        <div class="card-body">
+
+                                            <input type="file" name="files" src="files" id="files" class="dropify" />
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="card" style=" box-shadow: 1px 1px 5px 0px darkgrey;">
+                                <div class="card-body">
+
+
+                                    <div class="form-group p-0">
+                                        <label>Full Name</label>
+                                        <input id="name" name="name" required="" placeholder="Full Name" class="form-control">
+                                        <input name="userid" style="display:none;" id="userid" />
+                                    </div>
+                                    <div class="form-group p-0">
+                                        <label>G Mail</label>
+                                        <input id="gmail" name="gmail" required="" placeholder="Gmail" class="form-control">
+                                    </div>
+                                    <div class="form-group p-0">
+                                        <label>Password</label>
+                                        <input type="password" name="password" required="" placeholder="Password" class="form-control">
+                                    </div>
+                                    <div class="form-group p-0">
+                                        <label>Skype Address</label>
+                                        <input id="skype" type="text" name="skype" required="" placeholder="Skype Address" class="form-control">
+                                    </div>
+                                    <div class="form-group p-0">
+                                        <label>Role</label>
+                                        <select name="roll" class="form-control mb-3 " style="width: 100%; height:36px;">
+
+                                            <option value="Super Admin">Super Admin </option>
+                                            <option value="Admin">Admin </option>
+                                            <option value="Advertiser">Advertiser </option>
+                                            <option value="Affiliate">Affiliate </option>
+
+                                        </select>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+
+                    <br />
+
+                    <div class="form-group p-0" style="text-align: center;">
+                        <button type="submit"--> @*onclick="SendData()*@ <!--id="purposalvalidationchk" class="btn btn-primary waves-effect waves-light">Add System User</button>
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="closepurposal" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+
+            </div>
+
+        </div>
+    </div>
+</div>-->
+<form id="Form">
+    <div class="col-12">
+
+        <h4 class="mt-0 header-title h3bg">SYSTEM USER</h4>
+
+        <div class="card" style="margin-top: -7px; box-shadow: 0 9px 4px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%); ">
+            <div class="card-body">
+
+                @*<button type="button" class="btn btn-primary waves-effect waves-light" id="btnaddflight">Add New User</button>*@
+                <table id="mytable" class="" >
+                    <thead data-orderable="false">
+                        <tr data-orderable="false">
+                         
+                            <th data-orderable="false"><input name="select_all" value="1" type="checkbox" autocomplete="off"></th>
+
+                            <th class="fnameth" data-orderable="false"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; First Name</th>
+                            <th data-orderable="false"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Last Name</th>
+                            <th data-orderable="false"><i class="fa fa-check-circle" aria-hidden="true"></i>&nbsp;   Role</th>
+                            <th data-orderable="false"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Skype</th>
+                            <th data-orderable="false"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Contact</th>
+                            <th data-orderable="false"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Email</th>
+
+
+                            <th data-orderable="false"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>&nbsp; ACTION</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var i in ViewBag.user)
+                        {
+                            <tr>
+
+                                <td><input type="checkbox" class="archive" value="@i.AdminLoginId" name="archiveitem" autocomplete="off"></td>
+
+                                <td>@i.FirstName </td>
+                                <td>@i.LastName</td>
+                                <td>
+                                    @if (i.SystemRoll == "Super Admin")
+                                    {
+                                        <button style="width: 100%; border: none; background-color: #319795; border-radius: 6px; "> Super Admin</button>
+
+                                    }
+                                    @if (i.SystemRoll == "Admin")
+                                    {
+                                        <button style="width: 100%; border: none; background-color: #DE61BE; border-radius: 6px; ">Admin</button>
+                                    }
+                                    @if (i.SystemRoll == "User")
+                                    {
+                                        <button style="width: 100%; border: none; background-color: #DE61BE; border-radius: 6px; ">User</button>
+                                    }
+                                    @if (i.SystemRoll != "User" && i.SystemRoll != "Admin" && i.SystemRoll != "Super Admin")
+                                    {
+                                        <button style="border: none; width: 100%; background-color: #319795; border-radius: 6px; ">@i.SystemRoll</button>
+                                    }
+                                </td>
+
+
+                                <td>@i.SkypeAddress</td>
+                                <td>@i.Contact</td>
+                                <td><a href="mailto:@i.Gmail" style="color:blue;">@i.Gmail</a></td>
+
+
+
+
+                                <td style="direction: rtl;">
+                                    @if (i.SystemRoll != "Super Admin")
+                                    {
+                                        <a style="font-size:20px; cursor: pointer;" onclick="showconfirmationmodal()">×</a>
+                                    }
+                                    @if (i.SystemRoll == "Super Admin")
+                                    {
+                                        <a style="font-size: 20px; color: transparent; cursor: pointer;" >×</a>
+                                    }
+                                    <a class="fa fapencil tr" style=" cursor: pointer;" onclick="editoffer(@i.AdminLoginId)">dsdsd</a>
+
+
+                                    </td>
+                            </tr>
+
+                        }
+
+
+
+                    </tbody>
+
+                </table>
+
+
+            </div>
+
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            @foreach (var i in ViewBag.sites)
+            {
+
+
+                <button onclick="addnewuser()" type="button" style="box-shadow: 0 5px 12px 0 rgb(0 0 0 / 20%), 0 10px 40px 0 rgb(0 0 0 / 19%); background-color: #38A169; border-radius: 110px; height: 4em; width: 4em; float: right; color: white; border-color: transparent; ">
+                    Add
+                </button>
+
+            }
+
+        </div>
+    </div>
+</form>
+<div class="modal  fade bd-example-modal-lg" id="info" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+
+        <div class="modal-content" style="margin-top:10em; background: linear-gradient(90deg, #1E292B 0%, #273132 20.83%, #313735 40.62%, #3E413A 60.94%, #4A4B43 80.21%, #5A5748 100%);">
+            <div class="col-md-12">
+                <button onclick="modalclose()" style="float: right; background-color: white;" type="button" class="btn-close"></button>
+
+            </div>
+            <div class="row" style="padding-top: 5%; padding-bottom: 5%; ">
+
+                <div class="col-md-10" style="line-height: 28px; padding-left: 5%;  font-size: 18px;color:white;">
+
+                    <div>First name:</div>
+                    <div>Last name:</div>
+                    <div>Email address:</div>
+                    <div> Mobile number:</div>
+                    <div>Type of request:</div>
+                    <div>Engaged with Cosmopolitan Consumer Groupengaged:</div>
+                    <div style="
+                            display: list-item;list-style: inside;">penalty of perjury:</div>
+                    <div style="
+                            display: list-item;list-style: inside; ">
+                        Acknowledge that transmitting personal information:
+                    </div>
+                    <div style="
+                            display: list-item;list-style: inside;">
+                        Acknowledge that deletion:
+                    </div>
+                </div>
+
+
+                <div class="col-md-2" style="padding-left: 7%;font-size: 15px;line-height: 28px;color:white;">
+                    <div>Segun</div>
+                    <div>None</div>
+                    <div>None</div>
+                    <div>None</div>
+                    <div>None</div>
+                    <div>None</div>
+                    <div>Yes</div>
+                    <div>No</div>
+                    <div>Yes</div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="confirmmodal" tabindex="-1" role="dialog" style="margin-top: 23em;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-2">
+                        <h1 style="background-color: #c6f6d5;width: 48px;height: 48px;padding-top: 0%;padding-left: 14%;border-radius: 87px;color: #2f8c61;margin: 16px 20px;">✓</h1>
+
+                    </div>
+                    <div class="col-md-9" style="
+    margin-top: 16px;
+">
+                        <h2 style="font-size: 24px;">Remove </h2>
+                        <p style="font-size: 13px;">Are you sure you want to remove  selected System User </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+            <div class="modal-footer" style=" border: none;">
+                <button class="cancel" onclick="cancel()" type="button">Cancel</button>
+                <button type="button" onclick="selectedcheckbox()" style=" border-radius: 5px; padding: 1% 2%; border: none; color: white; background-color: #319795; " data-dismiss="modal">Continue</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.all.min.js"></script>
+<script>
+    function showmodal() {
+
+        $("#modal").modal('show');
+    }
+    function modalclose() {
+
+        $("#modal").modal('hide');
+    }
+    function showconfirmationmodal() {
+
+        /*$("#confirmmodal").modal('show');*/
+        Swal.fire({
+            icon: '  <h1 style="background-color: #FED7E2; margin-left: 1em; background-color: #FED7E2; width: 48px; height: 48px; padding-top: 0%; padding-left: 10%; border-radius: 87px; color: hotpink; ">×</h1>',
+            title: '  <h1 style="background-color: #FED7E2;  background-color: #FED7E2; width: 48px; height: 48px; padding-top: 0%;  border-radius: 87px; color: hotpink; ">×</h1>',
+            text: 'Remove ',
+            html: "<h2 style='text- align: center; font - size: 24px;'onclick='cancel()'>Remove</h2><br/><p style='color:black;font-size: 14px;' >You’ve officially removing something this user. All the access will be removed immediately.</p><br/> <button onclick='cancel()' type='button' style='  height: 1.9em;padding:2% 0 % 2 %; background-color: transparent; border-color: lightgray; width: 11em; float: left;; border - width: 2px;'>Cancel</button>    <button type='button' style=' height: 1.9em; padding:2% 0 % 2 %; color:white; background-color: #319795; border-color: lightgray; width: 11em; border-width: 2px'; onclick='selectedcheckbox()'; data-dismiss='modal'>Continue</button>",
+
+
+
+
+            showconfirmButton: false,
+            //confirmButtonColor: "#319795",
+            //confirmButtonText: "Cancel",
+            //closeOnConfirm: false,
+
+
+        })
+    }
+    function selectedcheckbox(offer) {
+
+        var formData = {};
+        var formData = $("#Form").serialize();
+
+        $.ajax(
+            {
+                type: "POST",
+                url: '/admin/delete',
+
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8', // when we use .serialize() this generates the data in query string format. this needs the default contentType (default content type is: contentType: 'application/x-www-form-urlencoded; charset=UTF-8') so it is optional, you can remove it
+                data: formData,
+                success: function (result) {
+                    sumitsweett();
+                    setTimeout(function () {
+                        location.reload(true);
+
+                    }, 1000);
+
+                },
+                error: function () {
+                    alert('Failed to receive the Data');
+                    console.log('Failed ');
+                }
+
+            }
+        );
+    }
+    function sumitsweett() {
+        var icon = "success";
+        if (status == "success") {
+            icon = "success";
+        }
+
+        var config = {}
+        config.icon = icon;
+        config.title = "Success";
+        config.text = "System User Removed SuccessFully";
+
+        Swal.fire(config);
+
+    }
+    function cancel() {
+        Swal.close();
+        $("#confirmmodal").modal('hide');
+    }
+
+    function sumitsweett() {
+        var icon = "success";
+        if (status == "success") {
+            icon = "success";
+        }
+
+        var config = {}
+        config.icon = icon;
+        config.title = "Success";
+        config.text = "System User Deleted SuccessFully";
+
+        Swal.fire(config);
+
+    }
+</script>
+@*<script>
+            function showconfirmationmodal() {
+
+                $("#confirmmodal").modal('show');
+            }
+            function cancel() {
+
+                $("#confirmmodal").modal('hide');
+            }
+
+
+    </script>*@
+
+<script>
+    function showmodal() {
+
+        $(".modal").modal('show');
+    }
+    function modalclose() {
+
+        $(".modal").modal('hide');
+    }
+
+
+    $(document).ready(function () {
+
+        /** Handling checboxes selection*/
+
+        function updateDataTableSelectAllCtrl(table) {
+            var $table = table.table().node();
+            var $chkbox_all = $('tbody input[type="checkbox"]', $table);
+            var $chkbox_checked = $('tbody input[type="checkbox"]:checked', $table);
+            var chkbox_select_all = $('thead input[name="select_all"]', $table).get(0);
+
+            // If none of the checkboxes are checked
+            if ($chkbox_checked.length === 0) {
+                chkbox_select_all.checked = false;
+                if ('indeterminate' in chkbox_select_all) {
+                    chkbox_select_all.indeterminate = false;
+                }
+
+                // If all of the checkboxes are checked
+            } else if ($chkbox_checked.length === $chkbox_all.length) {
+                chkbox_select_all.checked = true;
+                if ('indeterminate' in chkbox_select_all) {
+                    chkbox_select_all.indeterminate = false;
+                }
+
+                // If some of the checkboxes are checked
+            } else {
+                chkbox_select_all.checked = true;
+                if ('indeterminate' in chkbox_select_all) {
+                    chkbox_select_all.indeterminate = true;
+                }
+            }
+        }
+
+        /** Responsive table with colreorder, fixed header;footer, sortable teble*/
+        var table = $('#mytable').DataTable({
+
+            //responsive: {
+            //    details: {
+            //        type: 'column'
+            //    }
+            //},
+            /*  order: [1, 'asc'],*/
+            //colReorder: {
+            //    fixedColumnsLeft: 1,
+            //    fixedColumnsLeft: 2
+            //},
+            //fixedHeader: {
+            //    header: true,
+            //    footer: true
+            //},
+            'columnDefs': [{
+                'targets': 1,
+                'searchable': false,
+                'orderable': false,
+                'width': '1%',
+                'className': 'dt-body-center'
+            },
+            {
+                'className': 'control',
+                'orderable': false,
+                targets: 0,
+
+            },
+            ],
+
+
+            'filter': false,
+
+            "dom": '<"bottom"i>rt<"bottom"flp><"clear">',
+
+            "language": {
+                "info": '<"bottom"i>rt<"bottom"flp><"clear">',
+                "info": " _START_ - _END_ of _TOTAL_",
+                "paginate": {
+                    "next": '<img src="/img/nextt.png" style=" width: 15px;">',
+
+                    "previous": '<img src="/img/back.png" style=" width: 15px;" > '
+                }
+            },
+
+            "pagingType": "simple",
+            /*'order': [[1, 'asc']],*/
+            'rowCallback': function (row, data, dataIndex) {
+                // Get row ID
+                var rowId = data[6];
+
+                // If row ID is in the list of selected row IDs
+                if ($.inArray(rowId, /**rows_selected */) !== -1) {
+                    $(row).find('input[type="checkbox"]').prop('checked', true);
+                    $(row).addClass('selected');
+                }
+            }
+        });
+
+        /** mark single checkboxes */
+
+        $(document).ready(function () {
+            // Array holding selected row IDs
+            var rows_selected = [];
+
+
+            // Handle click on checkbox
+            $('#mytable tbody').on('click', 'input[type="checkbox"]', function (e) {
+                var $row = $(this).closest('tr');
+
+                // Get row data
+                var data = table.row($row).data();
+
+                // Get row ID
+                var rowId = data[6];
+
+                // Determine whether row ID is in the list of selected row IDs
+                var index = $.inArray(rowId, rows_selected);
+
+                // If checkbox is checked and row ID is not in list of selected row IDs
+                if (this.checked && index === -1) {
+                    rows_selected.push(rowId);
+
+                    // Otherwise, if checkbox is not checked and row ID is in list of selected row IDs
+                } else if (!this.checked && index !== -1) {
+                    rows_selected.splice(index, 1);
+                }
+
+                if (this.checked) {
+                    $row.addClass('selected');
+                } else {
+                    $row.removeClass('selected');
+                }
+
+                // Update state of "Select all" control
+                updateDataTableSelectAllCtrl(table);
+
+                // Prevent click event from propagating to parent
+                e.stopPropagation();
+            });
+
+            // Handle click on table cells with checkboxes
+            $('#mytable').on('click', 'tbody td, thead th:first-child', function (e) {
+                $(this).parent().find('input[type="checkbox"]').trigger('click');
+            });
+
+            // Handle click on "Select all" control
+            $('thead input[name="select_all"]', table.table().container()).on('click', function (e) {
+                if (this.checked) {
+                    $('#mytable tbody input[type="checkbox"]:not(:checked)').trigger('click');
+                } else {
+                    $('#mytable tbody input[type="checkbox"]:checked').trigger('click');
+                }
+
+                // Prevent click event from propagating to parent
+                e.stopPropagation();
+            });
+
+            // Handle table draw event
+            table.on('draw', function () {
+                // Update state of "Select all" control
+                updateDataTableSelectAllCtrl(table);
+            });
+
+            // Handle form submission event
+            $('#frm-mytable').on('submit', function (e) {
+                var form = this;
+
+                // Iterate over all selected checkboxes
+                $.each(rows_selected, function (index, rowId) {
+                    // Create a hidden element
+                    $(form).append(
+                        $('<input>')
+                            .attr('type', 'hidden')
+                            .attr('name', 'id[]')
+                            .val(rowId)/**there are data from json file or db*/
+                    );
+                });
+
+                $('#examplee-console').text($(form).serialize());
+                console.log("Form submission", $(form).serialize());
+
+                // Remove added elements
+                $('input[name="id\[\]"]', form).remove();
+
+                // Prevent actual form submission
+                e.preventDefault();
+            });
+
+        });
+
+
+
+        /** Handling responsive expand collapse all*/
+
+
+
+        // Handle click on "Expand All" button
+        $('#btn-show-all-children').on('click', function () {
+            // Expand row details
+            table.rows(':not(.parent)').nodes().to$().find('td:first-child').trigger('click');
+        });
+
+        // Handle click on "Collapse All" button
+        $('#btn-hide-all-children').on('click', function () {
+            // Collapse row details
+            table.rows('.parent').nodes().to$().find('td:first-child').trigger('click');
+        });
+    });
+
+
+</script>
+<script>
+    jQuery(document).ready(function () {
+        // Switchery
+        var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+        $('.js-switch').each(function () {
+            new Switchery($(this)[0], $(this).data());
+        });
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script>
+
+        function editoffer(count) {
+
+            $("#editnewuser").modal('show');
+            var id = count;
+          
+
+            $.ajax
+                (
+                    {
+                        type: "GET",
+                        url: "/admin/getuserinfo",
+                        contentType: "Application/json;charset=utf-8",
+                        data: { id: count },
+                        success: function (data) {
+                            console.log("result", data);
+                        $(".fname").val(data[0].firstName);
+                        $(".lname").val(data[0].lastName);
+                        $(".gmail").val(data[0].gmail);
+                        $(".pass").val(data[0].password);
+                        $(".skype").val(data[0].skypeAddress);
+                        $(".contact").val(data[0].contact);
+                        $(".userid").val(data[0].adminLoginId);
+                        },
+                    }
+            );
+     
+        }
+    $('#systemuser').hide();
+    function addnewuser() {
+        
+        $("#addnewuser").modal('show');
+    }
+
+    $(document).ready(function () {
+
+        $(document).on('click', '#btnaddflight', function () {
+            $(".mymodal").modal('show');
+            //$("#systemuser").addClass("in-down");
+            //$('#systemuser').show();
+            $('#details').hide();
+
+        }
+        );
+        $(document).on('click', '#closepurposal', function () {
+            $('#addflight').hide();
+
+
+            $('#systemuser').hide();
+            $('#details').show();
+        });
+    });
+    function submitblacklist(count) {
+
+        var id = count;
+
+
+        $.ajax
+            (
+                {
+                    type: "GET",
+                    url: "/admin/blacklist",
+                    contentType: "Application/json;charset=utf-8",
+                    data: { departid: id },
+                    success: function (response) {
+                        console.log("result", response);
+                        blackdisplaysweet();
+                        setTimeout(function () {
+                            location.reload(true);
+
+                        }, 1000);
+
+                        /*      setTimeout(displaysweet, 1000);*/
+
+
+
+
+
+
+                    },
+
+
+                }
+            );
+        $("#purposalform").addClass("in-down");
+        $('#purposalform').show();
+
+    }
+
+    function submitdel(count) {
+
+        var id = count;
+
+
+        $.ajax
+            (
+                {
+                    type: "GET",
+                    url: "/admin/delete",
+                    contentType: "Application/json;charset=utf-8",
+                    data: { departid: id },
+                    success: function (response) {
+                        console.log("result", response);
+                        deldisplaysweet();
+                        setTimeout(function () {
+                            location.reload(true);
+
+                        }, 1000);
+
+                        /*      setTimeout(displaysweet, 1000);*/
+
+
+
+
+
+
+                    },
+
+
+                }
+            );
+        $("#purposalform").addClass("in-down");
+        $('#purposalform').show();
+
+    }
+    function submitapprove(count) {
+
+        var id = count;
+
+
+        $.ajax
+            (
+                {
+                    type: "GET",
+                    url: "/admin/approve",
+                    contentType: "Application/json;charset=utf-8",
+                    data: { departid: id },
+                    success: function (response) {
+                        console.log("result", response);
+                        approvedisplaysweet();
+                        setTimeout(function () {
+                            location.reload(true);
+
+                        }, 1000);
+
+                        /*      setTimeout(displaysweet, 1000);*/
+
+
+
+
+
+
+                    },
+
+
+                }
+            );
+        $("#purposalform").addClass("in-down");
+        $('#purposalform').show();
+
+    }
+    function deldisplaysweet() {
+        var icon = "success";
+        if (status == "success") {
+            icon = "success";
+        }
+
+        var config = {}
+        config.icon = icon;
+        config.title = "Success";
+        config.text = "User  Deleted SuccessFully";
+
+        Swal.fire(config);
+
+    }
+    function blackdisplaysweet() {
+        var icon = "success";
+        if (status == "success") {
+            icon = "success";
+        }
+
+        var config = {}
+        config.icon = icon;
+        config.title = "Success";
+        config.text = "User  BlackListed SuccessFully";
+
+        Swal.fire(config);
+
+    }
+    function approvedisplaysweet() {
+        var icon = "success";
+        if (status == "success") {
+            icon = "success";
+        }
+
+        var config = {}
+        config.icon = icon;
+        config.title = "Success";
+        config.text = "User Approved SuccessFully";
+
+        Swal.fire(config);
+
+    }
+    function displaysweet() {
+        var icon = "success";
+        if (status == "success") {
+            icon = "success";
+        }
+
+        var config = {}
+        config.icon = icon;
+        config.title = "Success";
+        config.text = "User added SuccessFully";
+
+        Swal.fire(config);
+
+    }
+</script>
+<script>
+
+    function edit(id, skypeaddress, Gmail, Username) {
+
+        $("#name").val(userName);
+        $("#gmail").val(Gmail);
+        $("#skype").val(skypeAddress);
+        $("#userid").val(adminLoginId);
+
+        $('#buttonName').innerText = 'Update System User';
+        $("#systemuser").addClass("in-down");
+        $('#systemuser').show();
+    }
+
+    function SendData() {
+
+        var formData = {};
+        var formData = $("#adminroles").serialize();
+
+
+
+
+        $.ajax(
+            {
+                type: "POST",
+                url: '/admin/submitnewuser',
+
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8', // when we use .serialize() this generates the data in query string format. this needs the default contentType (default content type is: contentType: 'application/x-www-form-urlencoded; charset=UTF-8') so it is optional, you can remove it
+                data: formData,
+                success: function (result) {
+                    displaysweet();
+                    setTimeout(function () {
+                        location.reload(true);
+
+                    }, 1000);
+                },
+                error: function () {
+                    alert('Failed to receive the Data');
+                    console.log('Failed ');
+                }
+            });
+
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        $('#show_hide_password input').attr('type', 'password');
+        $('#show_hide_password i').addClass("bx-hide");
+        $('#show_hide_password i').removeClass("bx-show");
+        $("#show_hide_password a").on('click', function (event) {
+            event.preventDefault();
+            if ($('#show_hide_password input').attr("type") == "text") {
+                $('#show_hide_password input').attr('type', 'password');
+                $('#show_hide_password i').addClass("bx-hide");
+                $('#show_hide_password i').removeClass("bx-show");
+            } else if ($('#show_hide_password input').attr("type") == "password") {
+                $('#show_hide_password input').attr('type', 'text');
+                $('#show_hide_password i').removeClass("bx-hide");
+                $('#show_hide_password i').addClass("bx-show");
+            }
+        });
+    });
+</script>
+

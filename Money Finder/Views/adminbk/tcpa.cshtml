@@ -1,0 +1,169 @@
+﻿
+@{
+    ViewData["Title"] = "Admin";
+    Layout = "~/Views/Layouts/_adminLayout.cshtml";
+}
+
+
+
+
+
+
+
+
+
+
+<div class="page-wrapper">
+
+
+    <div class="container-fluid">
+
+        <br />
+        <br />
+        @foreach (var i in ViewBag.tcpadisc)
+        {
+        <div class="row">
+            <div class="col-12">
+                <div class="card m-b-30">
+                    <div class="card-body">
+
+                        <h4 class="mt-0 header-title">Create TCPA Offer </h4>
+
+
+
+
+                        <form action="/admin/addtcpa" enctype="multipart/form-data" method="post">
+                            <div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="p-0">
+                                            <div class="form-group">
+                                                <input hidden="" value="@i.Id" type="text" name="id" data-mask="999-99-999-9999-9" class="form-control">
+                                                <label>Offer Name</label>
+                                                <input type="text" value="@i.Offer_Name" name="name" required="" placeholder="Offer Title" data-mask="999-99-999-9999-9" class="form-control">
+
+                                            </div>
+
+
+
+
+                                        </div>
+                                        <div class="p-0">
+                                            <div class="form-group">
+
+                                                <label>Description</label>
+                                                <textarea style=" height: 12em;" type="text" name="redirectlink" required="" placeholder="Description" data-mask="999-99-999-9999-9" class="form-control"> @i.description </textarea>
+                                                <br /> 
+                                                <textarea style=" height: 4em;" type="text" name="bulletpoint" required="" placeholder="Description" data-mask="999-99-999-9999-9" class="form-control"> @i.bulletpoint </textarea>
+
+                                            </div>
+
+                                           
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <br />
+
+                            <div class="form-group p-0">
+                                <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+        @*<div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> </h4>
+                        <h6 class="card-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
+                        <div class="table-responsive m-t-40">
+                            <table id="example23" class="table table-bordered table-striped" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>TCPA Title</th>
+                                        <th>Description</th>
+
+
+
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>TCPA Title</th>
+                                        <th>Description</th>
+
+
+
+                                        <th>Action</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+
+                                    @foreach (var i in ViewBag.tcpadisc)
+                                    {
+                                    <tr>
+
+
+
+
+                                        <td>
+
+                                            <a>@i.Offer_Name</a>
+                                        </td>
+                                        <td>@i.date</td>
+
+                                        <td> <a onclick="return checkDelete()"> @Html.ActionLink(" ", "Deleteoffer", "admin", null, null, "", new { tid = i.Offer_Name }, new { @class = " btn  btn btn-outline-danger btn-circle fa fa-trash-o", onclick = "return checkDelete()", title = "Confirm" })</a></td>
+
+                                    </tr>
+
+                                    }
+
+
+
+
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                        <script type="text/javascript">
+                            function checkDelete() {
+                                if (confirm('Are you sure you want to Archive ?')) {
+
+                                    return true
+                                }
+                                else {
+                                    return false
+                                }
+                            }
+                        </script>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+            </div>
+        </div>*@
+    </div> <!-- end col -->
+</div> <!-- end row -->
+                    </div><!-- container -->
+</div> <!-- Page content Wrapper -->
+                </div> <!-- content -->

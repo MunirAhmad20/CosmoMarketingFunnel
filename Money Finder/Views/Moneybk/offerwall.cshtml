@@ -1,0 +1,534 @@
+﻿
+@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Layouts/MoneyhomeLayout.cshtml";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+<style>
+    .hiden {
+        display: none;
+    }
+
+    .row {
+        margin: 0 auto !important;
+    }
+
+    .navigation .navbar .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 8;
+        padding: 10px 16px;
+        box-shadow: 0 26px 48px 0 rgb(0 0 0 / 15%);
+    }
+
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        box-shadow: 3px 4px 9px 0px rgb(0 0 0 / 20%);
+        border-radius: 0.25rem;
+    }
+
+    .card-boddy {
+        flex: 1 1 auto !important;
+        padding: 1rem 0rem !important;
+    }
+
+    .card-body {
+        flex: 1 1 auto !important;
+        padding: 1rem 1rem !important;
+    }
+
+    .imgg {
+        min-height: 12em;
+        width: 100%;
+    }
+
+    .logoheight {
+        height: 2em !important;
+        margin-top: 16px !important;
+        width: 200px !important;
+    }
+
+    .mybtn {
+        width: 100% !important;
+    }
+
+    .textcenter {
+        text-align: center;
+    }
+
+    #footer {
+       
+        padding: 60px 0px 0px 23px !important;
+    }
+
+
+    @@media only screen and (min-width: 1000px) {
+        .mybtn {
+            width: 40% !important;
+        }
+
+        .textcenter {
+            text-align: left;
+        }
+    }
+</style>
+
+
+
+<div class="logo-bar">
+    <div class="row show-for-small-only" style=" margin-left: 8px;">
+        <div class="col-10">
+
+            <img class="logoheight" src="~/asset/creditguide-tr.png" alt="Credit Guide">
+        </div>
+        <div class="col-2">
+            <button style=" color: black !important;float:right; background-color: white;" class="text-white inline-flex p-3 hover:bg-gray-900 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler"
+                    data-target="#navigation">
+                <i class="material-icons">menu</i>
+            </button>
+        </div>
+
+
+    </div>
+    <div class="hiden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto"
+         id="navigation">
+        <div class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto">
+            <a href="#browss"
+               class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-400 items-center justify-center hover:bg-gray-900 hover:text-white">
+                <span>BROWSE RATES FOR FREE!</span>
+            </a>
+            <a href="#unclaimed-money"
+               class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-400 items-center justify-center hover:bg-gray-900 hover:text-white">
+                <span>WHY GET INSURANCE?</span>
+            </a>
+            <a href="#main-regg"
+               class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-400 items-center justify-center hover:bg-gray-900 hover:text-white">
+                <span>GET STARTED</span>
+            </a>
+
+        </div>
+    </div>
+
+    <script>
+        //function toggleshow() {
+
+        //    $("#navigation").style.display="block";
+        //}
+        $(document).ready(function () {
+            $(".nav-toggler").each(function (_, navToggler) {
+                var target = $(navToggler).data("target");
+                $(navToggler).on("click", function () {
+                    $(target).animate({
+                        height: "toggle"
+                    });
+                });
+            });
+        });
+
+    </script>
+    <div class="row navmaxwidth hide-for-small-only" style="display:none;">
+        <div class="small-12 medium-12 large-4 columns">
+
+            <h1 class="wow fadeInDown logocls text-center animated" style="visibility:visible;animation-name:fadeInDown"><img src="~/asset/creditguide-tr.png" alt="Credit Guide" style="margin-top:-22px"></h1>
+        </div>
+
+        <div class="large-8 columns hide-for-small-only">
+            <nav class="fontsizee">
+                <p class="headertext navaligh">
+                    <a onclick="javascript:" class="rc-trigger navcolor fontsizee" href="#browss">BROWSE RATES FOR FREE!</a> &nbsp;<a class="fontsizee">| </a> &nbsp;  <a onclick="javascript:" class="rc-trigger navcolor fontsizee" href="#unclaimed-money">WHY GET INSURANCE?</a> &nbsp;<a class="fontsizee"> |</a></h1> &nbsp;  <a class="rc-trigger navcolor fontsizee" style="color:cornflowerblue !important;" href="#main-regg">
+                        GET STARTED
+                    </a>
+                </p>
+            </nav>
+        </div>
+    </div>
+
+    <section id="hero" class="hide-for-small-only" style="min-height: 5em;padding: 0;padding-top: 1%;">
+        <div class="logo-bar logoheader">
+            <div class="row-fix navmaxwidth">
+                <div class="small-12 medium-12 large-4 columns">
+
+                    <h1 class="wow fadeInDown logocls   animated" style="visibility:visible;animation-name:fadeInDown"><img class="logotop" src="~/asset/creditguide-tr.png" alt=""></h1>
+                </div>
+                <div class="large-8 columns hide-for-small-only">
+                    <nav class="fontsizee">
+                        <p class="headertext navaligh">
+                            <a onclick="javascript:" class="rc-trigger navcolor fontsizee" href="#CHECK_YOUR_CREDIT">View Credit Reports!</a>&nbsp;  <a onclick="javascript:" class="rc-trigger navcolor fontsizee" href="#main-regg">Credit Report Resources</a> &nbsp;</h1> &nbsp;  <a class="rc-trigger navcolor fontsizee" href="#WHAT-IS-CREDIT">
+                                What is credit?
+                            </a>
+                        </p>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</div>
+
+
+<div class="testimonials hidden" style="background-color: #afafaf;min-height: 2em;">
+    <div class="row" style="
+"><ul style="text-align:center;width:100%;text-align:center;margin-left:auto;margin-right:auto"><li id="Test1"><p id="TestSpan1" class="animated fadeInRight navcolor testspan mobilehide" style="font-size:21px!important;margin-left:4em;display: none !important;"><b>Roland N. California</b> - $2462 Found (Old checking account/ Shares in Fidelity)</p><p style="display:none !important;" id="TestSpan1" class="animated fadeInRight navcolor testspan desktophide"><b>Roland N. California</b> - $2462 Found (Old checking account/ Shares in Fidelity)</p></li><li id="Test2" style="display:none"><p class="navcolor" id="TestSpan2"><b>Larry H. Virginia</b> - $266,174 Found (Old checking account)</p></li><li id="Test3" style="display:none"><p class="navcolor" id="TestSpan3"><b>Ted M. California</b> - $97,409 Found (old life Insurance policy)</p></li></ul></div>
+</div>
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+<section style="background: #F9FAFB; padding: 20px 14px 0px 23px;">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-boddy" style=" box-shadow: 0px 0px 10px rgb(0 0 0 / 40%);">
+                    <div class="row">
+                        <div class="col-12">
+
+                            <p class="text-center">
+
+                                We have matched you in the following resources.
+
+                                Click on the result below to get started.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+    @foreach (var i in ViewBag.offerswall)
+    {
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body" style=" box-shadow: 0px 0px 10px rgb(0 0 0 / 40%);">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img class="imgg" src="~/UploadedImages/@i.Image" />
+                            </div>
+                            <div class="col-md-6">
+                                <h2 style="color:cornflowerblue;" class="textcenter mt-2">@i.Offer_Name</h2>
+                                <p class="textcenter">
+
+                                    @i.description
+                                </p>
+                                <p class="textcenter">
+                                    <a href="#main-regg" onclick="javascript:" class="rc-trigger">
+
+                                        <button onclick="window.open('@i.redirect_link','applyoffer30','scrollbars=yes,width=1000,height=700');return false;" id="Apply1" href="#main-regg" class="btn mybtn button wow bounce infinite animated" style="color:white;  margin-top: 1em; padding: 12px 17px; background: linear-gradient(rgb(36, 153, 222), rgb(26, 113, 163));box-shadow: none; visibility: visible; animation-name: bounce; font-size: 17px; "><i style="color: #B5FF3F;" class="fa fa-check"></i> GET STARTED NOW</button>
+
+
+
+
+                                    </a>
+                                </p>
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    }
+    @*  <div class="row mt-3">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body" style=" box-shadow: 0px 0px 10px rgb(0 0 0 / 40%);">
+                        <div class="row">
+                            <div class="col-12">
+                                <img class="imgg" src="~/asset/img/Save_money_(367_×_156_px) (1).png" />
+                                <h2 style="color:cornflowerblue;" class="text-center mt-2">txxjdsjdsdjshdjshd</h2>
+                                <p class="text-center">
+
+                                    We have matched you in the following resources.
+
+                                    Click on the result below to get started.
+                                </p>
+                                <a href="#main-regg" onclick="javascript:" class="rc-trigger">
+
+                                    <button href="#main-regg" class="btn button wow bounce infinite animated" style="color:white;  margin-top: 1em; padding: 12px 17px; background: linear-gradient(rgb(36, 153, 222), rgb(26, 113, 163)); width: 100%; box-shadow: none; visibility: visible; animation-name: bounce; font-size: 17px; "><i style="color: #B5FF3F;" class="fa fa-check"></i> Check My Rate NOW</button>
+
+
+
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body" style=" box-shadow: 0px 0px 10px rgb(0 0 0 / 40%);">
+                        <div class="row">
+                            <div class="col-12">
+                                <img class="imgg" src="~/asset/img/Save_money_(367_×_156_px) (1).png" />
+                                <h2 style="color:cornflowerblue;" class="text-center mt-2">txxjdsjdsdjshdjshd</h2>
+                                <p class="text-center">
+
+                                    We have matched you in the following resources.
+
+                                    Click on the result below to get started.
+                                </p>
+                                <a href="#main-regg" onclick="javascript:" class="rc-trigger">
+
+                                    <button href="#main-regg" class="btn button wow bounce infinite animated" style="color:white;  margin-top: 1em; padding: 12px 17px; background: linear-gradient(rgb(36, 153, 222), rgb(26, 113, 163)); width: 100%; box-shadow: none; visibility: visible; animation-name: bounce; font-size: 17px; "><i style="color: #B5FF3F;" class="fa fa-check"></i> Save & Start</button>
+
+
+
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body" style=" box-shadow: 0px 0px 10px rgb(0 0 0 / 40%);">
+                        <div class="row">
+                            <div class="col-12">
+                                <img class="imgg" src="~/asset/img/Save_money_(367_×_156_px) (1).png" />
+                                <h2 style="color:cornflowerblue;" class="text-center mt-2">txxjdsjdsdjshdjshd</h2>
+                                <p class="text-center">
+
+                                    We have matched you in the following resources.
+
+                                    Click on the result below to get started.
+                                </p>
+                                <a href="#main-regg" onclick="javascript:" class="rc-trigger">
+
+                                    <button href="#main-regg" class="btn button wow bounce infinite animated" style="color:white;  margin-top: 1em; padding: 12px 17px; background: linear-gradient(rgb(36, 153, 222), rgb(26, 113, 163)); width: 100%; box-shadow: none; visibility: visible; animation-name: bounce; font-size: 17px; "><i style="color: #B5FF3F;" class="fa fa-check"></i> Click Here</button>
+
+
+
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body" style=" box-shadow: 0px 0px 10px rgb(0 0 0 / 40%);">
+                        <div class="row">
+                            <div class="col-12">
+                                <img class="imgg" src="~/asset/img/Save_money_(367_×_156_px) (1).png" />
+                                <h2 style="color:cornflowerblue;" class="text-center mt-2">txxjdsjdsdjshdjshd</h2>
+                                <p class="text-center">
+
+                                    We have matched you in the following resources.
+
+                                    Click on the result below to get started.
+                                </p>
+                                <a href="#main-regg" onclick="javascript:" class="rc-trigger">
+
+                                    <button href="#main-regg" class="btn button wow bounce infinite animated" style="color:white;  margin-top: 1em; padding: 12px 17px; background: linear-gradient(rgb(36, 153, 222), rgb(26, 113, 163)); width: 100%; box-shadow: none; visibility: visible; animation-name: bounce; font-size: 17px; "><i style="color: #B5FF3F;" class="fa fa-check"></i> Click Here</button>
+
+
+
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body" style=" box-shadow: 0px 0px 10px rgb(0 0 0 / 40%);">
+                        <div class="row">
+                            <div class="col-12">
+                                <img class="imgg" src="~/asset/img/Save_money_(367_×_156_px) (1).png" />
+                                <h2 style="color:cornflowerblue;" class="text-center mt-2">txxjdsjdsdjshdjshd</h2>
+                                <p class="text-center">
+
+                                    We have matched you in the following resources.
+
+                                    Click on the result below to get started.
+                                </p>
+                                <a href="#main-regg" onclick="javascript:" class="rc-trigger">
+
+                                    <button href="#main-regg" class="btn button wow bounce infinite animated" style="color:white;  margin-top: 1em; padding: 12px 17px; background: linear-gradient(rgb(36, 153, 222), rgb(26, 113, 163)); width: 100%; box-shadow: none; visibility: visible; animation-name: bounce; font-size: 17px; "><i style="color: #B5FF3F;" class="fa fa-check"></i> Click Here</button>
+
+
+
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>*@
+</section>
+<br />
+<section id="footer" style="background-color: #ffff">
+
+    <div class="row" style=" max-width: 100%">
+        <div class="col-md-4">
+
+            <h1 class="wow fadeInDown logocls text-center animated animated" style="visibility: visible; animation-name: fadeInDown;"><img src="~/asset/creditguide.jpg" alt="" style="width: 20em;"></h1>
+        </div>
+
+
+
+
+
+
+        <div class="col-md-8 navmaxwidth">
+            <div class="small-12 medium-5 columns show-for-small-only ">
+                @*<p style="color:white;" class="text-center">© Copyright 2022 The <a style="color: white; text-decoration: underline;" href="https://cosmopolitancg.com/"> The Cosmopolitan Consumer Group, LLC</a> </p>*@
+
+            </div><div class="small-12 medium-1 columns mobilehide show-for-small-only ">&nbsp;</div><div class="small-12 medium-6 columns show-for-small-only ">
+                <p class="text-right mobilehide" style="color: black;">
+                    <a style="color: black; text-decoration: underline;" href="javascript:" onclick="window.open('/Money/Unsubcribe','privacy','scrollbars=yes,width=555,height=500')">Click here</a>&nbsp;&nbsp;&nbsp;&nbsp; to unsubscribe from our mailing list&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a style="color: black; text-decoration: underline;" href="javascript:;" onclick="openfunc()">Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;  <a style="color: black; text-decoration: underline;" onclick="openfuncc()">  Terms    Conditions  </a>
+                </p>
+            </div>
+
+            <div class="small-12 columns">
+                <div class="" style="height:10px"></div>
+                <p style="color:black" class=" ">
+                    *Void where prohibited. Service is not available in all 50 states.
+                </p>
+                <div class="" style="height:10px"></div>
+
+                <p style="color:black" class=" ">
+                    <a style="color:black;text-decoration:underline;" href="https://cosmopolitancg.com/">  The Cosmopolitan Consumer Group, LLC </a>is not affiliated with the United States Government and is a privately operated web site.<a style="color:black;text-decoration:underline;" href="https://cosmopolitancg.com/">  The Cosmopolitan Consumer Group, LLC </a> acts as an informational portal for funding assistance. Information regarding the products and services on this website may be provided by a third party advertising such product and service on the site and therefore the correctness of such representations is unknown to the site owner who does not undertake due diligence to confirm such third-party representations regarding third party advertising claims. When you are redirected to the third-party advertiser's site, and you should review their terms and conditions and privacy policy as they differ significantly from our own. The owner of this website is not affiliated with the third-party advertiser other than stated above. The owner does not recommend or endorse any product or service on this website. The Cosmopolitan Consumer Group, LLC may receive a fee or commission when you participate in third party offers.
+                </p>
+                <div class="" style="height:10px"></div>
+                <p style="color:black"></p><p style="color:black" class=" ">
+                    After you register on cosmopolitantemplate.com , you will see a series of advertising offers. These offers are optional. You are not required to participate in the offers to obtain unclaimed asset information. If you decide to purchase products or services from our advertisers, you may incur associated charges. Any total dollar amount in unclaimed funds or goods that we show is reported by the appropriate government agencies. This does not guarantee that this money is under your name or common variations of your name and is able to have a claim form submitted to be paid that amount.
+                </p><p></p>
+                <div class="" style="height:10px"></div>
+                <p style="color:black" class=" ">
+                    California Residents: Pursuant to Section 1798.120 of the California Consumer Privacy Act (CCPA), a consumer shall have the right, at any time, to direct a business that sells personal information about the consumer to third parties not to sell the consumer’s personal information. If you would like to exercise this right, please click the following link: <a style="color: black; text-decoration: underline;" href="javascript:" onclick="window.open('/Money/CCPA','privacy','scrollbars=yes,width=555,height=500')"> Do Not Sell My Personal Information.</a>
+                </p>
+                <br>
+
+
+
+                <p class=" show-for-small-only " style="color:black">
+                    <a onclick="window.open('/Money/Unsubcribe','privacy','scrollbars=yes,width=555,height=500')">-UNSUBSCRIBE</a>
+                    <br />
+                    <a onclick="openfunc()"> -PRIVACY POLICY</a>
+                    <br />
+                    <a onclick="openfuncc()">TERM & CONDITIONS</a>
+                </p>
+                <br>
+
+                <p class=" show-for-small-only " style="color:black">© Copyright 2022 The Cosmopolitan Consumer Group, LLC</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="hide-for-small-only">
+        <div class="row" style="max-width:100%">
+            <div class="col-md-6">
+
+                <p style="color:black">© Copyright 2022 The Cosmopolitan Consumer Group, LLC</p>
+
+
+            </div>
+            <div class="col-md-6">
+
+                <p style="text-align: right !important;color :black;">
+                    <a onclick="window.open('/Money/Unsubcribe','privacy','scrollbars=yes,width=555,height=500')">UNSUBSCRIBE</a>
+                    |
+
+                    <a onclick="openfunc()"> PRIVACY POLICY</a>  |
+                    <a onclick="openfuncc()">TERM & CONDITIONS</a>
+
+                </p>
+
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <br>
+    <script>
+        window.addEventListener('load', function () {
+            if (window.location.pathname == '/Money/offers') {
+                gtag('event', 'conversion', { 'send_to': 'AW-10866454865/8JCiCKi6oasDENHiw70o' });
+            }
+        });
+    </script>
+</section>
+

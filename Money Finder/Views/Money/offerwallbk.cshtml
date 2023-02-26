@@ -1,0 +1,637 @@
+﻿
+@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Layouts/MoneyhomeLayout.cshtml";
+}
+
+<html class="no-js with-featherlight" lang="en">
+<head>
+    <meta class="foundation-mq-small">
+    <meta class="foundation-mq-small-only">
+    <meta class="foundation-mq-medium">
+    <meta class="foundation-mq-medium-only">
+    <meta class="foundation-mq-large">
+    <meta class="foundation-mq-large-only">
+    <meta class="foundation-mq-xlarge">
+    <meta class="foundation-mq-xlarge-only">
+    <meta class="foundation-mq-xxlarge">
+    <meta class="foundation-data-attribute-namespace">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>credit Guide Book</title>
+
+    <!-- Typography /////////////////////////////// -->
+    <link href="//fonts.googleapis.com/css?family=Oswald:400,300,700|Roboto:400,100,300,500,900,700|Roboto+Condensed:400,300,700" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" sizes="30x30" href="~/asset/Faviconcreditguidebook.png">
+    <!-- CSS //////////////////////////////////////////////////////-->
+    <link rel="stylesheet" href="https://moneyfinder.azureedge.net//Money/css/foundation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://moneyfinder.azureedge.net//Money/css/results.css">
+
+    <!-- Featherlight -->
+    <!-- Scripts///////////////////////////////////////////////////-->
+
+
+
+    <style>
+
+        #OverlayDiv {
+            display: none;
+        }
+
+        .featherlight .featherlight-inner {
+            display: block !important;
+        }
+    </style>
+
+    <!-- App Insights - Framework -->
+    <script src="//bat.bing.com/bat.js" async=""></script>
+    <script type="text/javascript">_appinsightskey = '7311448f-f770-434f-961c-920c906000d0';</script>
+    <script type="text/javascript" src="/Web/Resources/Scripts/Azure/appinsights.js"></script>
+
+    <style></style>
+    <script src="https://js.monitor.azure.com/scripts/b/ai.2.min.js" crossorigin="anonymous"></script>
+    <script src="https://bat.bing.com/p/action/25011250.js" type="text/javascript" async=""></script>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1026.0" data-gr-ext-installed="">
+    <style>
+        .r-item {
+            background: linear-gradient(to bottom, #fff 82%, #e9e9e9 577%) !important;
+        }
+        .desktophide{
+            display:none;
+        }
+        .footertop {
+            margin-top: -1em !important;
+        }
+        .logo {
+            padding: 15px 10px !important;
+            margin: 0 auto !important;
+            max-width: 285px !important;
+            margin-top: -0.2em !important;
+        }
+        .topheight {
+            height: 90px !important
+        }
+        @@media only screen and (max-width: 600px) {
+
+            .desktophide {
+                display:block;
+            }
+            .mobilhide
+            {
+                display:none;
+            }
+           
+            .logo {
+                height: 50px !important;
+                margin-top: 22px !important;
+                
+            }
+            .r-item {
+                background: linear-gradient(to bottom, #fff 82%, #e9e9e9 577%) !important;
+                padding: 15px !important;
+                box-shadow: 0px 0px 7px !important;
+            }
+            .logo {
+                height: 5em !important;
+                margin-top: -19px !important;
+                /* margin-top: 0px !important;
+                height: 40px !important;
+                height: 65px !important;*/
+            }
+            .footertop {
+                margin-top: -5em !important;
+            }
+            .topheight{
+                height:75px !important
+            }
+        }
+        @@media only screen and (max-device-width: 414px) {
+
+            .footertop {
+                margin-top: 0em !important;
+            }
+        }
+        @@media only screen and (max-device-width: 360px) {
+
+            .footertop {
+                margin-top: -5em !important;
+            }
+        }
+    </style>
+
+    <form name="PageForm" method="post" action="./ApplyStepResults" id="PageForm">
+     
+        <script type="text/javascript">
+            //<![CDATA[
+            var theForm = document.forms['PageForm'];
+            if (!theForm) {
+                theForm = document.PageForm;
+            }
+            function __doPostBack(eventTarget, eventArgument) {
+                if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                    theForm.__EVENTTARGET.value = eventTarget;
+                    theForm.__EVENTARGUMENT.value = eventArgument;
+                    theForm.submit();
+                }
+            }
+            //]]>
+        </script>
+
+
+        <div>
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="55C025E0" tabindex="-1">
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdABILRUtpGMQiRwOjs1PmFdXIae+Nt2QRzWF8LiG5XW99Di+vU3nnPRJBVeNC3ymLo6czmTYTW1CtKy3gC93gVnxjWoWyS3rVQULaELOLdCOmFCx/MfrJB656WUKYEmEHRijuqprZLpBKn/ggv06Jn+jcpFeDEwuIEFxmz0SBlDG+uoAoik42nDinyZyTBjUSVIz2kxKGLXqX6XLUXRZyiRfRBc7v6Ekmg87u38uCHglzTXG3/zgkMOAXL2aOJjB63bDTBDt7Ygc/2kus1kHO0TXoXeYyFFTrkYRiyuIgpqS120pAjhbfioIYjArVxw+C8u+GvHd8R88W5BRBr98uUacSPdgdYZmP8vaio93DTtpoL1a4V42Szz0Qv/GDW16d8xX6qMDOauFS9iz5xzSw8wWI4TS8r7BbtelggdOIPH/xGA==" tabindex="-1">
+        </div>
+
+        <span id="ExtenderScriptManager"><input type="hidden" name="CUSTOM1" id="CUSTOM1" value="{sub1}" tabindex="-1"><input type="hidden" name="CUSTOM2" id="CUSTOM2" value="{sub2}" tabindex="-1"><input type="hidden" name="CUSTOM3" id="CUSTOM3" value="{sub3}" tabindex="-1"><input type="hidden" name="form1_leadem" id="form1_leadem" value="us@gmail.com" tabindex="-1"></span>
+
+
+
+
+
+        <div class="navbar" id="navbars"></div>
+        <div class="top-header topheight">
+            <div class="row">
+                <div class="small-6 columns">
+                    <img class="logo" src="~/asset/creditguidebook_Logo-mid-size.jpg" alt="UnClaimed Money">
+                </div>
+
+                @*<div class="small-6 columns">
+                    <nav>
+                        <ul>
+                            <li><a href="#navProgram" tabindex="-1">About the Program</a></li>
+                            <li><a href="#navFeatures" tabindex="-1">Features</a></li>
+                        </ul>
+                    </nav>
+                </div>*@
+            </div>
+        </div>
+
+        <section class="offer-header" style="background-color: #f8e8ff; border-bottom: 0px;" id="">
+            <div class="row">
+                <div class="small-12 columns">
+                    <h1 style="color:black">Congratulations!</h1>
+                    <br />
+                    <h2 style="color:black">We have matched you with the following resources. Click on the results below to get started!</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="results" style="background-color: #f8e8ff;">
+
+
+
+            <div class="row">
+                <div class="small-12 medium-10 medium-centered large-10 large-centered columns">
+                    <!-- USA.gov -->
+                    @foreach (var i in ViewBag.offerswall)
+                    {
+
+                        <div class="result-item r-item">
+                            <div class="row" style="background-color:white;">
+                                <div class="small-12 columns">
+                                    <div class="row">
+
+                                        <div class="small-12 medium-4 large-3 columns">
+                                            <div class="desktophide"> <br /></div>
+                                            <img style=" width: 208px; height: 150px;" src="~/UploadedImages/@i.Image" alt="">
+                                            <a onclick="window.open('@i.redirect_link','applyoffer30','scrollbars=yes,width=1000,height=700');return false;" id="Apply1" class="button expand button-result-apply text-center" href="javascript:__doPostBack('Apply1','')">Click Here</a>
+                                        </div>
+
+                                        <div class="small-12 medium-8 large-9 columns">
+                                            <h3>@i.Offer_Name</h3>
+                                            <p>@i.description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <!-- ### -->
+                    <!-- MissingMoney.com -->
+                    <!--<div class="result-item">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <div class="row">
+
+                                <div class="small-12 medium-4 large-3 columns">
+                                    <img src="https://moneyfinder.azureedge.net//Money/img/results/missingmoney.jpg" alt="">
+                                    <a onclick="window.open('https://www.missingmoney.com/en/','applyoffer0','scrollbars=yes,width=1000,height=700');return true;" id="ApplyMissingMoney" class="button expand button-result-apply text-center" href="javascript:__doPostBack('ApplyMissingMoney','')">Click Here</a>
+                                </div>
+
+                                <div class="small-12 medium-8 large-9 columns">
+                                    <h3>MissingMoney.com</h3>
+                                    <p>MissingMoney.com has the most updated information for the state and provincial offices, their websites with contact information and property listings.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                    <!-- ### -->
+                    <!-- Find Family Resources -->
+                    <!--<div class="result-item">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <div class="row">
+
+                                <div class="small-12 medium-4 large-3 columns">
+                                    <img src="https://moneyfinder.azureedge.net//Money/img/results/offer-ffr.png" alt="">
+                                    <a onclick="window.open('https://myresourceslp.resourcesify.com/','applyoffer659','scrollbars=yes,width=1000,height=700');return false;" id="Apply2" class="button expand button-result-apply text-center" href="javascript:__doPostBack('Apply2','')">Click Here</a>
+                                </div>
+
+                                <div class="small-12 medium-8 large-9 columns">
+                                    <h3>Find Family Resources</h3>
+                                    <p>This site can help you find family benefit programs, unemployment benefits, low income housing and more. Apply online and find your resource matches in seconds!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                    <!-- ### -->
+                    <!-- Bad Credit Accepted -->
+                    <!--<div class="result-item">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <div class="row">
+
+                                <div class="small-12 medium-4 large-3 columns">
+                                    <img src="https://moneyfinder.azureedge.net//Money/img/results/offer-badcredit.png" alt="">
+                                    <a onclick="window.open('/PopPortal.aspx?offertype=portal&amp;prtid=612&amp;utspid=403740597','applyoffer612','scrollbars=yes,width=1000,height=700');return false;" id="Apply3" class="button expand button-result-apply text-center" href="javascript:__doPostBack('Apply3','')">Click Here</a>
+                                </div>
+
+                                <div class="small-12 medium-8 large-9 columns">
+                                    <h3>Bad Credit Accepted</h3>
+                                    <p>For those with bad or shaky credit there often is no place to turn when they need a loan. This site can help you find auto loans or credit cards, among other services, for people whose credit has taken a sudden downturn.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                    <!-- ### -->
+
+                </div>
+            </div>
+
+        </section>
+
+        <div class="clear"></div>
+
+        <section id="footer" class="footertop" style="background-color: #333333;">
+            <section style=" max-width: 1240px; margin: 0 auto;">
+              
+
+                    <div class="row" style="background-color: white; max-width: 1162px;">
+                        <div class="small-12 medium-12 large-4 columns">
+
+                            <h1 class="wow fadeInDown logocls text-center animated" style="visibility:visible;animation-name:fadeInDown"><img src="~/asset/creditguide.jpg" alt="" style="width: 20em; margin-top: 2em;"></h1>
+                        </div>
+                        <div class="col-md-8">
+
+                            <p style="color: black; font-size: 18px; padding: 23px 4px 14px 18px; text-align: center;">The Cosmopolitan Consumer Group is a dedicated and exclusive service that helps match you with top offers based on the interest you indicate when browsing on our website.</p>
+
+                        </div>
+
+
+
+                    </div>
+                    <br />
+                    <div class="row navmaxwidth">
+                        <div class="small-12 medium-5 columns">
+                            <p style="color:gray;" class="text-left">© Copyright 2022 The <a style="color: gray; text-decoration: underline;" href="https://cosmopolitancg.com/"> The Cosmopolitan Consumer Group, LLC</a> </p>
+
+                            @*<p class="text-left mobilehidde desktophide" style="color: white;">
+                <a style="color: white; text-decoration: underline;" href="javascript:" onclick="window.open('/Money/Unsubcribe','privacy','scrollbars=yes,width=555,height=500')">Click here</a> to unsubscribe from our mailing list |
+                <a style="color: white; text-decoration: underline;" href="javascript:;" onclick="openfunc()">Privacy Policy</a>|<a style="color: white; text-decoration: underline;" href="javascript:;" onclick="openfuncc()">Terms &amp; Conditions</a>
+            </p>*@
+                        </div><div class="small-12 medium-1 columns mobilehide">&nbsp;</div><div class="small-12 medium-6 columns">
+                            <p class="text-right mobilehide" style="color: white;">
+                                <a style="color: white; text-decoration: underline;" href="javascript:" onclick="window.open('/Money/Unsubcribe','privacy','scrollbars=yes,width=555,height=500')">Click here</a>&nbsp;&nbsp;&nbsp;&nbsp; to unsubscribe from our mailing list&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a style="color: white; text-decoration: underline;" href="javascript:;" onclick="openfunc()">Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;  <a style="color: white; text-decoration: underline;" onclick="openfuncc()">  Terms    Conditions  </a>
+                            </p>
+                        </div>
+
+                        <div class="small-12 columns">
+                            <div class="" style="height:10px"></div>
+                            <p style="color:gray" class="text-left">
+                                *Void where prohibited. Service is not available in all 50 states.
+                            </p>
+                            <div class="" style="height:10px"></div>
+
+                            <p style="color:gray" class="text-left">
+                                <a style="color:gray;text-decoration:underline;" href="https://cosmopolitancg.com/">  The Cosmopolitan Consumer Group, LLC </a>is not affiliated with the United States Government and is a privately operated web site.<a style="color:gray;text-decoration:underline;" href="https://cosmopolitancg.com/">  The Cosmopolitan Consumer Group, LLC </a> acts as an informational portal for funding assistance. Information regarding the products and services on this website may be provided by a third party advertising such product and service on the site and therefore the correctness of such representations is unknown to the site owner who does not undertake due diligence to confirm such third-party representations regarding third party advertising claims. When you are redirected to the third-party advertiser's site, and you should review their terms and conditions and privacy policy as they differ significantly from our own. The owner of this website is not affiliated with the third-party advertiser other than stated above. The owner does not recommend or endorse any product or service on this website. The Cosmopolitan Consumer Group, LLC may receive a fee or commission when you participate in third party offers.
+                            </p>
+                            <div class="" style="height:10px"></div>
+                            <p style="color:gray"></p><p style="color:gray" class="text-left">
+                                After you register on cosmopolitantemplate.com , you will see a series of advertising offers. These offers are optional. You are not required to participate in the offers to obtain unclaimed asset information. If you decide to purchase products or services from our advertisers, you may incur associated charges. Any total dollar amount in unclaimed funds or goods that we show is reported by the appropriate government agencies. This does not guarantee that this money is under your name or common variations of your name and is able to have a claim form submitted to be paid that amount.
+                            <p></p>
+                            <div class="" style="height:10px"></div>
+                            <p style="color:gray" class="text-left">
+                                California Residents: Pursuant to Section 1798.120 of the California Consumer Privacy Act (CCPA), a consumer shall have the right, at any time, to direct a business that sells personal information about the consumer to third parties not to sell the consumer’s personal information. If you would like to exercise this right, please click the following link: <a style="color: gray; text-decoration: underline;" href="javascript:" @*onclick="showDiv3()"*@ onclick="window.open('/Money/CCPA','privacy','scrollbars=yes,width=555,height=500')"> Do Not Sell My Personal Information.</a>
+                            </p>
+                        </div>
+                    </div>
+                    <br />
+
+                </section>
+            </section>
+       
+
+
+
+
+
+        <!--<section id="footer">
+        <div class="row">
+            <div class="small-12 medium-5 columns">
+                <p style="color:white;" class="text-left">© Copyright 2021 Student FinTech, LLC  </p>
+            </div>
+            <div class="small-12 medium-2 columns">&nbsp;</div>
+            <div class="small-12 medium-5 columns">
+                <p class="text-right">
+                    <a href="javascript:;" onclick="window.open('/Money/Unsubcribe' ,'privacy','scrollbars=yes,width=555,height=500')">Click here</a>  to unsubscribe from our mailing list |
+                    <a href="javascript:;" onclick="window.open('https://studentfintech.com/privacy-policy/' ,'privacy','scrollbars=yes,width=555,height=500')">Privacy Policy</a>
+                </p>
+
+
+
+            </div>
+            <div class="small-12 columns">
+                <p style="color:white;" class="text-left">
+                    *Void where prohibited. Service is not available in all 50 states.
+                </p>
+
+                <p style="color:white;" class="text-left">
+                    Student FinTech, LLC is not affiliated with the United States Government and is a privately operated web site. Student FinTech, LLC acts as an informational portal for funding assistance. Information regarding the products and services on this website may be provided by a third party advertising such product and service on the site and therefore the correctness of such representations is unknown to the site owner who does not undertake due diligence to confirm such third-party representations regarding third party advertising claims. When you are redirected to the third-party advertiser's site, and you should review their terms and conditions and privacy policy as they differ significantly from our own. The owner of this website is not affiliated with the third-party advertiser other than stated above. The owner does not recommend or endorse any product or service on this website. Student FinTech, LLC may receive a fee or commission when you participate in third party offers.
+                </p>
+                <p style="color:white;">
+
+                </p><p style="color:white;" class="text-left">
+                    After you register on Student FinTech, LLC, you will see a series of advertising offers. These offers are optional. You are not required to participate in the offers to obtain unclaimed asset information. If you decide to purchase products or services from our advertisers, you may incur associated charges. Any total dollar amount in unclaimed funds or goods that we show is reported by the appropriate government agencies. This does not guarantee that this money is under your name or common variations of your name and is able to have a claim form submitted to be paid that amount.
+                <p>
+                </p>
+                <p style="color:white;" class="text-left">
+                    California Residents: Pursuant to Section 1798.120 of the California Consumer Privacy Act (CCPA), a consumer shall have the right, at any time, to direct a business that sells personal information about the consumer to third parties not to sell the consumer’s personal information. If you would like to exercise this right, please click the following link: <a href="javascript:;" onclick="window.open('/Money/CCPA' ,'privacy','scrollbars=yes,width=555,height=500')"> Do Not Sell My Personal Information.</a>
+
+                </p>
+            </div>
+        </div>
+    </section>-->
+        <!-- OVERLAY -->
+        <!--<div id="OverlayDiv" style="display:;">
+        <div class="title-header">Didn’t Find What You Want?</div>
+        <div class="title-body">Check out these Great Offers</div>
+        <div class="container-nitro">
+            <div class="categories">
+
+
+                <div class="top-row  single top-row-left">
+                    <a onclick="window.open('/PopPortal.aspx?offertype=portal&amp;prtid=527&amp;utspid=403208452','applyoffer527','scrollbars=yes,width=1000,height=700');return false;" id="OverlayOffer1" href="javascript:__doPostBack('OverlayOffer1','')" tabindex="-1">
+                        <div class="overlayimgdiv">
+                            <img src="https://moneyfinder.azureedge.net//Money/Overlay/offers2/loanout.png" class="img-responsive">
+                        </div>
+                        <div class="category-description-container">
+                            <div class="category-order">1</div>
+                            <div class="category-description-title"><div><p><span id="OverlayLabel1">Are you tired of mounting credit card debt weighing you down? Consolidate the debt into a loan and have one fixed monthly payment.</span></p></div></div>
+
+                            <div class="category-arrow"><div>&gt;</div></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="top-row  single top-row-center">
+                    <a onclick="window.open('/PopPortal.aspx?offertype=portal&amp;prtid=659&amp;utspid=403208452','applyoffer659','scrollbars=yes,width=1000,height=700');return false;" id="OverlayOffer2" href="javascript:__doPostBack('OverlayOffer2','')" tabindex="-1">
+                        <div class="overlayimgdiv"><img src="https://moneyfinder.azureedge.net//Money/Overlay/offers2/usagrantconnect.png" class="img-responsive" style="padding-top:20px;"></div>
+
+                        <div class="category-description-container">
+                            <div class="category-order">2</div>
+                            <div class="category-description-title"><div><p><span id="OverlayLabel2">Access Available Funds and Resources Now! This Free Membership Give You Access to Exclusive Benefits. Click YES!</span></p></div></div>
+
+                            <div class="category-arrow"><div>&gt;</div></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="top-row  single top-row-right">
+                    <a onclick="window.open('/PopPortal.aspx?offertype=portal&amp;prtid=527&amp;utspid=403208452','applyoffer527','scrollbars=yes,width=1000,height=700');return false;" id="OverlayOffer3" href="javascript:__doPostBack('OverlayOffer3','')" tabindex="-1">
+                        <div class="overlayimgdiv"><img src="https://moneyfinder.azureedge.net//Money/Overlay/offers2/findunclaimedmoney.svg" class="img-responsive" style="padding-top:10px;"></div>
+                        <div class="category-description-container">
+                            <div class="category-order">3</div>
+                            <div class="category-description-title"><div><p><span id="OverlayLabel3">Are you tired of mounting credit card debt weighing you down? Consolidate the debt into a loan and have one fixed monthly payment.</span></p></div></div>
+
+                            <div class="category-arrow"><div>&gt;</div></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div style="float:none;clear:both;border-top:1px solid #999;margin:30px 0px;" class="show-for-large show-for-medium"></div>
+
+                <div class="top-row  single top-row-left">
+                    <a onclick="window.open('/PopPortal.aspx?offertype=portal&amp;prtid=400&amp;utspid=403208452','applyoffer400','scrollbars=yes,width=1000,height=700');reiurn false;" id="OverlayOffer4" href="javascript:__doPostBack('OverlayOffer4','')" tabindex="-1">
+                        <div class="overlayimgdiv"><img src="https://moneyfinder.azureedge.net//Money/Overlay/offers2/remoteworkers.jpg" class="img-responsive"></div>
+                        <div class="category-description-container">
+                            <div class="category-order">4</div>
+                            <div class="category-description-title"><div><p><span id="OverlayLabel4">Get the cash you need FAST! Up to $1,000 on loans for all credit types. Click YES to start now!</span></p></div></div>
+
+                            <div class="category-arrow"><div>&gt;</div></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="top-row  single top-row-center">
+                    <a onclick="window.open('/PopPortal.aspx?offertype=portal&amp;prtid=395&amp;utspid=403208452','applyoffer395','scrollbars=yes,width=1000,height=700');return false;" id="OverlayOffer5" href="javascript:__doPostBack('OverlayOffer5','')" tabindex="-1">
+                        <div class="overlayimgdiv"><img src="https://moneyfinder.azureedge.net//Money/Overlay/offers2/findfamilyresources.png" class="img-responsive"></div>
+                        <div class="category-description-container">
+                            <div class="category-order">5</div>
+                            <div class="category-description-title"><div><p><span id="OverlayLabel5">Billions in Government Assistance available NOW! Click to get your share.</span></p></div></div>
+
+                            <div class="category-arrow"><div>&gt;</div></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="top-row  single top-row-right">
+                    <a onclick="window.open('/PopPortal.aspx?offertype=portal&amp;prtid=527&amp;utspid=403208452','applyoffer527','scrollbars=yes,width=1000,height=700');return false;" id="OverlayOffer6" href="javascript:__doPostBack('OverlayOffer6','')" tabindex="-1">
+                        <div class="overlayimgdiv"><img src="https://moneyfinder.azureedge.net//Money/Overlay/offers2/mycreditcardhelper.png" class="img-responsive" style="padding-top:10px;"></div>
+                        <div class="category-description-container">
+                            <div class="category-order">6</div>
+                            <div class="category-description-title"><div><p><span id="OverlayLabel6">Are you tired of mounting credit card debt weighing you down? Consolidate the debt into a loan and have one fixed monthly payment.</span></p></div></div>
+
+                            <div class="category-arrow"><div>&gt;</div></div>
+                        </div>
+                    </a>
+                </div>
+
+                <input type="hidden" id="hdCatCount" value="6" tabindex="-1">
+
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="offers" style="display: none;">
+
+            </div>
+        </div>
+        <div class="tagline">No incentives awarded for clicking on topics</div>
+
+
+        <div style="float:none;clear:both;text-align:center;">
+            <p style="margin-top:20px;"><a href="javascript:;" id="OverlayClose" tabindex="-1">No thanks</a></p>
+        </div>
+
+
+    </div>-->
+        <!-- END -->
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation/foundation.min.js"></script>
+
+
+
+        <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.11/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+
+        <style>
+            #myBtn {
+                display: none; /* Hidden by default */
+                position: fixed; /* Fixed/sticky position */
+                bottom: 20px; /* Place the button at the bottom of the page */
+                right: 30px; /* Place the button 30px from the right */
+                z-index: 99; /* Make sure it does not overlap */
+                border: none; /* Remove borders */
+                outline: none; /* Remove outline */
+                /* Set a background color */
+                color: white; /* Text color */
+                cursor: pointer; /* Add a mouse pointer on hover */
+                padding: 15px; /* Some padding */
+                /* Rounded corners */
+                font-size: 18px; /* Increase font size */
+            }
+            @@media only screen and (max-width: 600px) {
+                #myBtn {
+                    display: none; /* Hidden by default */
+                    position: fixed; /* Fixed/sticky position */
+                    bottom: 20px; /* Place the button at the bottom of the page */
+                    right: 0px; /* Place the button 30px from the right */
+                    z-index: 99; /* Make sure it does not overlap */
+                    border: none; /* Remove borders */
+                    outline: none; /* Remove outline */
+                    /* Set a background color */
+                    color: white; /* Text color */
+                    cursor: pointer; /* Add a mouse pointer on hover */
+                    padding: 15px; /* Some padding */
+                    /* Rounded corners */
+                    font-size: 18px; /* Increase font size */
+                }
+            }
+        </style>
+
+
+        <a id="myBtn"  onclick="topFunction()"><img style="width:30%!important;float:right;" src="~/Resourcse/Asset 53 (2).png" /></a>
+        <script>
+            //Get the button:
+            mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () { scrollFunction() };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+
+        <input type="hidden" name="AFFILIATEID" id="AFFILIATEID" value="0" tabindex="-1">
+        <input type="hidden" name="PROGRAMID" id="PROGRAMID" value="0" tabindex="-1">
+        <input type="hidden" name="TRANSACTIONID" id="TRANSACTIONID" value="00000000-0000-0000-0000-000000000000" tabindex="-1">
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        $('#Apply1').click(function () {
+            appInsights.trackEvent("Results Offer 1 Click");
+        });
+        $('#ApplyMissingMoney').click(function () {
+            appInsights.trackEvent("Results Offer 2 Click");
+        });
+        $('#Apply2').click(function () {
+            appInsights.trackEvent("Results Offer 3 Click");
+        });
+        $('#Apply3').click(function () {
+            appInsights.trackEvent("Results Offer 4 Click");
+        });
+    </script>
+
+
+
+    <script>
+
+        $('#OverlayClose').click(function (e) {
+            e.preventDefault();
+            $.featherlight.close();
+            clearInterval(overlayinterval);
+            return false;
+        });
+
+        var activity = 0;
+        var _activity_time = 5;
+
+        var overlayinterval=setInterval(function () {
+            //console.log(activity);
+            //if (activity > _activity_time) return;
+
+            if (activity++ >= _activity_time) {
+                $.featherlight('#OverlayDiv');
+                if (_activity_time == 30) //clear it the 2nd time
+                    clearInterval(overlayinterval);
+                activity = 0;
+                _activity_time = 30;
+
+            }
+        }, 1000);
+
+        $('body').mouseover(function () {
+            activity = 0;
+        });
+        $('body').click(function () {
+            activity = 0;
+        });
+        $('body').scroll(function () {
+            activity = 0;
+        });
+
+    </script>
+
+
+
+    <link href="https://moneyfinder.azureedge.net//Money/Overlay/nitro.css" type="text/css" rel="stylesheet">
+    <link href="https://moneyfinder.azureedge.net//Money/Overlay/USAMF.css" type="text/css" rel="stylesheet">
+
+
+    <script type="text/javascript" src="../Web/Resources/Scripts/Common.js"></script>
+    <!-- [Bing Pixel] Dynamically Generated  -->
+    <script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"25011250"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
+
+
+    <div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon183350959949"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon738869187858" width="0" height="0" alt="" src="https://bat.bing.com/action/0?ti=25011250&amp;Ver=2&amp;mid=f5dae159-c86b-407a-a334-4e954438a6bf&amp;sid=c1453690fc3e11ebb72b577a8a520b98&amp;vid=2f8bc6a0f6ae11eb8f86b3ad4efeb80b&amp;vids=0&amp;pi=1200101525&amp;lg=en-US&amp;sw=1366&amp;sh=768&amp;sc=24&amp;tl=Money%20Finder%20USA&amp;p=https%3A%2F%2Fwww.moneyfinderusacentral.com%2FMoney%2FApplyStepResults&amp;r=https%3A%2F%2Fwww.moneyfinderusacentral.com%2FMoney%2FApplyStepFour&amp;lt=2398&amp;evt=pageLoad&amp;msclkid=N&amp;sv=1&amp;rn=644686"></div><div class="featherlight" style="display: block;">
+      
+    </div>
+</body>
+
+</html>
+

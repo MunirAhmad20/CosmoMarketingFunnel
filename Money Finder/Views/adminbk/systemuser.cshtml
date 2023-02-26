@@ -1,0 +1,450 @@
+﻿
+@{
+    ViewData["Title"] = "systemuser";
+    Layout = "~/Views/Layouts/_adminLayout.cshtml";
+}
+<div class="page-wrapper">
+
+
+    <div class="container-fluid">
+        <br />
+        <br />
+        <div id="systemuser" class="">
+            <div class="col-12">
+                <div class="card m-b-30">
+                    <div class="card-body">
+
+
+
+                        <br />
+                        <br />
+
+
+                        <form action="/admin/submitnewuser" id="adminroles" enctype="multipart/form-data" method="post">
+
+
+
+                            <div class="row">
+                                <div class="col-md-3"></div>
+
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="card m-b-30">
+                                                <div class="card-body">
+
+                                                    <input type="file" name="files" src="files" id="files" class="dropify" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="card" style=" box-shadow: 1px 1px 5px 0px darkgrey;">
+                                        <div class="card-body">
+
+
+                                            <div class="form-group p-0">
+                                                <label>Full Name</label>
+                                                <input id="name" name="name" required="" placeholder="Full Name" class="form-control">
+                                            <input name="userid" style="display:none;" id="userid" />
+                                            </div>
+                                            <div class="form-group p-0">
+                                                <label>G Mail</label>
+                                                <input id="gmail" name="gmail" required="" placeholder="Gmail" class="form-control">
+                                            </div>
+                                            <div class="form-group p-0">
+                                                <label>Password</label>
+                                                <input  type="password" name="password" required="" placeholder="Password" class="form-control">
+                                            </div>
+                                            <div class="form-group p-0">
+                                                <label>Skype Address</label>
+                                                <input id="skype" type="text" name="skype" required="" placeholder="Skype Address" class="form-control">
+                                            </div>
+                                            <div class="form-group p-0">
+                                                <label>Role</label>
+                                                <select name="roll" class="form-control mb-3 " style="width: 100%; height:36px;">
+
+                                                    <option value="Super Admin">Super Admin </option>
+                                                    <option value="Admin">Admin </option>
+                                                    <option value="Advertiser">Advertiser </option>
+                                                    <option value="Affiliate">Affiliate </option>
+                   
+                                                </select>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+
+                            <br />
+
+                            <div class="form-group p-0" style="text-align: center;">
+                                <button type="submit" @*onclick="SendData()*@ id="purposalvalidationchk" class="btn btn-primary waves-effect waves-light">Add System User</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="closepurposal" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="details">
+            <div class="col-12">
+                <div class="card m-b-30">
+                    <div class="card-body">
+                        <button type="button" class="btn btn-primary waves-effect waves-light" id="btnaddflight">Add New User</button>
+                        <div class="table-responsive m-t-40 m-t-400">
+                            <table class="demo-foo-addrow2 table table-bordered table m-b-0 toggle-arrow-tiny example23" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+
+                                        <th>Name</th>
+
+                                        <th data-hide="all">Gmail</th>
+                                        <th data-hide="all">Skype Address</th>
+
+                                        <th data-hide="all">System Roll</th>
+
+
+
+                                        <th data-hide="phone">Action</th>
+                                    </tr>
+                                </thead>
+                                @*<tfoot>
+                                        <tr>
+                                            <th style="width:60px;">Image</th>
+                                            <th>Offer Title</th>
+                                            <th>Description A</th>
+
+                                            <th>Lower Title</th>
+
+                                            <th>Action</th>
+                                        </tr>
+                                    </tfoot>*@
+                                <tbody>
+
+                                    @foreach (var i in ViewBag.user)
+                                    {
+                                    <tr>
+                                        <td>
+
+                                            <img style="height:30px;" class="rounded-circle" src="~/UploadedImages/@i.image" width="30">
+                                        </td>
+                                        <td>
+
+                                            <a>@i.Username</a>
+                                        </td>
+
+                                        <td>@i.Gmail </td>
+                                        <td>@i.skypeaddress </td>
+                                        <td>@i.systemroll </td>
+
+
+
+
+
+
+
+
+
+                                        <td>
+                                            @if (i.status == "Approved")
+                                            {
+
+
+                                                <button type="button" class="btn waves-effect waves-light btn-rounded btn-danger"><a onclick="submitblacklist('@i.Id')">Block</a></button>
+                                                <button type="button" class="btn waves-effect waves-light btn-rounded btn-warning"><a onclick="submitdel('@i.Id')">Delete</a></button>
+
+                                            }
+                                            else
+                                            {
+                                                <button type="button" class="btn waves-effect waves-light btn-rounded btn-primary"><a onclick="submitapprove('@i.Id')">Approve</a></button>
+                                            }
+                                            <button type="button" class="btn waves-effect waves-light btn-rounded btn-warning"><a onclick="edit('@i.Id','@i.skypeaddress','@i.Gmail','@i.Username')">Edit</a></button>
+                                        </td>
+
+
+
+
+
+
+
+                                    </tr>
+
+                                    }
+
+
+
+
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                        <script type="text/javascript">
+                            function checkDelete(count) {
+                                if (Archive('Are you sure you want to block ?')) {
+
+                                    submitblacklist(count);
+                                }
+                                else {
+                                    return false
+                                }
+                            }
+                        </script>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script>
+    $('#systemuser').hide();
+    $(document).ready(function () {
+
+        $(document).on('click', '#btnaddflight', function () {
+            $("#systemuser").addClass("in-down");
+            $('#systemuser').show();
+            $('#details').hide();
+
+        }
+        );
+        $(document).on('click', '#closepurposal', function () {
+            $('#addflight').hide();
+
+
+            $('#systemuser').hide();
+            $('#details').show();
+        });
+    });
+    function submitblacklist(count) {
+
+        var id = count;
+
+
+        $.ajax
+            (
+                {
+                    type: "GET",
+                    url: "/admin/blacklist",
+                    contentType: "Application/json;charset=utf-8",
+                    data: { departid: id },
+                    success: function (response) {
+                        console.log("result", response);
+                        blackdisplaysweet();
+                        setTimeout(function () {
+                            location.reload(true);
+
+                        }, 1000);
+
+                        /*      setTimeout(displaysweet, 1000);*/
+
+
+
+
+
+
+                    },
+
+
+                }
+            );
+        $("#purposalform").addClass("in-down");
+        $('#purposalform').show();
+
+    }
+
+    function submitdel(count) {
+
+        var id = count;
+
+
+        $.ajax
+            (
+                {
+                    type: "GET",
+                    url: "/admin/delete",
+                    contentType: "Application/json;charset=utf-8",
+                    data: { departid: id },
+                    success: function (response) {
+                        console.log("result", response);
+                        deldisplaysweet();
+                        setTimeout(function () {
+                            location.reload(true);
+
+                        }, 1000);
+
+                        /*      setTimeout(displaysweet, 1000);*/
+
+
+
+
+
+
+                    },
+
+
+                }
+            );
+        $("#purposalform").addClass("in-down");
+        $('#purposalform').show();
+
+    }
+    function submitapprove(count) {
+
+        var id = count;
+
+
+        $.ajax
+            (
+                {
+                    type: "GET",
+                    url: "/admin/approve",
+                    contentType: "Application/json;charset=utf-8",
+                    data: { departid: id },
+                    success: function (response) {
+                        console.log("result", response);
+                        approvedisplaysweet();
+                        setTimeout(function () {
+                            location.reload(true);
+
+                        }, 1000);
+
+                        /*      setTimeout(displaysweet, 1000);*/
+
+
+
+
+
+
+                    },
+
+
+                }
+            );
+        $("#purposalform").addClass("in-down");
+        $('#purposalform').show();
+
+    }
+    function deldisplaysweet() {
+        var icon = "success";
+        if (status == "success") {
+            icon = "success";
+        }
+
+        var config = {}
+        config.icon = icon;
+        config.title = "Success";
+        config.text = "User  Deleted SuccessFully";
+
+        Swal.fire(config);
+
+    }
+    function blackdisplaysweet() {
+        var icon = "success";
+        if (status == "success") {
+            icon = "success";
+        }
+
+        var config = {}
+        config.icon = icon;
+        config.title = "Success";
+        config.text = "User  BlackListed SuccessFully";
+
+        Swal.fire(config);
+
+    }
+    function approvedisplaysweet() {
+        var icon = "success";
+        if (status == "success") {
+            icon = "success";
+        }
+
+        var config = {}
+        config.icon = icon;
+        config.title = "Success";
+        config.text = "User Approved SuccessFully";
+
+        Swal.fire(config);
+
+    }
+    function displaysweet() {
+        var icon = "success";
+        if (status == "success") {
+            icon = "success";
+        }
+
+        var config = {}
+        config.icon = icon;
+        config.title = "Success";
+        config.text = "User added SuccessFully";
+
+        Swal.fire(config);
+
+    }
+</script>
+<script>
+
+    function edit(id, skypeaddress, Gmail, Username) {
+
+        $("#name").val(Username);
+        $("#gmail").val(Gmail);
+        $("#skype").val(skypeaddress);
+        $("#userid").val(id);
+
+        $('#buttonName').innerText = 'Update System User';
+        $("#systemuser").addClass("in-down");
+        $('#systemuser').show();
+    }
+
+   function SendData() {
+
+        var formData = {};
+       var formData = $("#adminroles").serialize();
+       
+     
+
+
+        $.ajax(
+            {
+                type: "POST",
+                url: '/admin/submitnewuser',
+
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8', // when we use .serialize() this generates the data in query string format. this needs the default contentType (default content type is: contentType: 'application/x-www-form-urlencoded; charset=UTF-8') so it is optional, you can remove it
+                data: formData,
+                success: function (result) {
+                    displaysweet();
+                    setTimeout(function () {
+                        location.reload(true);
+
+                    }, 1000);
+                },
+                error: function () {
+                    alert('Failed to receive the Data');
+                    console.log('Failed ');
+                }
+            });
+
+    }
+</script>
+

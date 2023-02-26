@@ -1,0 +1,13 @@
+﻿@media only screen and (max-width: 600px) {
+    .circlee {
+        border-radius: 50%;
+        behavior: url(PIE.htc);
+        width: 310px !important ;
+        height: 303px !important ;
+        background: #f9a22f ;
+        border: 0px solid blue ;
+        text-align: center !important;
+        margin-left: 3px !important;
+        font-size: 0px;
+    }
+}

@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewData["Title"] = "Admin";
+    Layout = "~/Views/Layouts/_adminLayout.cshtml";
+}
+
+
+
+
+
+
+
+
+
+
+
+<div class="page-wrapper">
+
+
+    <div class="container-fluid">
+    <br />
+<br />
+    @foreach (var i in ViewBag.popup)
+    {
+
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card m-b-30">
+                    <div class="card-body">
+
+                        <h4 class="mt-0 header-title">Edit POP Up Offer </h4>
+
+
+
+                      
+                        <form action="/admin/updatepopup" enctype="multipart/form-data" method="post">
+                            <div>
+                               
+                                <div class="row">
+                                    <div class="col-md-12">
+                                     
+                                        <div class="p-0">
+                                           
+                                            <div class="form-group">
+                                                <input hidden="" value="@i.Id" type="text" name="id" required="" data-mask="999-99-999-9999-9" class="form-control">
+
+                                                <label>POP UP Link</label>
+                                                <input type="text" value="@i.redirect_link" name="redirectlink" required="" data-mask="999-99-999-9999-9" class="form-control">
+
+                                            </div>
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <br />
+
+                            <div class="form-group p-0">
+                                <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    </div> <!-- end col -->
+</div> <!-- end row -->
+                    </div><!-- container -->
+</div> <!-- Page content Wrapper -->
+                </div> <!-- content -->

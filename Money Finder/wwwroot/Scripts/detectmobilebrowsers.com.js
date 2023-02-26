@@ -1,0 +1,1 @@
+No Content: https://localhost:5001/Scripts/detectmobilebrowsers.com.js

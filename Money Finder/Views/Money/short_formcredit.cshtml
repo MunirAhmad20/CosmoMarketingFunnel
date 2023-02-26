@@ -1,0 +1,1933 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Layouts/MoneyhomeLayout.cshtml";
+}
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+<style>
+    .optinbox .optin-right p {
+        color: #000000;
+        line-height: 16px;
+        margin: 31px 3px 0px 0px;
+        padding: 0px 0px 0px 0px;
+       
+   
+    }
+
+
+    .herocolor {
+        font-size: 41px;
+        font-weight: bold;
+    }
+
+
+
+    .card_d {
+        background-color: white;
+        height: 12em;
+        padding: 8%;
+    }
+
+    #main-reg h1 {
+        font-size: 21px;
+        padding: 0px;
+        margin: 0px 0px 0px 0px;
+    }
+
+   
+
+    .ma_col {
+        margin-top: 2%;
+        padding: 18px;
+        box-shadow: 0px 6px 8px 3px rgb(0 0 0 / 20%);
+        background-color: white;
+    }
+
+    .perdsonicon {
+        width: 40%;
+        float: right;
+        padding-top: 14%;
+        padding-bottom: 15%;
+    }
+    .personicon {
+        width: 80%;
+        float: right;
+        padding-top: 25%;
+        padding-bottom: 15%;
+    }
+   
+    .h1s {
+        overflow: hidden;
+        text-align: center;
+    }
+
+        .h1s:before
+         {
+            background-color: #06aaea;
+            content: "";
+            display: inline-block;
+            height: 60px;
+            position: relative;
+            vertical-align: middle;
+            width: 160%;
+        }
+
+        .h1s:before {
+            right: 0.5em;
+            margin-left: -50%;
+        }
+
+       /* .h1s:after {
+            left: 0.5em;
+            margin-right: -50%;
+        }*/
+</style>
+<script>
+    $(document).ready(function () {
+        $(".phonea").keyup(function () {
+
+            if (this.value.length == $(this).attr("maxlength")) {
+                $(".phoneb").focus();
+            }
+        });
+        $(".phoneb").keyup(function () {
+
+            if (this.value.length == $(this).attr("maxlength")) {
+                $(".phonec").focus();
+            }
+        });
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<br />
+<section id="hero" class="show-for-small-only"> <div class="logo-bar logoheader"> <div class="row navmaxwidth"> <div class="small-12 medium-12 large-4 columns"> <h1 class="wow fadeInDown logocls animated" style="visibility:visible;animation-name:fadeInDown"> <img class="logotop" src="~/asset/creditguide-tr.png" alt=""> </h1> </div> <div class="large-8 columns hide-for-small-only"> <nav class="fontsizee"> <p class="headertext navaligh"> <a onclick="javascript:" class="rc-trigger navcolor fontsizee" href="#CHECK_YOUR_CREDIT"> View Credit Reports! </a>&nbsp; <a onclick="javascript:" class="rc-trigger navcolor fontsizee" href="#main-regg">Credit Report Resources</a> &nbsp;</h1> &nbsp; <a class="rc-trigger navcolor fontsizee" href="#WHAT-IS-CREDIT"> What is credit? </a> </p> </nav> </div> </div> </div> <div class="logo-bar bgimagess"> <div class="row navmaxwidth bgcolor" style="display:flex;"> <div class="small-12 medium-12 large-7 columns"> <div class="desktophide"><br /></div> <h2 class="herocolor"> FREE & INSTANT </h2> <h2 class="subheader herocolor"> CREDIT REPORT TODAY! </h2> <p class=" herocolor" style="font-weight: 400; font-size: 15px; "> Sign up below and unlock your personal and exclusive top credit report offers available to you now! </p> <br class="desktophide" /> <p class="show-for-small-only " style="text-align:center;"> <a href="#main-regg" onclick="javascript:" class="rc-trigger"> <button href="#main-regg" class="btn getstart button wow bounce infinite animated" style=" visibility: visible; animation-name: bounce; "> <i style="color: #B5FF3F;" class="fa fa-check"></i> GET STARTED NOW </button> </a> </p> <p class="hide-for-small-only"> <a href="#main-regg" onclick="javascript:" class="rc-trigger"> <button href="#main-regg" class="btn button wow bounce infinite animated getbtn"> <i style="color: #B5FF3F;" class="fa fa-check"></i> GET STARTED NOW </button> </a> </p> </div> <div class="large-5 columns imghide"> <div class="" style="margin-top:0px"><img class="imgalign" src="~/asset/img/bgf.png" /></div> </div> </div> </div></section>
+
+<section id="hero main-reg " class="hide-for-small-only">
+    <div class="logo-bar logoheader">
+        <div class="row navmaxwidth">
+            <div class="small-12 medium-12 large-4 columns" style="padding-left:0%">
+                <h1 class="wow fadeInDown logocls animated" style="visibility:visible;animation-name:fadeInDown"> <img class="logotop" src="~/asset/creditguide-tr.png" alt=""> </h1>
+            </div>
+            <div class="large-8 columns hide-for-small-only">
+                <nav class="fontsizee">
+                    <p class="headertext navaligh">
+                        <a onclick="javascript:" class="rc-trigger navcolor fontsizee" href="#CHECK_YOUR_CREDIT"> View Credit Reports! </a>&nbsp; <a onclick="javascript:" class="rc-trigger navcolor fontsizee" href="#main-regg">Credit Report Resources</a> &nbsp;
+                        </h1> &nbsp; <a class="rc-trigger navcolor fontsizee" href="#WHAT-IS-CREDIT"> What is credit? </a>
+                    </p>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="logo-bar bgimagess" style="min-height:35em;">
+
+        <div class="row" style=" padding: 0; width: 100%; max-width: 100% !important; padding-top: 10%;">
+            <div class="large-3 column" style="padding:0;">
+                <h2 class="h1s" style="font-size: 65px; font-weight: bold;">
+                </h2>
+
+
+            </div>
+            <div class="large-6 column">
+                <h2 style=" font-size: 50px; font-weight: bold; text-align: center; color: white; line-height: 62px;">
+                    GET ACCESS TO 50 OFF OUR
+                    CREDIT TIPS FREE!
+                </h2>
+
+
+            </div>
+            <div class="large-3 column" style="padding:0;">
+                <h2 class="h1s" style="font-size: 65px; font-weight: bold;">
+                </h2>
+
+
+            </div>
+
+        </div>
+
+        <p class="btnapplynow" style="
+    text-align: center;
+"> <a href="#main-regg" onclick="javascript:" class="rc-trigger"> 
+       <button href="#main-regg" class="btn button wow bounce infinite animated btnbounce" style="margin-top: 5em !important;width: 12% !important;padding: 12px 5px !important;border-radius: 0 !important;background:black !important;font-size: 18px !important;font-weight: 100;box-shadow: 3px 2px 0px 0px white!important;"> READ MORE </button></a> </p>
+    </div>
+
+
+
+
+
+    <div class="logo-bar bgimagess" style="display:none;">
+        <div class="row navmaxwidth " style="display:flex;">
+            <div class="small-12 medium-12 large-5 columns" style="padding-left:0%">
+                <div class="desktophide"><br /></div>
+                <h2 class="herocolor"> GET  ACCESS TO 50 OFF OUR CREDIT TIPS <u>FREE</u> ! </h2>
+                <div class="row-fix hide-for-small-only">
+                    <div class="small-4 medium-4 large-4 columns card_pending">
+                        <div class="card card_d">
+                            <p class="cardhp">STEP 1</p>
+                            <p class="cardp">COMPLETE INFORMATION</p>
+                            <p class="cardp2">Submit some basic information to get started.</p>
+                        </div>
+                    </div>
+                    <div class="small-4 medium-4 large-4 columns card_pending">
+                        <div class="card card_d">
+                            <p class="cardhp">STEP 2</p>
+                            <p class="cardp">COMPARE RATES</p>
+                            <p class="cardp2">Shop affordable auto insurance rates from top brands!</p>
+                        </div>
+                    </div>
+                    <div class="small-4 medium-4 large-4 columns card_pending">
+                        <div class="card card_d">
+                            <p class="cardhp">STEP 3</p>
+                            <p class="cardp">SAVE MONEY</p>
+                            <p class="cardp2"> Find the best rate for you and keep more money in your pocket!! </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap -m-4 text-center" style=" padding-top: 4%;padding-left:2%;">
+                    <div style=" padding-right: 4%;" class="sm:w-1/4 w-1/2 py-2"> <img src="~/Resourcse/unclaimasseticon/11.png" /> </div>
+                    <div style=" padding-right: 4%;" class="sm:w-1/4 w-1/2"> <img src="~/Resourcse/unclaimasseticon/Asset 62.png" /> </div>
+                    <div style=" padding-right: 4%;" class="sm:w-1/4 w-1/2"> <img src="~/Resourcse/unclaimasseticon/Asset 60.png" /> </div>
+                    <div style=" padding-right: 4%;" class="sm:w-1/4 w-1/2 py-2"> <img src="~/Resourcse/unclaimasseticon/Asset 61.png" /> </div>
+                </div>
+
+
+
+            </div>
+            <div class="large-7 columns imghide">
+                <div id="main-reg">
+                    <div class="row reg-box boxpedding">
+                        <div class="small-12 columns">
+                            <div id="browss"></div>
+                            <div id="main-regg"></div>
+                            <br />
+                            <h1 class="subheader comp">COMPLETE THE FOLLOWING INFORMATION </h1>
+                            <h1 style=" color: #3c79aE;" class=" infor"> TO GET ACCESS TO YOUR FREE CREDIT REPORT! </h1>
+                        </div>
+                        <form class="needs-validation contact_form" action="/Money/submitoffers" name="PageForm" method="post" id="PageForm" data-parsley-validate="" novalidate="" data-parsley-errors-messages-disabled="true" autocomplete="on">
+                            <div class="small-12 columns"></div>
+                            <div class="row-fix">
+                                <div class="small-12 medium-6 large-6 columns mb-3"> <label>Email Address</label> <input class="form-control tooltipster tooltipstered" value="@ViewBag.email" name="email" placeholder="Enter email Address here..." maxlength="100" id="form1_leadem" type="email" required="required" data-parsley-type="email"> </div>
+                                <div class="small-12 medium-6 large-6 columns">
+                                    <label>Phone Number</label>
+                                    <div class="row-fix" id="otp-screen">
+                                        <div class="small-4 medium-4 large-4 columns" style="padding-left:0"> <input name="phonea" value="@ViewBag.phonea" placeholder="(000)" maxlength="3" id="form1_leadem HOME_PHONE_AREA" type="tel" required="required" data-parsley-trigger="change" class="tooltipster tooltipstered form-control phonea" data-parsley-type="digits" data-parsley-length="[3, 3]"> </div>
+                                        <div class="small-4 medium-4 large-4 columns" style="padding-left:0"> <input name="phoneb" value="@ViewBag.phoneb" placeholder="000" maxlength="3" id="form1_leadem HOME_PHONE_PREFIX" type="tel" required="required" data-parsley-trigger="change" class="tooltipster tooltipstered form-control phoneb" data-parsley-type="digits" data-parsley-length="[3, 3]"> </div>
+                                        <div class="small-4 medium-4 large-4 columns" style="padding-left:0;padding-right:0"> <input value="@ViewBag.phonec" name="phonec" placeholder="1234" maxlength="4" id="form1_leadem HOME_PHONE_SUFFIX" type="tel" required="required" data-parsley-trigger="change" class="tooltipster tooltipstered form-control phonec" data-parsley-type="digits" data-parsley-length="[4, 4]"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="display:none;"> <input value="@ViewBag.tid" name="TRANSACTIONID" type="text"> <input value="@ViewBag.zip" name="zip" type="text"> <input value="@ViewBag.lastname" name="last_name" type="text"> <input name="first_name" type="text" placeholder="First Name" value="@ViewBag.firstname"> <input name="age" type="text" placeholder="First Name" value="@ViewBag.Age"> <input name="city" type="text" placeholder="First Name" value="@ViewBag.City"> <input name="dob" type="text" placeholder="First Name" value="@ViewBag.DOB"> <input name="gender" type="text" placeholder="First Name" value="@ViewBag.Gender"> <input name="state" type="text" placeholder="First Name" value="@ViewBag.State"> <input name="address" type="text" placeholder="First Name" value="@ViewBag.address"> <input id="leadid_token" name="universal_leadid" type="hidden" value="" /> </div>
+                            <input style="display:none;" id="bb" name="nsyesno"> <input style="display:none;" name="lf" value="SF"> <input style="display:none;" id="device" name="device">
+                            @foreach (var it in ViewBag.qa)
+                            {
+                                if (it.switchs == "on")
+                                {
+                                    <div class="small-12 columns"></div>
+                                    <div id="PanelCheckingAccount">
+                                        <div class="row-fix radiobtn">
+                                            <div class="small-12 medium-12 large-12 columns">
+                                                <p class=" radiop haveactive " style="text-align:left;"> Do You have an active Checking Account? </p>
+                                                <div class="small-2 medium-2 large-2 columns" style="padding-left: 0;"> <a href=""> <input data-parsley-trigger="change" type="radio" id="html" name="checkingaccount" class="rbtnHasCheckingAccountYes ooltipster tooltipstered" value="Yes" data-parsley-multiple="checkingaccount"> <label for="html">Yes</label> </a> </div>
+                                                <div class="small-8 medium-8 large-8 columns" style="padding-left: 0;"> <a href=""> <input type="radio" id="htmll" name="checkingaccount" class="rbtnHasCheckingAccountNo" value="No" data-parsley-multiple="checkingaccount"> <label for="htmll">No</label> </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @foreach (var i in ViewBag.coreg)
+                                    {
+                                        <div class="small-12 columns" id="panel-01" style="display: none; margin-top: 20px; padding-bottom: 0px; border-top: 0;">
+                                            <div class="row-fix">
+                                                <div class="medium-4 columns" style="margin: 0; padding: 0;">
+                                                    <p> <img id="NetspendImage" alt="ns-logo" class="left netspendimage" src="~/UploadedImages/@i.Image"> </p>
+                                                </div>
+                                                <div class="small-12 medium-8 columns">
+                                                    <p class="radiop" style="font-size: 14px;"> <span id="NetspendLbl"><strong>@i.Offer_title</strong><br>@i.Discription_A @i.Discription_B.<br><strong>@i.Lower_title</strong></span> </p>
+                                                    <div class="row alightn">
+                                                        <div class="small-5 columns NSButtons"> <button type="button" class="labels" id="labelss" onclick="setValue()"> Yes, please!</button> </div>
+                                                        <div class="small-5 end columns NSButtons"> <button type="button" class="labels" id="labels" onclick="setValues()">No thanks</button> </div>
+                                                    </div>
+                                                    <div class="row"> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                    <div class="small-12 columns" id="panel-02" style="display: none; margin-top: 20px; padding-bottom: 0px; border-top: 0;">
+                                        <div class="row-fix">
+                                            @foreach (var i in ViewBag.nocoreg)
+                                            {
+                                                <div class="medium-4 columns" style="margin: 0; padding: 0;">
+                                                    <p> <img id="NetspendImage" alt="ns-logo" class="left netspendimage" src="~/UploadedImages/@i.Image" style="border-width: 0px; margin-left: 15px; border-radius: 4px; border: none; color: #fff; font-size: 0.9rem; line-height: 1.3rem; font-weight: 400; text-align: center; text-indent: 0px; padding: 7px 0px 0px 0px; margin: 0px auto 10px auto;width:10em;"> </p>
+                                                </div>
+                                                <div class="small-12 medium-8 columns">
+                                                    <p class="radiop" style="font-size: 14px;"> <span id="NetspendLbl"><strong>@i.Offer_title</strong><br>@i.Discription_A @i.Discription_B.<br><strong>@i.Lower_title</strong></span> </p>
+                                                    <div class="row alightn">
+                                                        <div class="small-5 columns NSButtons"> <button type="button" class="labels" id="nolabelss" onclick="nosetValue()"> Yes, please!</button> </div>
+                                                        <div class="small-5 end columns NSButtons"> <button type="button" class="labels" id="nolabels" onclick="nosetValues()">No thanks</button> </div>
+                                                    </div>
+                                                    <div class="row"> </div>
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+                                }
+                            }
+                            <div class="clear"></div>
+                            <label>
+                                <input type="hidden">
+                                <div class="small-12 columns opt-in" id="OptinDiv" style="margin-top:20px">
+                                    @foreach (var item in ViewBag.tcpadisc)
+                                    {
+                                        <p class="disclosertext " style=" color: #666666;"> @item.first <a style="color:#2199e8" onclick="openfunc()">Privacy Policy</a> , <a style="color:#2199e8" onclick="openfuncc()"> Terms &amp; Conditions </a> @item.second (<a onclick="showDiv5()" style="color:#2199e8" data-databuyers="Admediary LLC|Lexington Law|The Credit Pros|VP Media Management"> click here to view </a>), @item.third <a class="noselect" style="text-decoration:underline;color:#2199e8" href="#expe1">click here</a> @item.fourth </p>
+                                    }
+                                    <script>function openfunc() { windowWidth = 1130; windowHeight = 560; top = 380; var left = (screen.width - windowWidth) / 2; var top = (screen.height - top) / 4; var myWindow = window.open("/Money/privacy_policy", '_blank', 'width=' + windowWidth + ', height=' + windowHeight + ', top=' + top + ', left=' + left); } function openfuncc() { windowWidth = 1130; windowHeight = 560; top = 380; var left = (screen.width - windowWidth) / 2; var top = (screen.height - top) / 4; var myWindow = window.open("/Money/terms", '_blank', 'width=' + windowWidth + ', height=' + windowHeight + ', top=' + top + ', left=' + left); }</script>
+                                    <div class="resume" id="expe1">
+                                        <div class="small-12 columns opt-in" style="padding:0;">
+                                            <p> You DO have the right to have your DNC (Do Not Call) registration honored and opting in to receive outbound calls and/or SMS texts is not a requirement to complete this application. If you would not like to receive live telephone calls from our marketing partners, please check the box below: </p>
+                                        </div>
+                                        <div class="small-12 columns opt-in">
+                                            <input type="checkbox" runat="server" id="DNC_OPT_OUT" name="DNC_OPT_OUT" data-parsley-multiple="DNC_OPT_OUT">
+                                            <label for="DNC_OPT_OUT"></label> <p>No, I do not want to receive live telephone calls or SMS texts </p>
+                                        </div>
+                                    </div>
+                                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                                    <script>jQuery(document).ready(function (a) { a('a[href^="#"]').on("click", function (b) { var c = a(a(this).attr("href")); c.fadeToggle(100) }) });</script> <div class="clear"></div> <div class="small-12 columns hide-for-small-only"> <div class="row optinbox optingrp"> <div class="large-3 medium-3 column"> <img src="/asset/Money/img/arrow-p3.png" alt="" class="right animated fadeInLeft infinite hide-for-small-only" style="float:right;margin-top:10px"> <p style="text-align:center;"> <img src="/asset/Money/img/arrow-p3-down.png" alt="" class="center animated fadeInDown infinite show-for-small-only"> </p> </div> <div class="medium-9 column iconfirmmleft iconfirmmlefts"> <div class="optin opt_in"> <div class="row" style=" display: inline-flex;"> <div class="medium-2 columns"> <div style="background-color:transparent !important;" class="optin-left iconfirm"> <p style="display:flex;justify-content:center"> <input type="checkbox" runat="server" id="TERMS" name="terms" required="required" data-parsley-trigger="change" class="tooltipster tooltipstered confirminput" data-parsley-multiple="TERMS"> I CONFIRM </p> </div> </div> <div class="small-12 medium-12 large-12 columns"> <div class="optin-right"> <p class="optintxt"> that all of my information is accurate and consent to be called and texted as provided above. </p> </div> </div> </div> </div> </div> <div class="medium-3 columns"></div> </div> </div> <div class="small-12 medium-12 large-12 columns show-for-small-only"> <div class="row-fix"> <div class="small-4 medium-4 large-4 columns" style=" margin-left: -84px !important;"> <img src="~/asset/Money/img/arrow-p3.png" alt="" class="animated fadeInLeft infinite" style="/* float:right; *//* margin-top:20px; */"> <p style="text-align:center;"> <img style="display:none !important;" src="~/asset/Money/img/arrow-p3-down.png" alt="" class="center animated fadeInDown infinite show-for-small-only"> </p> </div> <div class="small-8 medium-8 large-8 columns"> <div class="optin opt_in"> <div class="row" style=" display: inline-flex;"> <div class="medium-2 columns"> <div style="/* margin-left: -2em !important; */ background-color: transparent !important; width: 158%;" class="optin-left iconfirm"> <p style="display:flex;justify-content:center"> <input type="checkbox" runat="server" id="TERMS form1_leadem" name="terms" required="required" data-parsley-trigger="change" class="tooltipster tooltipstered confirminput" data-parsley-multiple="TERMS"> </p> </div> </div> <div class="small-9 medium-9 large-9 columns"> <div class="optin-right"> <p class="optintxt optin-txt"> that all of my information is accurate and consent to be called and texted as provided above. </p> </div> </div> </div> </div> </div> <div class="medium-3 columns"></div> </div> </div> <div class="clear"></div> <div class="small-12 columns">
+                                        <p class=" continuep text-center"> <button type="submit" id="SUBMIT" class="btn  needs-validation button bounce infinite animated btn button wow bounce infinite animated getbtn" novalidate="" data-validates-form=""> <i style="color:#B5FF3F" class="fa fa-check"></i>  GET STARTED NOW  </button> </p>
+                                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+                                        @foreach (var it in ViewBag.pop)
+                                        {
+                                            if (it.switchs == "on")
+                                            {
+                                                @foreach (var item in ViewBag.popup)
+                                                {
+                                                    <script type="text/javascript">(function () { window.addEventListener("load", function () { var b = document.getElementsByClassName("needs-validation"); var a = Array.prototype.filter.call(b, function (c) { c.addEventListener("submit", function (d) { if (c.checkValidity() === false) { d.preventDefault(); d.stopPropagation() } c.classList.add("was-validated"); window.open("@item.redirect_link/?tid=@ViewBag.tid&subid1=1234", "privacy", "scrollbars=yes,width=2000,height=1000"); $("#PageForm").submit(); }, false) }) } , false) })();</script>
+                                                }
+                                            }
+                                            if (it.switchs == "off")
+                                            {
+                                                <script type="text/javascript">(function () { window.addEventListener("load", function () { var b = document.getElementsByClassName("needs-validation"); var a = Array.prototype.filter.call(b, function (c) { c.addEventListener("submit", function (d) { if (c.checkValidity() === false) { d.preventDefault(); d.stopPropagation() } c.classList.add("was-validated"); @*window.open("#", "privacy", "scrollbars=yes,width=2000,height=1000");*@ $("#PageForm").submit(); }, false) }) } , false) })();</script>
+                                            }
+                                        }
+                                    </div>
+                                </div>
+                            </label>
+                        </form>
+                    </div>
+                    <br> <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="hide-for-small-only" style="   background-color: white; min-height: 19em; ">
+   <div style="height:2em"></div>
+    <div style="margin: 0 auto; max-width: 80%; ">
+        <div class="row-fix hide-for-small-only">
+            <div class="small-4 medium-4 large-4 columns card_pending">
+                <div class="card card_d" style=" background-color: #e6e7e8; box-shadow: none !important; border: none;">
+                    <p class="cardhp">STEP 1</p>
+                    <p class="cardp">COMPLETE INFORMATION</p>
+                    <p class="cardp2">Submit some basic information to get started.</p>
+                </div>
+            </div>
+            <div class="small-4 medium-4 large-4 columns card_pending">
+                <div class="card card_d" style=" background-color: #e6e7e8; box-shadow: none !important; border: none;">
+                    <p class="cardhp">STEP 2</p>
+                    <p class="cardp">COMPARE RATES</p>
+                    <p class="cardp2">Shop affordable auto insurance rates from top brands!</p>
+                </div>
+            </div>
+            <div class="small-4 medium-4 large-4 columns card_pending">
+                <div class="card card_d" style=" background-color: #e6e7e8;box-shadow:none !important;border:none;">
+                    <p class="cardhp">STEP 3</p>
+                    <p class="cardp">SAVE MONEY</p>
+                    <p class="cardp2"> Find the best rate for you and keep more money in your pocket!! </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <div style="height:2em"></div>
+</section>
+<section class="mainregtop hide-for-small-only" id="main-reg"style="
+    background-color: #e6e7e8;
+">
+    <div class="row navmaxwidth">
+        <div class="small-12 small-centered medium-12 large-12 medium-centered columns mainregcolum">
+            <div class="row reg-box boxpedding" style="box-shadow:none !important;
+                 background-color: #e6e7e8;
+                 ">
+                <div class="small-12 columns">
+                    <div id="browss"></div>
+                    <div id="main-regg"></div>
+                    <br>
+                    <h1 style="color: black;font-size: 50px;font-family: 'Poppins';font-weight: bold !important;margin-bottom: 20px;margin-top: 30px;" class="subheader comp">COMPLETE THE FOLLOWING INFORMATION </h1>
+                    <h1 style="margin-bottom: 1em;font-size: 36px;padding: 0px;/* margin: 0px 0px 0px 0px; */" class=" infor"> TO GET ACCESS TO YOUR FREE CREDIT REPORT! </h1>
+                </div>
+                <form class="needs-validation contact_form" action="/Money/submitoffers" name="PageForm" method="post" id="PageForm" data-parsley-validate="" novalidate="" data-parsley-errors-messages-disabled="true" autocomplete="on">
+                    <div class="small-12 columns"></div>
+                    <div class="row-fix">
+                        <div class="small-12 medium-6 large-6 columns mb-3"> <label>Email Address</label> <input class="form-control tooltipster tooltipstered" value="@ViewBag.email" name="email" placeholder="Enter email Address here..." maxlength="100" id="form1_leadem" type="email" required="required" data-parsley-type="email"> </div>
+                        <div class="small-12 medium-6 large-6 columns">
+                            <label>Phone Number</label>
+                            <div class="row-fix" id="otp-screen">
+                                <div class="small-4 medium-4 large-4 columns" style="padding-left:0"> <input name="phonea" value="@ViewBag.phonea" placeholder="(000)" maxlength="3" id="form1_leadem HOME_PHONE_AREA" type="tel" required="required" data-parsley-trigger="change" class="tooltipster tooltipstered form-control phonea" data-parsley-type="digits" data-parsley-length="[3, 3]"> </div>
+                                <div class="small-4 medium-4 large-4 columns" style="padding-left:0"> <input name="phoneb" value="@ViewBag.phoneb" placeholder="000" maxlength="3" id="form1_leadem HOME_PHONE_PREFIX" type="tel" required="required" data-parsley-trigger="change" class="tooltipster tooltipstered form-control phoneb" data-parsley-type="digits" data-parsley-length="[3, 3]"> </div>
+                                <div class="small-4 medium-4 large-4 columns" style="padding-left:0;padding-right:0"> <input value="@ViewBag.phonec" name="phonec" placeholder="1234" maxlength="4" id="form1_leadem HOME_PHONE_SUFFIX" type="tel" required="required" data-parsley-trigger="change" class="tooltipster tooltipstered form-control phonec" data-parsley-type="digits" data-parsley-length="[4, 4]"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display:none;"> <input value="@ViewBag.tid" name="TRANSACTIONID" type="text"> <input value="@ViewBag.zip" name="zip" type="text"> <input value="@ViewBag.lastname" name="last_name" type="text"> <input name="first_name" type="text" placeholder="First Name" value="@ViewBag.firstname"> <input name="age" type="text" placeholder="First Name" value="@ViewBag.Age"> <input name="city" type="text" placeholder="First Name" value="@ViewBag.City"> <input name="dob" type="text" placeholder="First Name" value="@ViewBag.DOB"> <input name="gender" type="text" placeholder="First Name" value="@ViewBag.Gender"> <input name="state" type="text" placeholder="First Name" value="@ViewBag.State"> <input name="address" type="text" placeholder="First Name" value="@ViewBag.address"> <input id="leadid_token" name="universal_leadid" type="hidden" value="" /> </div>
+                    <input style="display:none;" id="bb" name="nsyesno"> <input style="display:none;" name="lf" value="SF"> <input style="display:none;" id="device" name="device">
+                    @foreach (var it in ViewBag.qa)
+                    {
+                        if (it.switchs == "on")
+                        {
+                            <div class="small-12 columns"></div>
+                            <div id="PanelCheckingAccount">
+                                <div class="row-fix radiobtn">
+                                    <div class="small-12 medium-12 large-12 columns">
+                                        <p class=" radiop haveactive " style="text-align:left;font-family: 'Poppins';font-size: 18px;"> Do You have an active Checking Account? </p>
+                                        <div class="small-2 medium-2 large-2 columns" style="padding-left: 0;"> <a href=""> <input data-parsley-trigger="change" type="radio" id="html" name="checkingaccount" class="rbtnHasCheckingAccountYes ooltipster tooltipstered" value="Yes" data-parsley-multiple="checkingaccount" data-parsley-id="89"> <label for="html">Yes</label> </a> </div>
+                                        <div class="small-8 medium-8 large-8 columns" style="padding-left: 0;"> <a href=""> <input type="radio" id="htmll" name="checkingaccount" class="rbtnHasCheckingAccountNo" value="No" data-parsley-multiple="checkingaccount"> <label for="htmll">No</label> </a> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @foreach (var i in ViewBag.coreg)
+                            {
+                                <div class="small-12 columns" id="panel-01" style="display: none; margin-top: 20px; padding-bottom: 0px; border-top: 0;">
+                                    <div class="row-fix">
+                                        <div class="medium-4 columns" style="margin: 0; padding: 0;">
+                                            <p> <img id="NetspendImage" alt="ns-logo" class="left netspendimage" src="~/UploadedImages/@i.Image"> </p>
+                                        </div>
+                                        <div class="small-12 medium-8 columns">
+                                            <p class="radiop" style="font-size: 14px;"> <span id="NetspendLbl"><strong>@i.Offer_title</strong><br>@i.Discription_A @i.Discription_B.<br><strong>@i.Lower_title</strong></span> </p>
+                                            <div class="row alightn">
+                                                <div class="small-5 columns NSButtons"> <button type="button" class="labels" id="labelss" onclick="setValue()"> Yes, please!</button> </div>
+                                                <div class="small-5 end columns NSButtons"> <button type="button" class="labels" id="labels" onclick="setValues()">No thanks</button> </div>
+                                            </div>
+                                            <div class="row"> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            <div class="small-12 columns" id="panel-02" style="display: none; margin-top: 20px; padding-bottom: 0px; border-top: 0;">
+                                <div class="row-fix">
+                                    @foreach (var i in ViewBag.nocoreg)
+                                    {
+                                        <div class="medium-4 columns" style="margin: 0; padding: 0;">
+                                            <p> <img id="NetspendImage" alt="ns-logo" class="left netspendimage" src="~/UploadedImages/@i.Image" style="border-width: 0px; margin-left: 15px; border-radius: 4px; border: none; color: #fff; font-size: 0.9rem; line-height: 1.3rem; font-weight: 400; text-align: center; text-indent: 0px; padding: 7px 0px 0px 0px; margin: 0px auto 10px auto;width:10em;"> </p>
+                                        </div>
+                                        <div class="small-12 medium-8 columns">
+                                            <p class="radiop" style="font-size: 14px;"> <span id="NetspendLbl"><strong>@i.Offer_title</strong><br>@i.Discription_A @i.Discription_B.<br><strong>@i.Lower_title</strong></span> </p>
+                                            <div class="row alightn">
+                                                <div class="small-5 columns NSButtons"> <button type="button" class="labels" id="nolabelss" onclick="nosetValue()"> Yes, please!</button> </div>
+                                                <div class="small-5 end columns NSButtons"> <button type="button" class="labels" id="nolabels" onclick="nosetValues()">No thanks</button> </div>
+                                            </div>
+                                            <div class="row"> </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    }
+                    <div class="clear"></div>
+                    <label>
+                        <input type="hidden">
+                        <div class="small-12 columns opt-in" id="OptinDiv" style="margin-top:20px">
+                            @foreach (var item in ViewBag.tcpadisc)
+                            {
+                                <p class="disclosertext " style=" font-family: 'Poppins'; text-align: justify; font-size: 20px; color: black; font-weight: 400; line-height: 26px; "> @item.first <a style="color:#2199e8" onclick="openfunc()">Privacy Policy</a> , <a style="color:#2199e8" onclick="openfuncc()"> Terms &amp; Conditions </a> @item.second (<a onclick="showDiv5()" style="color:#2199e8" data-databuyers="Admediary LLC|Lexington Law|The Credit Pros|VP Media Management"> click here to view </a>), @item.third <a class="noselect" style="text-decoration:underline;color:#2199e8" href="#expe1">click here</a> @item.fourth </p>
+                            }
+                            <script>function openfunc() { windowWidth = 1130; windowHeight = 560; top = 380; var left = (screen.width - windowWidth) / 2; var top = (screen.height - top) / 4; var myWindow = window.open("/Money/privacy_policy", '_blank', 'width=' + windowWidth + ', height=' + windowHeight + ', top=' + top + ', left=' + left); } function openfuncc() { windowWidth = 1130; windowHeight = 560; top = 380; var left = (screen.width - windowWidth) / 2; var top = (screen.height - top) / 4; var myWindow = window.open("/Money/terms", '_blank', 'width=' + windowWidth + ', height=' + windowHeight + ', top=' + top + ', left=' + left); }</script>
+                            <div class="resume" id="expe1">
+                                <div class="small-12 columns opt-in" style="padding:0;">
+                                    <p> You DO have the right to have your DNC (Do Not Call) registration honored and opting in to receive outbound calls and/or SMS texts is not a requirement to complete this application. If you would not like to receive live telephone calls from our marketing partners, please check the box below: </p>
+                                </div>
+                                <div class="small-12 columns opt-in">
+                                    <input type="checkbox" runat="server" id="DNC_OPT_OUT" name="DNC_OPT_OUT" data-parsley-multiple="DNC_OPT_OUT">
+                                    <label for="DNC_OPT_OUT"></label> <p>No, I do not want to receive live telephone calls or SMS texts </p>
+                                </div>
+                            </div>
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                            <script>jQuery(document).ready(function (a) { a('a[href^="#"]').on("click", function (b) { var c = a(a(this).attr("href")); c.fadeToggle(100) }) });</script> <div class="clear"></div> <div class="small-12 columns hide-for-small-only">
+                                                                                                                                                                                                                        <div class="row optinbox optingrp">
+                                                                                                                                                                                                                            <div class="large-3 medium-3 column" style="
+    width: 19%;
+"> <img src="/asset/Money/img/arrow-p3.png" alt="" class="right animated fadeInLeft infinite hide-for-small-only" style="float:right;margin-top:20px"> <p style="text-align:center;"> <img src="/asset/Money/img/arrow-p3-down.png" alt="" class="center animated fadeInDown infinite show-for-small-only"> </p> </div> <div class="medium-9 large-9 column iconfirmmleft iconfirmmlefts">
+                                                                                                                                                                                                                                <div class="optin opt_in" style="background:transparent !important;">
+                                                                                                                                                                                                                                    <div class="row" style=" display: inline-flex;">
+                                                                                                                                                                                                                                        <div class="medium-3 columns"> <div style="background-color:transparent !important;" class="optin-left iconfirm"> <p style="display: flex; justify-content: center; float: left; margin-top: 8px;" class="parsley-error"> <input type="checkbox" runat="server" id="TERMS" name="terms" required="required" data-parsley-trigger="change" class="tooltipster confirminput" data-parsley-multiple="TERMS" data-parsley-id="97">  </p> </div> </div> <div class="small-9 medium-9 large-9 columns">
+                                                                                                                                                                                                                                            <div class="optin-right" style="background-color:transparent !important;width:160%;">
+                                                                                                                                                                                                                                                <p class="optintxt" style="
+    font-size: 16px !important;
+    font-weight: 500;
+"> that all of my information is accurate and consent to be called and texted as provided above. </p>
+                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                            </div> <div class="medium-3 columns"></div>
+                                                                                                                                                                                                                        </div>
+</div> <div class="small-12 medium-12 large-12 columns show-for-small-only"> <div class="row-fix"> <div class="small-4 medium-4 large-4 columns" style=" margin-left: -84px !important;"> <img src="~/asset/Money/img/arrow-p3.png" alt="" class="animated fadeInLeft infinite" style="/* float:right; *//* margin-top:20px; */"> <p style="text-align:center;"> <img style="display:none !important;" src="~/asset/Money/img/arrow-p3-down.png" alt="" class="center animated fadeInDown infinite show-for-small-only"> </p> </div> <div class="small-8 medium-8 large-8 columns"> <div class="optin opt_in"> <div class="row" style=" display: inline-flex;"> <div class="medium-2 columns"> <div style="/* margin-left: -2em !important; */background-color:transparent !important;" class="optin-left iconfirm"> <p style="display:flex;justify-content:center"> <input type="checkbox" runat="server" id="TERMS form1_leadem" name="terms" required="required" data-parsley-trigger="change" class="tooltipster tooltipstered confirminput" data-parsley-multiple="TERMS"> </p> </div> </div> <div class="small-9 medium-9 large-9 columns"> <div class="optin-right"> <p class="optintxt optin-txt"> that all of my information is accurate and consent to be called and texted as provided above. </p> </div> </div> </div> </div> </div> <div class="medium-3 columns"></div> </div> </div> <div class="clear"></div> <div class="small-12 columns">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <p class=" continuep text-center" style="text-align:center;">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <button type="submit" id="SUBMIT" class="btn  needs-validation button bounce infinite animated btn button wow bounce infinite animated getbtn" novalidate="" data-validates-form="" style="
+    border-bottom: 5px grey solid;
+    border-radius: 0 !important;
+    background: black !important;
+    font-size: 28px !important;
+    font-weight: 100;
+    color: white;
+    font-weight: 700;
+">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <i class="fa fa-check"></i> GET STARTED NOW
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      </button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </p>
+                                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+                                @foreach (var it in ViewBag.pop)
+                                {
+                                    if (it.switchs == "on")
+                                    {
+                                        @foreach (var item in ViewBag.popup)
+                                        {
+                                            <script type="text/javascript">(function () { window.addEventListener("load", function () { var b = document.getElementsByClassName("needs-validation"); var a = Array.prototype.filter.call(b, function (c) { c.addEventListener("submit", function (d) { if (c.checkValidity() === false) { d.preventDefault(); d.stopPropagation() } c.classList.add("was-validated"); window.open("@item.redirect_link/?tid=@ViewBag.tid&subid1=1234", "privacy", "scrollbars=yes,width=2000,height=1000"); $("#PageForm").submit(); }, false) }) } , false) })();</script>
+                                        }
+                                    }
+                                    if (it.switchs == "off")
+                                    {
+                                        <script type="text/javascript">(function () { window.addEventListener("load", function () { var b = document.getElementsByClassName("needs-validation"); var a = Array.prototype.filter.call(b, function (c) { c.addEventListener("submit", function (d) { if (c.checkValidity() === false) { d.preventDefault(); d.stopPropagation() } c.classList.add("was-validated"); @*window.open("#", "privacy", "scrollbars=yes,width=2000,height=1000");*@ $("#PageForm").submit(); }, false) }) } , false) })();</script>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </label>
+                </form>
+            </div>
+            <br> <br>
+        </div>
+    </div>
+    <br /> <br />
+</section>
+
+
+<section class="mainregtop show-for-small-only" id="main-reg">
+    <div class="row navmaxwidth">
+        <div class="small-11 small-centered medium-11 medium-centered columns mainregcolum">
+            <div class="row reg-box boxpedding">
+                <div class="small-12 columns"> <div id="browss"></div> <div id="main-regg"></div> <br /> <h1 class="subheader comp">COMPLETE THE FOLLOWING INFORMATION </h1> <h1 style=" color: #3c79aE;" class=" infor"> TO GET ACCESS TO YOUR FREE CREDIT REPORT! </h1> </div> <form class="needs-validation contact_form" action="/Money/submitoffers" name="PageForm" method="post" id="PageForm" data-parsley-validate="" novalidate="" data-parsley-errors-messages-disabled="true" autocomplete="on">
+                    <div class="small-12 columns"></div>
+                    <div class="row-fix"> <div class="small-12 medium-6 large-6 columns mb-3"> <label>Email Address</label> <input class="form-control tooltipster tooltipstered" value="@ViewBag.email" name="email" placeholder="Enter email Address here..." maxlength="100" id="form1_leadem" type="email" required="required" data-parsley-type="email"> </div> <div class="small-12 medium-6 large-6 columns"> <label>Phone Number</label> <div class="row-fix" id="otp-screen"> <div class="small-4 medium-4 large-4 columns" style="padding-left:0"> <input name="phonea" value="@ViewBag.phonea" placeholder="(000)" maxlength="3" id="form1_leadem HOME_PHONE_AREA" type="tel" required="required" data-parsley-trigger="change" class="tooltipster tooltipstered form-control phonea" data-parsley-type="digits" data-parsley-length="[3, 3]"> </div> <div class="small-4 medium-4 large-4 columns" style="padding-left:0"> <input name="phoneb" value="@ViewBag.phoneb" placeholder="000" maxlength="3" id="form1_leadem HOME_PHONE_PREFIX" type="tel" required="required" data-parsley-trigger="change" class="tooltipster tooltipstered form-control phoneb" data-parsley-type="digits" data-parsley-length="[3, 3]"> </div> <div class="small-4 medium-4 large-4 columns" style="padding-left:0;padding-right:0"> <input value="@ViewBag.phonec" name="phonec" placeholder="1234" maxlength="4" id="form1_leadem HOME_PHONE_SUFFIX" type="tel" required="required" data-parsley-trigger="change" class="tooltipster tooltipstered form-control phonec" data-parsley-type="digits" data-parsley-length="[4, 4]"> </div> </div> </div> </div> <div style="display:none;"> <input value="@ViewBag.tid" name="TRANSACTIONID" type="text"> <input value="@ViewBag.zip" name="zip" type="text"> <input value="@ViewBag.lastname" name="last_name" type="text"> <input name="first_name" type="text" placeholder="First Name" value="@ViewBag.firstname"> <input name="age" type="text" placeholder="First Name" value="@ViewBag.Age"> <input name="city" type="text" placeholder="First Name" value="@ViewBag.City"> <input name="dob" type="text" placeholder="First Name" value="@ViewBag.DOB"> <input name="gender" type="text" placeholder="First Name" value="@ViewBag.Gender"> <input name="state" type="text" placeholder="First Name" value="@ViewBag.State"> <input name="address" type="text" placeholder="First Name" value="@ViewBag.address"> <input id="leadid_token" name="universal_leadid" type="hidden" value="" /> </div> <input style="display:none;" id="bb" name="nsyesno"> <input style="display:none;" name="lf" value="SF"> <input style="display:none;" id="device" name="device">
+                    @foreach (var it in ViewBag.qa)
+                    {
+
+                        if (it.switchs == "on")
+                        {
+                            <div class="small-12 columns"></div> <div id="PanelCheckingAccount">
+                                <div class="row-fix radiobtn"> <div class="small-12 medium-12 large-12 columns"> <p class=" radiop haveactive " style="text-align:left;"> Do You have an active Checking Account? </p> <div class="small-2 medium-2 large-2 columns" style="padding-left: 0;"> <a href=""> <input data-parsley-trigger="change" type="radio" id="html" name="checkingaccount" class="rbtnHasCheckingAccountYes ooltipster tooltipstered" value="Yes" data-parsley-multiple="checkingaccount"> <label for="html">Yes</label> </a> </div> <div class="small-8 medium-8 large-8 columns" style="padding-left: 0;"> <a href=""> <input type="radio" id="htmll" name="checkingaccount" class="rbtnHasCheckingAccountNo" value="No" data-parsley-multiple="checkingaccount"> <label for="htmll">No</label> </a> </div> </div> </div>
+                            </div> @foreach (var i in ViewBag.coreg)
+
+
+
+                            {<div class="small-12 columns" id="panel-01" style="display: none; margin-top: 20px; padding-bottom: 0px; border-top: 0;"> <div class="row-fix"> <div class="medium-4 columns" style="margin: 0; padding: 0;"> <p> <img id="NetspendImage" alt="ns-logo" class="left netspendimage" src="~/UploadedImages/@i.Image"> </p> </div> <div class="small-12 medium-8 columns"> <p class="radiop" style="font-size: 14px;"> <span id="NetspendLbl"><strong>@i.Offer_title</strong><br>@i.Discription_A @i.Discription_B.<br><strong>@i.Lower_title</strong></span> </p> <div class="row alightn"> <div class="small-5 columns NSButtons"> <button type="button" class="labels" id="labelss" onclick="setValue()"> Yes, please!</button> </div> <div class="small-5 end columns NSButtons"> <button type="button" class="labels" id="labels" onclick="setValues()">No thanks</button> </div> </div> <div class="row"> </div> </div> </div> </div>} <div class="small-12 columns" id="panel-02" style="display: none; margin-top: 20px; padding-bottom: 0px; border-top: 0;">
+                                <div class="row-fix">
+                                    @foreach (var i in ViewBag.nocoreg)
+                                    {<div class="medium-4 columns" style="margin: 0; padding: 0;"> <p> <img id="NetspendImage" alt="ns-logo" class="left netspendimage" src="~/UploadedImages/@i.Image" style="border-width: 0px; margin-left: 15px; border-radius: 4px; border: none; color: #fff; font-size: 0.9rem; line-height: 1.3rem; font-weight: 400; text-align: center; text-indent: 0px; padding: 7px 0px 0px 0px; margin: 0px auto 10px auto;width:10em;"> </p> </div> <div class="small-12 medium-8 columns"> <p class="radiop" style="font-size: 14px;"> <span id="NetspendLbl"><strong>@i.Offer_title</strong><br>@i.Discription_A @i.Discription_B.<br><strong>@i.Lower_title</strong></span> </p> <div class="row alightn"> <div class="small-5 columns NSButtons"> <button type="button" class="labels" id="nolabelss" onclick="nosetValue()"> Yes, please!</button> </div> <div class="small-5 end columns NSButtons"> <button type="button" class="labels" id="nolabels" onclick="nosetValues()">No thanks</button> </div> </div> <div class="row"> </div> </div>}
+                                </div>
+                            </div>
+                        }
+                    }
+                    <div class="clear"></div><label>
+                        <input type="hidden"> <div class="small-12 columns opt-in" id="OptinDiv" style="margin-top:20px">
+                            @foreach (var item in ViewBag.tcpadisc)
+                            {<p class="disclosertext " style=" color: #666666;"> @item.first <a style="color:#2199e8" onclick="openfunc()">Privacy Policy</a> , <a style="color:#2199e8" onclick="openfuncc()"> Terms &amp; Conditions </a> @item.second (<a onclick="showDiv5()" style="color:#2199e8" data-databuyers="Admediary LLC|Lexington Law|The Credit Pros|VP Media Management"> click here to view </a>), @item.third <a class="noselect" style="text-decoration:underline;color:#2199e8" href="#expe1">click here</a> @item.fourth </p>}
+                            <script>function openfunc() { windowWidth = 1130; windowHeight = 560; top = 380; var left = (screen.width - windowWidth) / 2; var top = (screen.height - top) / 4; var myWindow = window.open("/Money/privacy_policy", '_blank', 'width=' + windowWidth + ', height=' + windowHeight + ', top=' + top + ', left=' + left); } function openfuncc() { windowWidth = 1130; windowHeight = 560; top = 380; var left = (screen.width - windowWidth) / 2; var top = (screen.height - top) / 4; var myWindow = window.open("/Money/terms", '_blank', 'width=' + windowWidth + ', height=' + windowHeight + ', top=' + top + ', left=' + left); }</script> <div class="resume" id="expe1"> <div class="small-12 columns opt-in" style="padding:0;"> <p> You DO have the right to have your DNC (Do Not Call) registration honored and opting in to receive outbound calls and/or SMS texts is not a requirement to complete this application. If you would not like to receive live telephone calls from our marketing partners, please check the box below: </p> </div> <div class="small-12 columns opt-in"> <input type="checkbox" runat="server" id="DNC_OPT_OUT" name="DNC_OPT_OUT" data-parsley-multiple="DNC_OPT_OUT"><label for="DNC_OPT_OUT"></label> <p>No, I do not want to receive live telephone calls or SMS texts </p> </div> </div>
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                            <script>jQuery(document).ready(function (a) { a('a[href^="#"]').on("click", function (b) { var c = a(a(this).attr("href")); c.fadeToggle(100) }) });</script> <div class="clear"></div> <div class="small-12 columns hide-for-small-only"> <div class="row optinbox optingrp"> <div class="large-3 medium-3 column"> <img src="/asset/Money/img/arrow-p3.png" alt="" class="right animated fadeInLeft infinite hide-for-small-only" style="float:right;margin-top:20px"> <p style="text-align:center;"> <img src="/asset/Money/img/arrow-p3-down.png" alt="" class="center animated fadeInDown infinite show-for-small-only"> </p> </div> <div class="medium-6 column iconfirmmleft iconfirmmlefts"> <div class="optin opt_in"> <div class="row" style=" display: inline-flex;"> <div class="medium-4 columns"> <div style="background-color:transparent !important;" class="optin-left iconfirm"> <p style="display:flex;justify-content:center"> <input type="checkbox" runat="server" id="TERMS" name="terms" required="required" data-parsley-trigger="change" class="tooltipster tooltipstered confirminput" data-parsley-multiple="TERMS"> I CONFIRM </p> </div> </div> <div class="small-11 medium-8 large-8 columns"> <div class="optin-right"> <p class="optintxt"> that all of my information is accurate and consent to be called and texted as provided above. </p> </div> </div> </div> </div> </div> <div class="medium-3 columns"></div> </div> </div> <div class="small-12 medium-12 large-12 columns show-for-small-only"> <div class="row-fix"> <div class="small-4 medium-4 large-4 columns" style=" margin-left: -84px !important;"> <img src="~/asset/Money/img/arrow-p3.png" alt="" class="animated fadeInLeft infinite" style="/* float:right; *//* margin-top:20px; */"> <p style="text-align:center;"> <img style="display:none !important;" src="~/asset/Money/img/arrow-p3-down.png" alt="" class="center animated fadeInDown infinite show-for-small-only"> </p> </div> <div class="small-8 medium-8 large-8 columns"> <div class="optin opt_in"> <div class="row" style=" display: inline-flex;"> <div class="medium-2 columns"> <div style="/* margin-left: -2em !important; */background-color:transparent !important;" class="optin-left iconfirm"> <p style="display:flex;justify-content:center"> <input type="checkbox" runat="server" id="TERMS form1_leadem" name="terms" required="required" data-parsley-trigger="change" class="tooltipster tooltipstered confirminput" data-parsley-multiple="TERMS"> </p> </div> </div> <div class="small-9 medium-9 large-9 columns"> <div class="optin-right"> <p class="optintxt optin-txt"> that all of my information is accurate and consent to be called and texted as provided above. </p> </div> </div> </div> </div> </div> <div class="medium-3 columns"></div> </div> </div> <div class="clear"></div> <div class="small-12 columns">
+                                <p class=" mb-10 continuep"> <button type="submit" id="SUBMIT" class="btn btncontinue needs-validation button bounce infinite animated" novalidate="" data-validates-form=""> <i style="color:#B5FF3F" class="fa fa-check"></i> Continue </button> </p>
+                                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+
+                                @foreach (var it in ViewBag.pop)
+                                {
+
+                                    if (it.switchs == "on")
+                                    {
+                                        @foreach (var item in ViewBag.popup)
+                                        {
+                                            <script type="text/javascript">(function () { window.addEventListener("load", function () { var b = document.getElementsByClassName("needs-validation"); var a = Array.prototype.filter.call(b, function (c) { c.addEventListener("submit", function (d) { if (c.checkValidity() === false) { d.preventDefault(); d.stopPropagation() } c.classList.add("was-validated"); window.open("@item.redirect_link/?tid=@ViewBag.tid&subid1=1234", "privacy", "scrollbars=yes,width=2000,height=1000"); $("#PageForm").submit(); }, false) }) } , false) })();</script>
+                                        }
+                                    }
+                                    if (it.switchs == "off")
+                                    {
+
+                                        <script type="text/javascript">(function () { window.addEventListener("load", function () { var b = document.getElementsByClassName("needs-validation"); var a = Array.prototype.filter.call(b, function (c) { c.addEventListener("submit", function (d) { if (c.checkValidity() === false) { d.preventDefault(); d.stopPropagation() } c.classList.add("was-validated"); @*window.open("#", "privacy", "scrollbars=yes,width=2000,height=1000");*@ $("#PageForm").submit(); }, false) }) } , false) })();</script>
+                                    }
+                                }
+
+
+                            </div>
+                        </div>
+
+                    </label>
+                </form>
+            </div> <br> <br>
+        </div>
+    </div> <br /> <br />
+</section>
+<section style="background-color: #ffff; margin-top: -8em;" class="pheightt show-for-small-only"> <div class="row reg-box "> <div class="cardd" style="background-color: #fafafc"> <div class="card-body"> <div class="cardd"> <div class="card-body" style=" padding: 0;"> <div class="wFormContainer"> <br><br> <p class="plineheight pheight pmtop" style="text-align:center"> <img style="width:5em" src="/Resourcse/unclaimasseticon/11.png"><img style="padding-left:2%;width:5em" src="/Resourcse/unclaimasseticon/Asset 62.png"><img style="padding-left:2%;width:5em" src="/Resourcse/unclaimasseticon/Asset 60.png"><img style="padding-left:2%;width:4em" src="/Resourcse/unclaimasseticon/Asset 61.png"> </p> <br><br> </div> </div> </div> </div> </div> </div> <br><br><br></section>
+<link href="~/popups/bootstrap-dialog.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.3/js/bootstrap-dialog.min.js"></script>
+<script>function simpleSHow(b) { var a = $("#simple-div"); BootstrapDialog.show({ title: b, message: $("#simple-div"), onhide: function () { $("#hidden-div").append(a) } }) } function complexSHow(b) { var a = $("#complex-div"); BootstrapDialog.show({ title: b, message: $("#complex-div"), onhide: function () { $("#hidden-div").append(a) } }) } function showDiv1(a) { var b = $("#lavel-2_div-1"); BootstrapDialog.show({ title: "", message: $("#lavel-2_div-1"), onhide: function () { $("#hidden-div").append(b) } }) } function showDiv2(a) { var b = $("#lavel-2_div-2"); BootstrapDialog.show({ title: "", message: $("#lavel-2_div-2"), onhide: function () { $("#hidden-div").append(b) } }) } function showDiv3(a) { var b = $("#lavel-2_div-3"); BootstrapDialog.show({ title: "Level 2 Title", message: $("#lavel-2_div-3"), onhide: function () { $("#hidden-div").append(b) } }) } function showDiv4(a) { var b = $("#lavel-2_div-4"); BootstrapDialog.show({ title: "Level 2 Title", message: $("#lavel-2_div-4"), onhide: function () { $("#hidden-div").append(b) } }) } function showDiv5(a) { var b = $("#lavel-2_div-5"); BootstrapDialog.show({ title: "", message: $("#lavel-2_div-5"), onhide: function () { $("#hidden-div").append(b) } }) }</script>
+<div style="display:none" id="hidden-div">
+    <div id="lavel-2_div-5">
+        @foreach (var i in ViewBag.offers)
+        {
+            <p> <br /> @i.Offer_Name <br /><br /> @i.description </p>
+            <p> @i.bulletpoint </p>
+        }
+    </div>
+</div>
+
+    <section class="hide-for-small-only" >
+
+        <div style="background-color: #1c7aaf;height: 33em;">
+            <div class="row">
+                <div class="large-2 column">
+                    <img src="/asset/img/Person.png" alt="twbs" class="perdsonicon rounded-circle flex-shrink-0">
+
+                </div>
+
+                <div class="large-10 column">
+
+                    <div class="boxpedding reg-box " style=" padding: 0 58px 26px 0px;">
+
+                        <h1 class="unclainlineheight whatscredit" style="padding-top: 26px;color: white !important;text-align: justify !important;font-size: 24px !important;"> 1.WHAT IS CREDIT? </h1>
+                        <h2 class="texalign fontssize"> Credit is essentially what gives you the freedom to borrow money for things you need, such as a loan or credit card. It’s all based on trust and an obligation to pay it back, which means how strong your credit is (or how trustworthy you look to people lending you money) makes a big impact on your ability to get those things. How strong your credit is can hugely affect some major life milestones, such as: </h2>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-10 centered" style=" border-bottom: 2px solid #e6e7e8; margin: 0 auto;"></div>
+            </div>
+
+            <div class="row">
+                <div class="large-2 column">
+                    <img src="/asset/img/Person.png" alt="twbs" class="perdsonicon rounded-circle flex-shrink-0">
+
+                </div>
+
+                <div class="large-10 column">
+
+                    <div class="boxpedding reg-box  hide-for-small-only" style=" padding: 0 58px 26px 0px;">
+
+
+                        <h1 class="howworks whatscredit" style="padding-top: 30px;color: white !important;padding-top: 26px;color: white !important;text-align: justify !important;font-size: 24px !important;"> 2. CHECK YOUR CREDIT </h1>
+                        <h2 class="texalign fontssize"> CreditGuidebook.com is a service that helps you find free credit reports that may be available to you. Nice job with your high-impact factors! To improve the others, check each factor’s tips. </h2>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="large-10 centered" style=" border-bottom: 2px solid #e6e7e8; margin: 0 auto;"></div>
+            </div>
+
+            <div class="row">
+                <div class="large-2 column">
+                    <img src="/asset/img/Person.png" alt="twbs" class="perdsonicon rounded-circle flex-shrink-0">
+
+                </div>
+
+                <div class="large-10 column">
+
+                    <div class="boxpedding reg-box  hide-for-small-only" style=" padding: 0 58px 26px 0px;">
+
+
+                        <h1 class="howworks whatscredit" style="padding-top: 30px;color: white !important;padding-top: 26px;color: white !important;text-align: justify !important;font-size: 24px !important;"> 3.EXPLORE TOP FREE CREDIT REPORTS AND TOOLS </h1>
+                        <h2 class="texalign fontssize "> Credit can be an overwhelming topic, but it’s important to understand! When it comes to the health of your credit and financial life, having simple, easy to understand resources available to you is the priority. Signing up to our website allows you to browse an exclusive list of top free credit report resources out there to help you get a handle on your credit situation and understand how it impacts you! </h2>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+</section>
+
+
+    <section class="hide-for-small-only" style="background-color:white;">
+        <div style="padding-bottom: 5%; padding-top: 5%;">
+            <div class="row">
+                <div class="large-9  large-centered" style="margin: 0 auto; width: 75%;">
+                    <div class="row">
+                        <div class="large-2 column">
+                            <img style=" width: 80%;" src="/asset/img/House.png">
+                            <br>
+                            <br>
+
+                            <p style="font-size: 15px;font-weight: 400;">Renting an Apartment</p>
+                        </div>
+                        <div class="large-2 column">
+                            <img style=" width: 80%;" src="/asset/img/car.png">
+                            <br>
+                            <br>
+
+                            <p style="font-size: 12px;font-weight: bold;font-size: 15px;font-weight: 400;">Getting an Auto Loan </p>
+                        </div>
+                        <div class="large-2 column">
+                            <img style=" width: 80%;" src="/asset/img/CreditCard.png">
+                            <br>
+                            <br>
+
+                            <p style="font-size: 12px;font-weight: bold;font-size: 15px;font-weight: 400;">Getting a Credit Card</p>
+                        </div>
+                        <div class="large-2 column">
+                            <img style=" width: 80%;" src="/asset/img/Job.png">
+                            <br>
+                            <br>
+
+                            <p style="font-size: 12px;font-weight: bold;font-size: 15px;font-weight: 400;">Bing Offered a Job</p>
+                        </div>
+                        <div class="large-2 column">
+                            <img style=" width: 80%;" src="/asset/img/Mortgage.png">
+                            <br>
+                            <br>
+
+                            <p style="font-size: 12px;font-weight: bold;font-size: 15px;font-weight: 400;text-align:center;">Qualifying for a Mortgage</p>
+                        </div>
+                        <div class="large-2 column">
+                            <img style=" width: 80%;" src="/asset/img/More.png">
+                            <br>
+                            <br>
+
+                            <p style="font-size: 12px;font-weight: bold;text-align:center;font-size: 15px;font-weight: 400;">and More</p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+        <section id="unclaimed-assets" >
+            <div style="display:none" id="unclaimed-money"></div>
+
+            <div id="WHAT-IS-CREDIT"></div>
+            <div class="row show-for-small-only" >
+                <div class=" small-12 medium-12 large-8 columns">
+                    <div class="boxpedding reg-box ma_col">
+                        <h1 class="unclainlineheight whatscredit" style="padding-top:30px;"> 1.WHAT IS CREDIT? </h1>
+                        <h2 class="texalign fontssize"> Credit is essentially what gives you the freedom to borrow money for things you need, such as a loan or credit card. It’s all based on trust and an obligation to pay it back, which means how strong your credit is (or how trustworthy you look to people lending you money) makes a big impact on your ability to get those things. How strong your credit is can hugely affect some major life milestones, such as: </h2>
+
+                        <section class="show-for-small-only" style="padding: 27px 27px 27px 27px; ">
+                            <div>
+                                <div class="row ">
+                                    <div class="small-6 medium-6 large-6 columns">
+                                        <div class="card">
+                                            <p style="text-align: -webkit-center; padding-top: 14%;">
+                                                <svg class="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+
+                                                    <path d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"> </path>
+                                                </svg>
+                                            </p>
+                                            <p class="rent_app text"> Renting an <br>apartment </p>
+                                        </div>
+                                    </div>
+                                    <div class="small-6 medium-6 large-6 columns">
+                                        <div class="card">
+                                            <p style="text-align: -webkit-center; padding-top: 14%;">
+                                                <svg class="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" style="width: 54px;">
+
+                                                    <path d="M176 8C182.6 8 188.4 11.1 190.9 18.09L220.3 92.05L296.4 68.93C302.7 67.03 309.5 69.14 313.6 74.27C314.1 74.85 314.5 75.45 314.9 76.08C297.8 84.32 282.7 96.93 271.4 113.3L230.4 172.5C203.1 181.4 180.6 203.5 172.6 233.4L152.7 307.4L117.4 339.9C112.6 344.4 105.5 345.4 99.64 342.6C93.73 339.7 90.16 333.6 90.62 327L96.21 247.6L17.56 235.4C11.08 234.4 5.871 229.6 4.413 223.2C2.954 216.8 5.54 210.1 10.94 206.4L76.5 161.3L37.01 92.18C33.76 86.49 34.31 79.39 38.4 74.27C42.48 69.14 49.28 67.03 55.55 68.93L131.7 92.05L161.1 18.09C163.6 11.1 169.4 8 176 8L176 8zM384.2 99.67L519.8 135.1C552.5 144.7 576.1 173.1 578.8 206.8L585.7 290.7C602.9 304.2 611.3 327 605.3 349.4L570.1 480.8C565.5 497.8 547.1 507.1 530.9 503.4L515.5 499.3C498.4 494.7 488.3 477.1 492.8 460.1L501.1 429.1L253.8 362.9L245.6 393.8C240.1 410.9 223.4 421 206.4 416.4L190.9 412.3C173.8 407.7 163.7 390.2 168.3 373.1L203.5 241.7C209.5 219.3 228.2 203.8 249.8 200.7L297.7 131.5C316.9 103.6 351.6 90.92 384.2 99.67L384.2 99.67zM367.7 161.5C361.1 159.7 354.2 162.3 350.4 167.8L318.1 214.5L519.6 268.5L515 211.1C514.5 205.2 509.8 199.6 503.2 197.8L367.7 161.5zM268.3 308.8C281.1 312.2 294.3 304.6 297.7 291.8C301.2 279 293.6 265.9 280.8 262.4C267.1 259 254.8 266.6 251.4 279.4C247.9 292.2 255.5 305.4 268.3 308.8zM528 328.7C515.2 325.3 502.1 332.9 498.6 345.7C495.2 358.5 502.8 371.6 515.6 375.1C528.4 378.5 541.6 370.9 545 358.1C548.4 345.3 540.8 332.1 528 328.7z"> </path>
+                                                </svg>
+                                            </p>
+                                            <p class="rent_app text"> Getting an<br>auto loan </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="small-6 medium-6 large-6 columns">
+                                        <div class="card">
+                                            <p style="text-align: -webkit-center; padding-top: 14%;">
+                                                <svg class="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="width: 58px;">
+
+                                                    <path d="M512 32C547.3 32 576 60.65 576 96V128H0V96C0 60.65 28.65 32 64 32H512zM576 416C576 451.3 547.3 480 512 480H64C28.65 480 0 451.3 0 416V224H576V416zM112 352C103.2 352 96 359.2 96 368C96 376.8 103.2 384 112 384H176C184.8 384 192 376.8 192 368C192 359.2 184.8 352 176 352H112zM240 384H368C376.8 384 384 376.8 384 368C384 359.2 376.8 352 368 352H240C231.2 352 224 359.2 224 368C224 376.8 231.2 384 240 384z"> </path>
+                                                </svg>
+                                            </p>
+                                            <p class="rent_app text"> Getting a <br>credit Card </p>
+                                        </div>
+                                    </div>
+                                    <div class="small-6 medium-6 large-6 columns">
+                                        <div class="card">
+                                            <p style="text-align: -webkit-center; padding-top: 14%;">
+                                                <svg class="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="">
+
+                                                    <path d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM325.8 139.7C310.1 124.1 284.8 124.1 269.2 139.7L247.8 161.1L318.7 232.1L340.1 210.7C355.8 195 355.8 169.7 340.1 154.1L325.8 139.7zM111.5 303.8L96.48 363.1C95.11 369.4 96.71 375.2 100.7 379.2C104.7 383.1 110.4 384.7 115.9 383.4L176 368.3C181.6 366.9 186.8 364 190.9 359.9L296.1 254.7L225.1 183.8L119.9 288.1C115.8 293.1 112.9 298.2 111.5 303.8z"> </path>
+                                                </svg>
+                                            </p>
+                                            <p class="rent_app text"> Bing offered <br>a job </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="small-6 medium-6 large-6 columns">
+                                        <div class="card">
+                                            <p style="text-align: -webkit-center; padding-top: 14%;"> <img src="/asset/img/pad.svg" style="width: 50px;"> </p>
+                                            <p class="text rent_appp"> Qualifying For <br>a mortgage </p>
+                                        </div>
+                                    </div>
+                                    <div class="small-6 medium-6 large-6 columns">
+                                        <div class="card">
+                                            <p style="text-align: -webkit-center; padding-top: 14%;">
+                                                <svg class="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+
+                                                    <path d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"> </path>
+                                                </svg>
+                                            </p>
+                                            <p class="rent_app text">And <br>More</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+
+                    <div class="boxpedding reg-box ma_col hide-for-small-only">
+                        <div class="row">
+                            <div class="small-12 large-12 large-centered columns">
+                                <h1 class="howworks whatscredit" style=" padding-top: 30px;"> 2. CHECK YOUR CREDIT </h1>
+                                <h2 class="texalign fontssize"> CreditGuidebook.com is a service that helps you find free credit reports that may be available to you. Nice job with your high-impact factors! To improve the others, check each factor’s tips. </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <section id="hiw" class="sectiontop show-for-small-only" style="background: white; ">
+                        <div id="CHECK_YOUR_CREDIT"></div>
+                        <div class="row">
+                            <div class="small-12 large-12 large-centered columns" style=" margin-left: 2%;">
+                                <h1 class="whatscredit"> 2. CHECK YOUR CREDIT </h1>
+                                <h2 class="texalign fontssize" style="color:black;padding:0"> <span> CreditGuidebook.com is a service that helps you find free credit reports that may be available to you. </span> Nice job with your high-impact factors! To improve the others, check each factor’s tips. </h2>
+                            </div>
+                        </div>
+                        <div class="text-gray-600 body-font">
+                            <div class="row">
+                                <div class="small-12 large-10 large-centered columns mb-5" style="margin-top:2em;">
+                                    <div class="container px-5 mx-auto ">
+                                        <div class="flex flex-wrap -m-4 ">
+                                            <div class=" p-4 lg:w-1/3 cardwidth">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <div style="background: #ffff !important;padding:0;" class="new h-25 bg-gray-100 bg-opacity-75 px-8 pt-16 pb-10 rounded-lg overflow-hidden text-center relative stepmin">
+                                                            <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 " style="color:black;margin:0px;"> STEP 1 </h1>
+                                                            <h2 style="margin: 0px; font-size: 1.1em; color: #57A4D0; font-weight: 400; "> COMPLETE INFORMATION </h2>
+                                                            <p class="leading-relaxed" style="margin: 0px; color: black; padding: 0;"> Submit some basic information to get started. </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="p-4 lg:w-1/3 cardwidth">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <div style="background: #ffff !important;padding:0;" class="stepmin new h-25 bg-gray-100 bg-opacity-75 px-8 pt-16 pb-10 rounded-lg overflow-hidden text-center relative">
+                                                            <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 " style="color: black; margin: 0px;"> STEP 2 </h1>
+                                                            <h2 style="margin: 0px; font-size: 1.1em; color: #57A4D0; font-weight: 400; "> COMPARE RATES </h2>
+                                                            <p class="leading-relaxed " style="color: black; margin: 0px;"> Shop affordable auto insurance rates from top brands! </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="p-4 lg:w-1/3 cardwidth">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <div style="background: #ffff !important;padding:0;" class="stepmin new h-25 bg-gray-100 bg-opacity-75 px-8 pt-16 pb-10 rounded-lg overflow-hidden text-center relative">
+                                                            <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 " style="color: black; margin: 0px;"> STEP 3 </h1>
+                                                            <h2 style="margin: 0px; font-size: 1.1em; color: #57A4D0; font-weight: 400; "> SAVE MONEY </h2>
+                                                            <p class="leading-relaxed " style="margin: 0px; color: black; padding: 0;"> Find the best rate for you and keep more money in your pocket!! </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br /> <br />
+
+                                        <div class="row ">
+                                            <div class="small-12 large-10 large-centered columns mb-5" style="padding:0;">
+                                                <div class="col-12">
+                                                    <div class="col-6">
+                                                        <div class="card" style="border-top: 5px solid #57a4d0; border-radius: 2px !important;">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title cardheader mb-1">Payment History</h5>
+                                                                <p class="" style="text-align:center;"> <button class="mb-1" style=" border-radius: 6%; padding-left: 3%; padding-right: 3%; font-weight: bold; background: #718096; color: white;"> High Impact </button> </p>
+                                                                <h5 class="card-title mb-1 hunderd">100%</h5>
+                                                                <p class="card-text" style="text-align:center;"> Percentage of payments you've made on time. </p>
+                                                                <p style="text-align:center;margin-top: -1em;">
+                                                                    <a style=" background: none; color: #57a4d0; display: inline-flex; " href="#" class="btn btn-primary">
+                                                                        View Details
+                                                                        <i style=" margin-top: 3px; margin-left: 9px; ">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                                                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"> </path>
+                                                                            </svg>
+                                                                        </i>
+                                                                    </a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="desktophide tabshoww" style="height:20px;"></div>
+                                                    <div class="col-6">
+                                                        <div class="card" style=" border-top: 5px solid #57a4d0; border-radius: 2px !important;">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title cardheader mb-1">Credit card use</h5>
+                                                                <p class="" style="text-align:center;"> <button class="mb-1" style=" border-radius: 6%; padding-left: 3%; padding-right: 3%; font-weight: bold;background: #718096; color: white;"> High Impact </button> </p>
+                                                                <h5 class="card-title mb-1 hunderd">4%</h5>
+                                                                <p class="card-text" style="text-align:center;"> How much credit you're using compared to your total limits. </p>
+                                                                <p style="text-align:center;margin-top: -1em;">
+                                                                    <a style=" background: none; color: #57a4d0; display: inline-flex; " href="#" class="btn btn-primary">
+                                                                        View Details
+                                                                        <i style=" margin-top: 3px; margin-left: 9px; ">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                                                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"> </path>
+                                                                            </svg>
+                                                                        </i>
+                                                                    </a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="desktophide tabshoww" style="height:20px;"></div>
+                                                    <div class="col-6">
+                                                        <div class="card" style=" border-top: 5px solid #57a4d0;">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title cardheader mb-1">Derogatory marks</h5>
+                                                                <p class="" style="text-align:center;"> <button class="mb-1" style=" border-radius: 6%; padding-left: 3%; padding-right: 3%; font-weight: bold; background: #718096; color: white;"> High Impact </button> </p>
+                                                                <h5 class="card-title mb-1 hunderd">0</h5>
+                                                                <p class="card-text" style="text-align:center;"> Collections, tax liens, bankruptcies or civil judgments on your report. </p>
+                                                                <p style="text-align:center;margin-top: -1em;">
+                                                                    <a style=" background: none; color: #57a4d0; display: inline-flex; " href="#" class="btn btn-primary">
+                                                                        View Details
+                                                                        <i style=" margin-top: 3px; margin-left: 9px; ">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                                                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"> </path>
+                                                                            </svg>
+                                                                        </i>
+                                                                    </a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="height:20px;"></div>
+                                        <div class="row">
+                                            <div class="small-12 large-10 large-centered columns mb-5" style="padding:0;">
+                                                <div class="col-6">
+                                                    <div class="card" style="border-radius:2px !important;">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title cardheader mb-1">Credit age</h5>
+                                                            <p class="" style="text-align:center;"> <button class="mb-1" style=" border-radius: 6%; padding-left: 3%; padding-right: 3%; font-weight: bold;background: #718096;color: white;"> MEDIUM IMPACT </button> </p>
+                                                            <h5 class="card-title mb-1 hunderd">6 yrs, 11 mos</h5>
+                                                            <p class="card-text" style="text-align:center;"> Average age of your open accounts. </p>
+                                                            <p style="text-align:center;margin-top: -1em;">
+                                                                <a style=" background: none; color: #57a4d0; display: inline-flex; " href="#" class="btn btn-primary">
+                                                                    View Details
+                                                                    <i style=" margin-top: 3px; margin-left: 9px; ">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"> </path>
+                                                                        </svg>
+                                                                    </i>
+                                                                </a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="desktophide tabshoww" style="height:20px;"></div>
+                                                <div class="col-6">
+                                                    <div class="card" style=" border-top: 5px solid #57a4d0; border-radius: 2px !important;">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title cardheader mb-1">Total accounts</h5>
+                                                            <p class="" style="text-align:center;"> <button class="mb-1" style=" border-radius: 6%; padding-left: 3%; padding-right: 3%; font-weight: bold;background: #718096;color: white;"> LOW IMPACT </button> </p>
+                                                            <h5 class="card-title mb-1 hunderd">24</h5>
+                                                            <p class="card-text" style="text-align:center;"> Total open and closed accounts. </p>
+                                                            <p style="text-align:center;margin-top: -1em;">
+                                                                <a style=" background: none; color: #57a4d0; display: inline-flex; " href="#" class="btn btn-primary">
+                                                                    View Details
+                                                                    <i style=" margin-top: 3px; margin-left: 9px; ">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"> </path>
+                                                                        </svg>
+                                                                    </i>
+                                                                </a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="desktophide tabshoww" style="height:20px;"></div>
+                                                <div class="col-6">
+                                                    <div class="card" style=" border-top: 5px solid #57a4d0; border-radius: 2px !important;">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title cardheader mb-1">Hard inquiries</h5>
+                                                            <p class="" style="text-align:center;"> <button class="mb-1" style=" border-radius: 6%; padding-left: 3%; padding-right: 3%; font-weight: bold; background: #718096;color: white;"> LOW IMPACT </button> </p>
+                                                            <h5 class="card-title mb-1 hunderd">2</h5>
+                                                            <p class="card-text" style="text-align:center;"> Number of times you've applied for credit. </p>
+                                                            <p style="text-align:center;margin-top: -1em;">
+                                                                <a style=" background: none; color: #57a4d0; display: inline-flex; " href="#" class="btn btn-primary">
+                                                                    View Details
+                                                                    <i style=" margin-top: 3px; margin-left: 9px; ">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"> </path>
+                                                                        </svg>
+                                                                    </i>
+                                                                </a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="small-12 columns" style="padding: 0;">
+                                            <p class=" text-center"> <a href="#main-regg" onclick="javascript:" class="rc-trigger"> <button href="#main-regg" class="btn button wow bounce infinite animated animated animated" style="color:white;width: 100%;font-size: 1.4rem; margin-top: 1em; padding: 20px 30px; background: linear-gradient(rgb(36, 153, 222), rgb(26, 113, 163)); box-shadow: none; visibility: visible; animation-name: bounce; border-radius: 6px; font-weight: 400; text-transform: uppercase; font-family: Oswald, sans-serif;"> <i style="color: #B5FF3F;" class="fa fa-check"></i> GET STARTED NOW </button> </a> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="boxpedding reg-box ma_col">
+                        <div class="row">
+                            <div class="small-12 large-12 large-centered columns">
+                                <h1 class="howworks whatscredit" style=" padding-top: 30px;"> 3.EXPLORE TOP FREE CREDIT REPORTS AND TOOLS </h1>
+                                <h2 class="texalign fontssize "> Credit can be an overwhelming topic, but it’s important to understand! When it comes to the health of your credit and financial life, having simple, easy to understand resources available to you is the priority. Signing up to our website allows you to browse an exclusive list of top free credit report resources out there to help you get a handle on your credit situation and understand how it impacts you! </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                @*dsdjdd*@
+
+
+
+                <div class="small-4 medium-4 large-4 columns hide-for-small-only" style=" margin-top: 70px;">
+                    <div class="hide-for-small-only">
+                        <div class="row-fix ">
+                            <div class="small-4 medium-4 large-4 columns" style=" padding-left: 0;">
+                                <div class="" style="height: 8.6em;">
+                                    <p style="text-align: -webkit-center;padding-top: 14%;margin-bottom: 24px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="90" height="85" viewBox="0 0 24 24" style="fill: #000000;/* width: 54px; *//* height: 2.3em; */">
+                                            <path d="M 12 2.0996094 L 1 12 L 4 12 L 4 21 L 10 21 L 10 15 L 14 15 L 14 21 L 20 21 L 20 12 L 23 12 L 12 2.0996094 z" style="
+"></path>
+                                        </svg>
+                                    </p>
+                                    <p class="text desktopicon" style="
+    margin-top: -4px;
+">Renting an <br>apartment</p>
+                                </div>
+                            </div>
+                            <div class="small-4 medium-4 large-4 columns" style=" padding-left: 0;">
+                                <div class="" style=" height: 8.6em;">
+                                    <p style="text-align: -webkit-center; padding-top: 14%;">
+                                        <svg class="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" style="width: 94px;">
+
+                                            <path d="M176 8C182.6 8 188.4 11.1 190.9 18.09L220.3 92.05L296.4 68.93C302.7 67.03 309.5 69.14 313.6 74.27C314.1 74.85 314.5 75.45 314.9 76.08C297.8 84.32 282.7 96.93 271.4 113.3L230.4 172.5C203.1 181.4 180.6 203.5 172.6 233.4L152.7 307.4L117.4 339.9C112.6 344.4 105.5 345.4 99.64 342.6C93.73 339.7 90.16 333.6 90.62 327L96.21 247.6L17.56 235.4C11.08 234.4 5.871 229.6 4.413 223.2C2.954 216.8 5.54 210.1 10.94 206.4L76.5 161.3L37.01 92.18C33.76 86.49 34.31 79.39 38.4 74.27C42.48 69.14 49.28 67.03 55.55 68.93L131.7 92.05L161.1 18.09C163.6 11.1 169.4 8 176 8L176 8zM384.2 99.67L519.8 135.1C552.5 144.7 576.1 173.1 578.8 206.8L585.7 290.7C602.9 304.2 611.3 327 605.3 349.4L570.1 480.8C565.5 497.8 547.1 507.1 530.9 503.4L515.5 499.3C498.4 494.7 488.3 477.1 492.8 460.1L501.1 429.1L253.8 362.9L245.6 393.8C240.1 410.9 223.4 421 206.4 416.4L190.9 412.3C173.8 407.7 163.7 390.2 168.3 373.1L203.5 241.7C209.5 219.3 228.2 203.8 249.8 200.7L297.7 131.5C316.9 103.6 351.6 90.92 384.2 99.67L384.2 99.67zM367.7 161.5C361.1 159.7 354.2 162.3 350.4 167.8L318.1 214.5L519.6 268.5L515 211.1C514.5 205.2 509.8 199.6 503.2 197.8L367.7 161.5zM268.3 308.8C281.1 312.2 294.3 304.6 297.7 291.8C301.2 279 293.6 265.9 280.8 262.4C267.1 259 254.8 266.6 251.4 279.4C247.9 292.2 255.5 305.4 268.3 308.8zM528 328.7C515.2 325.3 502.1 332.9 498.6 345.7C495.2 358.5 502.8 371.6 515.6 375.1C528.4 378.5 541.6 370.9 545 358.1C548.4 345.3 540.8 332.1 528 328.7z"> </path>
+                                        </svg>
+                                    </p>
+                                    <p class="text desktopicon">Getting an<br>auto loan</p>
+                                </div>
+                            </div>
+
+                            <div class="small-4 medium-4 large-4 columns" style=" padding-left: 0;">
+                                <div class="" style=" height: 8.6em;">
+                                    <p style="text-align: -webkit-center;padding-top: 22%;">
+                                        <svg class="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="width: 74px;">
+
+                                            <path d="M512 32C547.3 32 576 60.65 576 96V128H0V96C0 60.65 28.65 32 64 32H512zM576 416C576 451.3 547.3 480 512 480H64C28.65 480 0 451.3 0 416V224H576V416zM112 352C103.2 352 96 359.2 96 368C96 376.8 103.2 384 112 384H176C184.8 384 192 376.8 192 368C192 359.2 184.8 352 176 352H112zM240 384H368C376.8 384 384 376.8 384 368C384 359.2 376.8 352 368 352H240C231.2 352 224 359.2 224 368C224 376.8 231.2 384 240 384z"> </path>
+                                        </svg>
+                                    </p>
+                                    <p class="text desktopicon">Getting a <br>credit Card</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row-fix ">
+                            <div class="small-4 medium-4 large-4 columns" style=" padding-left: 0;">
+                                <div class="" style="margin-top: 3em; height: 8.6em;">
+                                    <p style="text-align: -webkit-center; padding-top: 14%;">
+                                        <svg class="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="">
+                                            <!--! Font Awesome Pro 6.1.1 by fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                            <path d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM325.8 139.7C310.1 124.1 284.8 124.1 269.2 139.7L247.8 161.1L318.7 232.1L340.1 210.7C355.8 195 355.8 169.7 340.1 154.1L325.8 139.7zM111.5 303.8L96.48 363.1C95.11 369.4 96.71 375.2 100.7 379.2C104.7 383.1 110.4 384.7 115.9 383.4L176 368.3C181.6 366.9 186.8 364 190.9 359.9L296.1 254.7L225.1 183.8L119.9 288.1C115.8 293.1 112.9 298.2 111.5 303.8z"> </path>
+                                        </svg>
+                                    </p>
+                                    <p class="text desktopicon">Bing offered <br>a job</p>
+                                </div>
+                            </div>
+                            <div class="small-4 medium-4 large-4 columns" style=" padding-left: 0;">
+                                <div class="" style="margin-top: 3em; height: 8.6em;">
+                                    <p style="margin-top: -14px;text-align: -webkit-center;"> <img src="/asset/img/pad.png" style="width: 80px;"> </p>
+                                    <p class="text desktopicon" style="margin-top: -41px;"> Qualifying For <br>a mortgage </p>
+                                </div>
+                            </div>
+                            <div class="small-4 medium-4 large-4 columns" style=" padding-left: 0;">
+                                <div class="" style="margin-top: 3em; height: 8.6em;">
+                                    <p style="text-align: -webkit-center; padding-top: 14%;">
+                                        <svg class="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <!--! Font Awesome Pro 6.1.1 by fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                            <path d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"> </path>
+                                        </svg>
+                                    </p>
+                                    <p class="text desktopicon" style="
+    margin-top: 41px;
+">And <br>More</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+</div>
+
+        <section class="hide-for-small-only" style=" background-color: #1c7aaf;  padding: 5%;height:24em;margin-top:-51px;">
+            <div class="row ">
+                <div class=" small-12 medium-12 large-12 columns" style="margin-top: -2%; padding: 0;">
+                    <section id="hiw" class="sectiontop" style="background: transparent;min-height: 11em;">
+
+                        <style>
+                            .img-top {
+                                overflow: hidden;
+                                width: auto;
+                                height: 200px;
+                                /*   max-height: 30vh; */
+                            }
+
+                                .img-top:hover img {
+                                    transform: scale(1.5);
+                                    filter: grayscale(0%);
+                                }
+
+                                .img-top a span {
+                                    display: block;
+                                    position: absolute;
+                                    background-color: #00ffd1;
+                                    cursor: pointer;
+                                    /*   z-index: 2; */
+                                }
+
+                                    .img-top a span:nth-child(1) {
+                                        background-color: #00ffd1;
+                                        right: 0;
+                                        top: 200px;
+                                        width: 100%;
+                                        height: 5px;
+                                        transform: scaleX(0);
+                                        transform-origin: right;
+                                        transition: transform 0.5s ease-in-out;
+                                    }
+
+                                .img-top:hover a span:nth-child(1) {
+                                    background-color: #00ffd1;
+                                    transform: scaleX(1);
+                                    transform-origin: left;
+                                    transition: transform 0.5s ease-in-out;
+                                }
+
+                                .img-top a span:nth-child(2) {
+                                    background-color: #00ffd1;
+                                    right: 0;
+                                    top: 0;
+                                    width: 100%;
+                                    height: 5px;
+                                    border-radius: 5px 5px 0 0;
+                                    transform: scaleX(0);
+                                    transform-origin: left;
+                                    transition: transform 0.5s ease-in-out;
+                                }
+
+                                .img-top:hover a span:nth-child(2) {
+                                    background-color: #00ffd1;
+                                    transform: scaleX(1);
+                                    transform-origin: right;
+                                    transition: transform 0.5s ease-in-out;
+                                }
+
+                            .img-profile {
+                                width: 80px;
+                                height: 80px;
+                                border-radius: 50%;
+                                overflow: hidden;
+                                box-shadow: 0 0 0 5px white;
+                            }
+
+                                .img-profile:hover {
+                                    box-shadow: 0 0 0 5px #1c7aaf;
+                                    transition: box-shadow 0.3s ease-in-out;
+                                }
+
+                                    .img-profile:hover img {
+                                        transform: scale(1.5);
+                                        filter: grayscale(0%);
+                                    }
+
+                            img {
+                                /*   aspect-ratio: 1/1; */
+                                margin: auto;
+                                width: 100%;
+                                height: auto;
+                                vertical-align: top;
+                            }
+
+                            .media-bar {
+                                height: 50px;
+                                width: 100%;
+                                display: flex;
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                justify-content: space-around;
+                                align-items: center;
+                                padding: 5px;
+                                background-color: #222;
+                            }
+                        </style>
+                        <div class="small-12 medium-12 large-3 columns cardpending">
+                            <div class="card card_dd">
+                                <div class="card-body">
+
+                                    <div class="img-profile position-absolute top-0 start-50 translate-middle" style=" margin: -4em auto 0 auto;">
+                                        <img src="/asset/img/Star.png" class="animate" alt="">
+                                    </div>
+
+
+
+                                    <h5 class="card-title cardheader mb-1">Payment History</h5>
+                                    <p class="" style="text-align:center;margin:0;">
+                                        <button class="mb-1 pbtn" style="
+    font-size: 12px;
+">
+                                            High Impact
+                                        </button>
+                                    </p>
+                                    <h5 class="card-title mb-1 hunderd">100%</h5>
+                                    <p class="card-text" style="font-family: 'Poppins';font-weight: 500;text-align:center;margin:0;padding-left: 30px;padding-right: 30px;"> Percentage of payments you've made on time. </p>
+                                    <p style="text-align:center;margin-top: -1em;margin-bottom:0px;">
+                                        <a href="#" class="btn btn-primary aa" style="
+    font-size: 13px;
+    padding-top: 25px;
+">
+                                            View Details
+                                         
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="show-for-small-only" style="height:20px;min-height: 15em;"></div>
+                        <div class="small-12 medium-12 large-3 columns cardpending">
+                            <div class="card card_dd">
+                                <div class="card-body">
+                                    <div class="img-profile position-absolute top-0 start-50 translate-middle" style=" margin: -4em auto 0 auto;">
+                                        <img src="/asset/img/Star.png" class="animate" alt="">
+                                    </div>
+                                    <h5 class="card-title cardheader mb-1">Credit card use</h5>
+                                    <p class="" style="text-align:center;margin:0px;">
+                                        <button class="mb-1 pbtn" style="
+    font-size: 12px;
+">
+                                            High Impact
+                                        </button>
+                                    </p>
+                                    <h5 class="card-title mb-1 hunderd">4%</h5>
+                                    <p class="card-text" style="text-align: center; margin: 0px;"> How much credit you're using compared to your total limits. </p>
+                                    <p style="text-align:center;margin-top: -1em;margin-bottom:0px;">
+                                        <a href="#" class="btn btn-primary aa" style="
+    font-size: 13px;
+    padding-top: 25px;
+">
+                                            View Details
+                                           
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="show-for-small-only" style="height:20px;min-height: 15em;"></div>
+                        <div class="small-12 medium-12 large-3 columns cardpending">
+                            <div class="card card_dd">
+                                <div class="card-body">
+                                    <div class="img-profile position-absolute top-0 start-50 translate-middle" style=" margin: -4em auto 0 auto;">
+                                        <img src="/asset/img/Star.png" class="animate" alt="">
+                                    </div>
+                                    <h5 class="card-title cardheader mb-1">Derogatory marks</h5>
+                                    <p class="" style="text-align:center;margin:0;">
+                                        <button class="mb-1 pbtn" style="
+    font-size: 12px;
+">
+                                            High Impact
+                                        </button>
+                                    </p>
+                                    <h5 class="card-title mb-1 hunderd">10</h5>
+                                    <p class="card-text" style="text-align: center; margin: 0px;"> Collections, tax liens, bankruptcies or civil judgments on your report. </p>
+                                    <p style="text-align:center;margin-top: -1em;margin-bottom:0;">
+                                        <a href="#" class="btn btn-primary aa" style="
+    font-size: 13px;
+    padding-top: 25px;
+">
+                                            View Details
+                                          
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="show-for-small-only" style="height:20px;min-height: 15em;"></div>
+                        <div class="small-12 medium-12 large-3 columns cardpending cardpendingright">
+                            <div class="card card_dd">
+                                <div class="card-body">
+                                    <div class="img-profile position-absolute top-0 start-50 translate-middle" style=" margin: -4em auto 0 auto;">
+                                        <img src="/asset/img/Star.png" class="animate" alt="">
+                                    </div>
+                                    <h5 class="card-title cardheader mb-1">Credit age</h5>
+                                    <p class="" style="text-align: center; margin: 0px;">
+                                        <button class="mb-1 pbtn" style="
+    font-size: 12px;
+">
+                                            MEDIUM IMPACT
+                                        </button>
+                                    </p>
+                                    <h5 class="card-title mb-1 hunderd">6 yrs, 11 mos</h5>
+                                    <p class="card-text" style="text-align: center; margin: 0px;">Average age of your open accounts.</p>
+                                    <p style="text-align:center;margin-top: -1em;margin-bottom:0;">
+                                        <a href="#" class="btn btn-primary aa" style="
+    font-size: 13px;
+    padding-top: 50px;
+">
+                                            View Details
+                                           
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="" style="height:20px;min-height: 15em;"></div>
+
+                        <div class="small-4 medium-4 large-4 columns" style="padding-left: 0;display:none;">
+                            <div class="card card_dd">
+                                <div class="card-body">
+                                    <div class="img-profile position-absolute top-0 start-50 translate-middle" style=" margin: -4em auto 0 auto;">
+                                        <img src="/asset/img/Star.png" class="animate" alt="">
+                                    </div>
+                                    <h5 class="card-title cardheader mb-1">Total accounts</h5>
+                                    <p class="" style="text-align:center;"> <button class="mb-1 pbtn"> LOW IMPACT </button> </p>
+                                    <h5 class="card-title mb-1 hunderd">24</h5>
+                                    <p class="card-text" style="text-align:center; margin:0;">Total open and closed accounts.</p>
+                                    <p style="text-align:center;margin-top: -1em;margin-bottom:0;">
+                                        <a href="#" class="btn btn-primary aa">
+                                            View Details
+                                            <i class="ii">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"> </path>
+                                                </svg>
+                                            </i>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-4 medium-4 large-4 columns" style="padding-left: 0; padding-right: 0;display:none;">
+                            <div class="card card_dd">
+                                <div class="card-body">
+                                    <h5 class="card-title cardheader mb-1">Hard inquiries</h5>
+                                    <p class="" style="text-align:center;margin:0;"> <button class="mb-1 pbtn"> LOW IMPACT </button> </p>
+                                    <h5 class="card-title mb-1 hunderd">2</h5>
+                                    <p class="card-text text-center" style="margin: 0px;"> Number of times you've applied for credit. </p>
+                                    <p style="text-align:center;margin-top: -1em;margin-bottom:0;">
+                                        <a href="#" class="btn btn-primary aa">
+                                            View Details
+                                            <i class="ii">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"> </path>
+                                                </svg>
+                                            </i>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </section>
+
+
+<br />
+<div class="row" style="display:none;">
+    <div class="small-12  medium-12 cardtopp ">
+        <div class="row-fix">
+            <div class="small-12 medium-12 large-4 columns cardpending">
+                <div class="cardd" style=" box-shadow: 0px 6px 8px 3px rgb(0 0 0 / 20%); height: 6em;">
+                    <div class="card-body">
+                        <div class="row-fix">
+                            <div class="small-10 medium-10 large-10 columns ">
+                                <h5 style="color:cornflowerblue;">Credit Cards</h5>
+                                <p>Browse All Available Cards</p>
+                            </div>
+                            <div class="small-2 medium-2 large-2 columns"> <img src="/asset/img/arrowwleft.png" style="width: 2em;margin-top: 1.2em;"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="show-for-small-only" style="height:20px;min-height: 8em;"></div>
+            <div class="small-12 medium-12 large-4 columns cardpending ">
+                <div class="cardd" style=" box-shadow: 0px 6px 8px 3px rgb(0 0 0 / 20%); height: 6em;">
+                    <div class="card-body">
+                        <div class="row-fix">
+                            <div class="small-10 medium-10 large-10 columns">
+                                <h5 style="color:cornflowerblue;">Personal Loans</h5>
+                                <p>Tell Us More About Yourself To See More Personalized Offers</p>
+                            </div>
+                            <div class="small-2 medium-2 large-2 columns"> <img src="/asset/img/arrowwleft.png" style="width: 2em;margin-top: 1.2em;"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="show-for-small-only" style="height:20px;min-height: 8em;"></div>
+            <div class="small-12 medium-12 large-4 columns cardpending cardpendingright">
+                <div class="cardd" style=" box-shadow: 0px 6px 8px 3px rgb(0 0 0 / 20%); height: 6em;">
+                    <div class="card-body">
+                        <div class="row-fix">
+                            <div class="small-10 medium-10 large-10 columns">
+                                <h5 style="color:cornflowerblue;">Personal Loans</h5>
+                                <p>Tell Us More About Yourself To See More Personalized Offers</p>
+                            </div>
+                            <div class="small-2 medium-2 large-2 columns"> <img src="/asset/img/arrowwleft.png" style="width: 2em;margin-top: 1.2em;"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="" style="display:none;">
+    <div class="row">
+        <div class="small-12 large-10 large-centered columns">
+            <div class="cardd" style=" box-shadow: 0px 6px 8px 3px rgb(0 0 0 / 20%); height: 6em;">
+                <div class="card-body">
+                    <div class="row-fix">
+                        <div class="small-10 medium-10 large-10 columns">
+                            <h5 style="color:cornflowerblue;">Credit Cards</h5>
+                            <p>Browse All Available Cards</p>
+                        </div>
+                        <div class="small-2 medium-2 large-2 columns"> <img src="/asset/img/arrowwleft.png" style="width: 2em;margin-top: 1.2em;"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="small-12 large-10 large-centered columns">
+            <div class="cardd" style=" box-shadow: 0px 6px 8px 3px rgb(0 0 0 / 20%);">
+                <div class="card-body">
+                    <div class="row-fix">
+                        <div class="small-10 medium-10 large-10 columns">
+                            <h5 style="color:cornflowerblue;">Personal Loans</h5>
+                            <p>Tell Us More About Yourself To See More Personalized Offers</p>
+                        </div>
+                        <div class="small-2 medium-2 large-2 columns"> <img src="/asset/img/arrowwleft.png" style="width: 2em;margin-top: 2.2em;"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<div class="hide-for-small-only" style="background-color: white; height: 3em; margin-top: -2em;"></div>
+<section class="hide-for-small-only">
+    <div>
+        <br>
+        <div class="row">
+            <div class="large-4 column" style=" border-right: 3px solid;">
+                <div class="row">
+                    <div class="large-3 column">
+                        <img src="/asset/img/PersonBlue.png" alt="twbs" class="personicon rounded-circle flex-shrink-0">
+
+                    </div>
+
+                    <div class="large-9 column">
+
+                        <div class="boxpedding reg-box  hide-for-small-only" style=" padding: 0 58px 26px 0px;">
+
+
+                            <h1 class="howworks whatscredit" style="font-family: 'Poppins' !important;font-weight: 600 !important;padding-top: 30px;color: black !important;">Credit Cards </h1>
+                            <h2 class="texalign fontssize" style="
+    font-family: 'Poppins';
+">
+                                Browse All Available Cards
+                            </h2><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="large-4 column" style=" border-right: 3px solid;">
+                <div class="row">
+                    <div class="large-3 column">
+                        <img src="/asset/img/PersonBlue.png" alt="twbs" class="personicon rounded-circle flex-shrink-0">
+
+                    </div>
+
+                    <div class="large-9 column">
+
+                        <div class="boxpedding reg-box  hide-for-small-only" style=" padding: 0 58px 26px 0px;">
+
+
+                            <h1 class="howworks whatscredit" style="font-family: 'Poppins' !important;font-weight: 600 !important;padding-top: 30px;color: black !important;"> Personal Loans </h1>
+                            <h2 class="texalign fontssize" style="
+    font-family: 'Poppins';
+">
+                                Tell Us More About Yourself To See
+                                More Personalized Offers
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="large-4 column">
+                <div class="row">
+                    <div class="large-3 column">
+                        <img src="/asset/img/PersonBlue.png" alt="twbs" class="personicon rounded-circle flex-shrink-0">
+
+                    </div>
+
+                    <div class="large-9 column">
+
+                        <div class="boxpedding reg-box  hide-for-small-only" style=" padding: 0 58px 26px 0px;">
+
+
+                            <h1 class="howworks whatscredit" style="font-family: 'Poppins' !important;font-weight: 600 !important;padding-top: 30px;color: black !important;"> Personal Loans </h1>
+                            <h2 class="texalign fontssize" style="
+    font-family: 'Poppins';
+">
+                                Tell Us More About Yourself To See
+                                More Personalized Offers
+                            </h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</section>
+
+<style>
+    .my-5 {
+        margin-top: 1.25rem;
+        margin-bottom: 0;
+    }
+</style>
+
+
+@* fordesktop*@
+<br />
+<div class="row show-for-small-only">
+    <div class="small-12  medium-12 cardtopp ">
+        <div class="row-fix">
+            <div class="small-12 medium-12 large-4 columns cardpending">
+                <div class="cardd" style=" box-shadow: 0px 6px 8px 3px rgb(0 0 0 / 20%); height: 6em;">
+                    <div class="card-body">
+                        <div class="row-fix">
+                            <div class="small-10 medium-10 large-10 columns ">
+                                <h5 style="color:cornflowerblue;">Credit Cards</h5>
+                                <p>Browse All Available Cards</p>
+                            </div>
+                            <div class="small-2 medium-2 large-2 columns"> <img src="/asset/img/arrowwleft.png" style="width: 2em;margin-top: 1.2em;"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="show-for-small-only" style="height:20px;min-height: 8em;"></div>
+            <div class="small-12 medium-12 large-4 columns cardpending ">
+                <div class="cardd" style=" box-shadow: 0px 6px 8px 3px rgb(0 0 0 / 20%); height: 6em;">
+                    <div class="card-body">
+                        <div class="row-fix">
+                            <div class="small-10 medium-10 large-10 columns">
+                                <h5 style="color:cornflowerblue;">Personal Loans</h5>
+                                <p>Tell Us More About Yourself To See More Personalized Offers</p>
+                            </div>
+                            <div class="small-2 medium-2 large-2 columns"> <img src="/asset/img/arrowwleft.png" style="width: 2em;margin-top: 1.2em;"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="show-for-small-only" style="height:20px;min-height: 8em;"></div>
+            <div class="small-12 medium-12 large-4 columns cardpending cardpendingright">
+                <div class="cardd" style=" box-shadow: 0px 6px 8px 3px rgb(0 0 0 / 20%); height: 6em;">
+                    <div class="card-body">
+                        <div class="row-fix">
+                            <div class="small-10 medium-10 large-10 columns">
+                                <h5 style="color:cornflowerblue;">Personal Loans</h5>
+                                <p>Tell Us More About Yourself To See More Personalized Offers</p>
+                            </div>
+                            <div class="small-2 medium-2 large-2 columns"> <img src="/asset/img/arrowwleft.png" style="width: 2em;margin-top: 1.2em;"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section style=" background-color: white; padding-top: 2%;">
+    <div class="row" style=" overflow-x: hidden;">
+
+        <div class="col-md-4 cardpending">
+            <div class="cardd" style=" box-shadow: 3px 4px 0px 4px #1c7aaf !important; border-radius: 20px !important;">
+                <div class="card-body">
+                    <img style="width:100%" src="~/asset/card.png" />
+                    <h4 class="cardh" style=" color: black; text-transform: none; padding-top: 2.5%; font-weight: bold; padding-bottom: 5%; "> Platinum Card<sup style=" font-size: 14px; font-weight: bold;">®</sup> from American Express </h4> <span class="staric"> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> </span> <p class="cardp"> <span> <img class="cardimg" src="~/asset/img/VerifiedTick.png"> </span> Your Chance in approval is <span style="font-weight:bold;">excellent</span> </p>
+                    <p class="btnapplynow" style="text-align:center"> <a href="#main-regg" onclick="javascript:" class="rc-trigger"> <button   href="#main-regg" class="btn button wow bounce infinite animated btnbounce"> <i  class="fa fa-check"></i> Apply NOW! </button> </a> </p>
+                </div>
+
+            </div>
+            <br />
+        </div>
+        <div class="col-md-4 cardpending">
+            <div class="cardd" style=" box-shadow: 3px 4px 0px 4px #1c7aaf !important; border-radius: 20px !important;">
+                <div class="card-body">
+                    <img style="width:100%" src="~/asset/gold-card.png">
+                    <h4 class="cardh" style=" color: black; text-transform: none; padding-top: 2.5%; font-weight: bold; padding-bottom: 5%;"> American Express <sup style=" font-size: 14px; font-weight: bold;">®</sup>Gold Card </h4> <span class="staric"> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star "></span> </span> <p class="cardp"> <span> <img class="cardimg" src="~/asset/img/VerifiedTick.png"> </span> Your Chance in approval is <span style="font-weight:bold;">excellent</span> </p>
+                    <p class="btnapplynow" style="text-align:center"> <a href="#main-regg" onclick="javascript:" class="rc-trigger"> <button  href="#main-regg" class="btn button wow bounce infinite animated btnbounce"> <i class="fa fa-check"></i> Apply NOW! </button> </a> </p>
+                </div>
+
+            </div>
+            <br />
+        </div>
+        <div class="col-md-4 cardpending ">
+            <div class="cardd" style=" box-shadow: 3px 4px 0px 4px #1c7aaf !important; border-radius: 20px !important;">
+                <div class="card-body">
+
+                    <img style="width:97%" src="~/asset/cash-magnet.png" />
+                    <h4 class="cardh" style=" color: black; text-transform: none; padding-top: 2.5%; font-weight: bold; padding-bottom: 5%;"> Blue Cash Preferred <sup style=" font-size: 14px; font-weight: bold;">®</sup> Card form American Express </h4> <span class="staric"> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star "></span> </span> <p class="cardp"> <span> <img class="cardimg" src="~/asset/img/VerifiedTick.png"> </span> Your Chance in approval is <span style="font-weight:bold;">excellent</span> </p>
+
+                    <p class="btnapplynow" style="text-align:center"> <a href="#main-regg" onclick="javascript:" class="rc-trigger"> <button  href="#main-regg" class="btn button wow bounce infinite animated btnbounce"> <i class="fa fa-check"></i> Apply NOW! </button> </a> </p>
+                </div>
+
+            </div>
+            <br />
+        </div>
+    </div>
+    <div class="row" style=" overflow-x: hidden;">
+
+
+        <div class="small-12  medium-12  columns  " style="margin-top: 0%;box-shadow: 0px 6px 8px 3px rgb(0 0 0 / 20%); background-color: white;">
+            <div class="row">
+                <div class="cardd">
+                    <div class="card-body" style=" padding: 0; box-shadow: 0px 6px 8px 3px rgb(0 0 0 / 20%);">
+                        <div class="row" style="display: inline-flex;">
+                            <div class="col-md-0"> <img class="tickimg" src="~/asset/img/TickBlack.png"> </div>
+                            <div class="col-md-12">
+                                <p class="foop"> The Cosmopolitan Consumer Group is a dedicated and exclusive service that helps match you with top offers based on the interest you indicate when browsing on our website. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br />
+<section>
+    
+</section>
+
+<section id="about" style="min-height:1em;"> </section>
+<div class="row">
+    <section id="footer" style=" background-color: rgb(234, 234, 234); margin: 0 auto; padding: 0 !important;">
+
+        <div class="col-md-12 navmaxwidth cardpending cardpendingright">
+            <div class="small-12 medium-12 columns show-for-small-only ">
+                <h1 class="wow fadeInDown logocls text-center animated animated" style="visibility: visible; animation-name: fadeInDown;"> <img src="~/asset/img/creditguide__1_-removebg-preview.png" alt="" style="width: 20em;"> </h1>
+            </div>
+            <div class="small-12 medium-1 columns mobilehide show-for-small-only ">&nbsp;</div>
+            <div class="small-12 medium-6 columns show-for-small-only ">
+                <p class="text-right mobilehide" style="color: black;"> <a style="color: black; text-decoration: underline;" href="javascript:" onclick="window.open('/Money/Unsubcribe','privacy','scrollbars=yes,width=555,height=500')"> Click here </a>&nbsp;&nbsp;&nbsp;&nbsp; to unsubscribe from our mailing list&nbsp;&nbsp;&nbsp;&nbsp; <a style="color: black; text-decoration: underline;" href="javascript:;" onclick="openfunc()">Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp; <a style="color: black; text-decoration: underline;" onclick="openfuncc()"> Terms Conditions </a> </p>
+            </div>
+            <div class="small-12 columns cardpending cardpendingright">
+                <div class="" style="height:10px"></div>
+                <p style="color:black" class=" "> *Void where prohibited. Service is not available in all 50 states. </p>
+                <div class="" style="height:10px"></div>
+                <p style="color:black" class=" "> The Cosmopolitan Consumer Group, LLC is not affiliated with the United States Government and is a privately operated web site.The Cosmopolitan Consumer Group, LLC acts as an informational portal for funding assistance. Information regarding the products and services on this website may be provided by a third party advertising such product and service on the site and therefore the correctness of such representations is unknown to the site owner who does not undertake due diligence to confirm such third-party representations regarding third party advertising claims. When you are redirected to the third-party advertiser's site, and you should review their terms and conditions and privacy policy as they differ significantly from our own. The owner of this website is not affiliated with the third-party advertiser other than stated above. The owner does not recommend or endorse any product or service on this website. The Cosmopolitan Consumer Group, LLC may receive a fee or commission when you participate in third party offers. </p>
+                <div class="" style="height:10px"></div>
+                <p style="color:black"></p>
+                <p style="color:black" class=" "> After you register on our site , you will see a series of advertising offers. These offers are optional. You are not required to participate in the offers to obtain unclaimed asset information. If you decide to purchase products or services from our advertisers, you may incur associated charges. Any total dollar amount in unclaimed funds or goods that we show is reported by the appropriate government agencies. This does not guarantee that this money is under your name or common variations of your name and is able to have a claim form submitted to be paid that amount. </p>
+                <p></p>
+                <div class="" style="height:10px"></div>
+                <p style="color:black" class=" "> California Residents: Pursuant to Section 1798.120 of the California Consumer Privacy Act (CCPA), a consumer shall have the right, at any time, to direct a business that sells personal information about the consumer to third parties not to sell the consumer’s personal information. If you would like to exercise this right, please click the following link: <a style="color: black; text-decoration: underline;" href="javascript:" onclick="window.open('/Money/CCPA','privacy','scrollbars=yes,width=555,height=500')"> Do Not Sell My Personal Information. </a> </p>
+                <br>
+                <p class=" show-for-small-only " style="color:black"> <a onclick="window.open('/Money/Unsubcribe','privacy','scrollbars=yes,width=555,height=500')">-UNSUBSCRIBE</a> <br /> <a onclick="openfunc()"> -PRIVACY POLICY</a> <br /> <a onclick="openfuncc()">TERMS & CONDITIONS</a> </p>
+                <br>
+                <p class=" show-for-small-only " style="color:black"> © Copyright 2022 The Cosmopolitan Consumer Group, LLC </p>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<div class="row hide-for-small-only ">
+    <div class="col-md-4 cardpending">
+        <h1 class="wow fadeInDown logocls  animated animated" style="visibility: visible; animation-name: fadeInDown;"> <img src="~/asset/img/creditguide__1_-removebg-preview.png" alt="" style="width: 20em;"> </h1>
+    </div>
+    <div class="col-md-4">
+        <p style="color: black; margin-top: 5px; text-align: right !important; font-size:14px">© Copyright 2022 The Cosmopolitan Consumer Group, LLC</p>
+    </div>
+    <div class="col-md-4">
+        <p style="text-align: right !important; color: black; margin-top: 5px; font-size: 14px"> <a onclick="window.open('/Money/Unsubcribe','privacy','scrollbars=yes,width=555,height=500')">UNSUBSCRIBE</a> | <a onclick="openfunc()"> PRIVACY POLICY</a> | <a onclick="openfuncc()">TERMS & CONDITIONS</a> </p>
+    </div>
+</div>
+<br>
+</section>
+<style>
+    .parsley-errors-list {
+        margin-top: -10px;
+        margin-bottom: 10px
+    }
+
+    #myBtn {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Fixed/sticky position */
+        bottom: 20px;
+        /* Place the button at the bottom of the page */
+        right: 30px;
+        /* Place the button 30px from the right */
+        z-index: 99;
+        /* Make sure it does not overlap */
+        border: none;
+        /* Remove borders */
+        outline: none;
+        /* Remove outline */
+        /* Set a background color */
+        color: white;
+        /* Text color */
+        cursor: pointer;
+        /* Add a mouse pointer on hover */
+        padding: 15px;
+        /* Some padding */
+        /* Rounded corners */
+        font-size: 18px;
+        /* Increase font size */
+    }
+
+    @@media only screen and (max-width: 600px) {
+        #myBtn {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Fixed/sticky position */
+            bottom: 20px;
+            /* Place the button at the bottom of the page */
+            right: 0px;
+            /* Place the button 30px from the right */
+            z-index: 99;
+            /* Make sure it does not overlap */
+            border: none;
+            /* Remove borders */
+            outline: none;
+            /* Remove outline */
+            /* Set a background color */
+            color: white;
+            /* Text color */
+            cursor: pointer;
+            /* Add a mouse pointer on hover */
+            padding: 15px;
+            /* Some padding */
+            /* Rounded corners */
+            font-size: 18px;
+            /* Increase font size */
+        }
+    }
+</style>
+<a id="myBtn" href="#navbar" onclick="javascript:">
+    <img style="width:30%!important;float:right;"
+         src="~/Resourcse/Asset 53 (2).png" />
+</a>
+<script>
+    window.addEventListener('load', function () {
+        if (window.location.pathname == '/Money/offers') {
+            gtag('event', 'conversion', { 'send_to': 'AW-10866454865/8JCiCKi6oasDENHiw70o' });
+        }
+    });
+    function modalshow() {
+        $('#mymodal').show();
+    }
+    function modalhide() {
+        $('#mymodal').hide();
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        $(".phonea").keyup(function () {
+
+            if (this.value.length == $(this).attr("maxlength")) {
+                $(".phoneb").focus();
+            }
+        });
+        $(".phoneb").keyup(function () {
+
+            if (this.value.length == $(this).attr("maxlength")) {
+                $(".phonec").focus();
+            }
+        });
+
+
+        $('.rbtnHasCheckingAccountYes').click(function () {
+
+            $('#panel-01').show();
+            $('#panel-02').hide();
+        });
+        $('.rbtnHasCheckingAccountNo').click(function () {
+
+            $('#panel-01').hide();
+            $('#panel-02').show();
+        });
+    });
+
+    var isMobile = isMobileDevice();
+    if (isMobile) {
+        $('#rbtnHasCheckingAccountYes,#rbtnHasCheckingAccountNo').click(function () {
+
+
+            target = $('#panel-01');
+            $('html,body').animate({
+                scrollTop: target.offset().top - 100
+            }, 500);
+
+        })
+
+        $('.rbtnCheckingNSYes,.rbtnCheckingNSNo').click(function () {
+
+
+            if ($('#PanelCreditRepairProvider').is(":visible")) {
+                target = $('#PanelCreditRepairProvider');
+            }
+            else if ($('#CrediReadyPanel').is(":visible")) {
+
+                target = $('#CrediReadyPanel');
+            }
+            else {
+                target = $('#TERMS');
+            }
+            $('html,body').animate({
+                scrollTop: target.offset().top - 100
+            }, 500);
+
+        });
+        $('#rbtnConsultationYes').click(function () {
+
+            $('.LexLawOptin').show();
+            if ($('#CrediReadyPanel').is(":visible")) {
+
+                target = $('#CrediReadyPanel');
+            }
+            else {
+                target = $('#CreditRepairOptinFocus');
+            }
+            $('html,body').animate({
+                scrollTop: target.offset().top - 100
+            }, 500);
+
+        });
+        $('#rbtnConsultationNo').click(function () {
+
+            $('.LexLawOptin').hide();
+            if ($('#CrediReadyPanel').is(":visible")) {
+
+                target = $('#CrediReadyPanel');
+            }
+            else {
+                target = $('#TERMS');
+            }
+            $('html,body').animate({
+                scrollTop: target.offset().top - 100
+            }, 500);
+
+        });
+    }
+
+
+
+    mybutton = document.getElementById("myBtn");
+
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+    function setValue() {
+        document.getElementById('bb').value = "Yes";
+        document.getElementById('labelss').style.backgroundColor = "#f37200";
+        document.getElementById('labels').style.backgroundColor = "#167fb0";
+    }
+    function setValues() {
+        document.getElementById('bb').value = "No";
+        document.getElementById('labels').style.backgroundColor = "#f37200";
+        document.getElementById('labelss').style.backgroundColor = "#167fb0";
+    }
+    function nosetValue() {
+        document.getElementById('bb').value = "Yes";
+        document.getElementById('nolabelss').style.backgroundColor = "#f37200";
+        document.getElementById('nolabels').style.backgroundColor = "#167fb0";
+    }
+    function nosetValues() {
+        document.getElementById('bb').value = "No";
+        document.getElementById('nolabels').style.backgroundColor = "#f37200";
+        document.getElementById('nolabelss').style.backgroundColor = "#167fb0";
+    }
+
+
+    $(function () {
+
+
+        if ($(window).width() <= 2500) {
+
+            document.getElementById('device').value = "Laptop";
+        }
+
+        if ($(window).width() <= 800) {
+            document.getElementById('device').value = "IPad";
+        }
+        if ($(window).width() <= 480) {
+
+
+
+            document.getElementById('device').value = "Mobile";
+        }
+    });
+
+
+</script>

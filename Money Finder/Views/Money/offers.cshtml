@@ -1,0 +1,307 @@
+﻿
+@{
+    ViewData["Title"] = "offers";
+    Layout = "~/Views/Layouts/_emptyLayout.cshtml";
+}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+<style>
+
+    /*   a {
+    color: darkblue !important;
+    }
+    */
+    .image-link {
+    background: url("/Resourcse/Asset 72.png");
+    }
+
+    .modal {
+    top: 0em !important;
+    background: rgb(0 0 0 / 77%);
+    /* background-color: hsla(0,0%,100%,.8);*/
+    z-index: 350;
+    }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/asset/css/awesome.min.css">
+<form id="yesdata">
+
+    <input id="yesvalue" name="yesvalue" style="display:none;" value="0" />
+
+
+</form>
+<form id="nodata">
+
+    <input id="novalue" name="novalue" style="display:none;" value="0" />
+
+</form>
+<form class="form func" action="/Money/offer" method="post">
+    <input style="display:none;" name="count" value="@ViewBag.count" />
+
+    @foreach (var i in ViewBag.package)
+    {
+        <section id="main-reg " class="mb-3 offercard">
+            <div class="row " style="margin:0 auto">
+                <div class="col-12 ">
+                    <div class="card">
+                        <div class="card-body" style=" box-shadow: 0px 0px 10px rgb(0 0 0 / 40%);">
+
+                            <h1 style=" font-weight: 600; " class="text-center">
+                                @i.OfferName
+                            </h1>
+                            @*<h3 class="text-center" style="color:cornflowerblue;">@i.Offer_Name</h3>*@
+                            <p class="text-center mt-4 ppend">
+
+                                @i.OfferDescription
+
+                            </p>
+
+                            <div class="mobb">
+
+                                <p  style="text-align:center;">
+                                    <a class="cls-@i.PathOfferId offer" href="@i.RedirectLink/?tid=@ViewBag.tid&@ViewBag.parameterfname=@ViewBag.f_name&amp;@ViewBag.parameterlname=@ViewBag.l_name&amp;@ViewBag.parameteremail=@ViewBag.email &amp;@ViewBag.parameterzip=@ViewBag.zip" rel="noopener" target="_blank" data-next="/Money/other_offer?count=@ViewBag.count&tid=@ViewBag.tid">
+                                        <img class="mobimg" style=" width: 356px; min-height: 250px;" src="~/UploadedImages/@i.Image" />
+                                    </a>
+
+                                </p>
+                                <div class="row mt-3">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-4">
+                                        <div class="row">
+                                            <div class="col-6">
+
+
+
+
+                                                <a class="bbb btn btn-primary float-end cls-@i.PathOfferId offer" style="width: 100%;background-color:#4284BD;" href="@i.RedirectLink/?tid=@ViewBag.tid&@ViewBag.parameterfname=@ViewBag.f_name&amp;@ViewBag.parameterlname=@ViewBag.l_name&amp;@ViewBag.parameteremail=@ViewBag.email &amp;@ViewBag.parameterzip=@ViewBag.zip" data-next="/Money/other_offer?count=@ViewBag.count&tid=@ViewBag.tid" rel="noopener" target="_blank"><i style="color: #84D096; padding: 4%;" class="fa fa-check"></i>YES</a>
+                                                
+                                                
+                                                @*<a class="bbb btn btn-primary float-end" style="width: 100%;background-color:#4284BD;" href="@i.redirect_link" target="_blank">
+                        @Html.ActionLink("Yes", "offer", "Money", null, null, "", new { tid = ViewBag.count }, null)
+
+                        </a>*@
+                                            </div>
+                                            <div class="col-6">
+                                                <a href="/Money/other_offer?count=@ViewBag.count&tid=@ViewBag.tid">
+                                                    <button class="bbb btn btn-primary float-end no-@i.PathOfferId" type="button" style="width: 100%;background-color:#4284BD;">
+                                                        <i style="padding: 4%; color: #D34C46; " class="fa fa-close"></i>No
+
+
+                                                    </button>
+                                                </a>
+
+                                                @*<button class="btn btn-primary" style="background-color: #4284BD; width: 100%;" type="submit"><i style="padding: 4%; color: #D34C46; " class="fa fa-close"></i>NO</button>*@
+                                            </div>
+                                        </div>
+                                    </div>
+                               
+                                           <script>
+                                               $(document).on("click", ".offer", function (e) {
+                                                   e.preventDefault();
+                                                   var $t = $(e.currentTarget);
+                                                   window.open($t.attr("href"));
+                                                   window.location.href = $t.data("next");
+                                               });
+                                    </script>
+
+                                    <div class="col-md-4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+    }
+    @foreach (var it in ViewBag.qa)
+    {
+
+        if (it.Validation == "on" || it.Validation == "On")
+        {
+
+
+            <div class="modal" id="mymodal" tabindex="-1" role="dialog">
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title"> </h5>
+                            <button type="button" style=" font-size: 24px;" onclick="modalhide()" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="small-12 medium-12 columns">
+
+
+                                        <p class="radiop" style="font-size: 20px;text-align:center !important;">
+                                            <span id="NetspendLbl">
+                                                @foreach (var item in ViewBag.qatitle)
+                                                {
+
+                                                    <strong id="offer_title" style=" color: black;font-size:26px;">@item.QaTitle</strong>
+                                                }
+
+                                            </span>
+
+                                        </p>
+                                        <p class="radiop" style="font-size: 20px;text-align:center !important;">
+                                            @foreach (var item in ViewBag.qa)
+                                            {
+
+
+                                                <a   target="_blank" href="@item.RedirectLink/?tid=@ViewBag.tid" style=" font-weight: bold; color: black; font-size: 18px; color: #2199e8;" id="discription">@item.Option</a>
+                                                <br>
+                                            }
+
+                                            <strong></strong>
+
+                                        </p>
+
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                        @*<div class="row">
+
+                                <div class="col-6" style="padding-left:30px;">
+                                    <button type="button" class="labels" id="labelss" onclick="yesSendData();" style="padding-right: 26px;"><i class="fa fa-check" aria-hidden="true" style="color:lightgreen;"></i>&nbsp; Yes</button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="button" class="labels" id="labels" onclick="noSenddata();"><i class="fa fa-times" aria-hidden="true" style="color:red;"></i>&nbsp; No</button>
+                                </div>
+                            </div>*@
+
+                    </div>
+                </div>
+            </div>
+
+        }
+    }
+
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+@*@foreach (var it in ViewBag.package)
+{
+
+
+
+    <script>
+            $('.bbb').click(function () {
+                alert(1);
+            location.href = @it.redirect_link;
+            $('form').submit();
+        }
+        </script>
+}*@
+
+<script>
+    $(document).ready(function () {
+        $('#mymodal').show();
+    });
+
+    function modalshow() {
+        $('#mymodal').show();
+
+    }
+    function modalshowa() {
+        $('#mymodalc').hide();
+        $('#mymodala').show();
+    }
+    function modalshowb() {
+        $('#mymodalb').show();
+    }
+    function modalshowc() {
+        $('#mymodalc').show();
+    }
+    function modalhide() {
+        $('#mymodal').hide();
+        $('#mymodala').hide();
+        $('#mymodalb').hide();
+        $('#mymodalc').hide();
+    }
+  
+
+    function yesSendData() {
+        var increments = parseInt($("#yesvalue").val()) + 1;
+
+
+        $("#yesvalue").val(increments);
+
+
+        var count = increments;
+
+        $.ajax
+            (
+                {
+                    type: "GET",
+                    url: "/Money/yesqa",
+                    contentType: "Application/json;charset=utf-8",
+                    data: { id: count },
+                    success: function (data) {
+                        console.log("result", data);
+
+                        $("#discription").text(data[0].discription);
+                        $("#offer_title").text(data[0].offer_title);
+
+                    },
+
+                }
+            );
+    }
+
+
+
+
+    function noSenddata() {
+        var increments = parseInt($("#novalue").val()) + 1;
+
+
+        $("#novalue").val(increments);
+
+
+        var count = increments;
+
+        $.ajax
+            (
+                {
+                    type: "GET",
+                    url: "/Money/noqa",
+                    contentType: "Application/json;charset=utf-8",
+                    data: { id: count },
+                    success: function (data) {
+                        console.log("result", data);
+
+                        $("#discription").text(data[0].discription);
+                        $("#offer_title").text(data[0].offer_title);
+
+                    },
+
+                }
+            );
+
+    }
+
+
+
+</script>

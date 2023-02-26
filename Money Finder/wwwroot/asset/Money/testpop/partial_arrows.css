@@ -1,0 +1,243 @@
+.offer-wall-categories,
+.offer-wall-offers {
+    margin-top: 5px;
+    padding: 0;
+}
+
+.offer-wall-category-arrow-row {
+    width: 100%;
+    clear: both;
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: flex;
+    background-image: linear-gradient(#d5d5d5, white);
+}
+
+.offer-wall-category-arrow-row:hover {
+    background-color: #d5d5d5;
+    background-image: none;
+}
+
+.offer-wall-category-arrow-row a {
+    width: 100%;
+    margin-bottom: -5px;
+}
+
+.offer-wall-category-img {
+    float: left;
+    width: 31%;
+}
+
+.offer-wall-category-img img {
+    width: 100%;
+    height: 100%;
+    max-width: 137.6px;
+    max-height: 89px;
+    display: block !important;
+}
+
+.offer-wall-category-description {
+    float: left;
+    width: 69%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    color: #006633;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 10px;
+    height: 84%;
+    position: relative;
+}
+
+.offer-wall-category-description div {
+    height: unset;
+}
+
+.offer-wall-category-description div:first-child {
+    padding: 3px;
+}
+
+.offer-wall-category-description div p {
+    margin: 0 auto;
+}
+
+.offer-wall-category-arrows {
+    float: left;
+    width: 6.6%;
+    text-align: right;
+    display: none;
+}
+
+.offer-wall-category-arrows img {
+    width: 100%;
+    height: 100%;
+    max-width: 30px;
+    display: inline;
+}
+
+.offer-wall-category-bottom-arrows {
+    width: 100%;
+    max-width: 514px;
+    position: absolute;
+    bottom: -20%;
+}
+
+.offer-wall-category-bottom-arrows img {
+    width: 100%;
+    max-height: 37px;
+    display: block;
+}
+
+@media only screen and (min-width: 345px) {
+    .offer-wall-category-description {
+        font-size: 12px;
+        line-height: 12px;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    .offer-wall-category-description {
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+
+@media only screen and (min-width: 425px) {
+    .offer-wall-category-description {
+        font-size: 14px;
+        line-height: 14px;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .offer-wall-category-img {
+        width: 29%;
+    }
+    .offer-wall-category-description {
+        width: 71%;
+        font-size: 15px;
+        line-height: 17px;
+    }
+}
+
+@media only screen and (min-width: 550px) {
+    .offer-wall-category-img {
+        width: 26%;
+    }
+    .offer-wall-category-description {
+        width: 74%;
+        font-size: 16px;
+        line-height: 17px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .offer-wall-category-img {
+        width: 24%;
+    }
+    .offer-wall-category-description {
+        width: 65.3%;
+        font-size: 18px;
+        line-height: 20px;
+        padding: 0 2%;
+        display: flex;
+    }
+    .offer-wall-category-description div:first-child {
+        padding: 0;
+    }
+    .offer-wall-category-bottom-arrows {
+        display: none;
+    }
+    .offer-wall-category-arrows {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 650px) {
+    .offer-wall-category-img {
+        width: 22%;
+    }
+    .offer-wall-category-description {
+        width: 67.3%;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .offer-wall-category-img {
+        width: 20%;
+    }
+    .offer-wall-category-description {
+        width: 69.3%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .offer-wall-categories,
+    .offers {
+        margin: 15px 15px 5px;
+        padding: 15px 15px 5px;
+    }
+    .offer-wall-category-img {
+        width: unset;
+        height: unset;
+    }
+    .offer-wall-category-description {
+        width: 72.6%;
+        padding: 0 2.1%;
+    }
+    .offer-wall-category-arrows {
+        max-width: 30px;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    .offer-wall-category-description {
+        width: 75.1%;
+    }
+}
+
+/*RECENTLY ADDED*/
+
+@media screen and (min-width: 768px) {
+    .offer-wall-category-description {
+        top: 5px;
+    }
+    .offer-wall-category-arrows img {
+        margin-right: -2px;
+    }
+    .green {
+        background-image: url('../../Content/new_images/nitro/burst.png'), url('../../Content/new_images/nitro/offerwall_desktop_bg.png');
+        background-position: 94%, left top;
+        background-repeat: no-repeat, repeat;
+    }
+    .green .offer-wall-category-description p:nth-child(2) {
+        width: 452px;
+    }
+}
+
+.green .offer-wall-category-description div {
+    color: white;
+}
+
+.green .offer-wall-category-title {
+    color: white;
+}
+
+@media only screen and (max-width: 425px) {
+    .green {
+        background-image: url('../../Content/new_images/nitro/offerwall_mobile_bg.png');
+        background-position: left top;
+        background-repeat: repeat;
+        background-size: 100% 99%;
+    }
+    .offer-wall-category-arrows img {
+        margin-right: unset;
+    }
+    .green .offer-wall-category-description {
+        color: white;
+    }
+    .offer-wall-category-arrow-row a.green {
+        margin-top: -5px;
+    }
+}

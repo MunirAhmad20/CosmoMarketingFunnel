@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewData["Title"] = "Site Unsubscribe";
+    Layout = "~/Views/Layouts/_adminLayout.cshtml";
+}
+
+<div class="page-wrapper">
+
+
+    <div class="container-fluid">
+        <br />
+<br />
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Site Unsub Information's</h4>
+                        <h6 class="card-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
+                        <div class="table-responsive m-t-40">
+                            <table id="example23" class="table table-bordered table-striped example23" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+
+                                        <th>Email</th>
+
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>Email</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+
+                                    @foreach (var i in ViewBag.site)
+                                    {
+                                        <tr>
+
+                                            <td>
+
+                                                <a>@i.email</a>
+
+
+                                            </td>
+
+
+
+                                        </tr>
+
+                                    }
+                                </tbody>
+
+                            </table>
+                        </div>
+                        <script type="text/javascript">
+                            function checkDelete() {
+                                if (confirm('Are you sure you want to delete ?')) {
+
+                                    return true
+                                }
+                                else {
+                                    return false
+                                }
+                            }
+                        </script>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

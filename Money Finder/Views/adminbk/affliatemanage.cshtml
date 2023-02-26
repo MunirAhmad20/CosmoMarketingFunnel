@@ -1,0 +1,139 @@
+﻿
+@{
+    ViewData["Title"] = "affliatemanage";
+    Layout = "~/Views/Layouts/_adminLayout.cshtml";
+}
+
+@*<div class="page-wrapper">
+    <div class="container-fluid">*@
+<style>
+    /*  .row {
+        display: flex !important;
+        -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap;
+        margin-right: -38px !important;
+        margin-left: -38px !important;
+    }*/
+    @@media only screen and (max-width: 600px) {
+        input {
+            width: 9em;
+        }
+    }
+    .showTop {
+        display: table-row-group !important;
+    }
+</style>
+<div class="page-wrapper">
+
+
+    <div class="container-fluid">
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-12">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 style=" font-size: 25px; font-weight: bold;line-height:30px;" class="card-title">Affeliate OFFERS </h4>
+
+                        <div class="table-responsive m-t-40 m-t-400">
+                            <table class=" table table-bordered table m-b-0  example23" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th style="width:60px;">Id</th>
+
+                                        <th>Name</th>
+                                        <th>Status</th>
+                                        <th>Country</th>
+
+                                        <th>Affliate Manager</th>
+                                        <th>Prefered By</th>
+                                        <th>Labels</th>
+                                        <th>Today's Revenue</th>
+                                        <th>Date Created</th>
+
+                                    </tr>
+                                </thead>
+                                @*<tfoot>
+            <tr>
+                <th style="width:60px;">Image</th>
+                <th>Offer Title</th>
+                <th>Description A</th>
+
+                <th>Lower Title</th>
+
+                <th>Action</th>
+            </tr>
+        </tfoot>*@
+                                <tbody>
+
+                                    @foreach (var i in ViewBag.apiresult)
+
+                                    {
+                                        <tr>
+
+
+                                            <td> @i.network_affiliate_id </td>
+                                            <td>
+                                                <a>@Html.ActionLink(i.name, "affliateinfo", "admin", null, null, "", new { tid = i.network_affiliate_id }, null)</a>
+                                            </td>
+
+                                            <td> </td>
+                                            <td> @i.account_status </td>
+                                            <td> @i.default_currency_id </td>
+                                            <td>  </td>
+                                            <td> - </td>
+                                            <td> - </td>
+                                            <td> - </td>
+                                            <td> 0.00$ </td>
+
+
+                                        </tr>
+                                    }
+
+                                </tbody>
+                                @*<tfoot class="showTop">
+                                    <tr>
+                                        <th style="width:60px;">Id</th>
+
+                                        <th>Name</th>
+                                        <th>Status</th>
+                                        <th>Country</th>
+
+                                        <th>Affliate Manager</th>
+                                        <th>Prefered By</th>
+                                        <th>Labels</th>
+                                        <th>Today's Revenue</th>
+                                        <th>Date Created</th>
+
+                                    </tr>
+                                </tfoot>*@
+                            </table>
+                        </div>
+                        <script type="text/javascript">
+                            function checkDelete() {
+                                if (Archive('Are you sure you want to Archive ?')) {
+
+                                    return true
+                                }
+                                else {
+                                    return false
+                                }
+                            }
+                        </script>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

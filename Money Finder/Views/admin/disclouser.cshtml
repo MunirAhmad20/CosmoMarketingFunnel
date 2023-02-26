@@ -1,0 +1,213 @@
+﻿
+@{
+    ViewData["Title"] = "Admin";
+    Layout = "~/Views/Layouts/_adminLayout.cshtml";
+}
+
+
+@foreach (var i in ViewBag.tcpadisc)
+{
+<form action="/admin/addtcpa" enctype="multipart/form-data" method="post">
+   
+    <div class="row">
+        <div class="col-12">
+         <div class="card h3bg" style="margin:0;">
+                <div class="card-body" style="padding: 0;">
+                    <h4 class="mt-0 header-title" style="font-size: 16px;
+    font-weight: 600;color: white;">Edit Sign  Up disclouser Text</h4>
+
+                </div>
+
+            </div>
+            <div class="card m-b-30">
+                <div class="card-body" style=" box-shadow: 0 9px 4px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);">
+                    
+
+
+                    <div class="p-0">
+                        <div class="form-group">
+
+                            
+                            <br />
+                            <textarea style=" height: 9em;" type="text" name="redirectlink" required="" placeholder="Description" data-mask="999-99-999-9999-9" class="form-control"> @i.First @i.Second @i.Third @i.Fourth</textarea>
+
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <br />
+
+        <div class="form-group p-0">
+            <button onclick="modalopen()" type="button" style="float: right; background: #319795; border-radius: 6px;" class="btn btn-primary waves-effect waves-light">Edit</button>
+        </div>
+
+
+
+    </div>
+    
+   
+</form>
+
+<div class="modal fade" id="disclouser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="/admin/submitdisclouser" id="adminroles" enctype="multipart/form-data" method="post">
+
+
+
+                <div class="modal-body">
+                    <p align="center" style="font-weight: 500;font-size: 20px;"> Edit Sign  Up disclouser Text</p>
+                    <div class="row mt-3">
+
+                        <div class="col-md-12">
+                                <input name="id" style="display:none;" value="@i.DisclosureTextId" />
+                            <textarea class="form-control mb-3" name="first">@i.First </textarea>
+                            <textarea class="form-control mb-3" name="second">@i.Second</textarea>
+                            <textarea class="form-control mb-3" name="third">@i.Third</textarea>
+                            <textarea class="form-control mb-3" name="fourth">@i.Fourth</textarea>
+
+                        </div>
+                    
+                    </div>
+                  
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button type="button" class="" data-bs-dismiss="modal" aria-label="Close" style="width: 100%;
+      border-radius: 4px;height: 42px;border: 1px solid darkgray;background: transparent;">
+                                Cancel
+                            </button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="submit" style="width: 100%;
+      background-color: seagreen;
+      border-radius: 4px;color: white;height: 42px;border: none;">
+                                Continue
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+}
+
+@*<div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title"> </h4>
+                    <h6 class="card-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
+                    <div class="table-responsive m-t-40">
+                        <table id="example23" class="table table-bordered table-striped" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>TCPA Title</th>
+                                    <th>Description</th>
+
+
+
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>TCPA Title</th>
+                                    <th>Description</th>
+
+
+
+                                    <th>Action</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+
+                                @foreach (var i in ViewBag.tcpadisc)
+                                {
+                                <tr>
+
+
+
+
+                                    <td>
+
+                                        <a>@i.Offer_Name</a>
+                                    </td>
+                                    <td>@i.date</td>
+
+                                    <td> <a onclick="return checkDelete()"> @Html.ActionLink(" ", "Deleteoffer", "admin", null, null, "", new { tid = i.Offer_Name }, new { @class = " btn  btn btn-outline-danger btn-circle fa fa-trash-o", onclick = "return checkDelete()", title = "Confirm" })</a></td>
+
+                                </tr>
+
+                                }
+
+
+
+
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <script type="text/javascript">
+                        function checkDelete() {
+                            if (confirm('Are you sure you want to Archive ?')) {
+
+                                return true
+                            }
+                            else {
+                                return false
+                            }
+                        }
+                    </script>
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>*@
+    </div> <!-- end col -->
+</div> <!-- end row -->
+                    </div><!-- container -->
+</div> <!-- Page content Wrapper -->
+                </div> <!-- content -->
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<script>
+    function modalopen() {
+        $("#disclouser").modal("show")
+    }
+    function close() {
+        $("#disclouser").modal("hide")
+    }
+</script>

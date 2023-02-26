@@ -1,0 +1,801 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Layouts/MoneyhomeLayout.cshtml";
+}
+@*<link href="~/maeen_asset/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">*@
+
+
+
+<div id="sparkjqv_overlay_body_background" class="popup_background" style="opacity:0;visibility:hidden;background-color:black;position:fixed;inset:0;z-index:100000;transition:all .3s ease 0s"></div><div id="sparkjqv_overlay_body_wrapper" class="popup_wrapper" style="opacity:0;visibility:hidden;position:fixed;overflow:auto;z-index:100001;transition:all .3s ease 0s;inset:0;text-align:center;display:none"><div id="sparkjqv_overlay_body" class="simple_overlay popup_content" style="padding:0;margin:0;display:inline-block;z-index:10000;background-color:#333;border:1px solid #666;box-shadow:#666 0 0 40px;opacity:0;visibility:hidden;outline:0;transition:all .3s ease 0s;text-align:left;position:relative;vertical-align:middle;width:650px" data-popup-initialized="true" aria-hidden="true" role="dialog"><div id="sparkjqv_overlay_wrapper" style="width:100%;margin:0 auto 0 auto"><a id="sparkjqv_overlay_close" style="background-image:url(//docs.corepassage.com/JSLibraries/OptOutOverlay/close.png);position:absolute;right:-15px;top:-15px;cursor:pointer;height:35px;width:35px"></a><div style="width:100%;padding:25px 25px 25px 25px;background-color:#fff;font-family:Arial,Helvetica,sans-serif;font-size:12px;float:left;text-align:left"><span style="font-size:1.2rem;font-weight:bold">Please correct the following errors:</span><br><br><div id="sparkjqv_errors"></div><br><input type="button" id="sparkjqv_overlay_correct_now" value="Correct Now" class="btn button" style="margin-bottom:0px"></div></div></div><div class="popup_align" style="display:inline-block;vertical-align:middle;height:100%"></div></div><div id="invm_overlay_mpartners_body_background" class="popup_background" style="opacity:0;visibility:hidden;background-color:black;position:fixed;inset:0;z-index:100000;transition:all .3s ease 0s"></div><div id="invm_overlay_mpartners_body_wrapper" class="popup_wrapper" style="opacity:0;visibility:hidden;position:fixed;overflow:auto;z-index:100001;transition:all .3s ease 0s;inset:0;text-align:center;display:none"><div id="invm_overlay_mpartners_body" class="simple_overlay popup_content" style="padding:0;margin:0;display:inline-block;z-index:10000;background-color:#333;border:1px solid #666;box-shadow:#666 0 0 40px;width:650px;opacity:0;visibility:hidden;outline:0;transition:all .3s ease 0s;text-align:left;position:relative;vertical-align:middle" data-popup-initialized="true" aria-hidden="true" role="dialog"><div id="invm_overlay_mpartners_wrapper" style="margin:0 auto 0 auto"><a id="invm_overlay_mpartners_close" style="background-image:url(//docs.corepassage.com/JSLibraries/OptOutOverlay/close.png);position:absolute;right:-15px;top:-15px;cursor:pointer;height:35px;width:35px"></a><div style="padding:25px 25px 25px 25px;background-color:#fff;font-family:Arial,Helvetica,sans-serif;font-size:12px;float:left;text-align:left"><strong>Money Finder USA</strong><br><br>By registering on our site, you may receive live telephone calls from one or more of the callers listed below at the number you provided. Whether or not you receive any calls may depend on your answers to the offers presented that follow our registration page. You expressly waive all federal and state no-call restrictions with respect to such contact. You may opt out of receiving calls at any time by following the instructions provided by the caller or asking the caller to place you on its do-not-call list.<ol style="margin-top:10px;font-family:Arial,Helvetica,sans-serif;font-size:12px"><li>Admediary LLC</li><li>Lexington Law</li><li>The Credit Pros</li><li>VP Media Management</li></ol></div></div></div><div class="popup_align" style="display:inline-block;vertical-align:middle;height:100%"></div></div><div id="invm_overlay_body_background" class="popup_background" style="opacity:0;visibility:hidden;background-color:black;position:fixed;inset:0;z-index:100000;transition:all .3s ease 0s"></div><div id="invm_overlay_body_wrapper" class="popup_wrapper" style="opacity:0;visibility:hidden;position:fixed;overflow:auto;z-index:100001;transition:all .3s ease 0s;inset:0;text-align:center;display:none"><div id="invm_overlay_body" class="simple_overlay popup_content" style="padding:0;margin:0;display:inline-block;z-index:10000;background-color:#333;border:1px solid #666;box-shadow:#666 0 0 40px;width:650px;opacity:0;visibility:hidden;outline:0;transition:all .3s ease 0s;text-align:left;position:relative;vertical-align:middle" data-popup-initialized="true" aria-hidden="true" role="dialog"><div id="invm_overlay_wrapper" style="margin:0 auto 0 auto"><a id="invm_overlay_close" style="background-image:url(//docs.corepassage.com/JSLibraries/OptOutOverlay/close.png);position:absolute;right:-15px;top:-15px;cursor:pointer;height:35px;width:35px"></a><div style="padding:50px 25px 75px 25px;background-color:#fff;font-family:Arial,Helvetica,sans-serif;font-size:12px;float:left;text-align:left">You DO have the right to have your DNC (Do Not Call) registration honored and opting in to receive outbound calls is not a requirement to complete this application. If you would not like to receive live telephone calls from our marketing partners, please check the box below:<br><br><input type="checkbox" id="dnc_opt_out_checkbox" value="1"> No, I do not want to receive live telephone calls <br><br><input type="button" id="inovum_overlay_correct_now" value="Submit"></div></div></div><div class="popup_align" style="display:inline-block;vertical-align:middle;height:100%"></div></div>
+<br />
+
+
+<section id="hero">
+    <div class="logo-bar">
+        <div class="row navmaxwidth">
+            <div class="small-12 medium-12 large-4 columns">
+
+                <h1 class="wow fadeInDown text-center animated logocls" style="visibility:visible;animation-name:fadeInDown"><img src="~/asset/creditguidebook_Logo-mid-size.jpg" alt="" style="margin-top:-22px"></h1>
+            </div><div class="large-8 columns hide-for-small-only">
+                <nav class="fontsizee">
+                    <p class="headertext">
+                        <a onclick="javascript:" class="rc-trigger navcolor fontsizee" href="#main-regg">CHECK MY ELIGIBILITY</a> &nbsp;<a class="fontsizee">| </a> &nbsp;  <a onclick="javascript:" class="rc-trigger navcolor fontsizee" href="#unclaimed-money">WHAT IS UNCLAIMED MONEY?</a> &nbsp;<a class="fontsizee"> |</a></h1> &nbsp; <a <a class="rc-trigger navcolor fontsizee" href="#how_it_works">HOW IT WORKS
+</a>
+                    </p>
+                </nav>
+            </div>
+        </div>
+    </div><div class="testimonials" style="background-color:papayawhip"><div class="row"><ul style="text-align:center;width:100%;text-align:center;margin-left:auto;margin-right:auto"><li id="Test1"><p id="TestSpan1" class="animated fadeInRight navcolor testspan mobilehide" style="font-size:21px!important;margin-left:4em"><b>Roland N. California</b> - $2462 Found (Old checking account/ Shares in Fidelity)</p><p id="TestSpan1" class="animated fadeInRight navcolor testspan desktophide"><b>Roland N. California</b> - $2462 Found (Old checking account/ Shares in Fidelity)</p></li><li id="Test2" style="display:none"><p class="navcolor" id="TestSpan2"><b>Larry H. Virginia</b> - $266,174 Found (Old checking account)</p></li><li id="Test3" style="display:none"><p class="navcolor" id="TestSpan3"><b>Ted M. California</b> - $97,409 Found (old life Insurance policy)</p></li></ul></div></div><div class="testimonials" style="background-color:#d3d7da">
+        <div class="row maxwidth">
+            <div class="small-12 medium-8 medium-push-4 large-7 large-push-1 end columns maxwidthh uperleft tabhide">
+                <div class="desktophide"><br /></div><h2>
+    @*<label style="font-size:22px;color:black;font-family:'Oswald';line-height:0" class="subheader"> PARENTS OR STUDENTS </label>*@
+    55 or older?
+</h2><h2 class="subheader">
+    You can save thousands!
+</h2><p class="hide-for-small-only" style="font-weight:400">
+    Age 55 or older? You could be saving thousands of dollars! Seniors are eligible for a variety of discounts on everyday items, including things such as medical supplies, insurance and Medicare options, and more!
+
+</p>
+                <p class="show-for-small-only text-center"><a href="#main-regg" onclick="javascript:" class="rc-trigger"><button class="button wow bounce infinite animated" style="animation-name:bounce;background-color:transparent;box-shadow:none"><img src="~/Resourcse/button/1.png" /></button></a></p><p class="hide-for-small-only"><a href="#main-regg" onclick="javascript:" class="rc-trigger"><button href="#main-regg" class="button wow bounce infinite animated" style="margin-left:-1em;visibility:visible;animation-name:bounce;background-color:transparent;box-shadow:none"><img src="~/Resourcse/button/1.png" /></button></a></p>
+            </div><p style="text-align:center!important">
+                <div class="small-12 medium-9 medium-push-4 large-7 large-push-1 end columns maxwidthh mobilehidde">
+                    <div class="desktophide"><br /></div><h2>
+    @*<label style="font-size:22px;color:black;font-family:'Oswald';line-height:0" class="subheader"> PARENTS OR STUDENTS </label>*@
+    55 or older?
+</h2><h2 class="subheader">
+    You can save thousands!
+
+</h2><p class="hide-for-small-only" style="font-weight:400">
+    Age 55 or older? You could be saving thousands of dollars! Seniors are eligible for a variety of discounts on everyday items, including things such as medical supplies, insurance and Medicare options, and more!
+
+</p><p class="show-for-small-only text-center"><a href="#main-regg" onclick="javascript:" class="rc-trigger"><button class="button wow bounce infinite animated" style="animation-name:bounce;background-color:transparent;box-shadow:none"><img src="~/Resourcse/button/1.png" /></button></a></p><p class="hide-for-small-only"><a href="#main-regg" onclick="javascript:" class="rc-trigger"><button href="#main-regg" class="button wow bounce infinite animated" style="margin-left:-1em;visibility:visible;animation-name:bounce;background-color:transparent;box-shadow:none"><img src="~/Resourcse/button/1.png" /></button></a></p>
+                </div>
+            </p><div class="large-push-1 imgright mobilehide loghide" style="margin-top:-5px"><img class="imgalign" src="~/Resourcse/images/res1_11.png" /></div>
+        </div>
+    </div>
+</section>
+<section class="margin_top" id="stat-bar" style="margin-top:-5px">
+    <div class="row show-for-small-only"><div class="small-12 columns"></div></div><div id="main-regg"></div>
+    <div class="row hide-for-small-only"><div class="small-12 columns"><h1 class="wow fadeInDown" style="visibility:hidden;animation-name:none"><span class="subheader">Amount of average claim:</span> $<span class="counter">892.00</span></h1><p class="wow fadeInUp" style="visibility:hidden;animation-name:none"></p></div></div><div class="row desktophide tabshow ">
+        <div class="small-12 columns">
+            <h1 class="wow fadeInDown" style="visibility:hidden;animation-name:none">
+                <span style="font-size:20px" class="subheader ">Amount of average claim: $892.00</span>
+            </h1><p class="wow fadeInUp" style="visibility:hidden;animation-name:none"></p>
+        </div>
+    </div>
+</section>
+<section style="background-color:#f8e8ff" id="main-reg">
+    <div class="navbar" id="navbar" style="display:none"></div><div class="row">
+        <div class="small-12 columns">
+            <div class="mobilehide"><br /></div><br />@*<h2 class="subheader" style="font-size:22px;font-weight:bold;line-height:2em;color:black">PARENTS OR STUDENTS </h2>*@<h1 class="subheader text-center comp">COMPLETE THE FOLLOWING INFORMATION TO </h1><h1 style="color:black" class="text-center infor">
+    SEE WHAT YOU COULD BE SAVING ON!
+
+</h1>
+        </div>
+    </div><div class="row navmaxwidth">
+        <div class="small-11 small-centered medium-11 medium-centered columns">
+            <div class="row reg-box formimg" style="background-image:url('asset/formbg.png');">
+                <form class="needs-validation contact_form" action="/Money/offers" name="PageForm" method="post" id="PageForm" data-parsley-validate="" novalidate="" data-parsley-errors-messages-disabled="true" autocomplete="on">
+                    <div class="small-12 columns"><h2><i class="wow bounce infinite animated" style="visibility:visible;animation-name:bounce"><img class="wow bounce infinite animated" style="visibility:visible;animation-name:bounce" src="~/Resourcse/icon/3.png" /></i> Complete the information Below</h2></div><div class="small-12 medium-6 large-6 columns inputGroupContainer"><label for="FIRST_NAME">First Name</label><span class=""></span><input name="first_name" type="text" placeholder="First Name" maxlength="40" data-parsley-trigger="change" value="@ViewBag.firstname" id="FIRST_NAME" data-pattern-error="Please use only letters for your city." pattern="[A-z ']*" oninvalid="this.setCustomValidity('This is my custom message.')" required="" data-parsley-minlength="2"></div><div class="small-12 medium-6 large-6 columns"><label for="LAST_NAME">Last Name</label><input value="@ViewBag.lastname" name="last_name" type="text" data-parsley-trigger="change" placeholder="Last Name" maxlength="40" id="LAST_NAME" required class="tooltipster tooltipstered" data-parsley-minlength="2"></div><div class="small-12 medium-12 large-12 columns"><label for="ADDRESS1">Address</label><input value="@ViewBag.address" name="address" type="text" placeholder="Address" maxlength="120" data-parsley-trigger="change" id="ADDRESS1" required="" class="tooltipster tooltipstered" data-parsley-pattern="^\d{1,} [0-9a-zA-Z '.,#]{2,120}"></div><div class="small-12 medium-6 large-6 columns"><label for="ZIP">Zip Code</label><input value="@ViewBag.zip" name="zip" placeholder="Zip" maxlength="5" id="ZIP" type="tel" required="required" data-parsley-trigger="change" class="tooltipster tooltipstered parsley-error" data-parsley-type="digits" data-parsley-length="[5, 5]" data-parsley-id="11"></div><div class="small-12 medium-6 large-6 columns">
+                        <label>Phone Number</label><div class="row-fix">
+                            <div class="small-4 medium-4 large-4 columns" style="padding-left:0"><input name="phonea" value="@ViewBag.phonea" placeholder="Phone1" maxlength="3" id="HOME_PHONE_AREA" type="tel" required="required" data-parsley-trigger="change" class="tooltipster tooltipstered" data-parsley-type="digits" data-parsley-length="[3, 3]"></div><div class="small-4 medium-4 large-4 columns" style="padding-left:0"><input name="phoneb" placeholder="Phone2" maxlength="3" id="HOME_PHONE_PREFIX" value="@ViewBag.phoneb" type="tel" required="required" data-parsley-trigger="change" class="tooltipster tooltipstered" data-parsley-type="digits" data-parsley-length="[3, 3]"></div><div class="small-4 medium-4 large-4 columns" style="padding-left:0;padding-right:0"><input name="phonec" value="@ViewBag.phonec" placeholder="Phone3" maxlength="4" id="HOME_PHONE_SUFFIX" type="tel" required="required" data-parsley-trigger="change" class="tooltipster tooltipstered" data-parsley-type="digits" data-parsley-length="[4, 4]"></div>
+                        </div>
+                    </div><div class="small-12 medium-12 large-12 columns">
+                        <label for="form1_leadem">Email Address</label><input value="@ViewBag.email" name="email" placeholder="email" maxlength="100" id="form1_leadem" type="email" required="" data-parsley-type="email">
+
+                        <input style="display:none;" id="bb" name="nsyesno" />
+                        <input style="display:none;" name="lf" value="LF" />
+                        <input style="display:none;" id="device" name="device" />
+                        <input style="display:none;" name="TRANSACTIONID" value="@ViewBag.tid">
+                    </div>
+                    <script>
+                        document.getElementById('HOME_PHONE_SUFFIX').onkeydown = function () {
+                            if (this.value.length == this.maxLength)
+                                document.getElementById('form1_leadem').focus();
+                        }
+                    </script>
+                    <div class="small-12 columns"></div>
+                    @foreach (var i in ViewBag.coreg)
+
+                    {
+                        <div id="PanelCheckingAccount">
+
+                            <div class="small-12 medium-8 columns"><br /><label>Do you have an active checking account?</label></div><div class="small-12 medium-4 columns"><div class="row-fix"><div class="small-3 medium-4 columns"><br /><input type="radio" id="rbtnHasCheckingAccountYes" name="checkingaccount" value="yes" required="required" data-parsley-trigger="change" class="tooltipster tooltipstered" data-parsley-multiple="CHECKINGACCOUNT"><label style="font-size:14px;font-weight:bold;color:blue" for="rbtnHasCheckingAccountYes">Yes</label></div><div class="small-3 medium-4 columns end"><br /><input type="radio" id="rbtnHasCheckingAccountNo" name="checkingaccount" value="no" data-parsley-multiple="CHECKINGACCOUNT"><label style="font-size:14px;font-weight:bold;color:blue" for="rbtnHasCheckingAccountNo"> No</label></div></div></div>
+                        </div>
+
+                        <div class="small-12 columns" id="panel-01" style="display: none; margin-top: 20px; padding-bottom: 40px; border-top: 0;">
+                            <div class="row-fix">
+
+                                <div class="medium-3 columns" style="margin: 0; padding: 0;">
+
+                                    <p>
+                                        <img id="NetspendImage" alt="ns-logo" class="left netspendimage" src="~/UploadedImages/@i.Image" style="border-width: 0px; margin-left: 15px; border-radius: 4px;  border: none; color: #fff; font-size: 0.9rem; line-height: 1.3rem; font-weight: 400; text-align: center; text-indent: 0px; padding: 7px 0px 0px 0px; margin: 0px auto 10px auto;width:10em;">
+                                    </p>
+
+                                </div>
+
+
+                                <div class="small-12 medium-9 columns">
+                                    <p style="font-size: 14px;">
+                                        <span id="NetspendLbl"><strong>@i.Offer_title</strong><br>@i.Discription_A<br><br>@i.Discription_B.<br><br><strong>@i.Lower_title</strong></span>
+                                    </p>
+
+                                    <div class="row" style="margin-left: -2.5em;">
+                                        <div class="small-5 columns NSButtons">
+                                            <button type="button" class="labels" id="labelss" onclick="setValue()"> Yes, please!</button>
+                                        </div>
+                                        <div class="small-5 end columns NSButtons">
+                                            <button type="button" class="labels" id="labels" onclick="setValues()">No thanks</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    }
+                    <div class="small-12 columns" id="panel-02" style="display: none; margin-top: 20px; padding-bottom: 40px; border-top: 0;">
+                        <div class="row-fix">
+                            @foreach (var i in ViewBag.nocoreg)
+
+                            {
+
+                                <div class="medium-3 columns" style="margin: 0; padding: 0;">
+
+                                    <p>
+                                        <img id="NetspendImage" alt="ns-logo" class="left netspendimage" src="~/UploadedImages/@i.Image" style="border-width: 0px; margin-left: 15px; border-radius: 4px;  border: none; color: #fff; font-size: 0.9rem; line-height: 1.3rem; font-weight: 400; text-align: center; text-indent: 0px; padding: 7px 0px 0px 0px; margin: 0px auto 10px auto;width:10em;">
+                                    </p>
+
+                                </div>
+
+
+                                <div class="small-12 medium-9 columns">
+                                    <p style="font-size: 14px;">
+                                        <span id="NetspendLbl"><strong>@i.Offer_title</strong><br>@i.Discription_A<br><br>@i.Discription_B.<br><br><strong>@i.Lower_title</strong></span>
+                                    </p>
+
+                                    <div class="row" style="margin-left: -2.5em;">
+                                        <div class="small-5 columns NSButtons">
+                                            <button type="button" class="labels" id="nolabelss" onclick="nosetValue()"> Yes, please!</button>
+                                        </div>
+                                        <div class="small-5 end columns NSButtons">
+                                            <button type="button" class="labels" id="nolabels" onclick="nosetValues()">No thanks</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+                                    </div>
+
+                                </div>
+                            }
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="clear"></div><label>
+                        <input type="hidden" id="leadid_tcpa_disclosure"><div class="small-12 columns opt-in" id="OptinDiv" style="margin-top:20px">
+                            @foreach (var i in ViewBag.discloser)
+                            {
+
+                                <p class="disclosertext">
+                                    @i.first <a style="color:#2199e8" href="javascript:;" onclick="openfunc()" @*id="myBtn" onclick="showDiv1()"*@>Privacy Policy</a> , <a style="color:#2199e8" href="javascript:;" onclick="openfuncc()">Terms &amp; Conditions</a> @i.second
+                                    (<a onclick="showDiv5()" style="color:#2199e8" data-databuyers="Admediary LLC|Lexington Law|The Credit Pros|VP Media Management"> click here to view</a>),
+                                    @i.third <a style="text-decoration:underline;color:#2199e8" href="#expe1">click here</a> @i.fourth.
+                                </p>
+                            }
+                        </div>
+                        <script>
+                            function openfunc() {
+                                windowWidth = 1130;
+                                windowHeight = 560;
+                                top = 380;
+                                var left = (screen.width - windowWidth) / 2;
+                                var top = (screen.height - top) / 4;
+                                var myWindow = window.open("/Money/privacy_policy", '_blank', 'width=' + windowWidth + ', height=' + windowHeight + ', top=' + top + ', left=' + left);
+                            }
+                            function openfuncc() {
+                                windowWidth = 1130;
+                                windowHeight = 560;
+                                top = 380;
+                                var left = (screen.width - windowWidth) / 2;
+                                var top = (screen.height - top) / 4;
+                                var myWindow = window.open("/Money/terms", '_blank', 'width=' + windowWidth + ', height=' + windowHeight + ', top=' + top + ', left=' + left);
+                            }
+                        </script>
+                        <div style="display:none">
+                            <label>Keep this field blank</label>
+                        </div><div class="resume" id="expe1">
+                            <div class="small-12 columns opt-in">
+                                <p>
+                                    You DO have the right to have your DNC (Do Not Call) registration honored and opting in to receive outbound calls and/or SMS texts is not a requirement to complete this application. If you would not like to receive live telephone calls from our marketing partners, please check the box below:
+                                </p>
+                            </div><div class="small-12 columns opt-in"><input type="checkbox" runat="server" id="DNC_OPT_OUT" name="DNC_OPT_OUT" data-parsley-multiple="DNC_OPT_OUT"><label for="DNC_OPT_OUT"></label><p>No, I do not want to receive live telephone calls or SMS texts </p></div>
+                        </div>
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                        <script>jQuery(document).ready(function (a) { a('a[href^="#"]').on("click", function (b) { var c = a(a(this).attr("href")); c.fadeToggle(100) }) });</script>
+                        <div class="clear"></div>
+                        <br />
+                        <div class="small-12 columns">
+                            <div class="row optinbox">
+                                <div class="large-3 medium-3 column">
+                                    <img src="~/asset/Money/img/arrow-p3.png" alt="" class="right animated fadeInLeft infinite hide-for-small-only" style="float:right;margin-top:10px">
+                                    <p style="text-align:center;">
+                                        <img src="~/asset/Money/img/arrow-p3-down.png" alt="" class="center animated fadeInDown infinite show-for-small-only">
+                                    </p>
+
+                                </div>
+                                <div class="medium-6 column iconfirmmleft iconfirmmlefts">
+
+                                    <div class="optin">
+                                        <div class="row">
+                                            <div class="medium-4 columns">
+                                                <div class="optin-left iconfirm">
+                                                    <p style="display:flex;justify-content:center">
+                                                        <input type="checkbox" runat="server" id="TERMS" name="terms" style="width:20px;height:20px;display:inline" required="required" data-parsley-trigger="change" class="tooltipster tooltipstered" data-parsley-multiple="TERMS">
+                                                        I CONFIRM
+                                                    </p>
+                                                </div>
+                                            </div><div class="small-11 medium-8 large-8 columns"><div class="optin-right"><p style="font-size:.85rem;padding:2px">that all of my information is accurate and consent to be called and texted as provided above.</p></div></div>
+                                        </div>
+                                    </div>
+                                </div><div class="medium-3 columns"></div>
+                            </div>
+
+                    </label><div class="clear"></div><div class="small-12 columns">
+                        <p class="text-center mb-10" style="height:5.2em">
+                            <button onclick="" ; type="submit" id="SUBMIT" class="needs-validation button bounce infinite animated" novalidate="" data-validates-form="" style="cursor:pointer;background-color:transparent;box-shadow:none"><img src="~/Resourcse/button/2.png" /></button>
+                            @*<button   onclick=" window.open('https://www.sfclk.com/?nid=519&transaction_id=2381610e695b48dd952b5a69174fbbcb','','width=700,height=0')";  type="submit" id="SUBMIT" class="needs-validation button bounce infinite animated" novalidate="" data-validates-form="" style="cursor:pointer;background-color:transparent;box-shadow:none"><img src="~/Resourcse/button/2.png" /></button>*@
+                            @*<button href="javascript:;" onclick="window.open('@item.redirect_link','privacy','scrollbars=yes,width=555,height=500')" type="submit" id="SUBMIT" class="needs-validation button bounce infinite animated" novalidate="" data-validates-form="" style="cursor:pointer">Continue <i class="fa fa-arrow-right"></i></button>*@
+                        </p>
+                    </div>
+                    @foreach (var item in ViewBag.popup)
+                    {
+                        <script type="text/javascript">
+(function () {
+    window.addEventListener("load", function () {
+        var b = document.getElementsByClassName("needs-validation"); var a = Array.prototype.filter.call(b, function (c) {
+            c.addEventListener("submit", function (d) {
+                if (c.checkValidity() === false) { d.preventDefault(); d.stopPropagation() } c.classList.add("was-validated");
+                window.open("@item.redirect_link", "privacy", "scrollbars=yes,width=2000,height=1000");
+
+
+            }, false)
+        })
+    }
+
+
+
+
+                                    , false)
+                            })();</script>
+                    }
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+    <br />
+    <br />
+
+</section>
+<section class="text-gray-600 body-font mobilehide" style="background-color: #c7ffd2; margin-top: -5em; height: 10.8em;">
+
+    <div class="container px-5 py-10 mx-auto">
+        <div class="flex flex-wrap -m-4 text-center">
+            <div class="sm:w-1/4 w-1/2 py-2">
+
+                <img src="~/Resourcse/unclaimasseticon/11.png" />
+            </div>
+            <div class="sm:w-1/4 w-1/2">
+                <img src="~/Resourcse/unclaimasseticon/Asset 62.png" />
+            </div>
+            <div class="sm:w-1/4 w-1/2">
+                <img src="~/Resourcse/unclaimasseticon/Asset 60.png" />
+            </div>
+            <div class="sm:w-1/4 w-1/2 py-2">
+                <img src="~/Resourcse/unclaimasseticon/Asset 61.png" />
+            </div>
+        </div>
+    </div>
+</section>
+<section style="background-color:#c7ffd2;margin-top:-5em;height:8em">
+
+    <div class="row reg-box desktophide tabshoww">
+        <div class="wFormContainer">
+            <br /><br /><p class="plineheight pheight pmtop" style="text-align:center"><img style="width:5em" src="~/Resourcse/unclaimasseticon/11.png" /><img style="padding-left:2%;width:5em" src="~/Resourcse/unclaimasseticon/Asset 62.png" /><img style="padding-left:2%;width:5em" src="~/Resourcse/unclaimasseticon/Asset 60.png" /><img style="padding-left:2%;width:4em" src="~/Resourcse/unclaimasseticon/Asset 61.png" /></p>
+            @*<p style="text-align:center" class="plineheight pheight"><img src="~/Resourcse/unclaimasseticon/Asset 62.png" /></p>*@
+            <br /><br />
+        </div>
+    </div><br /><br /><br />
+</section>
+
+
+<link href="~/popups/bootstrap-dialog.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.3/js/bootstrap-dialog.min.js"></script>
+<script>function simpleSHow(b) { var a = $("#simple-div"); BootstrapDialog.show({ title: b, message: $("#simple-div"), onhide: function () { $("#hidden-div").append(a) } }) } function complexSHow(b) { var a = $("#complex-div"); BootstrapDialog.show({ title: b, message: $("#complex-div"), onhide: function () { $("#hidden-div").append(a) } }) } function showDiv1(a) { var b = $("#lavel-2_div-1"); BootstrapDialog.show({ title: "", message: $("#lavel-2_div-1"), onhide: function () { $("#hidden-div").append(b) } }) } function showDiv2(a) { var b = $("#lavel-2_div-2"); BootstrapDialog.show({ title: "", message: $("#lavel-2_div-2"), onhide: function () { $("#hidden-div").append(b) } }) } function showDiv3(a) { var b = $("#lavel-2_div-3"); BootstrapDialog.show({ title: "Level 2 Title", message: $("#lavel-2_div-3"), onhide: function () { $("#hidden-div").append(b) } }) } function showDiv4(a) { var b = $("#lavel-2_div-4"); BootstrapDialog.show({ title: "Level 2 Title", message: $("#lavel-2_div-4"), onhide: function () { $("#hidden-div").append(b) } }) } function showDiv5(a) { var b = $("#lavel-2_div-5"); BootstrapDialog.show({ title: "", message: $("#lavel-2_div-5"), onhide: function () { $("#hidden-div").append(b) } }) }</script><div style="display:none" id="hidden-div">
+    <div id="lavel-2_div-5">
+        @foreach (var i in ViewBag.offers)
+        {
+            <p>
+                <br />
+                @i.Offer_Name
+                <br /><br />
+                @i.description
+
+            </p>
+            <p>
+                @i.bulletpoint
+            </p>
+
+        }
+    </div>
+
+</div>
+
+<section class="bgimage">
+    <section style="margin-top:-80px" id="unclaimed-assets">
+        <div style="display:none" id="unclaimed-money"></div><div class="row">
+            <div class="small-12 large-10 large-centered columns">
+                <div class="mobilehide"><br /><br /><br /></div><h1 class="unclainlineheight mobilehide" style="font-size:57px">
+    Senior Savings and Discounts
+</h1><div class="brhide"><br /></div><div class="brhide"><br /></div><h3 class="brhide"> Senior Savings and Discounts</h3><h2 class="texalign fontssize">
+    Becoming a “senior” citizen isn’t so bad! You can save thousands of dollars each year by taking advantage of senior discounts and savings for everyday things!
+
+</h2>
+            </div>
+        </div><div class="row"><div class="small-12 large-4 large-centered columns"><p style="width:100%;text-align:center" class="text-center btnheight"><a href="#main-regg" onclick="javascript:" class="rc-trigger"><button class="button wow bounce infinite animated" style="visibility:hidden;animation-name:none;box-shadow:none;background-color:transparent;color:transparent;border:0;height:5em"><img src="~/Resourcse/button/5.png" /></button></a><div class="brhide"><br /></div><div class="brhide"><br /></div></p></div></div>
+    </section>
+    <section id="main-reg">
+        <div class="row navmaxwidth">
+            <div class="small-11 small-centered medium-11 medium-centered columns">
+
+
+
+                <section class="text-gray-600 body-font" style="background-color:#000;opacity:.8">
+                    <div class="container px-5 py-15 mx-auto">
+                        <div class="text-center">
+                            <br />
+                            <h3 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4" style="color:#fbb040;text-align:center">THAT FOLLOWING ITEMS THE HAVE BEEN UNCLAIMED INCLUDE</h3>
+
+                        </div>
+                        <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+                            <div class="p-2 sm:w-1/2 w-full">
+                                <div class=" rounded flex p-4 h-full items-center">
+                                    <img src="~/Resourcse/unclaimasseticon/Asset 59.png" />
+                                    <span class="title-font font-medium pfont pfonts" style="color: white; padding-left: 5%;">Tax refunds</span>
+                                </div>
+                            </div>
+                            <div class="p-2 sm:w-1/2 w-full">
+                                <div class="rounded flex p-4 h-full items-center">
+                                    <img src="~/Resourcse/unclaimasseticon/Asset 55.png" />
+                                    <span class="title-font font-medium pfont pfonts" style="color: white; padding-left: 5%;">Uncashed checks</span>
+                                </div>
+                            </div>
+                            <div class="p-2 sm:w-1/2 w-full">
+                                <div class=" rounded flex p-4 h-full items-center">
+                                    <img src="~/Resourcse/unclaimasseticon/Asset 58.png" />
+                                    <span class="title-font font-medium pfont pfonts" style="color: white; padding-left: 5%;">Bank accounts</span>
+                                </div>
+                            </div>
+                            <div class="p-2 sm:w-1/2 w-full">
+                                <div class="rounded flex p-4 h-full items-center">
+                                    <img src="~/Resourcse/unclaimasseticon/Asset 54.png" />
+                                    <span class="title-font font-medium pfont pfonts" style="color: white; padding-left: 5%;">Utility bills</span>
+                                </div>
+                            </div>
+                            <div class="p-2 sm:w-1/2 w-full">
+                                <div class=" rounded flex p-4 h-full items-center">
+                                    <img src="~/Resourcse/unclaimasseticon/Asset 57.png" />
+                                    <span class="title-font font-medium pfont pfonts" style="color: white; padding-left: 5%;">
+                                        Insurance policies
+
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="p-2 sm:w-1/2 w-full">
+                                <div class=" rounded flex p-4 h-full items-center">
+                                    <img src="~/Resourcse/unclaimasseticon/Asset 53.png" />
+                                    <span class="title-font font-medium pfont pfonts" style="color: white; padding-left: 5%;"> Wages</span>
+                                </div>
+                            </div>
+                            <div class="p-2 sm:w-1/2 w-full">
+                                <div class=" rounded flex p-4 h-full items-center">
+                                    <img src="~/Resourcse/unclaimasseticon/Asset 56.png" />
+                                    <span class="title-font font-medium pfont pfonts" style="color: white; padding-left: 5%;">Dividends</span>
+                                </div>
+                            </div>
+                            <div class="p-2 sm:w-1/2 w-full">
+                                <div class=" rounded flex p-4 h-full items-center">
+                                    <img src="~/Resourcse/unclaimasseticon/Asset 52.png" />
+                                    <span class="title-font font-medium pfont pfonts" style="color: white; padding-left: 5%;">And More</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+
+
+
+            </div>
+        </div>
+
+    </section>
+</section>
+<section id="hiw" class="sectiontop">
+    <div style="display:none" id="how_it_works"></div><div class="row">
+        <div class="small-12 large-10 large-centered columns">
+            <div class="brhide"><br /></div><div class="brhide"><br /></div><div class="mobilehide"><br /></div><div class="mobilehide"><br /></div><h1 class="howworks">
+    How to Save Money as a Senior
+</h1><h2 class="texalign fontssize" style="color:black;padding:0">
+    Lots of businesses offer discounts to customers over age 55. Taking advantage of these programs are a great way to save money and stretch your budget! You never know what places give discounts to senior customers, so it doesn’t hurt to ask!
+</h2>
+        </div>
+    </div>
+
+
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto pdtop" style="padding-left:8%">
+            <div class="flex flex-wrap -m-4">
+
+                <div class="stepwidth p-4 lg:w-1/3">
+                    <div class="new h-25 bg-gray-100 bg-opacity-75 px-8 pt-16 pb-10 rounded-lg overflow-hidden text-center relative stepmin">
+
+                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3" style="color:white">STEP 1</h1>
+                        <h2 style="color:white;margin-bottom: 1.3em; ">
+                            DISCOVER OFFERS
+                        </h2>
+                        <p class="leading-relaxed mb-3" style="color:white">Start the process by submitting some basic information about yourself above.</p>
+
+
+                    </div>
+                </div>
+
+                <div class="p-4 lg:w-1/3">
+                    <div class="stepmin new h-25 bg-gray-100 bg-opacity-75 px-8 pt-16 pb-10 rounded-lg overflow-hidden text-center relative">
+
+                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3" style="color:white">STEP 2</h1>
+                        <h2 style="color:white;margin-bottom: 1.3em; ">
+                            DISCOVER OFFERS
+                        </h2>
+                        <p class="leading-relaxed mb-3" style="color:white">From there, we’ll show you a few offers from our partners you might be interested in to earn and save money along the way!</p>
+
+
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/3">
+                    <div class="stepmin new h-25 bg-gray-100 bg-opacity-75 px-8 pt-16 pb-10 rounded-lg overflow-hidden text-center relative">
+
+                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3" style="color:white">STEP 3</h1>
+                        <h2 style="color:white;margin-bottom: 1.3em; ">
+                            EXPLORE UNCLAIMED $
+                        </h2>
+                        <p class="leading-relaxed mb-3" style="color:white">We give you the tools you need to learn more about how you can receive unclaimed money you may be eligible for - 100% free and legal!</p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+<section id="unclaimed-assets">
+    <div class="row">
+        <div class="small-12 large-10 large-centered columns">
+            <h1 class="unclainlineheight mobilehide" style="font-size:57px">
+
+                How old do you have to be to get senior discounts?
+
+            </h1><div class="brhide"><br /></div><div class="brhide"><br /></div><h3 class="brhide">
+    How old do you have to be to get senior discounts?
+</h3>
+                                                                                 <h2 class="texalign fontssize" style="color:black;padding:0">
+                                                                                     Every business categorizes a “senior” differently, but in general, many companies start offering senior discounts to customers anywhere from the time they turn 50 to 65. It can vary from business to business, so don’t be afraid to ask! You might already be able to score a discount!
+
+
+
+                                                                                 </h2>
+        </div>
+    </div>
+    <br />
+    <br />
+    <section class="sectionleft" style="max-width:1125px;margin:0 auto">
+
+
+        <section class="text-gray-600 body-font">
+            <div class="container px-5 py-24 mx-auto" style="padding-top:0em !important;">
+
+                <div class="flex flex-wrap -m-2">
+                    <div class="p-2 lg:w-1/3 md:w-1/2 w-full mb-5">
+                        <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg buttonn">
+
+                            <div class="flex-grow">
+                                <h2 style=" font-size:25px;" class="text-gray-900 title-font font-medium">College Expenses & Fees</h2>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 lg:w-1/3 md:w-1/2 w-full mb-5">
+                        <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg buttonn">
+
+                            <div class="flex-grow">
+                                <h2 style=" font-size:25px;" class="text-gray-900 title-font font-medium">Student Loans</h2>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 lg:w-1/3 md:w-1/2 w-full mb-5">
+                        <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg buttonn">
+
+                            <div class="flex-grow">
+                                <h2 style=" font-size:25px;" class="text-gray-900 title-font font-medium">School Supplies</h2>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 lg:w-1/3 md:w-1/2 w-full mb-5">
+                        <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg buttonn">
+
+                            <div class="flex-grow">
+                                <h2 style=" font-size:25px;" class="text-gray-900 title-font font-medium">Deposit into 529 Plans</h2>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 lg:w-1/3 md:w-1/2 w-full mb-5">
+                        <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg buttonn">
+
+                            <div class="flex-grow">
+                                <h2 style=" font-size:25px;" class="text-gray-900 title-font font-medium">Housing</h2>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 lg:w-1/3 md:w-1/2 w-full mb-5">
+                        <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg buttonn" style="background-color: #f8d9ff; ">
+
+                            <div class="flex-grow">
+                                <h2 style=" font-size:25px;" class="text-gray-900 title-font font-medium">And More</h2>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+    </section>
+
+
+</section>
+
+
+<section id="about"><div class="row"><div class="small-12 large-8 large-centered columns"><p class="text-center mb-10"><img class="imgfooter" src="~/asset/creditguidebook_Logo-mid-size.jpg" alt=""></p><h2 class="fintec texalign" style="padding:0"> SENIOR SAVINGS AND DISCOUNTS, LLC is a service that helps you find unclaimed money and assets that may be available in your name.</h2></div></div></section><div class="row" style="margin-top:-30em"><div class="small-12 large-8 large-centered columns"><img class="footimgtop" src="~/Resourcse/10.png" /></div></div>
+<section id="footer" style="background-color:#333">
+    <div class="row navmaxwidth">
+        <div class="small-12 medium-5 columns">
+            <p style="color:gray;" class="text-left">© Copyright 2022 The <a style="color: gray; text-decoration: underline;" href="https://cosmopolitancg.com/"> The Cosmopolitan Consumer Group, LLC</a> </p>
+
+            @*<p class="text-left mobilehidde desktophide" style="color: white;">
+                <a style="color: white; text-decoration: underline;" href="javascript:" onclick="window.open('/Money/Unsubcribe','privacy','scrollbars=yes,width=555,height=500')">Click here</a> to unsubscribe from our mailing list |
+                <a style="color: white; text-decoration: underline;" href="javascript:;" onclick="openfunc()">Privacy Policy</a>|<a style="color: white; text-decoration: underline;" href="javascript:;" onclick="openfuncc()">Terms &amp; Conditions</a>
+            </p>*@
+        </div><div class="small-12 medium-1 columns mobilehide">&nbsp;</div><div class="small-12 medium-6 columns">
+            <p class="text-right mobilehide" style="color: white;">
+                <a style="color: white; text-decoration: underline;" href="javascript:" onclick="window.open('/Money/Unsubcribe','privacy','scrollbars=yes,width=555,height=500')">Click here</a>&nbsp;&nbsp;&nbsp;&nbsp; to unsubscribe from our mailing list&nbsp;&nbsp;&nbsp;&nbsp;
+                <a style="color: white; text-decoration: underline;" href="javascript:;" onclick="openfunc()">Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;  <a style="color: white; text-decoration: underline;" onclick="openfuncc()">  Terms    Conditions  </a>
+            </p>
+        </div>
+
+        <div class="small-12 columns">
+            <div class="" style="height:10px"></div>
+            <p style="color:gray" class="text-left">
+                *Void where prohibited. Service is not available in all 50 states.
+            </p>
+            <div class="" style="height:10px"></div>
+
+            <p style="color:gray" class="text-left">
+                <a style="color:gray;text-decoration:underline;" href="https://cosmopolitancg.com/">  The Cosmopolitan Consumer Group, LLC </a>is not affiliated with the United States Government and is a privately operated web site.<a style="color:gray;text-decoration:underline;" href="https://cosmopolitancg.com/">  The Cosmopolitan Consumer Group, LLC </a> acts as an informational portal for funding assistance. Information regarding the products and services on this website may be provided by a third party advertising such product and service on the site and therefore the correctness of such representations is unknown to the site owner who does not undertake due diligence to confirm such third-party representations regarding third party advertising claims. When you are redirected to the third-party advertiser's site, and you should review their terms and conditions and privacy policy as they differ significantly from our own. The owner of this website is not affiliated with the third-party advertiser other than stated above. The owner does not recommend or endorse any product or service on this website. The Cosmopolitan Consumer Group, LLC may receive a fee or commission when you participate in third party offers.
+            </p>
+            <div class="" style="height:10px"></div>
+            <p style="color:gray"></p><p style="color:gray" class="text-left">
+                After you register on cosmopolitantemplate.com , you will see a series of advertising offers. These offers are optional. You are not required to participate in the offers to obtain unclaimed asset information. If you decide to purchase products or services from our advertisers, you may incur associated charges. Any total dollar amount in unclaimed funds or goods that we show is reported by the appropriate government agencies. This does not guarantee that this money is under your name or common variations of your name and is able to have a claim form submitted to be paid that amount.
+            <p></p>
+            <div class="" style="height:10px"></div>
+            <p style="color:gray" class="text-left">
+                California Residents: Pursuant to Section 1798.120 of the California Consumer Privacy Act (CCPA), a consumer shall have the right, at any time, to direct a business that sells personal information about the consumer to third parties not to sell the consumer’s personal information. If you would like to exercise this right, please click the following link: <a style="color: gray; text-decoration: underline;" href="javascript:" @*onclick="showDiv3()"*@ onclick="window.open('/Money/CCPA','privacy','scrollbars=yes,width=555,height=500')"> Do Not Sell My Personal Information.</a>
+            </p>
+        </div>
+    </div>
+    <br />
+
+</section>
+
+<style>
+    .parsley-errors-list {
+        margin-top: -10px;
+        margin-bottom: 10px
+    }
+
+    #myBtn {
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed/sticky position */
+        bottom: 20px; /* Place the button at the bottom of the page */
+        right: 30px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        /* Set a background color */
+        color: white; /* Text color */
+        cursor: pointer; /* Add a mouse pointer on hover */
+        padding: 15px; /* Some padding */
+        /* Rounded corners */
+        font-size: 18px; /* Increase font size */
+    }
+
+    @@media only screen and (max-width: 600px) {
+        #myBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed/sticky position */
+            bottom: 20px; /* Place the button at the bottom of the page */
+            right: 0px; /* Place the button 30px from the right */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            /* Set a background color */
+            color: white; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            /* Rounded corners */
+            font-size: 18px; /* Increase font size */
+        }
+    }
+</style>
+
+
+<a id="myBtn" href="#navbar" onclick="javascript:"><img style="width:30%!important;float:right;" src="~/Resourcse/Asset 53 (2).png" /></a>
+<script>
+    //function ipLookUp() {
+    //    $.ajax('http://ip-api.com/json')
+    //        .then(
+    //            function success(response) {
+    //                console.log('User\'s Location Data is ', response);
+    //                console.log('User\'s Country', response.country);
+    //            },
+
+    //            function fail(data, status) {
+    //                console.log('Request failed.  Returned status of',
+    //                    status);
+    //            }
+    //        );
+    //}
+/*    ipLookUp();*/
+    //Get the button:
+    mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+    function setValue() {
+        document.getElementById('bb').value = "Yes Please";
+        document.getElementById('labelss').style.backgroundColor = "#f37200";
+        document.getElementById('labels').style.backgroundColor = "#167fb0";
+    }
+    function setValues() {
+        document.getElementById('bb').value = "No Thanks";
+        document.getElementById('labels').style.backgroundColor = "#f37200";
+        document.getElementById('labelss').style.backgroundColor = "#167fb0";
+    }
+    function nosetValue() {
+        document.getElementById('bb').value = "Yes Please";
+        document.getElementById('nolabelss').style.backgroundColor = "#f37200";
+        document.getElementById('nolabels').style.backgroundColor = "#167fb0";
+    }
+    function nosetValues() {
+        document.getElementById('bb').value = "No Thanks";
+        document.getElementById('nolabels').style.backgroundColor = "#f37200";
+        document.getElementById('nolabelss').style.backgroundColor = "#167fb0";
+    }
+
+
+    $(function () {
+        // Do something if the window is less than 480px (e.g. mobile/small)
+
+
+
+        if ($(window).width() <= 2500) {
+            document.getElementById('device').value = "Laptop";
+        }
+
+        if ($(window).width() <= 800) {
+            document.getElementById('device').value = "IPad";
+        }
+        if ($(window).width() <= 480) {
+            document.getElementById('device').value = "Mobile";
+        }
+    });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.5/signature_pad.min.js" integrity="sha512-kw/nRM/BMR2XGArXnOoxKOO5VBHLdITAW00aG8qK4zBzcLVZ4nzg7/oYCaoiwc8U9zrnsO9UHqpyljJ8+iqYiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    var canvas = document.getElementById("signature-pad");
+
+    function resizeCanvas() {
+        var ratio = Math.max(window.devicePixelRatio || 1, 1);
+        canvas.width = canvas.offsetWidth * ratio;
+        canvas.height = canvas.offsetHeight * ratio;
+        canvas.getContext("2d").scale(ratio, ratio);
+    }
+    window.onresize = resizeCanvas;
+    resizeCanvas();
+
+    var signaturePad = new SignaturePad(canvas, {
+        backgroundColor: 'rgb(250,250,250)'
+    });
+
+    document.getElementById("clear").addEventListener('click', function () {
+        signaturePad.clear();
+    })
+</script>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+
+

@@ -1,0 +1,286 @@
+﻿
+@{
+    ViewData["Title"] = "advertisers";
+    Layout = "~/Views/Layouts/_adminLayout.cshtml";
+}
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/x-icon" href="~/datatablesassets/assets/img/favicon.ico" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="~/datatablesassets/assets/css/loader.css" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/datatablesassets/assets/css/plugins.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN PAGE LEVEL CUSTOM STYLES -->
+    <link rel="stylesheet" type="text/css" href="~/datatablesassets/plugins/table/datatable/datatables.css">
+    <link rel="stylesheet" type="text/css" href="~/datatablesassets/plugins/table/datatable/custom_dt_customer.css">
+    <!-- END PAGE LEVEL CUSTOM STYLES -->
+
+    <link rel="stylesheet" href="https://designreset.com/preview-equation/default/plugins/flaticon/style.css">
+    <link rel="stylesheet" href="https://designreset.com/preview-equation/default/plugins/table/datatable/custom_dt_customer.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <style>
+        .new-control.new-checkbox .new-control-indicator {
+            position: absolute;
+            top: 0.25rem;
+            left: 0;
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            pointer-events: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: white;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50% 50%;
+            border-radius: 2px;
+            border: 2px solid;
+        }
+
+        .widget-content-area {
+            padding: 20px;
+            /*  border-radius: 13px;*/
+            position: relative;
+            background-color: #fff;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            -webkit-box-shadow: 0 2px 4px rgb(126 142 177 / 12%);
+            box-shadow: 0 2px 4px rgb(126 142 177 / 12%);
+        }
+
+        .table-responsive > .dataTables_wrapper .row:nth-child(2) > .col-sm-12:first-child {
+            margin-top: 1em;
+        }
+
+        .dataTables_filter, .dataTables_length {
+            display: none;
+        }
+        .table > thead {
+            background-color: #e9eaee;
+            vertical-align: bottom;
+        }
+            .table > thead > tr > th:hover {
+                color: #6c89b8;
+            }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-container" id="container">
+
+
+        <div id="content" class="main-content">
+            <div class="container" style=" background-color: white; padding: 0;">
+                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                    <h4 class="mt-0 header-title h3bg">Ever Flow Offers</h4>
+                </div>
+
+                <div class="row layout-spacing">
+                    <div class="col-lg-12">
+                        <div class="statbox widget box box-shadow">
+
+                            <div class="widget-content widget-content-area">
+                                <div class="table-responsive mb-4 style-1" style="border-radius: 8px; border: 2px solid;">
+                                    <table id="customer-info-detail-1" class="table style-1  table-bordered table-hover">
+                                        <thead data-orderable="false">
+                                            <tr data-orderable="false">
+
+                                                <th data-orderable="false" class="checkbox-column"></th>
+                                                <th data-orderable="false">ID</th>
+                                                <th data-orderable="false">Thumbnail</th>
+                                                <th data-orderable="false">Name</th>
+                                                <th data-orderable="false">
+                                                    Visibility
+                                                </th>
+                                                <th data-orderable="false">
+                                                    Advertiser
+                                                </th>
+                                                <th data-orderable="false">
+                                                    Account Manager
+                                                </th>
+                                                <th data-orderable="false">
+                                                    Category
+                                                </th>
+                                                <th data-orderable="false">
+                                                    Labels
+                                                </th>
+                                                <th data-orderable="false">
+                                                    Channels
+                                                </th>
+                                                <th data-orderable="false">
+                                                    Platforms
+                                                </th>
+                                                <th data-orderable="false">
+                                                    Device Types
+                                                </th>
+                                                <th data-orderable="false">
+                                                    Countries
+                                                </th>
+                                                <th data-orderable="false">
+                                                    Revenue
+                                                </th>
+                                                <th data-orderable="false">
+                                                    Payout
+                                                </th>
+                                                <th data-orderable="false">
+                                                    Today's Revenue
+                                                </th>
+                                                <th data-orderable="false">
+                                                    Today's Clicks
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var i in ViewBag.offertable)
+                                            {
+
+
+                                                <tr>
+                                                    <td></td>
+                                                    <td>
+                                                        @i.network_offer_id
+                                                    </td>
+                                                    <td>
+                                                        <img src=" @i.thumbnail_url" />
+
+                                                    </td>
+                                                    <td>@i.name</td>
+                                                    <td>  @i.visibility</td>
+                                                    <td>  @i.network_advertiser_name </td>
+                                                    <td>  @i.relationship.account_manager.first_name  @i.relationship.account_manager.last_name</td>
+                                                    <td>  @i.category </td>
+                                                    <td>  @i.labels </td>
+                                                    <td>  @i.channels </td>
+                                                    <td>  All </td>
+                                                    <td> All</td>
+                                                    <td>
+                                                        United States
+                                                    </td>
+                                                    <td>  @i.revenue </td>
+                                                    <td>  @i.payout </td>
+                                                    <td>  @i.today_revenue </td>
+                                                    <td>  @i.today_clicks </td>
+
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!--  END CONTENT PART  -->
+    </div>
+
+   
+
+    <!--  END CONTROL SIDEBAR  -->
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <script src="~/datatablesassets/assets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="~/datatablesassets/assets/js/loader.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/datatablesassets/plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="~/datatablesassets/assets/js/app.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            App.init();
+        });
+    </script>
+    <script src="~/datatablesassets/assets/js/custom.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="~/datatablesassets/plugins/table/datatable/datatables.js"></script>
+    <script>
+        // var e;
+        c1 = $('#customer-info-detail-1').DataTable({
+
+            "lengthMenu": [10, 20, 50, 100],
+            headerCallback: function (e, a, t, n, s) {
+                e.getElementsByTagName("th")[0].innerHTML = '<label class="new-control new-checkbox checkbox-outline-primary m-auto">\n<input type="checkbox" class="new-control-input chk-parent select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
+            },
+
+            columnDefs: [{
+                targets: 0,
+                width: "30px",
+                className: "",
+                orderable: !1,
+                render: function (e, a, t, n) {
+                    return '<label class="new-control new-checkbox checkbox-outline-primary  m-auto">\n<input type="checkbox" class="new-control-input child-chk select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
+                }
+
+
+            }],
+            "language": {
+                "paginate": {
+                    "previous": "<i class='fas fa-angle-left'></i>",
+                    "next": "<i class='fas fa-angle-right'></i>"
+                },
+                "info": "Showing page _PAGE_ of _PAGES_"
+            }
+        });
+
+        multiCheck(c1);
+
+        c2 = $('#customer-info-detail-2').DataTable({
+            "lengthMenu": [5, 10, 20, 50, 100],
+            headerCallback: function (e, a, t, n, s) {
+                e.getElementsByTagName("th")[0].innerHTML = '<label class="new-control new-checkbox checkbox-outline-primary m-auto">\n<input type="checkbox" class="new-control-input chk-parent select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
+            },
+
+            columnDefs: [{
+                targets: 0,
+                width: "30px",
+                className: "",
+                orderable: !1,
+                render: function (e, a, t, n) {
+                    return '<label class="new-control new-checkbox checkbox-outline-primary  m-auto">\n<input type="checkbox" class="new-control-input child-chk select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
+                }
+            }],
+            "language": {
+                "paginate": {
+                    "previous": "<i class='flaticon-arrow-left-1'></i>",
+                    "next": "<i class='flaticon-arrow-right'></i>"
+                },
+                "info": "Showing page _PAGE_ of _PAGES_"
+            }
+        });
+
+        multiCheck(c2);
+
+        c3 = $('#customer-info-detail-3').DataTable({
+            "lengthMenu": [5, 10, 20, 50, 100],
+            "language": {
+                "paginate": {
+                    "previous": "<i class='flaticon-arrow-left-1'></i>",
+                    "next": "<i class='flaticon-arrow-right'></i>"
+                },
+                "info": "Showing page _PAGE_ of _PAGES_"
+            }
+        });
+
+        multiCheck(c3);
+    </script>
+    <!-- END PAGE LEVEL SCRIPTS -->
+</body>
+
+
+

@@ -1,0 +1,667 @@
+﻿
+@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Layouts/MoneyhomeLayout.cshtml";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+<style>
+    .offercard {
+        background: #F9FAFB !important;
+        padding: 60px 0px 0px 23px !important;
+    }
+
+    .headertext {
+        margin-top: 10px;
+    }
+
+    .hiden {
+        display: none;
+    }
+
+    .logoheaders {
+        height: 5em !important;
+        margin-bottom: 8px;
+        background-color: #FFFF !important;
+        margin-top: -1.4em !important;
+        padding-top: 13px !important;
+        /* box-shadow: 0px 6px 8px 3px rgb(0 0 0 / 21%); */
+        box-shadow: 1px 1px 13px 4px rgb(0 0 0 / 12%) !important;
+    }
+
+    .row {
+        margin: 0 auto !important;
+    }
+
+    .navigation .navbar .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 8;
+        padding: 10px 16px;
+        box-shadow: 0 26px 48px 0 rgb(0 0 0 / 15%);
+    }
+
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        box-shadow: 3px 4px 9px 0px rgb(0 0 0 / 20%);
+        border-radius: 0.25rem;
+    }
+
+    .card-boddy {
+        flex: 1 1 auto !important;
+        padding: 1rem 0rem !important;
+    }
+
+    .card-body {
+        flex: 1 1 auto !important;
+        padding: 1rem 1rem !important;
+    }
+
+    .imgg {
+        min-height: 12em;
+        width: 100%;
+    }
+
+    .logoheight {
+        /* height: 2em !important;*/
+        margin-top: -12px !important;
+        width: 250px !important;
+    }
+
+    .mybtn {
+        width: 100% !important;
+    }
+
+    .textcenter {
+        text-align: center;
+    }
+
+    #footer {
+        padding: 60px 0px 0px 23px !important;
+    }
+
+
+    @@media only screen and (min-width: 1000px) {
+        .mybtn {
+            width: 40% !important;
+        }
+
+        .textcenter {
+            text-align: left;
+        }
+    }
+
+    @@media only screen and ( max-width: 600px) {
+        .offercard h2 {
+            font-size: 25px !important;
+        }
+
+        .offercard {
+            background: #F9FAFB !important;
+            padding: 20px 0px 0px 0px !important;
+        }
+    }
+    #footer p {
+        margin-bottom: 0px;
+        font-family: "Poppins";
+        font-size: .8rem;
+        font-weight: 500;
+        color: #CCCCCC;
+        text-decoration: none;
+        padding: 0px;
+    }
+    #footer {
+        padding: 59px 0px 0px 0px !important;
+    }
+</style>
+
+
+
+<div class="testimonials">
+    <div class="row">
+        <ul style="text-align:center;width:100%;text-align:center;margin-left:auto;margin-right:auto">
+            <li id="Test1" class="hide-for-small-only">
+
+                <p id="TestSpan1" class="animated fadeInRight navcolor testspan desktophide"><p>This website is not a USA Government website. This is an informational based website that may provide advertisements for consumers that we may profit from.</p>
+            </li>
+            <li id="Test2" class="show-for-small-only">
+                <p class="navcolor navv" id="TestSpan2">This website is not a USA Government website. This is an informational based website that may provide advertisements for consumers that we may profit from.</p>
+            </li>
+            <li id="Test3" style="display:none">
+                <p class="navcolor navv" id="TestSpan3"><b>Ted M. California</b> - $97,409 Found (old life Insurance policy)</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<link id="DynamicStylesheet" rel="stylesheet" href="~/asset/Money/css/Styles.css">
+<div class="logo-bar  logoheaders">
+    <div class="row show-for-small-only" style=" margin-left: 8px;">
+        <div class="col-12">
+            <p style=" text-align: center;">
+                <img class="logoheight" src="~/asset/StudentFinTech_Logo-mid-size.jpg" alt="UNCLAIMED GOVT ">
+            </p>
+        </div>
+        <div style="display:none;" class="col-2">
+            <button style=" color: black !important;float:right; background-color: white;" class="text-white inline-flex p-3 hover:bg-gray-900 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler"
+                    data-target="#navigation">
+                <i class="material-icons">menu</i>
+            </button>
+        </div>
+
+
+    </div>
+    <div class="hiden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto"
+         id="navigation">
+        <div class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto">
+            <a href="http://unclaimedgovernment.com//#main-regg"
+               class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-400 items-center justify-center hover:bg-gray-900 hover:text-white">
+                <span>CHECK MY ELIGIBILITY!</span>
+            </a>
+            <a href="http://unclaimedgovernment.com//#whatis"
+               class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-400 items-center justify-center hover:bg-gray-900 hover:text-white">
+                <span>WHAT IS UNCLAIMED MONEY?</span>
+            </a>
+            <a href="http://unclaimedgovernment.com//#how_it_works"
+               class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-400 items-center justify-center hover:bg-gray-900 hover:text-white">
+                <span>HOW IT WORKS</span>
+            </a>
+
+        </div>
+    </div>
+
+    <script>
+        //function toggleshow() {
+
+        //    $("#navigation").style.display="block";
+        //}
+        $(document).ready(function () {
+            $(".nav-toggler").each(function (_, navToggler) {
+                var target = $(navToggler).data("target");
+                $(navToggler).on("click", function () {
+                    $(target).animate({
+                        height: "toggle"
+                    });
+                });
+            });
+        });
+
+    </script>
+
+    <div class="row navmaxwidth hide-for-small-only" style="display:none;">
+        <div class="small-12 medium-12 large-4 columns">
+
+            <h1 class="wow fadeInDown logocls text-center animated" style="visibility:visible;animation-name:fadeInDown"><img src="~/asset/StudentFinTech_Logo-mid-size.jpg" alt="Credit Guide" style="margin-top:-22px"></h1>
+        </div>
+
+        <div class="large-8 columns hide-for-small-only">
+            <nav class="fontsizee">
+                <p class="headertext navaligh">
+                    <a onclick="javascript:" class="rc-trigger navcolor fontsizee" href="http://creditguidebook.com/#browss">BROWSE RATES FOR FREE!</a> &nbsp;<a class="fontsizee">| </a> &nbsp;  <a onclick="javascript:" class="rc-trigger navcolor fontsizee" href="http://creditguidebook.com/#unclaimed-money">WHY GET INSURANCE?</a> &nbsp;<a class="fontsizee"> |</a></h1> &nbsp;  <a class="rc-trigger navcolor fontsizee" style="color:cornflowerblue !important;" href="http://creditguidebook.com/#main-regg">
+                        GET STARTED
+                    </a>
+                </p>
+            </nav>
+        </div>
+    </div>
+
+    <section id="hero" class="hide-for-small-only" style="min-height: 5em;padding: 0;/* padding-top: 1%; */margin-top: -13px;">
+        <div class="logo-bar" style="background-color: #0064db;">
+            <div class="row navmaxwidth" style="
+    max-width: 100%;
+">
+                <div class="small-12 medium-12 large-7 columns">
+                    <br>
+                    <h1 class="wow fadeInDown   logocls animated" style="visibility: visible;float:right; animation-name: fadeInDown;"><img src="/img/unclaimed_tr.png" alt="Student Fintec" style="margin-top:-30px"></h1>
+                </div>
+                <div class="large-5 columns hide-for-small-only" style="background-color: #0064db;height: 5em;">
+                    <br>
+                    <div class="row" style="max-width: 100%;width: 100%;">
+                        <div class="large-10 columns"></div>
+                        <div class="large-2 columns" style="
+    float: right;
+">
+                            <nav class="fontsizee" style="margin-top:-16px;">
+
+                                <h1 class="text-end" style="font-size: 25px; display:inline-flex;">
+                                    <span style="margin-top: 5%; padding-right: 7%;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 128 128" style="fill: #FFFFFF; width: 40px">
+                                            <path d="M 64 13.5 C 36.2 13.5 13.5 36.2 13.5 64 C 13.5 91.8 36.2 114.5 64 114.5 C 91.8 114.5 114.5 91.8 114.5 64 C 114.5 36.2 91.8 13.5 64 13.5 z M 64 19.5 C 88.5 19.5 108.5 39.5 108.5 64 C 108.5 88.5 88.5 108.5 64 108.5 C 39.5 108.5 19.5 88.5 19.5 64 C 19.5 39.5 39.5 19.5 64 19.5 z M 64 31 C 62.3 31 61 32.3 61 34 L 61 58.800781 C 59.2 59.800781 58 61.8 58 64 C 58 67.3 60.7 70 64 70 C 66.2 70 68.199219 68.8 69.199219 67 L 84 67 C 85.7 67 87 65.7 87 64 C 87 62.3 85.7 61 84 61 L 69.199219 61 C 68.699219 60.1 67.9 59.300781 67 58.800781 L 67 34 C 67 32.3 65.7 31 64 31 z"></path>
+                                        </svg>
+                                    </span><span><div class="countdown" style="padding-top: 40%;color: white;">3:00</div></span>
+                                </h1>
+
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</div>
+
+
+<div class="testimonials hidden" style="background-color: #afafaf;min-height: 2em;">
+    <div class="row" style="
+"><ul style="text-align:center;width:100%;text-align:center;margin-left:auto;margin-right:auto"><li id="Test1"><p id="TestSpan1" class="animated fadeInRight navcolor testspan mobilehide" style="font-size:21px!important;margin-left:4em;display: none !important;"><b>Roland N. California</b> - $2462 Found (Old checking account/ Shares in Fidelity)</p><p style="display:none !important;" id="TestSpan1" class="animated fadeInRight navcolor testspan desktophide"><b>Roland N. California</b> - $2462 Found (Old checking account/ Shares in Fidelity)</p></li><li id="Test2" style="display:none"><p class="navcolor" id="TestSpan2"><b>Larry H. Virginia</b> - $266,174 Found (Old checking account)</p></li><li id="Test3" style="display:none"><p class="navcolor" id="TestSpan3"><b>Ted M. California</b> - $97,409 Found (old life Insurance policy)</p></li></ul></div>
+</div>
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+<section class="offercard">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-boddy" style=" box-shadow: 0px 0px 10px rgb(0 0 0 / 40%);">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="text-capitalize" style="
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase !important;
+">
+                                Congratulations on coming this Far!
+                            </h3>
+                            <p class="text-center" style="
+    font-size: 12px;
+    font-weight: 500;
+">
+
+                                Check out these personalized option available to you!
+                            </p>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+    @foreach (var i in ViewBag.offerswall)
+    {
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body" style=" box-shadow: 0px 0px 10px rgb(0 0 0 / 40%);">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img class="imgg" src="~/UploadedImages/@i.Image" />
+                            </div>
+                            <div class="col-md-6">
+                                <h2 style="color:cornflowerblue;" class="textcenter mt-2">@i.OfferName</h2>
+                                <p class="textcenter">
+
+                                    @i.Description
+                                </p>
+                                <p class="textcenter">
+                                    <a onclick="window.open('@i.RedirectLink/?tid=@ViewBag.tid&subid1=1234' ,'_blank','scrollbars=yes,width=2000,height=700');return false;" class="rc-trigger">
+
+                                        <button id="Apply1" class="btn mybtn button wow bounce infinite animated" style="color:white;  margin-top: 1em; padding: 12px 17px; background: linear-gradient(rgb(36, 153, 222), rgb(26, 113, 163));box-shadow: none; visibility: visible; animation-name: bounce; font-size: 17px; "><i style="color: #B5FF3F;" class="fa fa-check"></i> GET STARTED NOW</button>
+
+
+
+
+                                    </a>
+                                </p>
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    }
+    @*  <div class="row mt-3">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body" style=" box-shadow: 0px 0px 10px rgb(0 0 0 / 40%);">
+                        <div class="row">
+                            <div class="col-12">
+                                <img class="imgg" src="~/asset/img/Save_money_(367_×_156_px) (1).png" />
+                                <h2 style="color:cornflowerblue;" class="text-center mt-2">txxjdsjdsdjshdjshd</h2>
+                                <p class="text-center">
+
+                                    We have matched you in the following resources.
+
+                                    Click on the result below to get started.
+                                </p>
+                                <a href="#main-regg" onclick="javascript:" class="rc-trigger">
+
+                                    <button href="#main-regg" class="btn button wow bounce infinite animated" style="color:white;  margin-top: 1em; padding: 12px 17px; background: linear-gradient(rgb(36, 153, 222), rgb(26, 113, 163)); width: 100%; box-shadow: none; visibility: visible; animation-name: bounce; font-size: 17px; "><i style="color: #B5FF3F;" class="fa fa-check"></i> Check My Rate NOW</button>
+
+
+
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body" style=" box-shadow: 0px 0px 10px rgb(0 0 0 / 40%);">
+                        <div class="row">
+                            <div class="col-12">
+                                <img class="imgg" src="~/asset/img/Save_money_(367_×_156_px) (1).png" />
+                                <h2 style="color:cornflowerblue;" class="text-center mt-2">txxjdsjdsdjshdjshd</h2>
+                                <p class="text-center">
+
+                                    We have matched you in the following resources.
+
+                                    Click on the result below to get started.
+                                </p>
+                                <a href="#main-regg" onclick="javascript:" class="rc-trigger">
+
+                                    <button href="#main-regg" class="btn button wow bounce infinite animated" style="color:white;  margin-top: 1em; padding: 12px 17px; background: linear-gradient(rgb(36, 153, 222), rgb(26, 113, 163)); width: 100%; box-shadow: none; visibility: visible; animation-name: bounce; font-size: 17px; "><i style="color: #B5FF3F;" class="fa fa-check"></i> Save & Start</button>
+
+
+
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body" style=" box-shadow: 0px 0px 10px rgb(0 0 0 / 40%);">
+                        <div class="row">
+                            <div class="col-12">
+                                <img class="imgg" src="~/asset/img/Save_money_(367_×_156_px) (1).png" />
+                                <h2 style="color:cornflowerblue;" class="text-center mt-2">txxjdsjdsdjshdjshd</h2>
+                                <p class="text-center">
+
+                                    We have matched you in the following resources.
+
+                                    Click on the result below to get started.
+                                </p>
+                                <a href="#main-regg" onclick="javascript:" class="rc-trigger">
+
+                                    <button href="#main-regg" class="btn button wow bounce infinite animated" style="color:white;  margin-top: 1em; padding: 12px 17px; background: linear-gradient(rgb(36, 153, 222), rgb(26, 113, 163)); width: 100%; box-shadow: none; visibility: visible; animation-name: bounce; font-size: 17px; "><i style="color: #B5FF3F;" class="fa fa-check"></i> Click Here</button>
+
+
+
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body" style=" box-shadow: 0px 0px 10px rgb(0 0 0 / 40%);">
+                        <div class="row">
+                            <div class="col-12">
+                                <img class="imgg" src="~/asset/img/Save_money_(367_×_156_px) (1).png" />
+                                <h2 style="color:cornflowerblue;" class="text-center mt-2">txxjdsjdsdjshdjshd</h2>
+                                <p class="text-center">
+
+                                    We have matched you in the following resources.
+
+                                    Click on the result below to get started.
+                                </p>
+                                <a href="#main-regg" onclick="javascript:" class="rc-trigger">
+
+                                    <button href="#main-regg" class="btn button wow bounce infinite animated" style="color:white;  margin-top: 1em; padding: 12px 17px; background: linear-gradient(rgb(36, 153, 222), rgb(26, 113, 163)); width: 100%; box-shadow: none; visibility: visible; animation-name: bounce; font-size: 17px; "><i style="color: #B5FF3F;" class="fa fa-check"></i> Click Here</button>
+
+
+
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body" style=" box-shadow: 0px 0px 10px rgb(0 0 0 / 40%);">
+                        <div class="row">
+                            <div class="col-12">
+                                <img class="imgg" src="~/asset/img/Save_money_(367_×_156_px) (1).png" />
+                                <h2 style="color:cornflowerblue;" class="text-center mt-2">txxjdsjdsdjshdjshd</h2>
+                                <p class="text-center">
+
+                                    We have matched you in the following resources.
+
+                                    Click on the result below to get started.
+                                </p>
+                                <a href="#main-regg" onclick="javascript:" class="rc-trigger">
+
+                                    <button href="#main-regg" class="btn button wow bounce infinite animated" style="color:white;  margin-top: 1em; padding: 12px 17px; background: linear-gradient(rgb(36, 153, 222), rgb(26, 113, 163)); width: 100%; box-shadow: none; visibility: visible; animation-name: bounce; font-size: 17px; "><i style="color: #B5FF3F;" class="fa fa-check"></i> Click Here</button>
+
+
+
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>*@
+</section>
+<br />
+@*<section id="footer" style=" background-color: #ffff; max-width: 78em; margin: 40px auto; padding: 0 !important;">*@
+<section id="footer" style="background-color:#333">
+    <div class="row footermaxwidth">
+        <div class="small-12 medium-12 large-7 columns">
+            <p style="color:gray" class="text-left copyrighttext">© Copyright 2022 The Cosmopolitan Consumer Group, LLC </p>
+            <p class="text-left desktophide"> <a href="javascript:" onclick="window.open('/Money/Unsubcribe','privacy','scrollbars=yes,width=555,height=500')">Click here</a> to unsubscribe from our mailing list | <a href="javascript:;" onclick="openfunc()">Privacy Policy</a>| <a onclick="openfuncc()">Terms &amp;Conditions</a> </p>
+        </div>
+        
+        <div class="small-12 medium-12 large-5 columns">
+            <p class="text-right mobilehide"> <a href="javascript:" onclick="window.open('/Money/Unsubcribe','privacy','scrollbars=yes,width=555,height=500')">Click here</a> to unsubscribe from our mailing list | <a href="javascript:;" onclick="openfunc()">Privacy Policy</a>|<a onclick="openfuncc()">Terms &amp;Conditions</a> </p>
+        </div>
+        <div class="small-12 columns">
+            <p style="color:gray" class="text-left"> *Void where prohibited. Service is not available in all 50 states. </p>
+            <p style="color:gray" class="text-left"> Cosmopolitan Consumer Group, LLC is not affiliated with the United States Government and is a privately operated web site. Cosmopolitan Consumer Group, LLC acts as an informational portal for funding assistance. Information regarding the products and services on this website may be provided by a third party advertising such product and service on the site and therefore the correctness of such representations is unknown to the site owner who does not undertake due diligence to confirm such third-party representations regarding third party advertising claims. When you are redirected to the third-party advertiser's site, and you should review their terms and conditions and privacy policy as they differ significantly from our own. The owner of this website is not affiliated with the third-party advertiser other than stated above. The owner does not recommend or endorse any product or service on this website. Cosmopolitan Consumer Group, LLC may receive a fee or commission when you participate in third party offers. </p>
+            <p style="color:gray"></p>
+            <p style="color:gray" class="text-left">
+                After you register on unclaimedgovernment.com, you will see a series of advertising offers. These offers are optional. You are not required to participate in the offers to obtain unclaimed asset information. If you decide to purchase products or services from our advertisers, you may incur associated charges. Any total dollar amount in unclaimed funds or goods that we show is reported by the appropriate government agencies. This does not guarantee that this money is under your name or common variations of your name and is able to have a claim form submitted to be paid that amount.
+            </p><p></p>
+            <p style="color:gray" class="text-left"> California Residents: Pursuant to Section 1798.120 of the California Consumer Privacy Act (CCPA), a consumer shall have the right, at any time, to direct a business that sells personal information about the consumer to third parties not to sell the consumer’s personal information. If you would like to exercise this right, please click the following link: <a href="javascript:" onclick="window.open('/Money/CCPA','privacy','scrollbars=yes,width=555,height=500')"> Do Not Sell My Personal Information.</a> </p>
+        </div>
+    </div>
+    <br>
+</section>
+<!--<section id="footer" style="background-color: #ffff">
+
+    <div class="row" style=" max-width: 100%">
+        <div class="col-md-4">
+
+            <h1 class="wow fadeInDown logocls text-center animated animated" style="visibility: visible; animation-name: fadeInDown;"><img src="~/asset/creditguide.jpg" alt="" style="width: 20em;"></h1>
+        </div>
+
+
+
+
+
+
+        <div class="col-md-8 navmaxwidth">
+            <div class="small-12 medium-5 columns show-for-small-only ">-->
+@*<p style="color:white;" class="text-center">© Copyright 2022 The <a style="color: white; text-decoration: underline;" href="https://cosmopolitancg.com/"> The Cosmopolitan Consumer Group, LLC</a> </p>*@
+
+<!--</div><div class="small-12 medium-1 columns mobilehide show-for-small-only ">&nbsp;</div><div class="small-12 medium-6 columns show-for-small-only ">
+                <p class="text-right mobilehide" style="color: black;">
+                    <a style="color: black; text-decoration: underline;" href="javascript:" onclick="window.open('/Money/Unsubcribe','privacy','scrollbars=yes,width=555,height=500')">Click here</a>&nbsp;&nbsp;&nbsp;&nbsp; to unsubscribe from our mailing list&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a style="color: black; text-decoration: underline;" href="javascript:;" onclick="openfunc()">Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;  <a style="color: black; text-decoration: underline;" onclick="openfuncc()">  Terms    Conditions  </a>
+                </p>
+            </div>
+
+            <div class="small-12 columns">
+                <div class="" style="height:10px"></div>
+                <p style="color:black" class=" ">
+                    *Void where prohibited. Service is not available in all 50 states.
+                </p>
+                <div class="" style="height:10px"></div>
+
+                <p style="color:black" class=" ">
+                    <a style="color:black;text-decoration:underline;" href="https://cosmopolitancg.com/">  The Cosmopolitan Consumer Group, LLC </a>is not affiliated with the United States Government and is a privately operated web site.<a style="color:black;text-decoration:underline;" href="https://cosmopolitancg.com/">  The Cosmopolitan Consumer Group, LLC </a> acts as an informational portal for funding assistance. Information regarding the products and services on this website may be provided by a third party advertising such product and service on the site and therefore the correctness of such representations is unknown to the site owner who does not undertake due diligence to confirm such third-party representations regarding third party advertising claims. When you are redirected to the third-party advertiser's site, and you should review their terms and conditions and privacy policy as they differ significantly from our own. The owner of this website is not affiliated with the third-party advertiser other than stated above. The owner does not recommend or endorse any product or service on this website. The Cosmopolitan Consumer Group, LLC may receive a fee or commission when you participate in third party offers.
+                </p>
+                <div class="" style="height:10px"></div>
+                <p style="color:black"></p><p style="color:black" class=" ">
+                    After you register on unclaimedgovernment.com, you will see a series of advertising offers. These offers are optional. You are not required to participate in the offers to obtain unclaimed asset information. If you decide to purchase products or services from our advertisers, you may incur associated charges. Any total dollar amount in unclaimed funds or goods that we show is reported by the appropriate government agencies. This does not guarantee that this money is under your name or common variations of your name and is able to have a claim form submitted to be paid that amount.
+                </p><p></p>
+                <div class="" style="height:10px"></div>
+                <p style="color:black" class=" ">
+                    California Residents: Pursuant to Section 1798.120 of the California Consumer Privacy Act (CCPA), a consumer shall have the right, at any time, to direct a business that sells personal information about the consumer to third parties not to sell the consumer’s personal information. If you would like to exercise this right, please click the following link: <a style="color: black; text-decoration: underline;" href="javascript:" onclick="window.open('/Money/CCPA','privacy','scrollbars=yes,width=555,height=500')"> Do Not Sell My Personal Information.</a>
+                </p>
+                <br>
+
+
+
+                <p class=" show-for-small-only " style="color:black">
+                    <a onclick="window.open('/Money/Unsubcribe','privacy','scrollbars=yes,width=555,height=500')">-UNSUBSCRIBE</a>
+                    <br />
+                    <a onclick="openfunc()"> -PRIVACY POLICY</a>
+                    <br />
+                    <a onclick="openfuncc()">TERM & CONDITIONS</a>
+                </p>
+                <br>
+
+                <p class=" show-for-small-only " style="color:black">© Copyright 2022 The Cosmopolitan Consumer Group, LLC</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="hide-for-small-only">
+        <div class="row" style="max-width:100%">
+            <div class="col-md-6">
+
+                <p style="color:black">© Copyright 2022 The Cosmopolitan Consumer Group, LLC</p>
+
+
+            </div>
+            <div class="col-md-6">
+
+                <p style="text-align: right !important;color :black;">
+                    <a onclick="window.open('/Money/Unsubcribe','privacy','scrollbars=yes,width=555,height=500')">UNSUBSCRIBE</a>
+                    |
+
+                    <a onclick="openfunc()"> PRIVACY POLICY</a>  |
+                    <a onclick="openfuncc()">TERM & CONDITIONS</a>
+
+                </p>
+
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <br>
+    <script>
+        window.addEventListener('load', function () {
+            if (window.location.pathname == '/Money/offers') {
+                gtag('event', 'conversion', { 'send_to': 'AW-10866454865/8JCiCKi6oasDENHiw70o' });
+            }
+        });
+    </script>
+</section>-->
+<script>
+    var timer2 = "3:00";
+    var interval = setInterval(function () {
+
+
+        var timer = timer2.split(':');
+        //by parsing integer, I avoid all extra string processing
+        var minutes = parseInt(timer[0], 10);
+        var seconds = parseInt(timer[1], 10);
+        --seconds;
+        minutes = (seconds < 0) ? --minutes : minutes;
+        if (minutes < 0) clearInterval(interval);
+        seconds = (seconds < 0) ? 59 : seconds;
+        seconds = (seconds < 10) ? '0' + seconds : seconds;
+        //minutes = (minutes < 10) ?  minutes : minutes;
+        $('.countdown').html(minutes + ':' + seconds);
+        timer2 = minutes + ':' + seconds;
+    }, 1000);
+</script>
+
+@*User cannot move Backword*@
+
+@*<script>
+    window.history.pushState(null, null, window.location.href);
+    window.onpopstate = function () {
+        window.history.go(1);
+    };
+</script>*@

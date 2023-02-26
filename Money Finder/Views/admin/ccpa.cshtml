@@ -1,0 +1,542 @@
+﻿
+@{
+    ViewData["Title"] = "consumerleadinfo";
+    Layout = "~/Views/Layouts/_adminLayout.cshtml";
+}
+<link href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables_themeroller.css">
+<link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf8" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+
+
+<link href="https://cdn.datatables.net/select/1.1.2/css/select.dataTables.min.css" rel="stylesheet" />
+
+
+
+
+@*<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <style>
+        table.dataTable.select tbody tr,
+        table.dataTable thead th:first-child {
+            cursor: pointer;
+        }
+    </style>*@
+
+<style>
+    td {
+        background-color:white !important;
+        padding-top:2% !important;
+        padding-bottom:2% !important;
+    }
+    table {
+        border-collapse: collapse;
+    }
+    table {
+        border-collapse: collapse;
+    }
+        table.dataTable thead th {
+            border-bottom: 2px solid #f7f7ff !important;
+        }
+            thead, th, td {
+        border-bottom: 2px solid #f7f7ff;
+    }
+    table.dataTable.no-footer {
+        border-bottom: 2px solid #f7f7ff;
+    }
+    thead {
+        background-color: #f7f7ff !important;
+    }
+    table.dataTable thead th {
+        /* padding-bottom:10px;
+        padding-top:10px;*/
+        padding-top: 1% !important;
+        padding-bottom: 1% !important;
+        background-color: #f7f7ff !important;
+    }
+    #mytable_previous a {
+        border: none !important;
+        padding-left: 100% !important;
+    }
+    .hundered {
+        padding: 1% !important;
+        color: white !important;
+        background-color: #38A169 !important;
+        border-radius: 2px !important;
+    }
+    #mytable_next a {
+        border: none !important;
+    }
+   
+
+    tr.border-bottom {
+        border-bottom: 1px solid #ff000d !important;
+    }
+    tr {
+        border-bottom: 2px solid #f7f7ff !important;
+    }
+        tr.border_bottom td {
+            border-bottom: 1px solid black;
+        }
+
+    .cancel {
+        border-radius: 5px;
+        padding: 1% 2%;
+        border: none;
+        color: black;
+        background-color: lightgray;
+    }
+
+        .cancel:hover {
+            background-color: #319795;
+        }
+    
+</style>
+
+
+
+
+
+
+@*<style>
+       .pagination {
+            display: none !important;
+        }
+
+        .pagination li.Prev, .pagination Next {
+            display: inline !important;
+        }
+    </style>*@
+<form id="Form">
+    <div class="col-12">
+        <h4 id="heading" class="mt-0 header-title h3bg">CCPA</h4>
+
+        <div class="card" style="margin-top: -7px; box-shadow: 0 9px 4px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%); ">
+            <div class="card-body">
+
+
+                <table id="mytable" class="" style="width:100%">
+                    <thead data-orderable="false">
+                        <tr data-orderable="false">
+                            
+                            <th data-orderable="false"><input name="select_all" value="1" type="checkbox" autocomplete="off"></th>
+                            <th class="userid" data-orderable="false" style=" width: 13%;"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>&nbsp;User ID</th>
+                            <th data-orderable="false" style=" width: 13%;"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;First Name</th>
+                            <th data-orderable="false" style=" width: 13%;"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;Last NAME</th>
+                            <th data-orderable="false"><i class="fa fa-check-circle" aria-hidden="true"></i>   &nbsp;Type Of Request</th>
+                            <th data-orderable="false">ACTION</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var i in ViewBag.ccpa)
+                        {
+
+
+                            <tr>
+
+                                <td><input type="checkbox" class="archive" value="@i.CcpaOptOutId" name="archiveitem" autocomplete="off"></td>
+                                <td>@i.CcpaOptOutId </td>
+                                <td>@i.FirstName </td>
+                                <td>@i.LastName</td>
+                                <td><a class="hundered">@i.TypeRequest</a></td>
+
+                                <td><a style=" cursor: pointer;" onclick="offerdetail('@i.CcpaOptOutId')">....</a>  <a style=" cursor: pointer;" onclick="showconfirmationmodal()">×</a></td>
+
+                            </tr>
+                        }
+
+
+
+
+                    </tbody>
+
+                </table>
+
+
+            </div>
+
+
+        </div>
+    </div>
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" id="modal" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+
+            <div class="modal-content" style="margin-top:10em; background: linear-gradient(90deg, #1E292B 0%, #273132 20.83%, #313735 40.62%, #3E413A 60.94%, #4A4B43 80.21%, #5A5748 100%);">
+                <div class="col-md-12">
+                    <button onclick="modalclose()" style="float: right; background-color: white;" type="button" class="btn-close"></button>
+
+                </div>
+                <div class="row" style="padding-top: 5%; padding-bottom: 5%; ">
+
+                    <div class="col-md-5" style="line-height: 28px; padding-left: 5%;  font-size: 18px;color:white;">
+
+                        <div style="height: 1.9em ">First name:</div>
+                        <div style="height: 1.9em ">Last name:</div>
+                        <div style="height: 1.9em ">Email address:</div>
+                        <div style="height: 2em;">Mobile</div>
+                        <div style="height: 2em;">Type of request:</div>
+                        <div style="height: 1.9em ">Engaged with Cosmopolitan Consumer Groupengaged:</div>
+                        <div style=" display: list-item; list-style: inside; height: 2.9em;line-height: 4em;">penalty of perjury:</div>
+                        <div style=" display: list-item; list-style: inside; height: 1.9em; ">
+                            Acknowledge that transmitting personal information:
+                        </div>
+                        <div style=" display: list-item; list-style: inside; height: 2.9em;line-height: 4em;">penalty of perjury:</div>
+                    </div>
+
+
+                    <div class="col-md-7" style="text-align:end;padding-right: 5%;font-size: 15px;color:white;">
+                        <div style="height: 1.9em;" id="firstname">None</div>
+                        <div style="height: 1.9em;" id="lastname">None</div>
+                        <div style="height: 1.9em;" id="mail">None</div>
+                        <div style="height: 2.9em;" id="mobile"></div>
+                        <div style="height: 4em;" id="tr">None</div>
+                        <div style="height: 1.9em;">None</div>
+                        <div style="height: 1.9em;">None</div>
+                        <div style="height: 1.9em;">None</div>
+                        <div style="height: 1.9em;">Yes</div>
+                        <div style="height: 1.9em;">No</div>
+                        <div style="height: 1.9em;">Yes</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="confirmmodal" tabindex="-1" role="dialog" style="margin-top: 23em;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <h1 style="background-color: #c6f6d5;width: 48px;height: 48px;padding-top: 0%;padding-left: 14%;border-radius: 87px;color: #2f8c61;margin: 16px 20px;">✓</h1>
+
+                        </div>
+                        <div class="col-md-9" style="
+    margin-top: 16px;
+">
+                            <h2 style="font-size: 24px;">Remove All</h2>
+                            <p style="font-size: 13px;">Are you sure you want to remove all selected CCPA's </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+                <div class="modal-footer" style=" border: none;">
+                    <button class="cancel" onclick="cancel()" type="button">Cancel</button>
+                    <button type="button" onclick="selectedcheckbox()" style=" border-radius: 5px; padding: 1% 2%; border: none; color: white; background-color: #319795; " data-dismiss="modal">Continue</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </form>
+    <script>
+        function showmodal() {
+            $("#heading").text("CONSUMER LEAD INFO'S");
+            $("#modal").modal('show');
+        }
+        function modalclose() {
+
+            $("#modal").modal('hide');
+        }
+        function showconfirmationmodal() {
+
+            $("#confirmmodal").modal('show');
+        }
+        function cancel() {
+
+            $("#confirmmodal").modal('hide');
+        }
+
+        function selectedcheckbox(offer) {
+
+            var formData = {};
+            var formData = $("#Form").serialize();
+            
+            $.ajax(
+                {
+                    type: "POST",
+                    url: '/admin/Deleteccpaoffer',
+
+                    contentType: 'application/x-www-form-urlencoded; charset=UTF-8', // when we use .serialize() this generates the data in query string format. this needs the default contentType (default content type is: contentType: 'application/x-www-form-urlencoded; charset=UTF-8') so it is optional, you can remove it
+                    data: formData,
+                    success: function (result) {
+                        sumitsweett();
+                        setTimeout(function () {
+                            location.reload(true);
+
+                        }, 1000);
+
+                    },
+                    error: function () {
+                        alert('Failed to receive the Data');
+                        console.log('Failed ');
+                    }
+
+                }
+            );
+        }
+        function sumitsweett() {
+            var icon = "success";
+            if (status == "success") {
+                icon = "success";
+            }
+
+            var config = {}
+            config.icon = icon;
+            config.title = "Success";
+            config.text = "CCPA Archive SuccessFully";
+
+            Swal.fire(config);
+
+        }
+
+
+
+        $(document).ready(function () {
+
+            /** Handling checboxes selection*/
+
+            function updateDataTableSelectAllCtrl(table) {
+                var $table = table.table().node();
+                var $chkbox_all = $('tbody input[type="checkbox"]', $table);
+                var $chkbox_checked = $('tbody input[type="checkbox"]:checked', $table);
+                var chkbox_select_all = $('thead input[name="select_all"]', $table).get(0);
+
+                // If none of the checkboxes are checked
+                if ($chkbox_checked.length === 0) {
+                    chkbox_select_all.checked = false;
+                    if ('indeterminate' in chkbox_select_all) {
+                        chkbox_select_all.indeterminate = false;
+                    }
+
+                    // If all of the checkboxes are checked
+                } else if ($chkbox_checked.length === $chkbox_all.length) {
+                    chkbox_select_all.checked = true;
+                    if ('indeterminate' in chkbox_select_all) {
+                        chkbox_select_all.indeterminate = false;
+                    }
+
+                    // If some of the checkboxes are checked
+                } else {
+                    chkbox_select_all.checked = true;
+                    if ('indeterminate' in chkbox_select_all) {
+                        chkbox_select_all.indeterminate = true;
+                    }
+                }
+            }
+
+            /** Responsive table with colreorder, fixed header;footer, sortable teble*/
+            var table = $('#mytable').DataTable({
+
+                //responsive: {
+                //    details: {
+                //        type: 'column'
+                //    }
+                //},
+                /*  order: [1, 'asc'],*/
+                //colReorder: {
+                //    fixedColumnsLeft: 1,
+                //    fixedColumnsLeft: 2
+                //},
+                fixedHeader: {
+                    header: true,
+                    footer: true
+                },
+                'columnDefs': [{
+                    'targets': 1,
+                    'searchable': false,
+                    'orderable': false,
+                    'width': '1%',
+                    'className': 'dt-body-center'
+                },
+                {
+                    'className': 'control',
+                    'orderable': false,
+                    targets: 0,
+
+                },
+                ],
+
+
+                'filter': false,
+
+                "dom": '<"bottom"i>rt<"bottom"flp><"clear">',
+
+                "language": {
+                    "info": '<"bottom"i>rt<"bottom"flp><"clear">',
+                    "info": " _START_ - _END_ of _TOTAL_",
+                    "paginate": {
+                        "next": '<img src="/img/nextt.png" style=" width: 15px;">',
+
+                        "previous": '<img src="/img/back.png" style=" width: 15px;" > '
+                    }
+                },
+
+                "pagingType": "simple",
+                /*'order': [[1, 'asc']],*/
+                'rowCallback': function (row, data, dataIndex) {
+                    // Get row ID
+                    var rowId = data[6];
+
+                    // If row ID is in the list of selected row IDs
+                    if ($.inArray(rowId, /**rows_selected */) !== -1) {
+                        $(row).find('input[type="checkbox"]').prop('checked', true);
+                        $(row).addClass('selected');
+                    }
+                }
+            });
+
+            /** mark single checkboxes */
+
+            $(document).ready(function () {
+                // Array holding selected row IDs
+                var rows_selected = [];
+
+
+                // Handle click on checkbox
+                $('#mytable tbody').on('click', 'input[type="checkbox"]', function (e) {
+                    var $row = $(this).closest('tr');
+
+                    // Get row data
+                    var data = table.row($row).data();
+
+                    // Get row ID
+                    var rowId = data[6];
+
+                    // Determine whether row ID is in the list of selected row IDs
+                    var index = $.inArray(rowId, rows_selected);
+
+                    // If checkbox is checked and row ID is not in list of selected row IDs
+                    if (this.checked && index === -1) {
+                        rows_selected.push(rowId);
+
+                        // Otherwise, if checkbox is not checked and row ID is in list of selected row IDs
+                    } else if (!this.checked && index !== -1) {
+                        rows_selected.splice(index, 1);
+                    }
+
+                    if (this.checked) {
+                        $row.addClass('selected');
+                    } else {
+                        $row.removeClass('selected');
+                    }
+
+                    // Update state of "Select all" control
+                    updateDataTableSelectAllCtrl(table);
+
+                    // Prevent click event from propagating to parent
+                    e.stopPropagation();
+                });
+
+                // Handle click on table cells with checkboxes
+                $('#mytable').on('click', 'tbody td, thead th:first-child', function (e) {
+                    $(this).parent().find('input[type="checkbox"]').trigger('click');
+                });
+
+                // Handle click on "Select all" control
+                $('thead input[name="select_all"]', table.table().container()).on('click', function (e) {
+                    if (this.checked) {
+                        $('#mytable tbody input[type="checkbox"]:not(:checked)').trigger('click');
+                    } else {
+                        $('#mytable tbody input[type="checkbox"]:checked').trigger('click');
+                    }
+
+                    // Prevent click event from propagating to parent
+                    e.stopPropagation();
+                });
+
+                // Handle table draw event
+                table.on('draw', function () {
+                    // Update state of "Select all" control
+                    updateDataTableSelectAllCtrl(table);
+                });
+
+                // Handle form submission event
+                $('#frm-mytable').on('submit', function (e) {
+                    var form = this;
+
+                    // Iterate over all selected checkboxes
+                    $.each(rows_selected, function (index, rowId) {
+                        // Create a hidden element
+                        $(form).append(
+                            $('<input>')
+                                .attr('type', 'hidden')
+                                .attr('name', 'id[]')
+                                .val(rowId)/**there are data from json file or db*/
+                        );
+                    });
+
+                    $('#examplee-console').text($(form).serialize());
+                    console.log("Form submission", $(form).serialize());
+
+                    // Remove added elements
+                    $('input[name="id\[\]"]', form).remove();
+
+                    // Prevent actual form submission
+                    e.preventDefault();
+                });
+
+            });
+
+
+
+            /** Handling responsive expand collapse all*/
+
+
+
+            // Handle click on "Expand All" button
+            $('#btn-show-all-children').on('click', function () {
+                // Expand row details
+                table.rows(':not(.parent)').nodes().to$().find('td:first-child').trigger('click');
+            });
+
+            // Handle click on "Collapse All" button
+            $('#btn-hide-all-children').on('click', function () {
+                // Collapse row details
+                table.rows('.parent').nodes().to$().find('td:first-child').trigger('click');
+            });
+        });
+    </script>
+
+    <script>
+
+        function offerdetail(count) {
+
+            $("#modal").modal('show');
+            var id = count;
+
+            $.ajax
+                (
+                    {
+                        type: "GET",
+                        url: "/admin/getccpaeoffer",
+                        contentType: "Application/json;charset=utf-8",
+                        data: { id: count },
+                        success: function (data) {
+                            console.log("result", data);
+                            $("#firstname").text(data[0].first_name);
+                            $("#lastname").text(data[0].last_name);
+                            $("#mail").text(data[0].email);
+                            $("#mobile").text(data[0].phone);
+                            $("#tr").text(data[0].typerequest);
+
+
+                        },
+
+
+                    }
+                );
+        }
+    </script>

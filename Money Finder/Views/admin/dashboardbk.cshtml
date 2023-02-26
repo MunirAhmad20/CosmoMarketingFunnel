@@ -1,0 +1,763 @@
+﻿@{ ViewData["Title"] = "everflowtest"; Layout = "~/Views/Layouts/_adminLayout.cshtml"; }
+
+<script type="text/javascript" charset="utf8" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+
+<style>
+    .hunderd {
+        font-size: 12px;
+        padding: 5px;
+        border-radius: 5px;
+        color: #fff;
+        /* margin-left: 5px; */
+        /* text-align: right; */
+        background-color: #e53935;
+        max-width: 46px;
+        height: 28px;
+        float: right;
+        width: 32px;
+    }
+
+    .uppertext {
+        text-transform: uppercase;
+        font-size: 13.5px;
+        color: #555;
+        margin-right: 5px;
+    }
+
+    .box {
+        box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%);
+    }
+
+    .pacingname {
+        letter-spacing: .2px;
+        color: rgba(0, 0, 0, .87);
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 10px;
+        color: #555;
+        margin-bottom: 1rem !important;
+    }
+
+    .zeropacingname {
+        float: right;
+        letter-spacing: .2px;
+        color: rgba(0, 0, 0, .87);
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 10px;
+        color: #555;
+        margin-bottom: 1rem !important;
+    }
+
+    .metric-today {
+        text-transform: uppercase;
+        font-size: 10px;
+        margin-top: 2px;
+        color: #555;
+    }
+
+    .main-metric {
+        color: rgba(0, 0, 0, .87);
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+</style>
+
+
+
+
+<div class="row">
+   
+    <div class="col-md-6">
+        @foreach (var i in ViewBag.sites)
+        {
+            <p>Hello @i.Username</p>
+        }
+            <br>
+            <div class="col-md-5">
+                <label style="margin-bottom: 5px;">Select Website:</label>
+                <select id="change" onchange="redirect();" class="form-control">
+                    <option value="volvo">Select Website </option>
+                    @*<option value="CCG">CCG</option>
+                    <option value="CCG Temp">CCG Temp</option>*@
+                    @*<option value="Student Fintech">Student Fintech</option>*@
+                    <option value="Unclaimed GOV">Unclaimed GOV</option>
+                    <option value="AutoRate Freedom">AutoRate Freedom</option>
+                    <option value="Senior Discount Savings">Senior Discount Savings</option>
+                </select>
+            </div>
+
+        </div>
+
+
+    <div class="col-md-6" style="text-align: right;">
+
+        @*<p>Wednesday,March23,2022</p>*@
+        <p>@DateTime.Now.ToLongDateString()</p>
+
+    </div>
+</div>
+
+
+
+
+<div class="col-md-12" style="margin-top:1em">
+
+    <h4 class="mt-0 header-title h3bg" style="margin: 0px -12px; height: 45px; ">Dashboard</h4>
+
+</div>
+<div class="row" style="background-color: white; margin-top: -6px;">
+    <div class="col-md-2">
+        <div class="card box">
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-8">
+
+                        <h4 class="uppertext">Revenue <p class="metric-today">Today</p></h4>
+
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="hunderd">@ViewBag.apiresult.revenue.trending_percentage %</h4>
+
+
+                    </div>
+                    <h4 class="main-metric">$ @ViewBag.apiresult.revenue.today.00</h4>
+
+                    <div class="col-md-10">
+
+                        <h5 class="pacingname "> Yesterday </h5>
+                        <h5 class="pacingname ">   CURRENT MONTH </h5>
+                        <h5 class="pacingname ">   LAST MONTH </h5>
+
+                    </div>
+                    <div class="col-md-2">
+                        <h5 class="zeropacingname ">$@ViewBag.apiresult.revenue.yesterday.00</h5>
+                        <h5 class="zeropacingname ">$@ViewBag.apiresult.revenue.current_month.00</h5>
+                        <h5 class="zeropacingname ">$@ViewBag.apiresult.revenue.last_month.00</h5>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="col-md-2">
+        <div class="card box">
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-8">
+
+                        <h4 class="uppertext">PAYOUT <p class="metric-today">Today</p></h4>
+
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="hunderd">@ViewBag.apiresult.payout.trending_percentage%</h4>
+
+
+                    </div>
+                    <h4 class="main-metric">$@ViewBag.apiresult.payout.today.00</h4>
+
+                    <div class="col-md-10">
+
+                        <h5 class="pacingname "> Yesterday </h5>
+                        <h5 class="pacingname ">   CURRENT MONTH </h5>
+                        <h5 class="pacingname ">   LAST MONTH </h5>
+
+                    </div>
+                    <div class="col-md-2">
+                        <h5 class="zeropacingname ">$@ViewBag.apiresult.payout.yesterday.00</h5>
+                        <h5 class="zeropacingname ">$@ViewBag.apiresult.payout.current_month.00</h5>
+                        <h5 class="zeropacingname ">$@ViewBag.apiresult.payout.last_month.00</h5>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="col-md-2">
+        <div class="card box">
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-8">
+
+                        <h4 class="uppertext">MARGIN <p class="metric-today">Today</p></h4>
+
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="hunderd">0 %</h4>
+
+
+                    </div>
+                    <h4 class="main-metric">@ViewBag.apiresult.margin.today%</h4>
+
+                    <div class="col-md-10">
+
+                        <h5 class="pacingname "> Yesterday </h5>
+                        <h5 class="pacingname ">   CURRENT MONTH </h5>
+                        <h5 class="pacingname ">   LAST MONTH </h5>
+
+                    </div>
+                    <div class="col-md-2">
+                        <h5 class="zeropacingname ">@ViewBag.apiresult.margin.yesterday%</h5>
+                        <h5 class="zeropacingname ">@ViewBag.apiresult.margin.current_month%</h5>
+                        <h5 class="zeropacingname ">@ViewBag.apiresult.margin.last_month%</h5>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="col-md-2">
+        <div class="card box">
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <h4 class="uppertext">CLICK <p class="metric-today">Today</p></h4>
+
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="hunderd">@ViewBag.apiresult.gross_click.trending_percentage</h4>
+
+
+                    </div>
+                    <h4 class="main-metric">@ViewBag.apiresult.gross_click.today</h4>
+
+                    <div class="col-md-10">
+
+                        <h5 class="pacingname "> Yesterday </h5>
+                        <h5 class="pacingname ">   CURRENT MONTH </h5>
+                        <h5 class="pacingname ">   LAST MONTH </h5>
+
+
+                    </div>
+                    <div class="col-md-2">
+                        <h5 class="zeropacingname ">@ViewBag.apiresult.gross_click.yesterday </h5>
+                        <h5 class="zeropacingname ">@ViewBag.apiresult.gross_click.current_month</h5>
+                        <h5 class="zeropacingname ">@ViewBag.apiresult.gross_click.last_month</h5>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <div class="col-md-2">
+        <div class="card box">
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-10">
+
+                        <h4 class="uppertext">CONVERSION<p class="metric-today">Today</p></h4>
+
+                    </div>
+                    <div class="col-md-2">
+                        <h4 class="hunderd">@ViewBag.apiresult.conversion.trending_percentage%</h4>
+
+
+                    </div>
+                    <h4 class="main-metric">@ViewBag.apiresult.conversion.today</h4>
+
+                    <div class="col-md-10">
+
+                        <h5 class="pacingname ">
+                            Yesterday
+                        </h5>
+                        <h5 class="pacingname ">
+                            CURRENT MONTH
+                        </h5>
+                        <h5 class="pacingname ">   LAST MONTH </h5>
+
+                    </div>
+                    <div class="col-md-2">
+                        <h5 class="zeropacingname ">
+                            @ViewBag.apiresult.conversion.yesterday
+                        </h5>
+                        <h5 class="zeropacingname ">
+                            @ViewBag.apiresult.conversion.current_month
+                        </h5>
+                        <h5 class="zeropacingname ">@ViewBag.apiresult.conversion.last_month</h5>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="col-md-2">
+        <div class="card box">
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-10">
+
+                        <h4 style=" font-size: 10.5px;" class="uppertext">UNIQUE CLICKS <p class="metric-today">Today</p></h4>
+
+                    </div>
+                    <div class="col-md-2">
+                        <h4 class="hunderd">@ViewBag.apiresult.unique_click.trending_percentage%</h4>
+
+
+                    </div>
+                    <h4 class="main-metric">@ViewBag.apiresult.unique_click.today</h4>
+
+                    <div class="col-md-10">
+
+                        <h5 class="pacingname ">
+                            Yesterday
+                        </h5>
+                        <h5 class="pacingname ">
+                            CURRENT MONTH
+                        </h5>
+                        <h5 class="pacingname ">   LAST MONTH </h5>
+
+                    </div>
+                    <div class="col-md-2">
+                        <h5 class="zeropacingname ">
+                            @ViewBag.apiresult.unique_click.yesterday
+                        </h5>
+                        <h5 class="zeropacingname ">
+                            @ViewBag.apiresult.unique_click.current_month
+                        </h5>
+                        <h5 class="zeropacingname ">@ViewBag.apiresult.unique_click.last_month</h5>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="row" style="    margin-top: 1em;background-color:white;">
+    <div class="col-md-2">
+        <div class="card box">
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-10">
+
+                        <h4 style="font-size: 10.5px; " class="uppertext">GROSS CLICKS <p class="metric-today">Today</p></h4>
+
+                    </div>
+                    <div class="col-md-2">
+                        <h4 class="hunderd">@ViewBag.apiresult.gross_click.trending_percentage </h4>
+
+
+                    </div>
+                    <h4 class="main-metric">@ViewBag.apiresult.gross_click.today</h4>
+
+                    <div class="col-md-10">
+
+                        <h5 class="pacingname ">
+                            Yesterday
+                        </h5>
+                        <h5 class="pacingname ">
+                            CURRENT MONTH
+                        </h5>
+                        <h5 class="pacingname ">   LAST MONTH </h5>
+
+
+                    </div>
+                    <div class="col-md-2">
+                        <h5 class="zeropacingname ">
+                            @ViewBag.apiresult.gross_click.yesterday
+                        </h5>
+                        <h5 class="zeropacingname ">
+                            @ViewBag.apiresult.gross_click.current_month
+                        </h5>
+                        <h5 class="zeropacingname ">@ViewBag.apiresult.gross_click.last_month</h5>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="col-md-2">
+        <div class="card box">
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <h4 class="uppertext">EPC <p class="metric-today">Today</p></h4>
+
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="hunderd">@ViewBag.apiresult.epc.today%</h4>
+
+
+                    </div>
+                    <h4 class="main-metric"> $@ViewBag.apiresult.epc.today.00</h4>
+
+                    <div class="col-md-10">
+
+                        <h5 class="pacingname ">
+                            Yesterday
+                        </h5>
+                        <h5 class="pacingname ">
+                            CURRENT MONTH
+                        </h5>
+                        <h5 class="pacingname ">   LASTT MONTH </h5>
+
+                    </div>
+                    <div class="col-md-2">
+                        <h5 class="zeropacingname ">
+                            $@ViewBag.apiresult.epc.yesterday.00
+                        </h5>
+                        <h5 class="zeropacingname ">
+                            $@ViewBag.apiresult.epc.current_month.00
+                        </h5>
+                        <h5 class="zeropacingname "> $@ViewBag.apiresult.epc.last_month.00</h5>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="col-md-2">
+        <div class="card box">
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <h4 class="uppertext">CPC <p class="metric-today">Today</p></h4>
+
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="hunderd">@ViewBag.apiresult.cpc.today%</h4>
+
+
+                    </div>
+                    <h4 class="main-metric">0%</h4>
+
+                    <div class="col-md-10">
+
+                        <h5 class="pacingname ">
+                            Yesterday
+                        </h5>
+                        <h5 class="pacingname ">
+                            CURRENT MONTH
+                        </h5>
+                        <h5 class="pacingname ">   LAST MONTH </h5>
+
+                    </div>
+                    <div class="col-md-2">
+                        <h5 class="zeropacingname ">
+                            @ViewBag.apiresult.cpc.yesterday%
+                        </h5>
+                        <h5 class="zeropacingname ">
+                            @ViewBag.apiresult.cpc.current_month%
+                        </h5>
+                        <h5 class="zeropacingname ">@ViewBag.apiresult.cpc.last_month%</h5>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="col-md-2">
+        <div class="card box">
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <h4 class="uppertext">EVR <p class="metric-today">Today</p></h4>
+
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="hunderd">@ViewBag.apiresult.evr.today%</h4>
+
+
+                    </div>
+                    <h4 class="main-metric">@ViewBag.apiresult.evr.today</h4>
+
+                    <div class="col-md-10">
+
+                        <h5 class="pacingname ">
+                            Yesterday
+                        </h5>
+                        <h5 class="pacingname ">
+                            CURRENT MONTH
+                        </h5>
+                        <h5 class="pacingname ">   LAST MONTH </h5>
+
+                    </div>
+                    <div class="col-md-2">
+                        <h5 class="zeropacingname ">
+                            @ViewBag.apiresult.evr.yesterday
+                        </h5>
+                        <h5 class="zeropacingname ">
+                            @ViewBag.apiresult.evr.current_month
+                        </h5>
+                        <h5 class="zeropacingname ">@ViewBag.apiresult.evr.last_month</h5>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <div class="col-md-2">
+        <div class="card box">
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <h4 class="uppertext">CVR <p class="metric-today">Today</p></h4>
+
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="hunderd">@ViewBag.apiresult.cvr.today%</h4>
+
+
+                    </div>
+                    <h4 class="main-metric">@ViewBag.apiresult.cvr.today</h4>
+
+                    <div class="col-md-10">
+
+                        <h5 class="pacingname ">
+                            Yesterday
+                        </h5>
+                        <h5 class="pacingname ">
+                            CURRENT MONTH
+                        </h5>
+                        <h5 class="pacingname ">   LAST MONTH </h5>
+
+                    </div>
+                    <div class="col-md-2">
+                        <h5 class="zeropacingname ">
+                            @ViewBag.apiresult.cvr.yesterday
+                        </h5>
+                        <h5 class="zeropacingname ">
+                            @ViewBag.apiresult.cvr.current_month
+                        </h5>
+                        <h5 class="zeropacingname ">@ViewBag.apiresult.cvr.last_month</h5>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="col-md-2">
+        <div class="card box">
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-8">
+
+                        <h4 class="uppertext">PROFIT <p class="metric-today">Today</p></h4>
+
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="hunderd">@ViewBag.apiresult.profit.today%</h4>
+
+
+                    </div>
+                    <h4 class="main-metric">@ViewBag.apiresult.profit.today</h4>
+
+                    <div class="col-md-10">
+
+                        <h5 class="pacingname ">
+                            Yesterday
+                        </h5>
+                        <h5 class="pacingname ">
+                            CURRENT MONTH
+                        </h5>
+                        <h5 class="pacingname ">   LAST MONTH </h5>
+
+                    </div>
+                    <div class="col-md-2">
+                        <h5 class="zeropacingname ">
+                            @ViewBag.apiresult.profit.yesterday
+                        </h5>
+
+                        <h5 class="zeropacingname ">
+                            @ViewBag.apiresult.profit.current_month
+                        </h5>
+                        <h5 class="zeropacingname ">
+                            @ViewBag.apiresult.profit.last_month
+                        </h5>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+</div>
+@foreach (var i in ViewBag.sites)
+{
+<script>
+
+        function redirect() {
+           
+            var web = $("#change").val();
+            if (web == "Senior Discount Savings") {
+                window.location.href = "http://SeniorDiscountSavings.com/admin/valuepass?tid=@i.Gmail&tidpass=@i.password"
+
+            }
+            if (web == "AutoRate Freedom") {
+                window.location.href = "https://autoratefreedom.com/admin/valuepass?tid=@i.Gmail&tidpass=@i.password"
+
+            }
+            if (web == "Unclaimed GOV") {
+                window.location.href = "http://unclaimedgovernment.com/admin/valuepass?tid=@i.Gmail&tidpass=@i.password"
+
+            }
+            if (web == "Student Fintech") {
+                window.location.href = "http://studentfintech.app/admin/valuepass?tid=@i.Gmail&tidpass=@i.password"
+
+
+            }
+            if (web == "CCG Temp") {
+                window.location.href = "http://cosmopolitantemplate.com/admin/valuepass?tid=@i.Gmail&tidpass=@i.password"
+
+            }
+            if (web == "CCG") {
+                window.location.href = "http://cosmopolitancg.com"
+
+            }
+
+
+        }
+
+
+
+
+</script>
+}
+
+
+
+
+

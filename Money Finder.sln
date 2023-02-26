@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Money_Finder", "Money Finder\Money_Finder.csproj", "{BECE411B-BC23-4887-AA47-B6FAD62C3263}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Money_Finder_Test", "Money_Finder_Test\Money_Finder_Test.csproj", "{F224A6B3-C67F-4A73-99DF-933DF9C76314}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BECE411B-BC23-4887-AA47-B6FAD62C3263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BECE411B-BC23-4887-AA47-B6FAD62C3263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BECE411B-BC23-4887-AA47-B6FAD62C3263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BECE411B-BC23-4887-AA47-B6FAD62C3263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F224A6B3-C67F-4A73-99DF-933DF9C76314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F224A6B3-C67F-4A73-99DF-933DF9C76314}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F224A6B3-C67F-4A73-99DF-933DF9C76314}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F224A6B3-C67F-4A73-99DF-933DF9C76314}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {080064C1-EA2C-4BEB-B72C-A86B8A08B7CE}
+	EndGlobalSection
+EndGlobal

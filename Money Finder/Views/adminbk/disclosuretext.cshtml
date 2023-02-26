@@ -1,0 +1,194 @@
+﻿
+@{
+    ViewData["Title"] = "disclosuretext";
+    Layout = "~/Views/Layouts/_adminLayout.cshtml";
+}
+
+
+
+
+
+<div class="page-wrapper">
+
+
+    <div class="container-fluid">
+
+        <br />
+        <br />
+        @foreach(var i in  ViewBag.signdisc)
+        {
+        
+        <div class="row">
+            <div class="col-12">
+                <div class="card m-b-30">
+                    <div class="card-body">
+
+                        <h4 class="mt-0 header-title">Create Sign Up Disclosure Text </h4>
+
+
+
+                        @*<form action="/Agency/addimage" enctype="multipart/form-data" method="post">*@
+                        <form action="/admin/adddisclouser" enctype="multipart/form-data" method="post">
+                            <div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="p-0">
+                                            <div class="form-group">
+
+                                                <label></label>
+                                                <input hidden="" value="@i.Id" type="text" name="id"  data-mask="999-99-999-9999-9" class="form-control">
+                                                <input value="@i.first" type="text" name="first"  data-mask="999-99-999-9999-9" class="form-control">
+                                                <br />
+                                               
+                                                <label>Privacy Policy, Terms & Conditions</label>
+                                                <textarea style=" height: 12em;"  data="" type="text" name="second" placeholder="" data-mask="999-99-999-9999-9" class="form-control">@i.second</textarea>
+                                                <br />
+                                                <label>Our Partners,</label>
+                                                <textarea  style=" height: 12em;" type="text" name="third"  placeholder="" data-mask="999-99-999-9999-9" class="form-control">@i.third</textarea>
+                                                <br />
+
+                                                <label>No SMS Consent</label>
+                                                <input value="@i.fourth" type="text" name="four" required="" data-mask="999-99-999-9999-9" class="form-control">
+
+                                            </div>
+
+
+
+
+                                        </div>
+                                        @*<div class="p-20">
+                                        <div class="form-group">
+
+                                            <label>Privacy Policy, Terms & Conditions</label>
+                                            <input type="text" name="redirectlink" required="" placeholder="" data-mask="999-99-999-9999-9" class="form-control">
+
+                                        </div>*@
+
+
+
+
+
+                                        @*<div class="form-group">
+
+                                                <label>(click here to view),</label>
+                                                <input type="text" name="redirectlink" required="" placeholder="" data-mask="999-99-999-9999-9" class="form-control">
+
+                                            </div>
+
+
+
+
+                                        </div>*@
+                                        @*<div class="p-20">
+                                        <div class="form-group">
+
+                                            <label>click here </label>
+                                            <input type="text" name="redirectlink" required="" placeholder="" data-mask="999-99-999-9999-9" class="form-control">
+
+                                        </div>*@
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="form-group p-0">
+                                <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+        @*<div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> </h4>
+                        <h6 class="card-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
+                        <div class="table-responsive m-t-40">
+                            <table id="example23" class="table table-bordered table-striped" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th style="width:60px;">SIGN UP DISCLOSURE</th>
+
+
+
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th style="width:60px;">SIGN UP DISCLOSURE</th>
+
+
+
+                                        <th>Action</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+
+                                    @foreach (var i in ViewBag.signdisc)
+                                    {
+                                    <tr>
+
+
+
+
+                                        <td style=" width: 1265em !important;">
+                                            <a>@i.first &nbsp; Privacy Policy , Terms & Conditions @i.second &nbsp; (click here to view), @i.third &nbsp; click here  @i.fourth</a>
+
+                                        </td>
+
+
+                                        <td> <a onclick="return checkDelete()"> @Html.ActionLink(" ", "Deleteoffer", "admin", null, null, "", new { tid = i.first }, new { @class = " btn  btn btn-outline-danger btn-circle fa fa-trash-o", onclick = "return checkDelete()", title = "Confirm" })</a></td>
+
+                                    </tr>
+
+                                    }
+
+
+
+
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                        <script type="text/javascript">
+                            function checkDelete() {
+                                if (confirm('Are you sure you want to Archive ?')) {
+
+                                    return true
+                                }
+                                else {
+                                    return false
+                                }
+                            }
+                        </script>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+            </div>
+        </div>*@
+    </div>
+    </div> <!-- end col -->
+
+              

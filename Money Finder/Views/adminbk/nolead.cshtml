@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewData["Title"] = "No Active Account Lead";
+    Layout = "~/Views/Layouts/_adminLayout.cshtml";
+}
+
+
+<div class="page-wrapper">
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">No Lead  Information's</h4>
+                        <h6 class="card-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
+                        <div class="table-responsive m-t-40">
+                            <table id="example23" class="table table-bordered table-striped" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Address</th>
+
+                                        <th>Zip Code</th>
+                                        <th>Phone</th>
+                                        <th>E-mail</th>
+                                        <th>Active Account</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Address</th>
+
+                                        <th>Zip Code</th>
+                                        <th>Phone</th>
+                                        <th>E-mail</th>
+                                        <th>Active Account</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+
+                                    @foreach (var i in ViewBag.users)
+                                    {
+                                        <tr>
+
+                                            <td>
+
+                                                <a>@i.First_Name</a>
+
+                                            <td>
+                                                <a href="javascript:void(0);">@i.Last_Name</a>
+                                            </td>
+
+                                            <td>@i.address</td>
+                                            <td>@i.zip_code</td>
+                                            <td>@i.phone</td>
+                                            <td>@i.email</td>
+                                            <td>@i.checkingaccount</td>
+
+
+
+
+
+                                        </tr>
+
+                                    }
+                                </tbody>
+
+                            </table>
+                        </div>
+                        <script type="text/javascript">
+                            function checkDelete() {
+                                if (confirm('Are you sure you want to delete ?')) {
+
+                                    return true
+                                }
+                                else {
+                                    return false
+                                }
+                            }
+                        </script>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
